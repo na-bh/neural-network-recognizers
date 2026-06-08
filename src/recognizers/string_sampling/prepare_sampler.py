@@ -85,7 +85,7 @@ def main() -> None:
     dtype = getattr(torch, args.dtype)
     device = args.device
 
-    data = torch.load(args.input)
+    data = torch.load(args.input, weights_only = False)
     automaton = data.pop('automaton')
     match automaton:
         case FiniteAutomaton():

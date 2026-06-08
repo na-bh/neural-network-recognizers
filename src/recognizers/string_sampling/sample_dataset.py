@@ -385,7 +385,7 @@ def get_hand_coded_language(name):
             raise ValueError(f'invalid hand-coded language name: {name}')
 
 def get_automaton_language(filename, dtype, device):
-    data = torch.load(filename, map_location=torch.device('cpu'))
+    data = torch.load(filename, map_location=torch.device('cpu'),weights_only=False)
     automaton = data['sampler']
     alphabet = data.pop('alphabet', None)
     match automaton:

@@ -64,19 +64,27 @@ def main():
         #   num_layers * (
         #       4 * hidden_units * (2 * hidden_units + 1)    # input/recurrent layers
         #   ) +
-        #   hidden_units + 1    # recognition head
+        #   hidden_units + 1    # recognition head        
         if args.architecture == 'rnn':
             a = 2 * num_layers
             b = vocab_size + 2 * num_layers + 1
+
+            c = 1 - args.parameter_budget
+            hidden_units_float = (-b + math.sqrt(b * b - 4 * a * c)) / (2 * a)
+            hidden_units = round(hidden_units_float)
+
         elif args.architecture == 'lstm':
             a = 8 * num_layers
             b = vocab_size + 5 * num_layers + 1
+
+            c = 1 - args.parameter_budget
+            hidden_units_float = (-b + math.sqrt(b * b - 4 * a * c)) / (2 * a)
+            hidden_units = round(hidden_units_float)
+
         else:
-            a = 7 * num_layers
-            b = vocab_size + 3
-        c = 1 - args.parameter_budget
-        hidden_units_float = (-b + math.sqrt(b * b - 4 * a * c)) / (2 * a)
-        hidden_units = round(hidden_units_float)
+            # Mamba calibrated to ~64k parameters.
+            hidden_units = 37
+
         outputs.extend([
             '--hidden-units', str(hidden_units)
         ])

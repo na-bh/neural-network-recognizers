@@ -1,4 +1,5 @@
 import dataclasses
+
 from typing import Optional
 
 import torch
@@ -21,16 +22,17 @@ from rau.unidirectional import (
     DropoutUnidirectional,
     OutputUnidirectional
 )
+from .mamba import MambaStackUnidirectional
 
 from .vocabulary import get_vocabularies
 
 class RecognitionModelInterface(ModelInterface):
 
     def add_more_init_arguments(self, group):
-        group.add_argument('--architecture', choices=['transformer', 'rnn', 'lstm'],
+        group.add_argument('--architecture', choices=['transformer', 'rnn', 'lstm','mamba'],
             help='The type of neural network architecture to use.')
         group.add_argument('--num-layers', type=int,
-            help='(transformer, rnn, lstm) Number of layers.')
+            help='(transformer, rnn, lstm, mamba) Number of layers.')
         group.add_argument('--d-model', type=int,
             help='(transformer) The size of the vector representations used '
                  'in the transformer.')
@@ -41,14 +43,14 @@ class RecognitionModelInterface(ModelInterface):
             help='(transformer) The size of the hidden layer of the '
                  'feedforward network in each feedforward sublayer.')
         group.add_argument('--dropout', type=float,
-            help='(transformer) The dropout rate used throughout the '
+            help='(transformer, mamba) The dropout rate used throughout the '
                  'transformer on input embeddings, sublayer function outputs, '
                  'feedforward hidden layers, and attention weights. '
                  '(rnn, lstm) The dropout rate used between all layers, '
                  'including between the input embedding layer and the first '
                  'layer, and between the last layer and the output layer.')
         group.add_argument('--hidden-units', type=int,
-            help='(rnn, lstm) Number of hidden units to use in the hidden '
+            help='(rnn, lstm, mamba) Number of hidden units to use in the hidden '
                  'state.')
         group.add_argument('--init-scale', type=float,
             help='The scale used for the uniform distribution from which '
@@ -139,7 +141,7 @@ class RecognitionModelInterface(ModelInterface):
                 ).main()
             )
             output_size = d_model
-        elif architecture in ('rnn', 'lstm'):
+        elif architecture in ('rnn', 'lstm', 'mamba'):
             if hidden_units is None:
                 raise ValueError
             if num_layers is None:
@@ -162,13 +164,19 @@ class RecognitionModelInterface(ModelInterface):
                     dropout=dropout,
                     learned_hidden_state=True
                 )
-            else:
+            elif architecture == 'lstm':
                 core = LSTM(
                     input_size=hidden_units,
                     hidden_units=hidden_units,
                     layers=num_layers,
                     dropout=dropout,
                     learned_hidden_state=True
+                )
+            else:
+                core = MambaStackUnidirectional(
+                    d_model=hidden_units,
+                    num_layers=num_layers,
+                    dropout=dropout
                 )
             # Now, add the input embedding layer and dropout layers.
             embedding_layer_and_core = (

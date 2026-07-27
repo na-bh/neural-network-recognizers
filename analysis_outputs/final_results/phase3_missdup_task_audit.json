@@ -1,0 +1,125 @@
+{
+  "task": "missing-duplicate-string",
+  "description": "Phase 3 (bounded) task audit for missing-duplicate-string. Corrects the pilot's initial framing (hypothesized as an aggregate/majority 'which symbol is duplicated' task akin to cycle-navigation): the real generator is BINARY-alphabet, and the correct task is an unmarked, midpoint-implicit duplicate-of-halves check with a single, semantically-constant ('always fill with 1') redacted position -- same content-preserving-carry computational class as marked-copy, not an aggregate-count task.",
+  "grammar_confirmation": {
+    "alphabet_confirmed": [
+      "0",
+      "1",
+      "_"
+    ],
+    "alphabet_is_binary_plus_blank": true,
+    "length_range_seen": {
+      "min": 0,
+      "max": 40
+    },
+    "positive_lengths_always_even": true,
+    "positive_blank_count_always_exactly_one": true,
+    "positive_blank_fill_value_is_fixed_constant_one_never_ambiguous": {
+      "n_positives_checked": 5098,
+      "n_where_filling_with_zero_would_also_match": 0,
+      "conclusion": "0 ambiguous cases confirms the blank deterministically stands for a redacted '1' by construction -- the fill value requires NO computation (constant), only the subsequent positional halves-match check is a genuine target computation."
+    },
+    "negative_blank_count_distribution": {
+      "0": 349,
+      "1": 1483,
+      "2": 924,
+      "3": 341,
+      "4": 205,
+      "5": 186,
+      "6": 170,
+      "7": 169,
+      "8": 155,
+      "9": 185,
+      "10": 152,
+      "11": 153,
+      "12": 114,
+      "13": 117,
+      "14": 67,
+      "15": 60,
+      "16": 35,
+      "17": 17,
+      "18": 13,
+      "19": 6,
+      "21": 1
+    },
+    "positive_blank_count_distribution": {
+      "1": 5098
+    },
+    "no_marker_separating_string_from_answer": true,
+    "task_family_reclassification": "Structurally an UNMARKED MIDPOINT-IMPLICIT DUPLICATE-STRING check (compare s[j] vs s[half+j] for all j, after a zero-computation constant blank-fill), same content-preserving-carry computational class as marked-copy -- NOT an aggregate/majority-counting task despite the 'which symbol is duplicated' framing suggested by the task name. The alphabet is binary, so 'which symbol' is trivial/constant; the real difficulty is WHETHER the two halves genuinely match position-by-position."
+  },
+  "cited_hard_negative_fraction_reproduction": {
+    "test_set_n_negatives": 2538,
+    "n_hard": 678,
+    "fraction": 0.26713947990543735,
+    "matches_cited_26_7_percent": true
+  },
+  "shortcut_feature_audit": {
+    "per_feature": {
+      "sequence_length_parity": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.4579763361893105
+      },
+      "blank_count_is_one": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.30252957976336187
+      },
+      "aggregate_count_per_half": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.01795185638514892
+      },
+      "first_last_symbol_match": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.06854345165238677
+      }
+    },
+    "joint_hard_candidates_vs_aggregate_route": {
+      "n_total_negatives": 4902,
+      "n_genuinely_hard_candidates (pass length-parity AND blank-count-is-one)": 488,
+      "fraction_of_negatives_genuinely_hard_candidates": 0.09955120359037127,
+      "n_hard_candidates_aggregate_route_would_wrongly_accept": 88,
+      "fraction_hard_candidates_aggregate_route_wrongly_accepts": 0.18032786885245902,
+      "interpretation": "Among negatives that pass BOTH trivial structural checks (even length, exactly one blank -- i.e. everything a shallow structural shortcut cannot already reject), the aggregate-count-per-half 'route' still wrongly accepts a substantial minority as positive, since it ignores WITHIN-half symbol order entirely. This is decisive empirical evidence that aggregate symbol counting alone cannot solve the task -- true positional (order-sensitive) comparison is required for full accuracy."
+    },
+    "aggregate_route_alone_is_insufficient": true
+  },
+  "load_bearing_counterexample": {
+    "clean": [
+      "1",
+      "1",
+      "0",
+      "1",
+      "_",
+      "1",
+      "0",
+      "1"
+    ],
+    "corrupted": [
+      "1",
+      "1",
+      "0",
+      "1",
+      "_",
+      "0",
+      "1",
+      "1"
+    ],
+    "clean_is_valid": true,
+    "corrupted_is_valid": false,
+    "aggregate_route_and_trivial_features_identical_between_clean_and_corrupted": true,
+    "per_feature_match": {
+      "sequence_length_parity": true,
+      "blank_count_is_one": true,
+      "aggregate_count_per_half": true,
+      "first_last_symbol_match": true
+    }
+  },
+  "condition_design_implications": {
+    "condition1_structural_features": [
+      "sequence_length_parity",
+      "blank_count_is_one"
+    ],
+    "condition2_aggregate_route_feature": "aggregate_count_per_half (count of '1's in each half after blank-fill, order-blind)",
+    "condition3_target_identity_null_test_caveat": "IMPORTANT: because the blank's fill value is a FIXED CONSTANT ('1', never '0', 0/5098 ambiguous cases above), 'the identity of the duplicated symbol' as originally envisioned by the pilot brief (varying WHICH symbol is duplicated) is not constructible from genuine positives in this task -- there is no genuine positive where the answer is anything other than '1'. Condition 3 is REDEFINED here as a target-computation null test over WHICH HALF-POSITION PAIR is mismatched (i.e., whether models causally verify the SPECIFIC position of the halves-mismatch vs. some position-blind aggregate/parity signal) -- see phase3_missdup_counterfactual_design.json for the concrete pair construction."
+  }
+}

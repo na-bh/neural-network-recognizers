@@ -1,0 +1,298 @@
+{
+  "task": "stack-manipulation",
+  "description": "Cell selection for stack-manipulation's bounded Phase 3 patching pilot: primary (best) + secondary (next-best) seed per architecture, pulled from the existing flare_a2_stack_manipulation.json (no new training). Checks for per-seed single-solver bottlenecks AND architecture-wide near-chance collapse. Unlike missing-duplicate-string, no route-hint prediction is derived from hard_vs_scrambled_negative_accuracy here, since the task audit already established that statistic is confounded by the length_mismatch shortcut (87%+ of the nominal 'hard' population) -- reported for context only.",
+  "comparability_threshold": 0.15,
+  "near_chance_threshold": 0.6,
+  "cell_selection": {
+    "rnn": {
+      "primary_seed": 4,
+      "primary_accuracy": 0.8733333333333333,
+      "secondary_seed": 1,
+      "secondary_accuracy": 0.8666666666666667,
+      "accuracy_gap": 0.006666666666666599,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "4",
+          0.8733333333333333
+        ],
+        [
+          "1",
+          0.8666666666666667
+        ],
+        [
+          "6",
+          0.8666666666666667
+        ],
+        [
+          "10",
+          0.8666666666666667
+        ],
+        [
+          "3",
+          0.84
+        ],
+        [
+          "7",
+          0.7933333333333333
+        ],
+        [
+          "9",
+          0.76
+        ],
+        [
+          "8",
+          0.7066666666666667
+        ],
+        [
+          "2",
+          0.44666666666666666
+        ],
+        [
+          "5",
+          0.4066666666666667
+        ]
+      ],
+      "n_seeds_above_near_chance_threshold": 8,
+      "n_seeds_total": 10,
+      "architecture_wide_near_chance": false
+    },
+    "lstm": {
+      "primary_seed": 1,
+      "primary_accuracy": 0.8866666666666667,
+      "secondary_seed": 7,
+      "secondary_accuracy": 0.8733333333333333,
+      "accuracy_gap": 0.01333333333333342,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "1",
+          0.8866666666666667
+        ],
+        [
+          "7",
+          0.8733333333333333
+        ],
+        [
+          "10",
+          0.6333333333333333
+        ],
+        [
+          "2",
+          0.5933333333333334
+        ],
+        [
+          "8",
+          0.41333333333333333
+        ],
+        [
+          "3",
+          0.4066666666666667
+        ],
+        [
+          "5",
+          0.4066666666666667
+        ],
+        [
+          "6",
+          0.4066666666666667
+        ],
+        [
+          "9",
+          0.4066666666666667
+        ],
+        [
+          "4",
+          0.38
+        ]
+      ],
+      "n_seeds_above_near_chance_threshold": 3,
+      "n_seeds_total": 10,
+      "architecture_wide_near_chance": false
+    },
+    "transformer": {
+      "primary_seed": 5,
+      "primary_accuracy": 0.8533333333333334,
+      "secondary_seed": 3,
+      "secondary_accuracy": 0.7466666666666667,
+      "accuracy_gap": 0.10666666666666669,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "5",
+          0.8533333333333334
+        ],
+        [
+          "3",
+          0.7466666666666667
+        ],
+        [
+          "7",
+          0.5733333333333334
+        ],
+        [
+          "10",
+          0.52
+        ],
+        [
+          "2",
+          0.42
+        ],
+        [
+          "1",
+          0.4066666666666667
+        ],
+        [
+          "4",
+          0.4066666666666667
+        ],
+        [
+          "6",
+          0.4066666666666667
+        ],
+        [
+          "8",
+          0.4066666666666667
+        ],
+        [
+          "9",
+          0.4066666666666667
+        ]
+      ],
+      "n_seeds_above_near_chance_threshold": 2,
+      "n_seeds_total": 10,
+      "architecture_wide_near_chance": false
+    },
+    "mamba": {
+      "primary_seed": 3,
+      "primary_accuracy": 0.86,
+      "secondary_seed": 1,
+      "secondary_accuracy": 0.84,
+      "accuracy_gap": 0.020000000000000018,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "3",
+          0.86
+        ],
+        [
+          "1",
+          0.84
+        ],
+        [
+          "0",
+          0.5133333333333333
+        ],
+        [
+          "5",
+          0.48
+        ],
+        [
+          "4",
+          0.4666666666666667
+        ],
+        [
+          "2",
+          0.44666666666666666
+        ],
+        [
+          "8",
+          0.44666666666666666
+        ],
+        [
+          "9",
+          0.41333333333333333
+        ],
+        [
+          "6",
+          0.4066666666666667
+        ],
+        [
+          "7",
+          0.4066666666666667
+        ]
+      ],
+      "n_seeds_above_near_chance_threshold": 2,
+      "n_seeds_total": 10,
+      "architecture_wide_near_chance": false
+    }
+  },
+  "per_seed_bottleneck_check": {
+    "rnn": "NO SEED-LEVEL BOTTLENECK -- primary/secondary seeds comparable (gap=0.007).",
+    "lstm": "NO SEED-LEVEL BOTTLENECK -- primary/secondary seeds comparable (gap=0.013).",
+    "transformer": "NO SEED-LEVEL BOTTLENECK -- primary/secondary seeds comparable (gap=0.107).",
+    "mamba": "NO SEED-LEVEL BOTTLENECK -- primary/secondary seeds comparable (gap=0.020)."
+  },
+  "hard_vs_scrambled_negative_accuracy_CONFOUNDED_see_task_audit": {
+    "rnn": {
+      "hard_negative_accuracy": 0.7066666666666667,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.89,
+      "n_scrambled": 300
+    },
+    "lstm": {
+      "hard_negative_accuracy": 0.71,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.8966666666666666,
+      "n_scrambled": 300
+    },
+    "transformer": {
+      "hard_negative_accuracy": 0.7333333333333333,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.79,
+      "n_scrambled": 300
+    },
+    "mamba": {
+      "hard_negative_accuracy": 0.7066666666666667,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.8466666666666667,
+      "n_scrambled": 300
+    }
+  },
+  "final_cells": [
+    {
+      "arch": "rnn",
+      "seed": 4,
+      "role": "primary"
+    },
+    {
+      "arch": "lstm",
+      "seed": 1,
+      "role": "primary"
+    },
+    {
+      "arch": "transformer",
+      "seed": 5,
+      "role": "primary"
+    },
+    {
+      "arch": "mamba",
+      "seed": 3,
+      "role": "primary"
+    },
+    {
+      "arch": "rnn",
+      "seed": 1,
+      "role": "secondary",
+      "comparable": true
+    },
+    {
+      "arch": "lstm",
+      "seed": 7,
+      "role": "secondary",
+      "comparable": true
+    },
+    {
+      "arch": "transformer",
+      "seed": 3,
+      "role": "secondary",
+      "comparable": true
+    },
+    {
+      "arch": "mamba",
+      "seed": 1,
+      "role": "secondary",
+      "comparable": true
+    }
+  ]
+}

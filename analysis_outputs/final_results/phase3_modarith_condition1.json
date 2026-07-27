@@ -1,0 +1,1291 @@
+{
+  "condition": "condition_1_structural_features",
+  "task": "modular-arithmetic-simple",
+  "status": "PRIMARY evidence is the behavioral logit gap (clean vs corrupt, unpatched); full-state patch (top-layer readout) is SECONDARY, a wiring check only, flagged UNRELIABLE when the behavioral gap is near zero.",
+  "n_pairs_per_position": 25,
+  "positions_tested": [
+    "early",
+    "mid",
+    "late"
+  ],
+  "results_by_position": {
+    "early": [
+      {
+        "arch": "rnn",
+        "seed": 4,
+        "role": "primary",
+        "pair_type": "structural_break_early",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 11.377485637664796,
+          "ci95": 0.01621546440504168,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "rnn",
+        "seed": 5,
+        "role": "secondary",
+        "pair_type": "structural_break_early",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 12.115968332290649,
+          "ci95": 0.005080882214895059,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "lstm",
+        "seed": 3,
+        "role": "primary",
+        "pair_type": "structural_break_early",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/3",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 14.593614377975463,
+          "ci95": 0.00484679792293237,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "lstm",
+        "seed": 4,
+        "role": "secondary",
+        "pair_type": "structural_break_early",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 12.701107406616211,
+          "ci95": 0.03705038704038517,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "transformer",
+        "seed": 5,
+        "role": "primary",
+        "pair_type": "structural_break_early",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 11.000033264160157,
+          "ci95": 0.0388991258028133,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 0.9999999765593214,
+          "restored_fraction_ci95": 6.912348536596639e-09,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          0.9999999782711265,
+          0.9999999784570718,
+          0.9999999563672222,
+          1.0,
+          1.0,
+          0.9999999575122649,
+          0.9999999781395981,
+          0.9999999780668138,
+          0.9999999560687353,
+          1.0,
+          0.999999956928037,
+          0.9999999563408879,
+          1.0,
+          0.9999999783546335,
+          1.0,
+          0.9999999565338624,
+          0.9999999783216778,
+          0.9999999785314267,
+          0.999999978257388,
+          0.9999999782342415,
+          0.9999999570211736,
+          1.0,
+          0.9999999562066815,
+          0.9999999563701891,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "transformer",
+        "seed": 2,
+        "role": "secondary",
+        "pair_type": "structural_break_early",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/2",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.003767423629760742,
+          "ci95": 0.001597225273322322,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0000572201028348,
+          "restored_fraction_ci95": 0.00013130338885229331,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          0.9993983152827918,
+          1.0,
+          1.0,
+          1.0,
+          1.0000353694337354,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9999525549176828,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.001303780964798,
+          1.0,
+          1.000834376303713,
+          1.0,
+          0.9998874444256852,
+          1.0000186612424655,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "mamba",
+        "seed": 0,
+        "role": "primary",
+        "pair_type": "structural_break_early",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/0",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 11.857466115951539,
+          "ci95": 0.085490148565057,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "mamba",
+        "seed": 1,
+        "role": "secondary",
+        "pair_type": "structural_break_early",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/1",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 12.139256105422973,
+          "ci95": 0.02396199308718279,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      }
+    ],
+    "mid": [
+      {
+        "arch": "rnn",
+        "seed": 4,
+        "role": "primary",
+        "pair_type": "structural_break_mid",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 11.385654773712158,
+          "ci95": 0.021704677132965634,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "rnn",
+        "seed": 5,
+        "role": "secondary",
+        "pair_type": "structural_break_mid",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 12.128541040420533,
+          "ci95": 0.0071029222943945845,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "lstm",
+        "seed": 3,
+        "role": "primary",
+        "pair_type": "structural_break_mid",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/3",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 14.561348295211792,
+          "ci95": 0.005073228383122875,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "lstm",
+        "seed": 4,
+        "role": "secondary",
+        "pair_type": "structural_break_mid",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 13.253687858581543,
+          "ci95": 0.042735915965667254,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "transformer",
+        "seed": 5,
+        "role": "primary",
+        "pair_type": "structural_break_mid",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 10.464187526702881,
+          "ci95": 0.04133361362398416,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 0.9999999771878414,
+          "restored_fraction_ci95": 9.29358710290858e-09,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          0.9999999772321881,
+          1.0,
+          0.9999999771619664,
+          1.0,
+          1.0,
+          1.0,
+          0.9999999319974797,
+          1.0,
+          0.9999999552267939,
+          0.9999999543725951,
+          1.0,
+          0.9999999536727803,
+          1.0,
+          0.9999999320249372,
+          1.0,
+          1.0,
+          1.0,
+          0.9999999544725631,
+          0.9999999541513122,
+          1.0,
+          0.9999999543385584,
+          0.999999977164086,
+          0.9999999771765341,
+          0.9999999771611298,
+          0.9999999535431146
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "transformer",
+        "seed": 2,
+        "role": "secondary",
+        "pair_type": "structural_break_mid",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/2",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.003523917198181152,
+          "ci95": 0.0023282573963809075,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 0.99999306550079,
+          "restored_fraction_ci95": 3.622390841174111e-05,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0001755309812181,
+          1.0000606685676152,
+          1.0001013993104846,
+          0.9999096739228616,
+          1.0001048767697955,
+          1.0000064598648597,
+          0.9999870158536427,
+          1.0,
+          1.0,
+          1.0,
+          0.9999116607773851,
+          1.0,
+          1.0001095290251916,
+          1.0,
+          0.9997871887635668,
+          1.0,
+          0.9998213966779782,
+          1.0,
+          1.0000559033989267,
+          0.9997953336062219,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "mamba",
+        "seed": 0,
+        "role": "primary",
+        "pair_type": "structural_break_mid",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/0",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 11.846936635971069,
+          "ci95": 0.09454222310046712,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "mamba",
+        "seed": 1,
+        "role": "secondary",
+        "pair_type": "structural_break_mid",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/1",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 12.139881896972657,
+          "ci95": 0.025162424715182395,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      }
+    ],
+    "late": [
+      {
+        "arch": "rnn",
+        "seed": 4,
+        "role": "primary",
+        "pair_type": "structural_break_late",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 11.41226266860962,
+          "ci95": 0.020680812970894837,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "rnn",
+        "seed": 5,
+        "role": "secondary",
+        "pair_type": "structural_break_late",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 12.083858013153076,
+          "ci95": 0.010846397393065716,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "lstm",
+        "seed": 3,
+        "role": "primary",
+        "pair_type": "structural_break_late",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/3",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 14.530661878585816,
+          "ci95": 0.006251992784911851,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "lstm",
+        "seed": 4,
+        "role": "secondary",
+        "pair_type": "structural_break_late",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 11.786718902587891,
+          "ci95": 0.06785514600349682,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "transformer",
+        "seed": 5,
+        "role": "primary",
+        "pair_type": "structural_break_late",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 7.779934177398681,
+          "ci95": 0.08112158372005912,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 0.9999999736026952,
+          "restored_fraction_ci95": 1.799407225786009e-08,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0000000609371746,
+          0.9999999692523711,
+          0.9999999091102301,
+          1.0,
+          0.9999999691761237,
+          0.9999999370035565,
+          1.0,
+          0.9999999688609212,
+          1.0,
+          1.0,
+          0.9999998713623856,
+          1.0,
+          1.0,
+          0.9999998733731497,
+          0.9999999692812745,
+          1.0000000298365272,
+          0.9999999039651016,
+          1.0,
+          1.0,
+          0.9999999692454018,
+          1.0,
+          1.0,
+          1.0,
+          0.9999999689502718,
+          0.9999999397128911
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "transformer",
+        "seed": 2,
+        "role": "secondary",
+        "pair_type": "structural_break_late",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/2",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.0017939853668212892,
+          "ci95": 0.0008058236354257037,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0000043396827112,
+          "restored_fraction_ci95": 4.3935955972466896e-05,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0000788270534446,
+          0.999813153961136,
+          1.000085157114877,
+          1.0,
+          1.0,
+          0.9997993176801124,
+          1.0002058036633052,
+          0.9998306806637318,
+          1.0,
+          1.0,
+          1.0,
+          1.0002012072434607,
+          0.9999103621369666,
+          1.000199600798403,
+          1.0,
+          0.9999640972247155,
+          1.000025147110597,
+          0.9999773273477531,
+          0.9998486911786957,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0001691188905801,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "mamba",
+        "seed": 0,
+        "role": "primary",
+        "pair_type": "structural_break_late",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/0",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 11.971134777069091,
+          "ci95": 0.0994437981852161,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "mamba",
+        "seed": 1,
+        "role": "secondary",
+        "pair_type": "structural_break_late",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/1",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 12.151622762680054,
+          "ci95": 0.024395505950621253,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      }
+    ]
+  },
+  "per_cell_summary": {
+    "rnn_seed4": {
+      "arch": "rnn",
+      "seed": 4,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 11.377485637664796,
+        "mid": 11.385654773712158,
+        "late": 11.41226266860962
+      },
+      "causal_by_position": {
+        "early": true,
+        "mid": true,
+        "late": true
+      },
+      "all_positions_causal": true,
+      "no_position_causal": false
+    },
+    "rnn_seed5": {
+      "arch": "rnn",
+      "seed": 5,
+      "role": "secondary",
+      "gap_by_position": {
+        "early": 12.115968332290649,
+        "mid": 12.128541040420533,
+        "late": 12.083858013153076
+      },
+      "causal_by_position": {
+        "early": true,
+        "mid": true,
+        "late": true
+      },
+      "all_positions_causal": true,
+      "no_position_causal": false
+    },
+    "lstm_seed3": {
+      "arch": "lstm",
+      "seed": 3,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 14.593614377975463,
+        "mid": 14.561348295211792,
+        "late": 14.530661878585816
+      },
+      "causal_by_position": {
+        "early": true,
+        "mid": true,
+        "late": true
+      },
+      "all_positions_causal": true,
+      "no_position_causal": false
+    },
+    "lstm_seed4": {
+      "arch": "lstm",
+      "seed": 4,
+      "role": "secondary",
+      "gap_by_position": {
+        "early": 12.701107406616211,
+        "mid": 13.253687858581543,
+        "late": 11.786718902587891
+      },
+      "causal_by_position": {
+        "early": true,
+        "mid": true,
+        "late": true
+      },
+      "all_positions_causal": true,
+      "no_position_causal": false
+    },
+    "transformer_seed5": {
+      "arch": "transformer",
+      "seed": 5,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 11.000033264160157,
+        "mid": 10.464187526702881,
+        "late": 7.779934177398681
+      },
+      "causal_by_position": {
+        "early": true,
+        "mid": true,
+        "late": true
+      },
+      "all_positions_causal": true,
+      "no_position_causal": false
+    },
+    "transformer_seed2": {
+      "arch": "transformer",
+      "seed": 2,
+      "role": "secondary",
+      "gap_by_position": {
+        "early": 0.003767423629760742,
+        "mid": 0.003523917198181152,
+        "late": 0.0017939853668212892
+      },
+      "causal_by_position": {
+        "early": false,
+        "mid": false,
+        "late": false
+      },
+      "all_positions_causal": false,
+      "no_position_causal": true
+    },
+    "mamba_seed0": {
+      "arch": "mamba",
+      "seed": 0,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 11.857466115951539,
+        "mid": 11.846936635971069,
+        "late": 11.971134777069091
+      },
+      "causal_by_position": {
+        "early": true,
+        "mid": true,
+        "late": true
+      },
+      "all_positions_causal": true,
+      "no_position_causal": false
+    },
+    "mamba_seed1": {
+      "arch": "mamba",
+      "seed": 1,
+      "role": "secondary",
+      "gap_by_position": {
+        "early": 12.139256105422973,
+        "mid": 12.139881896972657,
+        "late": 12.151622762680054
+      },
+      "causal_by_position": {
+        "early": true,
+        "mid": true,
+        "late": true
+      },
+      "all_positions_causal": true,
+      "no_position_causal": false
+    }
+  },
+  "overall": {
+    "n_cells_causal_at_all_positions": 7,
+    "n_cells_null_everywhere": 1,
+    "n_cells_position_specific": 0,
+    "prediction_check": "Predicted causally load-bearing across most cells if the shortcut is used (alternation_pattern_valid has only a 0.6% blind spot -- an extremely strong shortcut signal). Found: 7/8 cells causal at ALL 3 positions, 1/8 null everywhere."
+  }
+}

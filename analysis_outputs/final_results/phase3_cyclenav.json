@@ -1,0 +1,366 @@
+{
+  "task": "cycle-navigation",
+  "condition": "condition_1_symbol_counts",
+  "status": "PRIMARY evidence is the behavioral logit gap on grammar_pairs and the layer-specific patch at each architecture's Phase-2-established canonical site (layer0 rnn/lstm, last layer mamba/transformer -- no layer sweep needed, cycle-navigation never showed a site-transfer issue in Phase 2). Full-state patch is secondary/reference only.",
+  "description": "Tests whether the shortcut feature symbol_counts -- uniform 0.39-0.67 selectivity across all 8 cells in Phase 2 -- causally drives accept/reject, via grammar_pairs (clean=valid positive; corrupt=same length, last token (digit) replaced by a move symbol, an invalid symbol-count profile). Predicted: large behavioral gap and high layer-specific restored fraction for all 4 architectures, both seeds.",
+  "m_moves": 19,
+  "n_pairs_generated": 25,
+  "canonical_layer_by_arch": {
+    "rnn": 0,
+    "lstm": 0,
+    "mamba": 4,
+    "transformer": 4
+  },
+  "grammar_pairs_audit": {
+    "n_pairs": 25,
+    "kind": "grammar",
+    "same_length": true,
+    "n_token_positions_differing": {
+      "min": 1,
+      "max": 1
+    },
+    "differs_only_at_last_position": true,
+    "target_property_check": "corrupt is_grammatical=False for all pairs (last token is a move, not a digit) -- verified below via is_grammatical()",
+    "all_corrupt_scrambled": true
+  },
+  "sample_pairs": [
+    {
+      "clean": [
+        6,
+        7,
+        7,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        7,
+        6,
+        7,
+        7,
+        6,
+        6,
+        7,
+        7,
+        7,
+        2
+      ],
+      "corrupt": [
+        6,
+        7,
+        7,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        7,
+        6,
+        7,
+        7,
+        6,
+        6,
+        7,
+        7,
+        7,
+        6
+      ],
+      "length": 20,
+      "clean_label": true,
+      "corrupt_label": false,
+      "corrupt_last_token_move": "="
+    },
+    {
+      "clean": [
+        5,
+        6,
+        6,
+        5,
+        7,
+        6,
+        7,
+        5,
+        6,
+        6,
+        6,
+        5,
+        5,
+        6,
+        5,
+        7,
+        5,
+        5,
+        7,
+        1
+      ],
+      "corrupt": [
+        5,
+        6,
+        6,
+        5,
+        7,
+        6,
+        7,
+        5,
+        6,
+        6,
+        6,
+        5,
+        5,
+        6,
+        5,
+        7,
+        5,
+        5,
+        7,
+        7
+      ],
+      "length": 20,
+      "clean_label": true,
+      "corrupt_label": false,
+      "corrupt_last_token_move": ">"
+    },
+    {
+      "clean": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        6,
+        7,
+        7,
+        5,
+        7,
+        6,
+        7,
+        7,
+        6,
+        6,
+        6,
+        7,
+        6,
+        6,
+        2
+      ],
+      "corrupt": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        6,
+        7,
+        7,
+        5,
+        7,
+        6,
+        7,
+        7,
+        6,
+        6,
+        6,
+        7,
+        6,
+        6,
+        7
+      ],
+      "length": 20,
+      "clean_label": true,
+      "corrupt_label": false,
+      "corrupt_last_token_move": ">"
+    }
+  ],
+  "cells": [
+    {
+      "arch": "rnn",
+      "seed": 1,
+      "checkpoint": "data/models/cycle-navigation/rnn/rec+ns/validation-short/1",
+      "canonical_layer": 0,
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 5.430911083221435,
+        "ci95_abs_clean_corrupt_logit_gap": 0.0004913144939361344,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_canonical_layer": {
+        "layer_specific_restored_fraction_mean": 1.0,
+        "layer_specific_restored_fraction_ci95": 0.0,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": true,
+      "SURPRISING_near_zero_symbol_counts_effect": false
+    },
+    {
+      "arch": "rnn",
+      "seed": 4,
+      "checkpoint": "data/models/cycle-navigation/rnn/rec+ns/validation-short/4",
+      "canonical_layer": 0,
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 3.5507873773574827,
+        "ci95_abs_clean_corrupt_logit_gap": 0.0823691674296283,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_canonical_layer": {
+        "layer_specific_restored_fraction_mean": 1.0,
+        "layer_specific_restored_fraction_ci95": 0.0,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": true,
+      "SURPRISING_near_zero_symbol_counts_effect": false
+    },
+    {
+      "arch": "lstm",
+      "seed": 2,
+      "checkpoint": "data/models/cycle-navigation/lstm/rec+ns/validation-short/2",
+      "canonical_layer": 0,
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 4.485776662826538,
+        "ci95_abs_clean_corrupt_logit_gap": 0.0008548711138596057,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_canonical_layer": {
+        "layer_specific_restored_fraction_mean": 1.0000000021269664,
+        "layer_specific_restored_fraction_ci95": 7.317994908255419e-09,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": true,
+      "SURPRISING_near_zero_symbol_counts_effect": false
+    },
+    {
+      "arch": "lstm",
+      "seed": 3,
+      "checkpoint": "data/models/cycle-navigation/lstm/rec+ns/validation-short/3",
+      "canonical_layer": 0,
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 4.560938339233399,
+        "ci95_abs_clean_corrupt_logit_gap": 0.02171544061788118,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_canonical_layer": {
+        "layer_specific_restored_fraction_mean": 1.0000000052132905,
+        "layer_specific_restored_fraction_ci95": 1.3230857282192886e-08,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": true,
+      "SURPRISING_near_zero_symbol_counts_effect": false
+    },
+    {
+      "arch": "transformer",
+      "seed": 6,
+      "checkpoint": "data/models/cycle-navigation/transformer/rec+ns/validation-short/6",
+      "canonical_layer": 4,
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 7.733146638870239,
+        "ci95_abs_clean_corrupt_logit_gap": 0.008668894834661224,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 0.9999999925897278,
+        "wiring_restored_fraction_ci95": 8.564527756111177e-09,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_canonical_layer": {
+        "layer_specific_restored_fraction_mean": 0.9999999925897278,
+        "layer_specific_restored_fraction_ci95": 8.564527756111177e-09,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": true,
+      "SURPRISING_near_zero_symbol_counts_effect": false
+    },
+    {
+      "arch": "transformer",
+      "seed": 9,
+      "checkpoint": "data/models/cycle-navigation/transformer/rec+ns/validation-short/9",
+      "canonical_layer": 4,
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 6.431996865272522,
+        "ci95_abs_clean_corrupt_logit_gap": 0.026100992333482054,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 0.9999999970046405,
+        "wiring_restored_fraction_ci95": 8.325579626568985e-09,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_canonical_layer": {
+        "layer_specific_restored_fraction_mean": 0.9999999970046405,
+        "layer_specific_restored_fraction_ci95": 8.325579626568985e-09,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": true,
+      "SURPRISING_near_zero_symbol_counts_effect": false
+    },
+    {
+      "arch": "mamba",
+      "seed": 0,
+      "checkpoint": "models/cycle-navigation/mamba/rec+ns/validation-short/0",
+      "canonical_layer": 4,
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 9.128828687667847,
+        "ci95_abs_clean_corrupt_logit_gap": 0.056693978179667905,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_canonical_layer": {
+        "layer_specific_restored_fraction_mean": 1.0,
+        "layer_specific_restored_fraction_ci95": 0.0,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": true,
+      "SURPRISING_near_zero_symbol_counts_effect": false
+    },
+    {
+      "arch": "mamba",
+      "seed": 7,
+      "checkpoint": "models/cycle-navigation/mamba/rec+ns/validation-short/7",
+      "canonical_layer": 4,
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 9.424718608856201,
+        "ci95_abs_clean_corrupt_logit_gap": 0.44631732369569344,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_canonical_layer": {
+        "layer_specific_restored_fraction_mean": 1.0,
+        "layer_specific_restored_fraction_ci95": 0.0,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": true,
+      "SURPRISING_near_zero_symbol_counts_effect": false
+    }
+  ],
+  "any_surprising_near_zero_cells": [],
+  "prediction_confirmed": true
+}

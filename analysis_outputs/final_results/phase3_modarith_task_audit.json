@@ -1,0 +1,91 @@
+{
+  "task": "modular-arithmetic-simple",
+  "description": "Phase 3 (bounded) task audit for modular-arithmetic-simple -- a single accumulated mod-5 register carrier, order-sensitive via non-commuting +/-/* operators, structurally distinct from every task piloted so far (marker/durable-content, binary-addition/carry-chain, Dyck-2-3/bounded-stack).",
+  "grammar": "digit (op digit)* '=' digit, digit in {0..4}, op in {+,-,*}, left-to-right, mod 5, no operator precedence -- confirmed via 100% exact match of a from-scratch evaluator against real training labels.",
+  "grammar_confirmation": {
+    "n_total": 10000,
+    "n_match": 10000,
+    "fraction": 1.0
+  },
+  "cited_scrambled_fraction_reproduction": {
+    "n_negatives": 2483,
+    "n_structurally_scrambled": 2468,
+    "fraction_scrambled": 0.9939589206604913,
+    "n_grammatically_valid_but_wrong (hard)": 15,
+    "fraction_hard": 0.006041079339508659,
+    "matches_cited_99_4_percent": true
+  },
+  "shortcut_feature_audit": {
+    "per_feature": {
+      "n_equals_is_one": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.42690293999194523
+      },
+      "first_token_is_digit": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.7619814740233588
+      },
+      "last_token_is_digit": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.7744663713250101
+      },
+      "sequence_length_parity_odd": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.4405960531614982
+      },
+      "alternation_pattern_valid": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.006041079339508659
+      },
+      "digit_operator_count_relation": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.0684655658477648
+      }
+    },
+    "joint_all_six": {
+      "positive_satisfy_all_six_fraction": 1.0,
+      "negative_satisfy_all_six_fraction (shortcut-blind fraction)": 0.006041079339508659,
+      "n_shortcut_blind_negatives": 15,
+      "n_total_negatives": 2483,
+      "matches_grammatically_valid_negative_population": true,
+      "n_grammatically_valid_negatives": 15
+    },
+    "all_features_trivial_counting_or_pattern_no_arithmetic_required": true,
+    "target_computation_requires_order_sensitive_accumulation": "The genuine target computation is a running mod-5 register updated by non-commuting operators -- NOT reducible to any combination of the six structural features audited above, demonstrated directly by the counterexample below."
+  },
+  "load_bearing_counterexample": {
+    "clean": [
+      "1",
+      "*",
+      "2",
+      "+",
+      "3",
+      "=",
+      "0"
+    ],
+    "corrupted": [
+      "1",
+      "+",
+      "3",
+      "*",
+      "2",
+      "=",
+      "0"
+    ],
+    "clean_valid": true,
+    "corrupted_valid": false,
+    "clean_true_value": 0,
+    "corrupted_true_value": 3,
+    "claimed_value_both": 0,
+    "all_six_shortcut_features_identical": true,
+    "per_feature_match": {
+      "n_equals_is_one": true,
+      "first_token_is_digit": true,
+      "last_token_is_digit": true,
+      "sequence_length_parity_odd": true,
+      "alternation_pattern_valid": true,
+      "digit_operator_count_relation": true
+    },
+    "note": "Same digit multiset {1,2,3}, same operator multiset {*,+}, same length, same first/last token type, same alternation pattern, same claimed final digit (0) -- but reordering the two (op,digit) pairs changes the TRUE left-to-right value from 0 to 3, since '*' and '+' do not commute when interleaved. No combination of the six structural features can detect this."
+  }
+}

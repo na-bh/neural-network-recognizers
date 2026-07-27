@@ -1,0 +1,156 @@
+{
+  "task": "parity",
+  "n_test_examples": 5010,
+  "n_long": 997,
+  "selected_seeds": {
+    "rnn": 1,
+    "lstm": 2,
+    "transformer": 1,
+    "mamba": 2
+  },
+  "accuracy_table": {
+    "rnn": {
+      "1": 1.0,
+      "2": 0.49047141424272817,
+      "3": 0.5195586760280843,
+      "4": 0.5175526579739218,
+      "5": 1.0,
+      "6": 1.0,
+      "7": 0.5245737211634904,
+      "8": 0.9498495486459378,
+      "9": 1.0
+    },
+    "lstm": {
+      "1": 0.4844533600802407,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 1.0,
+      "6": 1.0,
+      "7": 1.0,
+      "8": 1.0,
+      "9": 0.5155466399197592
+    },
+    "transformer": {
+      "1": 0.60481444332999,
+      "2": 0.5095285857572718,
+      "3": 0.5426278836509528,
+      "4": 0.49247743229689067,
+      "5": 0.5015045135406219,
+      "6": 0.5155466399197592,
+      "7": 0.551654964894684,
+      "8": 0.48746238716148443,
+      "9": 0.5416248746238717
+    },
+    "mamba": {
+      "0": 0.5215646940822467,
+      "1": 0.4844533600802407,
+      "2": 0.5687061183550652,
+      "3": 0.5205616850551655,
+      "4": 0.5656970912738215,
+      "5": 0.5446339017051154,
+      "6": 0.49949849548645936,
+      "7": 0.563691073219659,
+      "8": 0.5586760280842528,
+      "9": 0.4864593781344032
+    }
+  },
+  "n_positives": 2474,
+  "n_hard_negatives": 2529,
+  "n_scrambled_negatives": 0,
+  "n_total": 5010,
+  "grammar_only_ceiling": 0.7462075848303393,
+  "hard_vs_scrambled_negative_accuracy": {
+    "rnn": {
+      "hard_negative_accuracy": 1.0,
+      "n_hard": 2529,
+      "scrambled_negative_accuracy": NaN,
+      "n_scrambled": 0
+    },
+    "lstm": {
+      "hard_negative_accuracy": 1.0,
+      "n_hard": 2529,
+      "scrambled_negative_accuracy": NaN,
+      "n_scrambled": 0
+    },
+    "transformer": {
+      "hard_negative_accuracy": 0.4468169236852511,
+      "n_hard": 2529,
+      "scrambled_negative_accuracy": NaN,
+      "n_scrambled": 0
+    },
+    "mamba": {
+      "hard_negative_accuracy": 0.4792408066429419,
+      "n_hard": 2529,
+      "scrambled_negative_accuracy": NaN,
+      "n_scrambled": 0
+    }
+  },
+  "counterfactual_logit_difference": {
+    "rnn": {
+      "short_L20": {
+        "length": 20,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 51.54933603286743,
+        "median_abs_delta_logit": 50.911659240722656,
+        "frac_corrupt_accepted": 0.0
+      },
+      "long_L400": {
+        "length": 400,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 51.635111045837405,
+        "median_abs_delta_logit": 50.90541648864746,
+        "frac_corrupt_accepted": 0.0
+      }
+    },
+    "lstm": {
+      "short_L20": {
+        "length": 20,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 28.661901330947877,
+        "median_abs_delta_logit": 29.86451244354248,
+        "frac_corrupt_accepted": 0.0
+      },
+      "long_L400": {
+        "length": 400,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 28.519739151000977,
+        "median_abs_delta_logit": 26.98601770401001,
+        "frac_corrupt_accepted": 0.0
+      }
+    },
+    "transformer": {
+      "short_L20": {
+        "length": 20,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 15.741265206336974,
+        "median_abs_delta_logit": 15.998523473739624,
+        "frac_corrupt_accepted": 0.0
+      },
+      "long_L400": {
+        "length": 400,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.17127876864746214,
+        "median_abs_delta_logit": 0.14782468043267727,
+        "frac_corrupt_accepted": 0.63
+      }
+    },
+    "mamba": {
+      "short_L20": {
+        "length": 20,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 11.29277105242014,
+        "median_abs_delta_logit": 12.249458312988281,
+        "frac_corrupt_accepted": 0.02
+      },
+      "long_L400": {
+        "length": 400,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 6.465947303064167,
+        "median_abs_delta_logit": 6.912683486938477,
+        "frac_corrupt_accepted": 0.37
+      }
+    }
+  },
+  "test_resolvable": true
+}

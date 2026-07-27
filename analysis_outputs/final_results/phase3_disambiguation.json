@@ -1,0 +1,273 @@
+{
+  "step": "disambiguation_balance_pairs",
+  "description": "Runs balance_pairs (isolates is_balanced from length_parity) on lstm, mamba, transformer -- both seeds each -- to complete each cell's mechanism attribution the way rnn's was already completed in the Phase 3 design step. rnn is not re-run here (already disambiguated: near-zero balance_pairs gap on seed3, ruling out marker-centering by elimination).",
+  "n_half": 50,
+  "n_pairs_generated": 25,
+  "balance_pairs_audit": {
+    "n_pairs": 25,
+    "same_length": true,
+    "same_marker_count": true,
+    "n_token_positions_differing": {
+      "min": 2,
+      "max": 2
+    },
+    "differs_at_exactly_two_positions": true,
+    "clean_all_balanced": true,
+    "corrupt_all_unbalanced": true,
+    "marker_position_shifts_by_exactly_one": true,
+    "target_property_isolated": true
+  },
+  "cells": [
+    {
+      "arch": "lstm",
+      "seed": 10,
+      "checkpoint": "data/models/marked-reversal/lstm/rec+ns/validation-short/10",
+      "is_balanced_best_layer": 4,
+      "is_balanced_layer_selectivity_from_sweep": {
+        "0": -7.447402718296914e-06,
+        "1": 0.0006032396201824941,
+        "2": 0.004586669149134193,
+        "3": 0.00670964438652033,
+        "4": 0.020451498789796907
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 0.0021032261848449706,
+        "ci95_abs_clean_corrupt_logit_gap": 3.211794393739807e-05,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": 0.9999855396908367,
+        "layer_specific_restored_fraction_ci95": 6.753533743269047e-05,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "layer_specific_patch_caveat": "behavioral gap (0.0021) is near the numerically-unstable-denominator regime -- the layer_specific restored_fraction here is not meaningful; the near-zero gap itself is the finding."
+    },
+    {
+      "arch": "lstm",
+      "seed": 1,
+      "checkpoint": "data/models/marked-reversal/lstm/rec+ns/validation-short/1",
+      "is_balanced_best_layer": 4,
+      "is_balanced_layer_selectivity_from_sweep": {
+        "0": -0.00029975795941172834,
+        "1": 0.000617668962949236,
+        "2": 0.003362502327313388,
+        "3": 0.0061040774529882436,
+        "4": 0.05463973189350213
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 5.726378312110901,
+        "ci95_abs_clean_corrupt_logit_gap": 2.0834083648271653,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": 1.000000246085066,
+        "layer_specific_restored_fraction_ci95": 1.90578206277016e-05,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": true
+    },
+    {
+      "arch": "transformer",
+      "seed": 9,
+      "checkpoint": "data/models/marked-reversal/transformer/rec+ns/validation-short/9",
+      "is_balanced_best_layer": 1,
+      "is_balanced_layer_selectivity_from_sweep": {
+        "0": 0.0006023086948426792,
+        "1": 0.0006125488735803097,
+        "2": 0.0006092906348911242,
+        "3": 0.00030767082479976615,
+        "4": 0.0006111524855706429
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 0.00929344654083252,
+        "ci95_abs_clean_corrupt_logit_gap": 0.0003893663107786863,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 0.9999962636532027,
+        "wiring_restored_fraction_ci95": 4.683894751114812e-06,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": 0.9756944772063867,
+        "layer_specific_restored_fraction_ci95": 0.026839519765271862,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "layer_specific_patch_caveat": "behavioral gap (0.0093) is near the numerically-unstable-denominator regime -- the layer_specific restored_fraction here is not meaningful; the near-zero gap itself is the finding."
+    },
+    {
+      "arch": "transformer",
+      "seed": 1,
+      "checkpoint": "data/models/marked-reversal/transformer/rec+ns/validation-short/1",
+      "is_balanced_best_layer": 4,
+      "is_balanced_layer_selectivity_from_sweep": {
+        "0": 3.258238689185511e-06,
+        "1": 8.378328058000761e-06,
+        "2": -5.1200893688152505e-06,
+        "3": 0.0006153416495996433,
+        "4": 0.0015281139452615333
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 0.04039630889892578,
+        "ci95_abs_clean_corrupt_logit_gap": 0.0021051237547523565,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 0.9999831954583495,
+        "wiring_restored_fraction_ci95": 2.4114981406031033e-06,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": 0.9999831954583495,
+        "layer_specific_restored_fraction_ci95": 2.4114981406031033e-06,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "layer_specific_patch_caveat": "behavioral gap (0.0404) is near the numerically-unstable-denominator regime -- the layer_specific restored_fraction here is not meaningful; the near-zero gap itself is the finding."
+    },
+    {
+      "arch": "mamba",
+      "seed": 4,
+      "checkpoint": "models/marked-reversal/mamba/rec+ns/validation-short/4",
+      "is_balanced_best_layer": 4,
+      "is_balanced_layer_selectivity_from_sweep": {
+        "0": 7.912865388037815e-06,
+        "1": -8.378328058111784e-06,
+        "2": 0.0030450567864458433,
+        "3": 0.005196890709365243,
+        "4": 0.005800130329547515
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 5.159787499904633,
+        "ci95_abs_clean_corrupt_logit_gap": 1.546840324900319,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": 1.0,
+        "layer_specific_restored_fraction_ci95": 0.0,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": true
+    },
+    {
+      "arch": "mamba",
+      "seed": 6,
+      "checkpoint": "models/marked-reversal/mamba/rec+ns/validation-short/6",
+      "is_balanced_best_layer": 4,
+      "is_balanced_layer_selectivity_from_sweep": {
+        "0": 0.0,
+        "1": 0.0006134797989201246,
+        "2": 0.0009174269223607423,
+        "3": 0.003962483708806475,
+        "4": 0.004887358033885514
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 8.261184968948363,
+        "ci95_abs_clean_corrupt_logit_gap": 1.6521411790457012,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": 1.0,
+        "layer_specific_restored_fraction_ci95": 0.0,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": true
+    }
+  ],
+  "mechanism_attribution_by_cell": {
+    "rnn_seed3": {
+      "marker_count_gap": 8.520753574371337,
+      "marker_position_gap": 0.0005451297760009766,
+      "length_parity_pairs_gap": 8.640714015960693,
+      "balance_pairs_gap": 3.337860107421875e-07,
+      "identified_mechanism": "marker_count + length_parity SPECIFICALLY (confirmed by elimination: length_parity_pairs gap large, balance_pairs gap near-zero)"
+    },
+    "rnn_seed7": {
+      "marker_count_gap": 9.583723440170289,
+      "marker_position_gap": 1.1625289916992187e-05,
+      "length_parity_pairs_gap": 8.221230154037476,
+      "balance_pairs_gap": NaN,
+      "identified_mechanism": "marker_count + length_parity OR is_balanced [UNDISAMBIGUATED -- balance_pairs not run for this specific cell]",
+      "note": "balance_pairs only run for rnn seed3 (design-step representative); seed7 attributed via its own large length_parity_pairs gap (8.22) plus architecture-level evidence from seed3."
+    },
+    "lstm_seed10": {
+      "marker_count_gap": 8.594491038322449,
+      "marker_position_gap": 0.006455802917480468,
+      "length_parity_pairs_gap": 0.0013927459716796876,
+      "balance_pairs_gap": 0.0021032261848449706,
+      "identified_mechanism": "marker_count"
+    },
+    "lstm_seed1": {
+      "marker_count_gap": 5.226069035530091,
+      "marker_position_gap": 4.158463368415832,
+      "length_parity_pairs_gap": 4.359266018867492,
+      "balance_pairs_gap": 5.726378312110901,
+      "identified_mechanism": "marker_count + marker_position + is_balanced/marker-centering (CONFIRMED via balance_pairs, direct evidence)"
+    },
+    "transformer_seed9": {
+      "marker_count_gap": 0.3173395609855652,
+      "marker_position_gap": 0.6394153094291687,
+      "length_parity_pairs_gap": 0.04702208518981934,
+      "balance_pairs_gap": 0.00929344654083252,
+      "identified_mechanism": "marker_count + marker_position"
+    },
+    "transformer_seed1": {
+      "marker_count_gap": 2.9986828541755677,
+      "marker_position_gap": 3.4119616757333278,
+      "length_parity_pairs_gap": 0.8798417282104493,
+      "balance_pairs_gap": 0.04039630889892578,
+      "identified_mechanism": "marker_count + marker_position + length_parity SPECIFICALLY (confirmed by elimination: length_parity_pairs gap large, balance_pairs gap near-zero)"
+    },
+    "mamba_seed4": {
+      "marker_count_gap": 8.035508489608764,
+      "marker_position_gap": 5.807613711357117,
+      "length_parity_pairs_gap": 0.002406909465789795,
+      "balance_pairs_gap": 5.159787499904633,
+      "identified_mechanism": "marker_count + marker_position + is_balanced/marker-centering (CONFIRMED via balance_pairs, direct evidence)"
+    },
+    "mamba_seed6": {
+      "marker_count_gap": 10.339012775421143,
+      "marker_position_gap": 8.75598313331604,
+      "length_parity_pairs_gap": 0.10672414779663086,
+      "balance_pairs_gap": 8.261184968948363,
+      "identified_mechanism": "marker_count + marker_position + is_balanced/marker-centering (CONFIRMED via balance_pairs, direct evidence)"
+    }
+  },
+  "lstm_seed10_marker_count_only_check": {
+    "hypothesis": "lstm seed10 uses marker_count alone, with no positional/parity/balance refinement.",
+    "evidence_for": {
+      "marker_count_gap": 8.594491038322449,
+      "marker_position_gap": 0.006455802917480468,
+      "length_parity_pairs_gap": 0.0013927459716796876,
+      "balance_pairs_gap": 0.0021032261848449706
+    },
+    "interpretation": "Three independent counterfactual types (marker_position, length_parity, balance) all show near-zero behavioral gap for lstm seed10, while marker_count alone shows a large gap (8.59) -- convergent null evidence across every structural refinement tested, plus one clear positive. A fourth, content-varying counterfactual (marker preserved at count=1 and centered, only mirror CONTENT varied) would complete the picture by ruling out content-sensitivity too -- this is exactly what balanced_content_match (condition 3, about to run) tests for EVERY architecture, so seed10's result there will serve as this confirmation without needing a redundant fifth counterfactual built here. Working attribution: marker_count-only, pending condition 3's content-null confirmation."
+  },
+  "notable_findings_for_user": [
+    "transformer seed1 ALSO shows length-parity-SPECIFIC sensitivity (length_parity_pairs gap=0.88, balance_pairs gap=0.04, ruled out by elimination) -- weaker in magnitude than rnn (8.2-8.6) but the same qualitative mechanism. This refines the corrected P4 narrative: length-parity sensitivity is NOT rnn-exclusive. transformer seed9 shows no such effect (length_parity_pairs gap=0.047, right at the threshold, essentially null) -- so this is a SEED-level split within transformer too, not just within lstm.",
+    "mamba (both seeds) and lstm seed1 all show DIRECT is_balanced/marker-centering sensitivity (balance_pairs gap 5.2-8.3), not just raw marker_position-bin sensitivity -- i.e. these architectures are sensitive to fine-grained (1-position) marker shifts, not only the coarse near/far distinction marker_position_pairs tested. This is a MORE refined mechanism than the P4 corrected summary's \"marker_count/marker_position, no length-parity refinement\" description implied -- \"no length-parity refinement\" remains true for these cells, but they are not using the crudest possible marker check either.",
+    "lstm shows THREE distinct mechanisms across its two probed seeds: seed10 = marker_count only (simplest in the pilot); seed1 = marker_count + marker_position + is_balanced (most refined non-rnn mechanism, comparable in sophistication to mamba). This is the most extreme seed-dependent mechanism split found in either pilot task."
+  ]
+}

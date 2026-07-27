@@ -1,0 +1,123 @@
+{
+  "task": "binary-multiplication",
+  "description": "Phase 3 (bounded) task audit for binary-multiplication. Confirms LSB-first encoding (same as binary-addition/compute-sqrt), exact x*y=z semantics, the multiplication-specific bitlength(x)+bitlength(y)-1/+0 length constraint, and an EXACT mod-2 LSB relationship (LSB(z)=LSB(x) AND LSB(y), unlike compute-sqrt where no such relationship exists). Confound check: present but the LEAST severe of the four tasks audited so far, leaving the largest genuinely-hard population (12.7% of all negatives).",
+  "grammar_confirmation": {
+    "alphabet": [
+      "0",
+      "1",
+      "\u00d7",
+      "="
+    ],
+    "encoding": "LSB-first (little-endian) fixed-width binary for u_x, u_y, u_z",
+    "n_positives_checked": 4943,
+    "x_times_y_equals_z_match_fraction": 1.0,
+    "bitlength_constraint": {
+      "formula": "bitlength(x*y) in {bitlength(x)+bitlength(y)-1, bitlength(x)+bitlength(y)} for x,y>0",
+      "n_checked": 3022,
+      "n_match": 3022,
+      "match_fraction": 1.0
+    },
+    "mod2_lsb_relationship": {
+      "formula": "LSB(z) == LSB(x) AND LSB(y)",
+      "n_checked": 4943,
+      "n_match": 4943,
+      "match_fraction": 1.0,
+      "note": "EXACT mathematical identity for multiplication (unlike compute-sqrt, where no such parity relationship was found) -- confirmed with zero exceptions."
+    },
+    "task_family_reclassification": "Same operator/equals-count family as binary-addition and compute-sqrt (viol_binary_arith is the SHARED violation classifier for both binary-addition and binary-multiplication) -- structurally simplest change from binary-addition is the harder target computation (multiplication's carry-propagation is a longer, non-linear dependency chain vs addition's simple ripple-carry) plus the doubled length-share for u_z (get_length_weights=(1,1,2))."
+  },
+  "cited_hard_negative_fraction_reproduction": {
+    "test_set_n_negatives": 2538,
+    "n_hard": 284,
+    "fraction": 0.11189913317572892
+  },
+  "hard_negative_confound_check": {
+    "n_hard": 284,
+    "hard_population_violation_kind_breakdown": {
+      "length_insufficient": 51,
+      "value_mismatch_only": 95,
+      "multiple_operators": 96,
+      "no_equals": 10,
+      "no_operator": 21,
+      "multiple_equals_or_misplaced": 7,
+      "empty_ux": 3,
+      "empty_uy": 1
+    },
+    "fraction_hard_that_is_trivial_confound": 0.6654929577464789,
+    "fraction_hard_that_is_genuinely_value_mismatch_only": 0.3345070422535211,
+    "confound_present_but_least_severe_of_four_tasks_audited": true,
+    "interpretation": "CONFIRMED but the LEAST severe confound of the four tasks audited in this pilot (missing-duplicate-string/stack-manipulation ~87%, compute-sqrt ~77%, binary-multiplication ~66.5%). The genuinely-hard fraction (33.5% of 'hard', 12.7% of ALL negatives) is the largest well-powered residual found so far."
+  },
+  "shortcut_feature_audit": {
+    "per_feature": {
+      "operator_count_is_one": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.29314420803782504
+      },
+      "equals_count_is_one_after_operator": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.1607565011820331
+      },
+      "fields_well_formed": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.15918045705279749
+      },
+      "length_sufficient": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.13120567375886524
+      },
+      "lsb_consistent": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.15524034672970843
+      }
+    },
+    "joint_all_five": {
+      "positive_satisfy_all_five_fraction": 1.0,
+      "n_shortcut_blind_negatives (pass ALL FIVE checks, still invalid)": 323,
+      "n_total_negatives": 2538,
+      "shortcut_blind_fraction_of_negatives": 0.1272655634357762,
+      "shortcut_blind_violation_kind_breakdown": {
+        "value_mismatch_only": 323
+      },
+      "interpretation": "The shortcut-blind population is exactly the set of negatives all five counting/parsing/AND-check features CANNOT distinguish from a genuine positive -- the LARGEST such residual found in this pilot so far relative to the other three tasks audited, comparable in scale to compute-sqrt's."
+    }
+  },
+  "load_bearing_counterexample": {
+    "clean": [
+      "1",
+      "1",
+      "\u00d7",
+      "1",
+      "1",
+      "=",
+      "1",
+      "0",
+      "0",
+      "1"
+    ],
+    "corrupted": [
+      "1",
+      "1",
+      "\u00d7",
+      "1",
+      "1",
+      "=",
+      "1",
+      "0",
+      "1",
+      "0"
+    ],
+    "clean_violation": "ACTUALLY_POSITIVE",
+    "corrupted_violation": "value_mismatch_only",
+    "all_five_shortcut_features_identical_between_clean_and_corrupted": true,
+    "per_feature_match": {
+      "operator_count_is_one": true,
+      "equals_count_is_one_after_operator": true,
+      "fields_well_formed": true,
+      "length_sufficient": true,
+      "lsb_consistent": true
+    }
+  },
+  "genuinely_hard_population_definition_for_later_conditions": "operator_count_is_one AND equals_count_is_one_after_operator AND fields_well_formed AND length_sufficient AND lsb_consistent AND value_mismatch_only -- 323 real test-set examples.",
+  "bit_order_note_for_condition3_position_sweep": "LSB-first encoding means 'early' sequence positions within u_z are LOW-ORDER (small-magnitude) bits and 'late' positions are HIGH-ORDER (large-magnitude) bits -- same convention as compute-sqrt. Any Condition 3 gap that scales with position must be checked against this magnitude confound before being read as more comprehensive verification at high positions."
+}

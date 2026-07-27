@@ -1,0 +1,103 @@
+{
+  "task": "compute-sqrt",
+  "description": "Phase 3 (bounded) task audit for compute-sqrt. Confirms LSB-first binary encoding for both x and z (opposite of naive MSB-first assumption -- critical for Condition 3's 'early vs late bit' position sweep: leftmost/early sequence positions are LOW-ORDER bits, rightmost/late positions are HIGH-ORDER bits). Confirms integer-floor-sqrt semantics (not exact-perfect-square). No mod-2 parity shortcut exists. Confound check: present but markedly less severe than missing-duplicate-string/stack-manipulation, leaving a substantial (16.5% of all negatives) genuinely-hard population.",
+  "grammar_confirmation": {
+    "alphabet": [
+      "0",
+      "1",
+      "="
+    ],
+    "encoding": "LSB-first (little-endian) fixed-width binary for both u_x and u_z",
+    "n_positives_checked": 5077,
+    "floor_sqrt_exact_match_fraction": 1.0,
+    "answer_length_sufficient_always_holds": 1.0,
+    "bitlength_isqrt_equals_ceil_half_bitlength_x": "mathematically exact identity, spot-checked: bitlength(isqrt(x)) == ceil(bitlength(x)/2) for x in {3,4,8,15,16} -- a trivial O(1) shortcut requiring no sqrt VALUE computation.",
+    "x_z_parity_joint_distribution_on_positives": {
+      "(1, 1)": 1532,
+      "(0, 0)": 1419,
+      "(0, 1)": 1201,
+      "(1, 0)": 925
+    },
+    "no_fixed_mod2_relationship_between_x_and_z": true
+  },
+  "cited_hard_negative_fraction_reproduction": {
+    "test_set_n_negatives": 2487,
+    "n_hard": 477,
+    "fraction": 0.19179734620024125,
+    "matches_a1_audit_cited_19_18_percent": true
+  },
+  "hard_negative_confound_check": {
+    "n_hard": 477,
+    "hard_population_violation_kind_breakdown": {
+      "multiple_markers": 222,
+      "value_mismatch_only": 110,
+      "length_insufficient": 119,
+      "no_marker": 22,
+      "empty_uz": 1,
+      "empty_ux": 3
+    },
+    "fraction_hard_that_is_trivial_confound (marker/length/empty checks)": 0.7693920335429769,
+    "fraction_hard_that_is_genuinely_value_mismatch_only": 0.23060796645702306,
+    "confound_present_but_less_severe_than_prior_two_tasks": true,
+    "interpretation": "CONFIRMED but LESS SEVERE than missing-duplicate-string (87%) or stack-manipulation (87%): 76.9% of the nominally-'hard' population is a trivial structural shortcut (dominated by multiple_markers at 46.5%, not length as in the prior two tasks -- here the second '=' simply happens to occur late for this task's negative-generation distribution). The remaining 23.1% is genuinely value_mismatch_only. Unlike the prior two tasks, this leaves a SUBSTANTIAL genuinely-hard population (16.5% of ALL negatives, 411/2487) -- large enough that a meaningful direct-accuracy check and Condition 3 test are both well-powered here, not just a token residual."
+  },
+  "shortcut_feature_audit": {
+    "per_feature": {
+      "marker_count_is_one": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.23080016083634902
+      },
+      "fields_well_formed": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.22919179734620024
+      },
+      "answer_length_sufficient": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.1652593486127865
+      }
+    },
+    "joint_all_three": {
+      "positive_satisfy_all_three_fraction": 1.0,
+      "n_shortcut_blind_negatives (pass ALL THREE checks, still invalid)": 411,
+      "n_total_negatives": 2487,
+      "shortcut_blind_fraction_of_negatives": 0.1652593486127865,
+      "shortcut_blind_violation_kind_breakdown": {
+        "value_mismatch_only": 411
+      },
+      "interpretation": "The shortcut-blind population is exactly the set of negatives all three counting/parsing checks CANNOT distinguish from a genuine positive -- SUBSTANTIALLY LARGER here (16.5% of all negatives) than for missing-duplicate-string/stack-manipulation (~2.4% each), meaning compute-sqrt's structural shortcuts leave much more of the real negative distribution requiring genuine sqrt verification to catch."
+    }
+  },
+  "load_bearing_counterexample": {
+    "clean": [
+      "1",
+      "0",
+      "0",
+      "1",
+      "=",
+      "1",
+      "1"
+    ],
+    "corrupted": [
+      "1",
+      "0",
+      "0",
+      "1",
+      "=",
+      "0",
+      "1"
+    ],
+    "clean_x": 9,
+    "clean_z": 3,
+    "corrupted_z": 2,
+    "clean_violation": "ACTUALLY_POSITIVE",
+    "corrupted_violation": "value_mismatch_only",
+    "all_three_shortcut_features_identical_between_clean_and_corrupted": true,
+    "per_feature_match": {
+      "marker_count_is_one": true,
+      "fields_well_formed": true,
+      "answer_length_sufficient": true
+    }
+  },
+  "genuinely_hard_population_definition_for_later_conditions": "marker_count_is_one AND fields_well_formed AND answer_length_sufficient AND value_mismatch_only (decoded z != true isqrt(x)) -- 411 real test-set examples, SUBSTANTIALLY larger than the prior two tasks' residuals.",
+  "bit_order_note_for_condition3_position_sweep": "LSB-first encoding means 'early' sequence positions within u_z are LOW-ORDER (small magnitude) bits and 'late' positions are HIGH-ORDER (large magnitude) bits -- flipping a late/high-order bit changes z's VALUE by a much larger amount than flipping an early/low-order bit. Any Condition 3 gap that scales with position must be checked against this magnitude confound (per the user's explicit binary-addition-precedent concern) before being read as 'more comprehensive verification at high positions' -- it may just be magnitude sensitivity."
+}

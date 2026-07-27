@@ -1,0 +1,113 @@
+{
+  "task": "missing-duplicate-string",
+  "trigger": "Condition 2 (phase3_missdup_condition2.json) showed near-zero behavioral gap for ALL 8 cells, flatly contradicting the flare_a2-derived prediction (Transformer/Mamba large effect, RNN/LSTM modest). Investigated rather than accepted at face value.",
+  "finding": "flare_a2's hard-negative population (viol_missing_duplicate_string frac>=0.8) is CONFOUNDED: it returns 'hard' (frac=1.0) for BOTH blank_count!=1 negatives AND odd-length negatives, because these are only PROVABLE at end-of-sequence under the incremental-detectability metric -- despite both being trivial O(1) running-counter shortcuts, not genuine content verification. Direct per-bucket accuracy (bypassing patching entirely) shows: (1) ALL FOUR architectures solve blank_count!=1 near-perfectly (~100%, the cheapest possible shortcut); (2) RNN/LSTM ALSO solve blank1_odd near-perfectly via length parity (matching Condition 1's ~8-logit causal effect there); Transformer/Mamba do NOT reliably use length parity (near/below chance); (3) on the ONE population that actually requires position-by-position content verification (blank_count==1 AND even length -- phase3_missdup_task_audit.json's 'genuinely hard candidates'), RNN/LSTM/Mamba are all NEAR-FLOOR (always predict accept, ~0-4%), and Transformer is NEAR-CHANCE (~48-51%). NONE of the four architectures show evidence of genuine duplicate-content verification.",
+  "revised_interpretation": "The original hypothesis framing (RNN/LSTM = genuine positional tracking via content-preserving carry, Transformer/Mamba = shallow aggregate-count route) is NOT SUPPORTED. A more accurate characterization: RNN/LSTM's high reported 'hard-negative accuracy' (91%, flare_a2) is fully explained by TWO trivial structural shortcuts (blank-count-is-one AND length-parity) that happen to cover the vast majority of the real test distribution's negatives -- NOT by genuine content verification. Transformer relies on only ONE of those shortcuts (blank-count), explaining its lower reported hard-negative accuracy (25%). Mamba is similar to Transformer/near-floor on genuine verification despite solving blank-count. Condition 2's uniform near-zero gap is therefore CORRECT, not a null result masking a real effect: there is no meaningful decision for patching to flip in the genuinely-hard regime, because every architecture already defaults to (near-)constant behavior there regardless of input content.",
+  "implication_for_condition_3": "Condition 3's position_mismatch_pairs are ALSO drawn from the genuinely-hard population (blank_count==1, even length -- a same-half SWAP changes neither). Given this investigation, Condition 3 is now PREDICTED to ALSO show near-zero behavioral gaps for the same underlying reason (floor/near-chance baseline accuracy in this regime, not genuine position-sensitivity to test) -- reported explicitly as a revised prediction, not assumed; run and reported honestly regardless of outcome.",
+  "per_cell_bucketed_accuracy": [
+    {
+      "arch": "rnn",
+      "seed": 2,
+      "role": "primary",
+      "acc_blank_count_not_1_trivial_shortcut": 1.0,
+      "n_blank_count_not_1": 1822,
+      "acc_blank1_odd_length_parity_shortcut": 1.0,
+      "n_blank1_odd": 441,
+      "acc_blank1_even_GENUINELY_HARD": 0.0,
+      "n_blank1_even": 275,
+      "genuinely_hard_near_floor (<=0.10)": true,
+      "genuinely_hard_near_chance (0.40-0.60)": false
+    },
+    {
+      "arch": "rnn",
+      "seed": 3,
+      "role": "secondary",
+      "acc_blank_count_not_1_trivial_shortcut": 1.0,
+      "n_blank_count_not_1": 1822,
+      "acc_blank1_odd_length_parity_shortcut": 1.0,
+      "n_blank1_odd": 441,
+      "acc_blank1_even_GENUINELY_HARD": 0.0,
+      "n_blank1_even": 275,
+      "genuinely_hard_near_floor (<=0.10)": true,
+      "genuinely_hard_near_chance (0.40-0.60)": false
+    },
+    {
+      "arch": "lstm",
+      "seed": 1,
+      "role": "primary",
+      "acc_blank_count_not_1_trivial_shortcut": 1.0,
+      "n_blank_count_not_1": 1822,
+      "acc_blank1_odd_length_parity_shortcut": 1.0,
+      "n_blank1_odd": 441,
+      "acc_blank1_even_GENUINELY_HARD": 0.0036363636363636364,
+      "n_blank1_even": 275,
+      "genuinely_hard_near_floor (<=0.10)": true,
+      "genuinely_hard_near_chance (0.40-0.60)": false
+    },
+    {
+      "arch": "lstm",
+      "seed": 2,
+      "role": "secondary",
+      "acc_blank_count_not_1_trivial_shortcut": 1.0,
+      "n_blank_count_not_1": 1822,
+      "acc_blank1_odd_length_parity_shortcut": 1.0,
+      "n_blank1_odd": 441,
+      "acc_blank1_even_GENUINELY_HARD": 0.0,
+      "n_blank1_even": 275,
+      "genuinely_hard_near_floor (<=0.10)": true,
+      "genuinely_hard_near_chance (0.40-0.60)": false
+    },
+    {
+      "arch": "transformer",
+      "seed": 8,
+      "role": "primary",
+      "acc_blank_count_not_1_trivial_shortcut": 0.9983534577387486,
+      "n_blank_count_not_1": 1822,
+      "acc_blank1_odd_length_parity_shortcut": 0.5056689342403629,
+      "n_blank1_odd": 441,
+      "acc_blank1_even_GENUINELY_HARD": 0.48363636363636364,
+      "n_blank1_even": 275,
+      "genuinely_hard_near_floor (<=0.10)": false,
+      "genuinely_hard_near_chance (0.40-0.60)": true
+    },
+    {
+      "arch": "transformer",
+      "seed": 10,
+      "role": "secondary",
+      "acc_blank_count_not_1_trivial_shortcut": 0.9950603732162459,
+      "n_blank_count_not_1": 1822,
+      "acc_blank1_odd_length_parity_shortcut": 0.02947845804988662,
+      "n_blank1_odd": 441,
+      "acc_blank1_even_GENUINELY_HARD": 0.014545454545454545,
+      "n_blank1_even": 275,
+      "genuinely_hard_near_floor (<=0.10)": true,
+      "genuinely_hard_near_chance (0.40-0.60)": false
+    },
+    {
+      "arch": "mamba",
+      "seed": 9,
+      "role": "primary",
+      "acc_blank_count_not_1_trivial_shortcut": 1.0,
+      "n_blank_count_not_1": 1822,
+      "acc_blank1_odd_length_parity_shortcut": 0.034013605442176874,
+      "n_blank1_odd": 441,
+      "acc_blank1_even_GENUINELY_HARD": 0.01818181818181818,
+      "n_blank1_even": 275,
+      "genuinely_hard_near_floor (<=0.10)": true,
+      "genuinely_hard_near_chance (0.40-0.60)": false
+    },
+    {
+      "arch": "mamba",
+      "seed": 5,
+      "role": "secondary",
+      "acc_blank_count_not_1_trivial_shortcut": 0.973655323819978,
+      "n_blank_count_not_1": 1822,
+      "acc_blank1_odd_length_parity_shortcut": 0.03854875283446712,
+      "n_blank1_odd": 441,
+      "acc_blank1_even_GENUINELY_HARD": 0.02181818181818182,
+      "n_blank1_even": 275,
+      "genuinely_hard_near_floor (<=0.10)": true,
+      "genuinely_hard_near_chance (0.40-0.60)": false
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "task": "repeat-01",
+  "description": "Phase 3 (bounded) task audit for repeat-01, the structurally simplest task in this pilot's shortcut-vulnerable coverage (DFA-based, 2-symbol alphabet, no structural tokens). Confirms the (01)* target exactly. KEY FINDING: viol_repeat_01's 'hard negative' classification and the TRUE shortcut-blind population are largely disjoint for this task (only 5/151 overlap) -- the correct genuinely-hard population for Condition 3 is the 115-example shortcut-blind set, defined directly via the four structural features, not the viol-based classification.",
+  "grammar_confirmation": {
+    "alphabet": [
+      "0",
+      "1"
+    ],
+    "dfa_based": true,
+    "target": "(01)* -- s[i]=='0' if i even else '1', for all i, AND len(s) even",
+    "n_positives_checked": 5026,
+    "positive_match_fraction": 1.0,
+    "n_negatives_checked": 4974,
+    "n_negatives_accidentally_matching": 0
+  },
+  "cited_hard_negative_fraction_reproduction": {
+    "test_set_n_negatives": 2502,
+    "n_hard": 151,
+    "fraction": 0.06035171862509992
+  },
+  "hard_vs_shortcut_blind_divergence_check": {
+    "n_hard": 151,
+    "hard_population_violation_kind_breakdown": {
+      "alternation_mismatch": 138,
+      "length_parity_only": 13
+    },
+    "n_hard_that_is_ALSO_shortcut_blind": 5,
+    "fraction_hard_that_is_trivially_catchable": 0.9668874172185431,
+    "interpretation": "CONFIRMED: 96.7% of the nominally-'hard' population is trivially catchable by the four structural shortcuts (matching the user's prediction). But this does NOT mean the task has almost no genuinely-hard population -- see the full shortcut-blind audit below, which finds a LARGER (115-example) shortcut-blind population spread across ALL positions, not concentrated late the way viol_repeat_01's classification would suggest."
+  },
+  "shortcut_feature_audit": {
+    "per_feature": {
+      "length_parity_even": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.44364508393285373
+      },
+      "first_symbol_is_0": {
+        "positive_satisfy_fraction": 0.9968102073365231,
+        "negative_satisfy_fraction": 0.746203037569944
+      },
+      "last_symbol_is_1": {
+        "positive_satisfy_fraction": 0.9968102073365231,
+        "negative_satisfy_fraction": 0.7398081534772182
+      },
+      "count_balance": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.05875299760191847
+      }
+    },
+    "joint_all_four": {
+      "positive_satisfy_all_four_fraction": 0.9968102073365231,
+      "n_shortcut_blind_negatives (pass ALL FOUR checks, still invalid)": 115,
+      "n_total_negatives": 2502,
+      "shortcut_blind_fraction_of_negatives": 0.04596322941646683,
+      "shortcut_blind_violation_kind_breakdown": {
+        "alternation_mismatch": 115
+      }
+    }
+  },
+  "genuinely_hard_population_position_distribution": {
+    "n_shortcut_blind": 115,
+    "first_violation_fraction_mean": 0.254366348806662,
+    "first_violation_fraction_histogram_5bins_0to1": [
+      58,
+      29,
+      12,
+      9,
+      7
+    ],
+    "n_classified_hard_by_viol_among_shortcut_blind (frac>=0.8)": 5,
+    "interpretation": "The 115 shortcut-blind negatives' first-violation positions are spread across the WHOLE string (mean fraction 0.25, most concentrated EARLY not late) -- because expected[i] is a pure function of position i, not history-dependent, a count-preserving corruption (e.g. adjacent swap) can be detected at any position, unlike the marker/count-family tasks elsewhere in this pilot where genuine hardness was structurally forced to be late-detectable."
+  },
+  "load_bearing_counterexample": {
+    "clean": [
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "1",
+      "0",
+      "1"
+    ],
+    "corrupted": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "0",
+      "1",
+      "0",
+      "1"
+    ],
+    "clean_violation": "ACTUALLY_POSITIVE",
+    "corrupted_violation": "alternation_mismatch",
+    "all_four_shortcut_features_identical_between_clean_and_corrupted": true,
+    "per_feature_match": {
+      "length_parity_even": true,
+      "first_symbol_is_0": true,
+      "last_symbol_is_1": true,
+      "count_balance": true
+    }
+  },
+  "genuinely_hard_population_definition_for_later_conditions": "length_parity_even AND first_symbol_is_0 AND last_symbol_is_1 AND count_balance AND alternation_mismatch (NOT the viol_repeat_01 'hard' classification) -- 115 real test-set examples, spread across all positions."
+}

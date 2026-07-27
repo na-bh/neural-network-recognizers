@@ -1,0 +1,159 @@
+{
+  "task": "bucket-sort",
+  "n_test_examples": 5010,
+  "n_long": 982,
+  "selected_seeds": {
+    "rnn": 4,
+    "lstm": 2,
+    "transformer": 7,
+    "mamba": 7
+  },
+  "accuracy_table": {
+    "rnn": {
+      "1": 0.6266666666666667,
+      "2": 0.7333333333333333,
+      "3": 0.5,
+      "4": 0.9266666666666666,
+      "5": 0.8466666666666667,
+      "6": 0.5,
+      "7": 0.5,
+      "8": 0.49333333333333335,
+      "9": 0.8666666666666667,
+      "10": 0.9266666666666666
+    },
+    "lstm": {
+      "1": 0.5,
+      "2": 0.7666666666666667,
+      "3": 0.5066666666666667,
+      "4": 0.5,
+      "5": 0.5,
+      "6": 0.48,
+      "7": 0.5,
+      "8": 0.5,
+      "9": 0.5,
+      "10": 0.5
+    },
+    "transformer": {
+      "1": 0.8066666666666666,
+      "2": 0.5,
+      "3": 0.8533333333333334,
+      "4": 0.5,
+      "5": 0.8266666666666667,
+      "6": 0.5666666666666667,
+      "7": 0.8666666666666667,
+      "8": 0.5,
+      "9": 0.5,
+      "10": 0.49333333333333335
+    },
+    "mamba": {
+      "0": 0.5066666666666667,
+      "1": 0.5,
+      "2": 0.74,
+      "3": 0.7466666666666667,
+      "4": 0.7466666666666667,
+      "5": 0.68,
+      "6": 0.7466666666666667,
+      "7": 0.7533333333333333,
+      "8": 0.5,
+      "9": 0.5
+    }
+  },
+  "n_positives": 2519,
+  "n_hard_negatives": 394,
+  "n_scrambled_negatives": 2091,
+  "n_total": 5010,
+  "grammar_only_ceiling": 0.9594810379241517,
+  "hard_vs_scrambled_negative_accuracy": {
+    "rnn": {
+      "hard_negative_accuracy": 0.9033333333333333,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.8666666666666667,
+      "n_scrambled": 300
+    },
+    "lstm": {
+      "hard_negative_accuracy": 0.06666666666666667,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.68,
+      "n_scrambled": 300
+    },
+    "transformer": {
+      "hard_negative_accuracy": 0.56,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.8566666666666667,
+      "n_scrambled": 300
+    },
+    "mamba": {
+      "hard_negative_accuracy": 0.33666666666666667,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.68,
+      "n_scrambled": 300
+    }
+  },
+  "counterfactual_logit_difference": {
+    "rnn": {
+      "short_L20": {
+        "length": 19,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 5.407308000326156,
+        "median_abs_delta_logit": 6.335031032562256,
+        "frac_corrupt_accepted": 0.15
+      },
+      "long_L400": {
+        "length": 399,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 6.039134979248047,
+        "median_abs_delta_logit": 6.4685304164886475,
+        "frac_corrupt_accepted": 0.0
+      }
+    },
+    "lstm": {
+      "short_L20": {
+        "length": 19,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.010545459985733032,
+        "median_abs_delta_logit": 0.007614791393280029,
+        "frac_corrupt_accepted": 1.0
+      },
+      "long_L400": {
+        "length": 399,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.005077360272407532,
+        "median_abs_delta_logit": 0.0056469738483428955,
+        "frac_corrupt_accepted": 0.97
+      }
+    },
+    "transformer": {
+      "short_L20": {
+        "length": 19,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 12.266156046390533,
+        "median_abs_delta_logit": 13.264735221862793,
+        "frac_corrupt_accepted": 0.0
+      },
+      "long_L400": {
+        "length": 399,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 10.743512733578681,
+        "median_abs_delta_logit": 10.673554509878159,
+        "frac_corrupt_accepted": 0.0
+      }
+    },
+    "mamba": {
+      "short_L20": {
+        "length": 19,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 6.279753900766373,
+        "median_abs_delta_logit": 7.363030314445496,
+        "frac_corrupt_accepted": 0.15
+      },
+      "long_L400": {
+        "length": 399,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 7.07904809474945,
+        "median_abs_delta_logit": 7.352684915065765,
+        "frac_corrupt_accepted": 0.0
+      }
+    }
+  },
+  "test_resolvable": true
+}

@@ -1,0 +1,159 @@
+{
+  "task": "marked-reversal",
+  "n_test_examples": 5010,
+  "n_long": 1016,
+  "selected_seeds": {
+    "rnn": 3,
+    "lstm": 10,
+    "transformer": 9,
+    "mamba": 4
+  },
+  "accuracy_table": {
+    "rnn": {
+      "1": 0.4666666666666667,
+      "2": 0.78,
+      "3": 0.94,
+      "4": 0.47333333333333333,
+      "5": 0.78,
+      "6": 0.78,
+      "7": 0.94,
+      "8": 0.7533333333333333,
+      "9": 0.4666666666666667,
+      "10": 0.7533333333333333
+    },
+    "lstm": {
+      "1": 0.47333333333333333,
+      "2": 0.47333333333333333,
+      "3": 0.47333333333333333,
+      "4": 0.47333333333333333,
+      "5": 0.47333333333333333,
+      "6": 0.47333333333333333,
+      "7": 0.47333333333333333,
+      "8": 0.47333333333333333,
+      "9": 0.47333333333333333,
+      "10": 0.78
+    },
+    "transformer": {
+      "1": 0.47333333333333333,
+      "2": 0.47333333333333333,
+      "3": 0.47333333333333333,
+      "4": 0.47333333333333333,
+      "5": 0.47333333333333333,
+      "6": 0.47333333333333333,
+      "7": 0.47333333333333333,
+      "8": 0.47333333333333333,
+      "9": 0.7666666666666667,
+      "10": 0.4666666666666667
+    },
+    "mamba": {
+      "0": 0.7333333333333333,
+      "1": 0.47333333333333333,
+      "2": 0.47333333333333333,
+      "3": 0.4666666666666667,
+      "4": 0.8666666666666667,
+      "5": 0.4666666666666667,
+      "6": 0.84,
+      "7": 0.47333333333333333,
+      "8": 0.47333333333333333,
+      "9": 0.4666666666666667
+    }
+  },
+  "n_positives": 2534,
+  "n_hard_negatives": 329,
+  "n_scrambled_negatives": 2144,
+  "n_total": 5010,
+  "grammar_only_ceiling": 0.966566866267465,
+  "hard_vs_scrambled_negative_accuracy": {
+    "rnn": {
+      "hard_negative_accuracy": 0.8033333333333333,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.89,
+      "n_scrambled": 300
+    },
+    "lstm": {
+      "hard_negative_accuracy": 0.14333333333333334,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.6966666666666667,
+      "n_scrambled": 300
+    },
+    "transformer": {
+      "hard_negative_accuracy": 0.17,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.6833333333333333,
+      "n_scrambled": 300
+    },
+    "mamba": {
+      "hard_negative_accuracy": 0.36666666666666664,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.8,
+      "n_scrambled": 300
+    }
+  },
+  "counterfactual_logit_difference": {
+    "rnn": {
+      "short_L20": {
+        "length": 19,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.00015596389770507812,
+        "median_abs_delta_logit": 0.00014138221740722656,
+        "frac_corrupt_accepted": 1.0
+      },
+      "long_L400": {
+        "length": 399,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.0002661275863647461,
+        "median_abs_delta_logit": 0.00027191638946533203,
+        "frac_corrupt_accepted": 1.0
+      }
+    },
+    "lstm": {
+      "short_L20": {
+        "length": 19,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 4.900217056274414e-05,
+        "median_abs_delta_logit": 4.124641418457031e-05,
+        "frac_corrupt_accepted": 1.0
+      },
+      "long_L400": {
+        "length": 399,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 2.1845698356628417e-05,
+        "median_abs_delta_logit": 2.1785497665405273e-05,
+        "frac_corrupt_accepted": 1.0
+      }
+    },
+    "transformer": {
+      "short_L20": {
+        "length": 19,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.059023512601852415,
+        "median_abs_delta_logit": 0.05912584066390991,
+        "frac_corrupt_accepted": 1.0
+      },
+      "long_L400": {
+        "length": 399,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.001976224780082703,
+        "median_abs_delta_logit": 0.0019488632678985596,
+        "frac_corrupt_accepted": 1.0
+      }
+    },
+    "mamba": {
+      "short_L20": {
+        "length": 19,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.015253570675849915,
+        "median_abs_delta_logit": 0.014904379844665527,
+        "frac_corrupt_accepted": 1.0
+      },
+      "long_L400": {
+        "length": 399,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.0169021612405777,
+        "median_abs_delta_logit": 0.01674652099609375,
+        "frac_corrupt_accepted": 1.0
+      }
+    }
+  },
+  "test_resolvable": true
+}

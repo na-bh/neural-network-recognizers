@@ -1,0 +1,124 @@
+{
+  "task": "dyck-2-3",
+  "k_bracket_types": 2,
+  "m_max_nesting_depth": 3,
+  "description": "Phase 3 (bounded) task audit for Dyck-2-3, a stack-carrier formal language -- structurally distinct from the marker-family (durable content carrier) and arithmetic (carry-propagation carrier) tasks already piloted.",
+  "k_m_confirmation": {
+    "2": {
+      "n_match": 5905,
+      "n_total": 10000,
+      "fraction": 0.5905
+    },
+    "3": {
+      "n_match": 10000,
+      "n_total": 10000,
+      "fraction": 1.0
+    },
+    "4": {
+      "n_match": 9990,
+      "n_total": 10000,
+      "fraction": 0.999
+    },
+    "None": {
+      "n_match": 9989,
+      "n_total": 10000,
+      "fraction": 0.9989
+    }
+  },
+  "cited_hard_negative_fraction_reproduction": {
+    "test_set_n_negatives": 2545,
+    "n_hard_by_viol_dyck": 297,
+    "fraction": 0.11669941060903732,
+    "matches_cited_11_7_percent": true
+  },
+  "viol_dyck_depth_blindness_gap": {
+    "n_checked": 297,
+    "n_reclassified_as_earlier_violation": 171,
+    "examples": [
+      {
+        "seq_len": 262,
+        "viol_dyck_frac": 1.0,
+        "viol_dyck_with_depth_frac": 0.019083969465648856,
+        "true_kind": "depth_exceeded"
+      },
+      {
+        "seq_len": 39,
+        "viol_dyck_frac": 1.0,
+        "viol_dyck_with_depth_frac": 0.1794871794871795,
+        "true_kind": "depth_exceeded"
+      },
+      {
+        "seq_len": 345,
+        "viol_dyck_frac": 1.0,
+        "viol_dyck_with_depth_frac": 0.744927536231884,
+        "true_kind": "depth_exceeded"
+      }
+    ],
+    "fraction_of_viol_dyck_hard_negatives_actually_depth_exceeded_earlier": 0.5757575757575758
+  },
+  "shortcut_feature_audit": {
+    "per_feature": {
+      "bracket_count_parity": {
+        "classification": "TRIVIAL_COUNTING_OR_POSITIONAL",
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.09469548133595285,
+        "note": "necessary-condition check: should be ~1.0 for positives (a real violation in this feature would make a positive fail, which should never happen); the negative_satisfy_fraction is this feature's OWN blind spot size."
+      },
+      "per_type_bracket_counts": {
+        "classification": "TRIVIAL_COUNTING_OR_POSITIONAL",
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.018860510805500982,
+        "note": "necessary-condition check: should be ~1.0 for positives (a real violation in this feature would make a positive fail, which should never happen); the negative_satisfy_fraction is this feature's OWN blind spot size."
+      },
+      "sequence_length_parity": {
+        "classification": "TRIVIAL_COUNTING_OR_POSITIONAL",
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.45029469548133594,
+        "note": "necessary-condition check: should be ~1.0 for positives (a real violation in this feature would make a positive fail, which should never happen); the negative_satisfy_fraction is this feature's OWN blind spot size."
+      },
+      "first_last_check": {
+        "classification": "TRIVIAL_COUNTING_OR_POSITIONAL",
+        "positive_satisfy_fraction": 0.9959432048681541,
+        "negative_satisfy_fraction": 0.6286836935166994,
+        "note": "necessary-condition check: should be ~1.0 for positives (a real violation in this feature would make a positive fail, which should never happen); the negative_satisfy_fraction is this feature's OWN blind spot size."
+      }
+    },
+    "joint_all_four": {
+      "positive_satisfy_all_four_fraction": 0.9959432048681541,
+      "negative_satisfy_all_four_fraction (shortcut-blind fraction)": 0.016895874263261296,
+      "n_shortcut_blind_negatives": 43,
+      "n_total_negatives": 2545,
+      "shortcut_blind_violation_kind_breakdown": {
+        "close_with_nothing_open": 13,
+        "type_mismatch": 20,
+        "depth_exceeded": 10
+      },
+      "interpretation": "The shortcut-blind population is exactly the set of negatives that four independent counting/positional checks (bracket-count parity, per-type counts, length parity, first/last check) CANNOT distinguish from a genuine positive -- a purely structural baseline is chance-level on this subset by construction, regardless of how many counting features it has access to, since none of them encode LIFO order or nesting depth."
+    },
+    "all_features_trivial_counting_or_positional_no_stack_required": true,
+    "target_computation_requires_stack": "TRUE target computation requires LIFO type-matching (a closer must match the most recently opened, still-unclosed type) AND a bounded depth counter (nesting beyond m=3 is invalid) -- neither is reducible to any combination of the four counting/positional features audited above, demonstrated directly by the counterexample below."
+  },
+  "load_bearing_counterexample": {
+    "clean": [
+      "(0",
+      "(1",
+      ")1",
+      ")0"
+    ],
+    "corrupted": [
+      "(0",
+      "(1",
+      ")0",
+      ")1"
+    ],
+    "clean_is_valid": true,
+    "corrupted_is_valid": false,
+    "all_four_shortcut_features_identical_between_clean_and_corrupted": true,
+    "per_feature_match": {
+      "bracket_count_parity": true,
+      "per_type_bracket_counts": true,
+      "sequence_length_parity": true,
+      "first_last_check": true
+    }
+  }
+}

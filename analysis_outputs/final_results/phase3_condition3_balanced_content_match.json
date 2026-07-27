@@ -1,0 +1,309 @@
+{
+  "condition": "condition_3_balanced_content_match",
+  "status": "CONFIRMATORY null test, applied to all 8 cells (previously only behaviorally spot-checked on rnn seed3 during the Phase 3 design step). PRIMARY evidence is the behavioral logit gap; full-state wiring check is secondary/reference only.",
+  "description": "Tests genuine mirror-content verification via mirror_pairs (content flipped, is_balanced/marker_count held constant) for all 4 architectures x 2 seeds. Predicted: near-zero effect everywhere, matching the corrected Phase 2 balanced_content_match probe (selectivity = 0.0 at every layer, every seed, all 4 architectures).",
+  "n_half": 50,
+  "n_pairs_generated": 25,
+  "mirror_pairs_audit": {
+    "n_pairs": 25,
+    "same_length": true,
+    "same_marker_count": true,
+    "same_marker_position": true,
+    "n_token_positions_differing": {
+      "min": 1,
+      "max": 1
+    },
+    "differs_at_exactly_one_position": true,
+    "flip_position_is_the_only_difference": true,
+    "clean_all_full_match": true,
+    "corrupt_all_no_match": true,
+    "target_property_isolated": true
+  },
+  "cells": [
+    {
+      "arch": "rnn",
+      "seed": 3,
+      "checkpoint": "data/models/marked-reversal/rnn/rec+ns/validation-short/3",
+      "balanced_content_match_best_layer": 2,
+      "layer_selectivity_from_sweep": {
+        "0": 2.031199220042801e-06,
+        "1": 4.062398440085602e-06,
+        "2": 8.124796880060181e-06,
+        "3": -0.00035816812913014306,
+        "4": 6.093597660239425e-06
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 7.62939453125e-08,
+        "ci95_abs_clean_corrupt_logit_gap": 4.449589958173112e-08,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 8
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": 0.25,
+        "layer_specific_restored_fraction_ci95": 0.32078029864690877,
+        "layer_specific_n_nondegenerate_denom": 8
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "SURPRISING_above_noise_content_sensitivity": false,
+      "layer_specific_patch_caveat": "behavioral gap (0.0000) is degenerate/near-zero -- layer_specific rf is not meaningful; near-zero gap IS the finding (no content verification, as predicted)."
+    },
+    {
+      "arch": "rnn",
+      "seed": 7,
+      "checkpoint": "data/models/marked-reversal/rnn/rec+ns/validation-short/7",
+      "balanced_content_match_best_layer": 1,
+      "layer_selectivity_from_sweep": {
+        "0": -0.0003656158596035963,
+        "1": 1.0155996100102982e-05,
+        "2": 9.478929693607085e-06,
+        "3": 0.0,
+        "4": 8.124796880060181e-06
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 0.0,
+        "ci95_abs_clean_corrupt_logit_gap": 0.0,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": NaN,
+        "wiring_restored_fraction_ci95": NaN,
+        "wiring_n_nondegenerate_denom": 0
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": NaN,
+        "layer_specific_restored_fraction_ci95": NaN,
+        "layer_specific_n_nondegenerate_denom": 0
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "SURPRISING_above_noise_content_sensitivity": false,
+      "layer_specific_patch_caveat": "behavioral gap (0.0000) is degenerate/near-zero -- layer_specific rf is not meaningful; near-zero gap IS the finding (no content verification, as predicted)."
+    },
+    {
+      "arch": "lstm",
+      "seed": 10,
+      "checkpoint": "data/models/marked-reversal/lstm/rec+ns/validation-short/10",
+      "balanced_content_match_best_layer": 4,
+      "layer_selectivity_from_sweep": {
+        "0": 7.447730473564285e-06,
+        "1": -6.77066406717941e-07,
+        "2": 7.447730473453262e-06,
+        "3": -6.770664064958964e-07,
+        "4": 0.0007407106489004667
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 2.1696090698242188e-07,
+        "ci95_abs_clean_corrupt_logit_gap": 6.604494163799533e-08,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 23
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": 1.1716356107660457,
+        "layer_specific_restored_fraction_ci95": 0.7174492571047877,
+        "layer_specific_n_nondegenerate_denom": 23
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "SURPRISING_above_noise_content_sensitivity": false,
+      "layer_specific_patch_caveat": "behavioral gap (0.0000) is degenerate/near-zero -- layer_specific rf is not meaningful; near-zero gap IS the finding (no content verification, as predicted)."
+    },
+    {
+      "arch": "lstm",
+      "seed": 1,
+      "checkpoint": "data/models/marked-reversal/lstm/rec+ns/validation-short/1",
+      "balanced_content_match_best_layer": 4,
+      "layer_selectivity_from_sweep": {
+        "0": 0.0007447730473403302,
+        "1": 0.0014760047665474119,
+        "2": 9.478929693607085e-06,
+        "3": 0.001104972375690516,
+        "4": 0.005152475354782693
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 0.11203805327415467,
+        "ci95_abs_clean_corrupt_logit_gap": 0.060240003025403596,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": 1.0012249484800575,
+        "layer_specific_restored_fraction_ci95": 0.0034908693734672447,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": true,
+      "SURPRISING_above_noise_content_sensitivity": true
+    },
+    {
+      "arch": "transformer",
+      "seed": 9,
+      "checkpoint": "data/models/marked-reversal/transformer/rec+ns/validation-short/9",
+      "balanced_content_match_best_layer": 1,
+      "layer_selectivity_from_sweep": {
+        "0": 4.7394648466925204e-06,
+        "1": 1.9634925793488023e-05,
+        "2": 2.7082656266497196e-06,
+        "3": 1.2187195320145783e-05,
+        "4": 1.2187195320256805e-05
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 0.0009428739547729492,
+        "ci95_abs_clean_corrupt_logit_gap": 7.211106347937557e-05,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 0.9999933615412792,
+        "wiring_restored_fraction_ci95": 4.912569984523957e-05,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": 0.8187180501134518,
+        "layer_specific_restored_fraction_ci95": 0.04713450672136872,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "SURPRISING_above_noise_content_sensitivity": false,
+      "layer_specific_patch_caveat": "behavioral gap (0.0009) is degenerate/near-zero -- layer_specific rf is not meaningful; near-zero gap IS the finding (no content verification, as predicted)."
+    },
+    {
+      "arch": "transformer",
+      "seed": 1,
+      "checkpoint": "data/models/marked-reversal/transformer/rec+ns/validation-short/1",
+      "balanced_content_match_best_layer": 3,
+      "layer_selectivity_from_sweep": {
+        "0": 6.770664066957366e-06,
+        "1": 5.4165312534104615e-06,
+        "2": 6.770664066735321e-06,
+        "3": 1.0155996100102982e-05,
+        "4": 4.7394648466925204e-06
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 0.024436244964599608,
+        "ci95_abs_clean_corrupt_logit_gap": 0.0007025188395756284,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0000086682872666,
+        "wiring_restored_fraction_ci95": 1.1500318564598081e-05,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": 0.8834139547704636,
+        "layer_specific_restored_fraction_ci95": 0.004422486596498337,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "SURPRISING_above_noise_content_sensitivity": false,
+      "layer_specific_patch_caveat": "behavioral gap (0.0244) is degenerate/near-zero -- layer_specific rf is not meaningful; near-zero gap IS the finding (no content verification, as predicted)."
+    },
+    {
+      "arch": "mamba",
+      "seed": 4,
+      "checkpoint": "models/marked-reversal/mamba/rec+ns/validation-short/4",
+      "balanced_content_match_best_layer": 2,
+      "layer_selectivity_from_sweep": {
+        "0": 7.447730473564285e-06,
+        "1": 0.0011110659733505335,
+        "2": 0.0025687899469181152,
+        "3": 0.002209944751381143,
+        "4": 0.0022160383490413826
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 5.905628204345703e-06,
+        "ci95_abs_clean_corrupt_logit_gap": 1.8843991841397343e-06,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 24
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": -0.10799017158801871,
+        "layer_specific_restored_fraction_ci95": 0.2926830166817438,
+        "layer_specific_n_nondegenerate_denom": 24
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "SURPRISING_above_noise_content_sensitivity": false,
+      "layer_specific_patch_caveat": "behavioral gap (0.0000) is degenerate/near-zero -- layer_specific rf is not meaningful; near-zero gap IS the finding (no content verification, as predicted)."
+    },
+    {
+      "arch": "mamba",
+      "seed": 6,
+      "checkpoint": "models/marked-reversal/mamba/rec+ns/validation-short/6",
+      "balanced_content_match_best_layer": 3,
+      "layer_selectivity_from_sweep": {
+        "0": 6.770664066735321e-06,
+        "1": 1.1510128913649886e-05,
+        "2": 0.0011083577077238838,
+        "3": 0.0033210107247318987,
+        "4": 0.0025762376773913465
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 0.0004791545867919922,
+        "ci95_abs_clean_corrupt_logit_gap": 0.00017469744306665986,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": 1.1719342218564488,
+        "layer_specific_restored_fraction_ci95": 0.717621804748382,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "SURPRISING_above_noise_content_sensitivity": false,
+      "layer_specific_patch_caveat": "behavioral gap (0.0005) is degenerate/near-zero -- layer_specific rf is not meaningful; near-zero gap IS the finding (no content verification, as predicted)."
+    }
+  ],
+  "all_cells_null": false,
+  "surprising_cells": [
+    {
+      "arch": "lstm",
+      "seed": 1,
+      "checkpoint": "data/models/marked-reversal/lstm/rec+ns/validation-short/1",
+      "balanced_content_match_best_layer": 4,
+      "layer_selectivity_from_sweep": {
+        "0": 0.0007447730473403302,
+        "1": 0.0014760047665474119,
+        "2": 9.478929693607085e-06,
+        "3": 0.001104972375690516,
+        "4": 0.005152475354782693
+      },
+      "PRIMARY_behavioral_logit_gap": {
+        "mean_abs_clean_corrupt_logit_gap": 0.11203805327415467,
+        "ci95_abs_clean_corrupt_logit_gap": 0.060240003025403596,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n_nondegenerate_denom": 25
+      },
+      "layer_specific_patch_at_best_layer": {
+        "layer_specific_restored_fraction_mean": 1.0012249484800575,
+        "layer_specific_restored_fraction_ci95": 0.0034908693734672447,
+        "layer_specific_n_nondegenerate_denom": 25
+      },
+      "layer_specific_rf_is_meaningful": true,
+      "SURPRISING_above_noise_content_sensitivity": true
+    }
+  ],
+  "lstm_seed10_fourth_null_confirmation": {
+    "content_gap": 2.1696090698242188e-07,
+    "confirms_marker_count_only": true,
+    "interpretation": "lstm seed10's balanced_content_match gap (0.0000) is near-zero, the FOURTH independent null (alongside marker_position, length_parity, balance) -- marker_count-only attribution is now fully confirmed: seed10 is insensitive to position, parity, balance, AND content, responding only to marker count."
+  }
+}

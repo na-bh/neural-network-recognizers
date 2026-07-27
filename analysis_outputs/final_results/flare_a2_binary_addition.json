@@ -1,0 +1,159 @@
+{
+  "task": "binary-addition",
+  "n_test_examples": 5010,
+  "n_long": 1056,
+  "selected_seeds": {
+    "rnn": 9,
+    "lstm": 9,
+    "transformer": 8,
+    "mamba": 5
+  },
+  "accuracy_table": {
+    "rnn": {
+      "1": 0.6066666666666667,
+      "2": 0.7,
+      "3": 0.72,
+      "4": 0.5,
+      "5": 0.8866666666666667,
+      "6": 0.5133333333333333,
+      "7": 0.5066666666666667,
+      "8": 0.72,
+      "9": 0.8933333333333333,
+      "10": 0.8066666666666666
+    },
+    "lstm": {
+      "1": 0.5733333333333334,
+      "2": 0.52,
+      "3": 0.86,
+      "4": 0.8866666666666667,
+      "5": 0.8866666666666667,
+      "6": 0.8,
+      "7": 0.56,
+      "8": 0.8266666666666667,
+      "9": 0.8933333333333333,
+      "10": 0.8933333333333333
+    },
+    "transformer": {
+      "1": 0.5,
+      "2": 0.5,
+      "3": 0.6666666666666666,
+      "4": 0.62,
+      "5": 0.5,
+      "6": 0.8,
+      "7": 0.5,
+      "8": 0.82,
+      "9": 0.5,
+      "10": 0.5
+    },
+    "mamba": {
+      "0": 0.52,
+      "1": 0.5333333333333333,
+      "2": 0.6133333333333333,
+      "3": 0.6,
+      "4": 0.6933333333333334,
+      "5": 0.8533333333333334,
+      "6": 0.6133333333333333,
+      "7": 0.56,
+      "8": 0.5266666666666666,
+      "9": 0.6333333333333333
+    }
+  },
+  "n_positives": 2470,
+  "n_hard_negatives": 374,
+  "n_scrambled_negatives": 2163,
+  "n_total": 5010,
+  "grammar_only_ceiling": 0.9620758483033932,
+  "hard_vs_scrambled_negative_accuracy": {
+    "rnn": {
+      "hard_negative_accuracy": 0.3233333333333333,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.93,
+      "n_scrambled": 300
+    },
+    "lstm": {
+      "hard_negative_accuracy": 0.32666666666666666,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.9366666666666666,
+      "n_scrambled": 300
+    },
+    "transformer": {
+      "hard_negative_accuracy": 0.63,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.94,
+      "n_scrambled": 300
+    },
+    "mamba": {
+      "hard_negative_accuracy": 0.29,
+      "n_hard": 300,
+      "scrambled_negative_accuracy": 0.84,
+      "n_scrambled": 300
+    }
+  },
+  "counterfactual_logit_difference": {
+    "rnn": {
+      "short_L20": {
+        "length": 21,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.01247049331665039,
+        "median_abs_delta_logit": 0.01105499267578125,
+        "frac_corrupt_accepted": 0.0
+      },
+      "long_L400": {
+        "length": 399,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.019803318977355957,
+        "median_abs_delta_logit": 0.01998114585876465,
+        "frac_corrupt_accepted": 0.0
+      }
+    },
+    "lstm": {
+      "short_L20": {
+        "length": 21,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.0004683828353881836,
+        "median_abs_delta_logit": 0.0003534555435180664,
+        "frac_corrupt_accepted": 0.0
+      },
+      "long_L400": {
+        "length": 399,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 4.858016967773437e-05,
+        "median_abs_delta_logit": 4.267692565917969e-05,
+        "frac_corrupt_accepted": 0.0
+      }
+    },
+    "transformer": {
+      "short_L20": {
+        "length": 21,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.6262140560150147,
+        "median_abs_delta_logit": 0.5683302879333496,
+        "frac_corrupt_accepted": 0.0
+      },
+      "long_L400": {
+        "length": 399,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 5.293366189002991,
+        "median_abs_delta_logit": 5.307886600494385,
+        "frac_corrupt_accepted": 0.0
+      }
+    },
+    "mamba": {
+      "short_L20": {
+        "length": 21,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.0008359622955322266,
+        "median_abs_delta_logit": 0.0006051063537597656,
+        "frac_corrupt_accepted": 0.0
+      },
+      "long_L400": {
+        "length": 399,
+        "n_pairs": 100,
+        "mean_abs_delta_logit": 0.0008679914474487304,
+        "median_abs_delta_logit": 0.0007731914520263672,
+        "frac_corrupt_accepted": 0.0
+      }
+    }
+  },
+  "test_resolvable": true
+}

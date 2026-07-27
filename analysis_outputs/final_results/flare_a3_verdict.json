@@ -1,0 +1,700 @@
+{
+  "description": "A3: consolidated task x architecture shortcut verdict table for the 13 audited FLaRe tasks.",
+  "verdict_thresholds": {
+    "shortcut-vulnerable": "logit_diff_long < 0.1 AND hard_neg_acc < 0.20",
+    "arithmetic/answer-sensitive": "logit_diff_long > 1.0 AND hard_neg_acc > 0.70",
+    "partial-shortcut-with-ceiling": "test accuracy within 3pts of the grammar-only ceiling",
+    "mixed": "does not cleanly fit any of the above",
+    "test-unresolvable": "no checkpoint, or counterfactual test errored"
+  },
+  "table": {
+    "parity": {
+      "rnn": {
+        "verdict": "arithmetic/answer-sensitive",
+        "logit_diff_long": 51.635111045837405,
+        "hard_neg_acc": 1.0,
+        "n_hard": 2529,
+        "scrambled_neg_acc": NaN,
+        "n_scrambled": 0,
+        "long_seq_test_acc": 1.0,
+        "grammar_only_ceiling": 0.7462075848303393
+      },
+      "lstm": {
+        "verdict": "arithmetic/answer-sensitive",
+        "logit_diff_long": 28.519739151000977,
+        "hard_neg_acc": 1.0,
+        "n_hard": 2529,
+        "scrambled_neg_acc": NaN,
+        "n_scrambled": 0,
+        "long_seq_test_acc": 1.0,
+        "grammar_only_ceiling": 0.7462075848303393
+      },
+      "transformer": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.17127876864746214,
+        "hard_neg_acc": 0.4468169236852511,
+        "n_hard": 2529,
+        "scrambled_neg_acc": NaN,
+        "n_scrambled": 0,
+        "long_seq_test_acc": 0.60481444332999,
+        "grammar_only_ceiling": 0.7462075848303393
+      },
+      "mamba": {
+        "verdict": "mixed",
+        "logit_diff_long": 6.465947303064167,
+        "hard_neg_acc": 0.4792408066429419,
+        "n_hard": 2529,
+        "scrambled_neg_acc": NaN,
+        "n_scrambled": 0,
+        "long_seq_test_acc": 0.5687061183550652,
+        "grammar_only_ceiling": 0.7462075848303393
+      }
+    },
+    "marked-copy": {
+      "rnn": {
+        "verdict": "partial-shortcut-with-ceiling",
+        "logit_diff_long": 0.03308682918548584,
+        "hard_neg_acc": 0.81,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.9166666666666666,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.94,
+        "grammar_only_ceiling": 0.9652694610778443
+      },
+      "lstm": {
+        "verdict": "shortcut-vulnerable",
+        "logit_diff_long": 1.6492605209350585e-05,
+        "hard_neg_acc": 0.023333333333333334,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.6866666666666666,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.7933333333333333,
+        "grammar_only_ceiling": 0.9652694610778443
+      },
+      "transformer": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.036519638299942016,
+        "hard_neg_acc": 0.34,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.7733333333333333,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.88,
+        "grammar_only_ceiling": 0.9652694610778443
+      },
+      "mamba": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.0693051540851593,
+        "hard_neg_acc": 0.44,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.77,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.6666666666666666,
+        "grammar_only_ceiling": 0.9652694610778443
+      }
+    },
+    "marked-reversal": {
+      "rnn": {
+        "verdict": "partial-shortcut-with-ceiling",
+        "logit_diff_long": 0.0002661275863647461,
+        "hard_neg_acc": 0.8033333333333333,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.89,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.94,
+        "grammar_only_ceiling": 0.966566866267465
+      },
+      "lstm": {
+        "verdict": "shortcut-vulnerable",
+        "logit_diff_long": 2.1845698356628417e-05,
+        "hard_neg_acc": 0.14333333333333334,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.6966666666666667,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.78,
+        "grammar_only_ceiling": 0.966566866267465
+      },
+      "transformer": {
+        "verdict": "shortcut-vulnerable",
+        "logit_diff_long": 0.001976224780082703,
+        "hard_neg_acc": 0.17,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.6833333333333333,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.7666666666666667,
+        "grammar_only_ceiling": 0.966566866267465
+      },
+      "mamba": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.0169021612405777,
+        "hard_neg_acc": 0.36666666666666664,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.8,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.8666666666666667,
+        "grammar_only_ceiling": 0.966566866267465
+      }
+    },
+    "odds-first": {
+      "rnn": {
+        "verdict": "partial-shortcut-with-ceiling",
+        "logit_diff_long": 3.478527069091797e-06,
+        "hard_neg_acc": 0.8,
+        "n_hard": 230,
+        "scrambled_neg_acc": 0.9466666666666667,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.9533333333333334,
+        "grammar_only_ceiling": 0.9764471057884232
+      },
+      "lstm": {
+        "verdict": "partial-shortcut-with-ceiling",
+        "logit_diff_long": 3.191471099853516e-05,
+        "hard_neg_acc": 0.8,
+        "n_hard": 230,
+        "scrambled_neg_acc": 0.95,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.9533333333333334,
+        "grammar_only_ceiling": 0.9764471057884232
+      },
+      "transformer": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.043398877680301665,
+        "hard_neg_acc": 0.2,
+        "n_hard": 230,
+        "scrambled_neg_acc": 0.6666666666666666,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.7733333333333333,
+        "grammar_only_ceiling": 0.9764471057884232
+      },
+      "mamba": {
+        "verdict": "mixed",
+        "logit_diff_long": 2.393960952758789e-05,
+        "hard_neg_acc": 0.5173913043478261,
+        "n_hard": 230,
+        "scrambled_neg_acc": 0.76,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.88,
+        "grammar_only_ceiling": 0.9764471057884232
+      }
+    },
+    "bucket-sort": {
+      "rnn": {
+        "verdict": "arithmetic/answer-sensitive",
+        "logit_diff_long": 6.039134979248047,
+        "hard_neg_acc": 0.9033333333333333,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.8666666666666667,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.9266666666666666,
+        "grammar_only_ceiling": 0.9594810379241517
+      },
+      "lstm": {
+        "verdict": "shortcut-vulnerable",
+        "logit_diff_long": 0.005077360272407532,
+        "hard_neg_acc": 0.06666666666666667,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.68,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.7666666666666667,
+        "grammar_only_ceiling": 0.9594810379241517
+      },
+      "transformer": {
+        "verdict": "mixed",
+        "logit_diff_long": 10.743512733578681,
+        "hard_neg_acc": 0.56,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.8566666666666667,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.8666666666666667,
+        "grammar_only_ceiling": 0.9594810379241517
+      },
+      "mamba": {
+        "verdict": "mixed",
+        "logit_diff_long": 7.07904809474945,
+        "hard_neg_acc": 0.33666666666666667,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.68,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.7533333333333333,
+        "grammar_only_ceiling": 0.9594810379241517
+      }
+    },
+    "binary-addition": {
+      "rnn": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.019803318977355957,
+        "hard_neg_acc": 0.3233333333333333,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.93,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.8933333333333333,
+        "grammar_only_ceiling": 0.9620758483033932
+      },
+      "lstm": {
+        "verdict": "mixed",
+        "logit_diff_long": 4.858016967773437e-05,
+        "hard_neg_acc": 0.32666666666666666,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.9366666666666666,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.8933333333333333,
+        "grammar_only_ceiling": 0.9620758483033932
+      },
+      "transformer": {
+        "verdict": "mixed",
+        "logit_diff_long": 5.293366189002991,
+        "hard_neg_acc": 0.63,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.94,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.82,
+        "grammar_only_ceiling": 0.9620758483033932
+      },
+      "mamba": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.0008679914474487304,
+        "hard_neg_acc": 0.29,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.84,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.8533333333333334,
+        "grammar_only_ceiling": 0.9620758483033932
+      }
+    },
+    "binary-multiplication": {
+      "rnn": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.1269673663377762,
+        "hard_neg_acc": 0.5567375886524822,
+        "n_hard": 282,
+        "scrambled_neg_acc": 0.8766666666666667,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.9066666666666666,
+        "grammar_only_ceiling": 0.9714570858283433
+      },
+      "lstm": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.004149327278137207,
+        "hard_neg_acc": 0.48936170212765956,
+        "n_hard": 282,
+        "scrambled_neg_acc": 0.8666666666666667,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.8866666666666667,
+        "grammar_only_ceiling": 0.9714570858283433
+      },
+      "transformer": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.049400191307067874,
+        "hard_neg_acc": 0.4716312056737589,
+        "n_hard": 282,
+        "scrambled_neg_acc": 0.8266666666666667,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.88,
+        "grammar_only_ceiling": 0.9714570858283433
+      },
+      "mamba": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.21029989123344422,
+        "hard_neg_acc": 0.48226950354609927,
+        "n_hard": 282,
+        "scrambled_neg_acc": 0.8866666666666667,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.9,
+        "grammar_only_ceiling": 0.9714570858283433
+      }
+    },
+    "compute-sqrt": {
+      "rnn": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.0033869385719299317,
+        "hard_neg_acc": 0.5133333333333333,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.8633333333333333,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.9133333333333333,
+        "grammar_only_ceiling": 0.9521956087824351
+      },
+      "lstm": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.0485048508644104,
+        "hard_neg_acc": 0.5133333333333333,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.8633333333333333,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.9133333333333333,
+        "grammar_only_ceiling": 0.9521956087824351
+      },
+      "transformer": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.054399839639663695,
+        "hard_neg_acc": 0.3933333333333333,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.8566666666666667,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.8533333333333334,
+        "grammar_only_ceiling": 0.9521956087824351
+      },
+      "mamba": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.29312907338142397,
+        "hard_neg_acc": 0.5133333333333333,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.8533333333333334,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.9066666666666666,
+        "grammar_only_ceiling": 0.9521956087824351
+      }
+    },
+    "dyck-2-3": {
+      "rnn": {
+        "verdict": "arithmetic/answer-sensitive",
+        "logit_diff_long": 11.85159329175949,
+        "hard_neg_acc": 1.0,
+        "n_hard": 297,
+        "scrambled_neg_acc": 1.0,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 1.0,
+        "grammar_only_ceiling": 0.9703592814371258
+      },
+      "lstm": {
+        "verdict": "arithmetic/answer-sensitive",
+        "logit_diff_long": 10.225740923611447,
+        "hard_neg_acc": 0.9966329966329966,
+        "n_hard": 297,
+        "scrambled_neg_acc": 0.9833333333333333,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.9866666666666667,
+        "grammar_only_ceiling": 0.9703592814371258
+      },
+      "transformer": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.25167256116867065,
+        "hard_neg_acc": 0.2962962962962963,
+        "n_hard": 297,
+        "scrambled_neg_acc": 0.72,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.7066666666666667,
+        "grammar_only_ceiling": 0.9703592814371258
+      },
+      "mamba": {
+        "verdict": "partial-shortcut-with-ceiling",
+        "logit_diff_long": 0.5166034477949143,
+        "hard_neg_acc": 0.9259259259259259,
+        "n_hard": 297,
+        "scrambled_neg_acc": 0.9666666666666667,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.9866666666666667,
+        "grammar_only_ceiling": 0.9703592814371258
+      }
+    },
+    "repeat-01": {
+      "rnn": {
+        "verdict": "arithmetic/answer-sensitive",
+        "logit_diff_long": 38.59982490539551,
+        "hard_neg_acc": 1.0,
+        "n_hard": 151,
+        "scrambled_neg_acc": 1.0,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 1.0,
+        "grammar_only_ceiling": 0.9849301397205589
+      },
+      "lstm": {
+        "verdict": "arithmetic/answer-sensitive",
+        "logit_diff_long": 46.41911697387695,
+        "hard_neg_acc": 1.0,
+        "n_hard": 151,
+        "scrambled_neg_acc": 1.0,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 1.0,
+        "grammar_only_ceiling": 0.9849301397205589
+      },
+      "transformer": {
+        "verdict": "mixed",
+        "logit_diff_long": 14.592333793640137,
+        "hard_neg_acc": 0.17218543046357615,
+        "n_hard": 151,
+        "scrambled_neg_acc": 0.7633333333333333,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.8066666666666666,
+        "grammar_only_ceiling": 0.9849301397205589
+      },
+      "mamba": {
+        "verdict": "arithmetic/answer-sensitive",
+        "logit_diff_long": 76.43362426757812,
+        "hard_neg_acc": 1.0,
+        "n_hard": 151,
+        "scrambled_neg_acc": 1.0,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 1.0,
+        "grammar_only_ceiling": 0.9849301397205589
+      }
+    },
+    "stack-manipulation": {
+      "rnn": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.00011772871017456055,
+        "hard_neg_acc": 0.7066666666666667,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.89,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.8733333333333333,
+        "grammar_only_ceiling": 0.9417165668662675
+      },
+      "lstm": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.00014807701110839845,
+        "hard_neg_acc": 0.71,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.8966666666666666,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.8866666666666667,
+        "grammar_only_ceiling": 0.9417165668662675
+      },
+      "transformer": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.2564830088056624,
+        "hard_neg_acc": 0.7333333333333333,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.79,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.8533333333333334,
+        "grammar_only_ceiling": 0.9417165668662675
+      },
+      "mamba": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.12314513683319092,
+        "hard_neg_acc": 0.7066666666666667,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.8466666666666667,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.86,
+        "grammar_only_ceiling": 0.9417165668662675
+      }
+    },
+    "missing-duplicate-string": {
+      "rnn": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.02505950927734375,
+        "hard_neg_acc": 0.91,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.9,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.9733333333333334,
+        "grammar_only_ceiling": 0.931936127744511
+      },
+      "lstm": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.13131883144378662,
+        "hard_neg_acc": 0.91,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.9,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.9733333333333334,
+        "grammar_only_ceiling": 0.931936127744511
+      },
+      "transformer": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.0112533700466156,
+        "hard_neg_acc": 0.25333333333333335,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.8966666666666666,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.8666666666666667,
+        "grammar_only_ceiling": 0.931936127744511
+      },
+      "mamba": {
+        "verdict": "mixed",
+        "logit_diff_long": 0.12464554071426391,
+        "hard_neg_acc": 0.2833333333333333,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.9,
+        "n_scrambled": 300,
+        "long_seq_test_acc": 0.8666666666666667,
+        "grammar_only_ceiling": 0.931936127744511
+      }
+    },
+    "unmarked-reversal": {
+      "rnn": {
+        "verdict": "partial-shortcut-with-ceiling",
+        "logit_diff_long": 0.0,
+        "hard_neg_acc": 0.6066666666666667,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.0,
+        "n_scrambled": 222,
+        "long_seq_test_acc": 0.7466666666666667,
+        "grammar_only_ceiling": 0.7734530938123753
+      },
+      "lstm": {
+        "verdict": "partial-shortcut-with-ceiling",
+        "logit_diff_long": 0.0,
+        "hard_neg_acc": 0.6066666666666667,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.0,
+        "n_scrambled": 222,
+        "long_seq_test_acc": 0.7466666666666667,
+        "grammar_only_ceiling": 0.7734530938123753
+      },
+      "transformer": {
+        "verdict": "mixed",
+        "logit_diff_long": 7.929512464813888,
+        "hard_neg_acc": 0.5633333333333334,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.33783783783783783,
+        "n_scrambled": 222,
+        "long_seq_test_acc": 0.6533333333333333,
+        "grammar_only_ceiling": 0.7734530938123753
+      },
+      "mamba": {
+        "verdict": "mixed",
+        "logit_diff_long": 6.051271479427815,
+        "hard_neg_acc": 0.3466666666666667,
+        "n_hard": 300,
+        "scrambled_neg_acc": 0.03153153153153153,
+        "n_scrambled": 222,
+        "long_seq_test_acc": 0.6733333333333333,
+        "grammar_only_ceiling": 0.7734530938123753
+      }
+    }
+  },
+  "marker_placement_decomposition": {
+    "marked-copy": {
+      "n_scrambled_total": 2173,
+      "n_sampled": 300,
+      "counts": {
+        "marker_count_wrong": 233,
+        "marker_position_wrong": 32,
+        "content_mismatch": 18,
+        "other": 17
+      },
+      "fractions": {
+        "marker_count_wrong": 0.7766666666666666,
+        "marker_position_wrong": 0.10666666666666667,
+        "content_mismatch": 0.06,
+        "other": 0.056666666666666664
+      },
+      "marker_placement_frac": 0.8833333333333333,
+      "mechanism_confirmed_80pct": true
+    },
+    "marked-reversal": {
+      "n_scrambled_total": 2144,
+      "n_sampled": 300,
+      "counts": {
+        "marker_count_wrong": 233,
+        "marker_position_wrong": 29,
+        "content_mismatch": 22,
+        "other": 16
+      },
+      "fractions": {
+        "marker_count_wrong": 0.7766666666666666,
+        "marker_position_wrong": 0.09666666666666666,
+        "content_mismatch": 0.07333333333333333,
+        "other": 0.05333333333333334
+      },
+      "marker_placement_frac": 0.8733333333333333,
+      "mechanism_confirmed_80pct": true
+    },
+    "odds-first": {
+      "n_scrambled_total": 2247,
+      "n_sampled": 300,
+      "counts": {
+        "marker_count_wrong": 217,
+        "marker_position_wrong": 43,
+        "content_mismatch": 13,
+        "other": 27
+      },
+      "fractions": {
+        "marker_count_wrong": 0.7233333333333334,
+        "marker_position_wrong": 0.14333333333333334,
+        "content_mismatch": 0.043333333333333335,
+        "other": 0.09
+      },
+      "marker_placement_frac": 0.8666666666666667,
+      "mechanism_confirmed_80pct": true
+    },
+    "bucket-sort": {
+      "n_scrambled_total": 2091,
+      "n_sampled": 300,
+      "counts": {
+        "marker_count_wrong": 205,
+        "marker_position_wrong": 37,
+        "content_mismatch": 33,
+        "other": 25
+      },
+      "fractions": {
+        "marker_count_wrong": 0.6833333333333333,
+        "marker_position_wrong": 0.12333333333333334,
+        "content_mismatch": 0.11,
+        "other": 0.08333333333333333
+      },
+      "marker_placement_frac": 0.8066666666666666,
+      "mechanism_confirmed_80pct": true
+    }
+  },
+  "marker_placement_mechanism_confirmed_across_all_4_tasks": true,
+  "unmarked_reversal_special_note": {
+    "finding": "RNN and LSTM show EXACT ZERO logit-sensitivity (mean|delta_logit|=0.0, frac_corrupt_accepted=1.0) to a flip of the OUTERMOST mirror pair (last token vs. first token) at BOTH short (L20) and long (L400) lengths, despite 60.7% accuracy on the broader real hard-negative population (which spans flips at many positions, not just the outermost pair). Transformer and Mamba show strong sensitivity to the same flip (delta_logit 6-8, 0% accepted).",
+    "interpretation": "This is exactly the 'shortcut A1 didn't anticipate' scenario: a narrow, position-specific blind spot (the single outermost mirror pair) in two architectures, invisible to A1's structural audit because A1 only measures structural properties of the string, and A2's population-level hard-negative accuracy averages over many flip positions (staying moderate at 60.7%), diluting a failure that is total at exactly one position.",
+    "separate_puzzle_worth_flagging": "scrambled_negative_accuracy is ALSO surprisingly low for RNN/LSTM/Mamba (0%, 0%, 3.2%) -- i.e. these architectures accept most scrambled (obviously malformed) negatives as valid, the opposite of the usual pattern where scrambled negatives are the easy category. Only transformer (33.8%) partially escapes this. Not further diagnosed here (out of A2/A3 scope) -- flagged as an anomaly rather than averaged away, per the discipline for this experiment.",
+    "rnn_long_L400": {
+      "length": 400,
+      "n_pairs": 100,
+      "mean_abs_delta_logit": 0.0,
+      "median_abs_delta_logit": 0.0,
+      "frac_corrupt_accepted": 1.0
+    },
+    "lstm_long_L400": {
+      "length": 400,
+      "n_pairs": 100,
+      "mean_abs_delta_logit": 0.0,
+      "median_abs_delta_logit": 0.0,
+      "frac_corrupt_accepted": 1.0
+    },
+    "transformer_long_L400": {
+      "length": 400,
+      "n_pairs": 100,
+      "mean_abs_delta_logit": 7.929512464813888,
+      "median_abs_delta_logit": 7.955341413617134,
+      "frac_corrupt_accepted": 0.0
+    },
+    "mamba_long_L400": {
+      "length": 400,
+      "n_pairs": 100,
+      "mean_abs_delta_logit": 6.051271479427815,
+      "median_abs_delta_logit": 6.069294303655624,
+      "frac_corrupt_accepted": 0.0
+    },
+    "population_hard_neg_acc": {
+      "rnn": {
+        "hard_negative_accuracy": 0.6066666666666667,
+        "n_hard": 300,
+        "scrambled_negative_accuracy": 0.0,
+        "n_scrambled": 222
+      },
+      "lstm": {
+        "hard_negative_accuracy": 0.6066666666666667,
+        "n_hard": 300,
+        "scrambled_negative_accuracy": 0.0,
+        "n_scrambled": 222
+      },
+      "transformer": {
+        "hard_negative_accuracy": 0.5633333333333334,
+        "n_hard": 300,
+        "scrambled_negative_accuracy": 0.33783783783783783,
+        "n_scrambled": 222
+      },
+      "mamba": {
+        "hard_negative_accuracy": 0.3466666666666667,
+        "n_hard": 300,
+        "scrambled_negative_accuracy": 0.03153153153153153,
+        "n_scrambled": 222
+      }
+    }
+  },
+  "mixed_cell_characterization": {
+    "note": "Several tasks land in 'mixed' by the strict pre-registered thresholds but show clear, specific, informative patterns that the two-threshold box misses -- reported explicitly rather than left as an opaque label.",
+    "binary-addition": "rnn/lstm/mamba: near-zero logit-diff (0.0-0.02) but frac_corrupt_accepted=0.00 -- i.e. the decision margin for the single-flipped-z-bit hard negative is razor-thin, yet these architectures land on the CORRECT side of it every single time (100% reject). This is 'fragile-but-correct' discrimination, not a shortcut: genuine (if low-margin) sensitivity to the exact output bit. Transformer shows a real margin (5.29) and also 100% correct. None of the 4 architectures accept the corrupted long-length pair even once.",
+    "binary-multiplication": "All 4 architectures: tiny logit-diff (0.004-0.21) AND frac_corrupt_accepted=1.00 (100% WRONG on this specific counterfactual) AND hard-negative accuracy near chance (47-56%, close to a 50/50 coin flip for a binary decision). This is a genuine shortcut/non-computation signature -- it misses the strict <20% hard-neg-acc cutoff only because chance-level performance on a roughly-balanced test set is ~50%, not near 0%. Should be read as shortcut-vulnerable in substance, not form.",
+    "compute-sqrt": "Same near-chance pattern as binary-multiplication: tiny logit-diff, frac_corrupt_accepted=1.00, hard-neg accuracy 39-51% (chance level). Read as shortcut-vulnerable in substance.",
+    "stack-manipulation": "rnn/lstm/mamba: tiny logit-diff (0.0001-0.12), frac_corrupt_accepted~1.00 on this specific counterfactual, YET hard-negative accuracy on the broader real population is 70-73% -- well ABOVE chance. This is the SAME pattern as the unmarked-reversal blind spot: the counterfactual here flips the LAST reported stack symbol, which corresponds to the BOTTOM of the stack (information from the very start of the sequence) -- a long-range-dependency blind spot at one specific position, not a general shortcut. Transformer partially escapes (logit-diff 0.26, 69% corrupt rejected).",
+    "missing-duplicate-string": "Architecture-split: rnn/lstm show HIGH hard-neg accuracy (91%, matching the answer-sensitive criterion) but tiny logit-diff (0.03-0.13, well below the >1.0 threshold) -- another 'fragile-but-correct' case. transformer/mamba show LOW hard-neg accuracy (25-28%) with tiny logit-diff and 100% corrupt-accepted -- a genuine shortcut pattern for these two architectures specifically, missing the strict <20% cutoff by a small margin."
+  }
+}

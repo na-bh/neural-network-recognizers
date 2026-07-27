@@ -1,0 +1,123 @@
+{
+  "task": "stack-manipulation",
+  "description": "Phase 3 (bounded) task audit for stack-manipulation. Reclassifies the task's family (marker-transform, like bucket-sort -- NOT Dyck-2-3's implicit-LIFO family, despite surface resemblance as a 'stack-carrier' task). Confirms and QUANTIFIES a confound in flare_a2's hard-negative metric analogous to (and more severe than) missing-duplicate-string's: 87%+ of the nominally-hard population is a trivial O(1) counting check (answer-length arithmetic), not genuine stack simulation.",
+  "grammar_confirmation": {
+    "alphabet": [
+      "0",
+      "1",
+      "PUSH",
+      "POP",
+      "#"
+    ],
+    "n_positives_checked": 5056,
+    "first_token_never_pop": {
+      "holds": true,
+      "any_empty_positive": false
+    },
+    "token_before_marker_distribution": {
+      "0": 1241,
+      "POP": 2520,
+      "1": 1274,
+      "None": 21
+    },
+    "token_before_marker_never_push": true,
+    "length_parity_both_occur (no fixed parity constraint)": {
+      "n_even": 2387,
+      "n_odd": 2669,
+      "both_occur": true
+    },
+    "task_family_reclassification": "MARKER-TRANSFORM family (bucket-sort/marked-reversal/marked-copy/odds-first), NOT Dyck-2-3's implicit-throughout-LIFO family, despite both being 'stack-carrier' tasks -- explicit MARKER separates the operation program from its deterministic answer (simulate push/pop, emit reversed final stack)."
+  },
+  "cited_hard_negative_fraction_reproduction": {
+    "test_set_n_negatives": 2563,
+    "n_hard": 582,
+    "fraction": 0.22707764338665626,
+    "matches_cited_22_7_percent": true
+  },
+  "hard_negative_confound_check": {
+    "n_hard": 582,
+    "hard_population_violation_kind_breakdown": {
+      "length_mismatch": 507,
+      "value_mismatch_only": 55,
+      "malformed_push_no_bit": 11,
+      "unexpected_token_before_marker": 5,
+      "no_marker_reached": 3,
+      "malformed_pop_empty": 1
+    },
+    "fraction_hard_that_is_length_mismatch_CONFOUND (trivial counting check)": 0.8711340206185567,
+    "fraction_hard_that_is_genuinely_value_mismatch_only": 0.09450171821305842,
+    "confound_confirmed": true,
+    "interpretation": "CONFIRMED, and MORE SEVERE than missing-duplicate-string's confound: 87%+ of the nominally-'hard' population is length_mismatch (stack_size_arithmetic_consistent violations) -- a pure counting check (push-count minus pop-count plus initial-stack-size vs. observed answer length), requiring NO value simulation. It is classified 'hard' by viol_stack_manipulation ONLY because the answer's total length cannot be confirmed before EOS (must see the whole suffix), not because it requires deep computation. Only ~9-10% of the 'hard' population is genuinely value_mismatch_only, the sole category requiring real LIFO simulation to catch. Any Phase-3 conclusion must be drawn from the value_mismatch_only-isolated population, NOT flare_a2's raw hard-negative accuracy statistic."
+  },
+  "shortcut_feature_audit": {
+    "per_feature": {
+      "marker_count_is_one": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.38626609442060084
+      },
+      "operations_well_formed": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.4775653531018338
+      },
+      "stack_size_arithmetic_consistent": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.060866172454155286
+      },
+      "first_token_never_pop": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.9063597346859149
+      },
+      "token_before_marker_never_push": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.889192352711666
+      },
+      "answer_bit_counts_subset_of_available": {
+        "positive_satisfy_fraction": 1.0,
+        "negative_satisfy_fraction": 0.29964884900507216
+      }
+    },
+    "joint_all_six": {
+      "positive_satisfy_all_six_fraction": 1.0,
+      "n_shortcut_blind_negatives (pass ALL SIX checks, still invalid)": 62,
+      "n_total_negatives": 2563,
+      "shortcut_blind_fraction_of_negatives": 0.024190401872805307,
+      "shortcut_blind_violation_kind_breakdown": {
+        "value_mismatch_only": 62
+      },
+      "interpretation": "The shortcut-blind population is exactly the set of negatives all six counting/parsing checks CANNOT distinguish from a genuine positive -- a purely structural/counting baseline is chance-level on this subset by construction. Expected (and confirmed below) to be dominated by value_mismatch_only, the only category requiring genuine stack simulation."
+    }
+  },
+  "load_bearing_counterexample": {
+    "clean": [
+      "PUSH",
+      "0",
+      "PUSH",
+      "1",
+      "#",
+      "1",
+      "0"
+    ],
+    "corrupted": [
+      "PUSH",
+      "0",
+      "PUSH",
+      "1",
+      "#",
+      "0",
+      "1"
+    ],
+    "clean_is_valid": true,
+    "corrupted_is_valid": false,
+    "corrupted_violation_kind": "value_mismatch_only",
+    "all_six_shortcut_features_identical_between_clean_and_corrupted": true,
+    "per_feature_match": {
+      "marker_count_is_one": true,
+      "operations_well_formed": true,
+      "stack_size_arithmetic_consistent": true,
+      "first_token_never_pop": true,
+      "token_before_marker_never_push": true,
+      "answer_bit_counts_subset_of_available": true
+    }
+  },
+  "genuinely_hard_population_definition_for_later_conditions": "marker_count_is_one AND operations_well_formed AND stack_size_arithmetic_consistent AND (value_mismatch_only for negatives) -- i.e., exclude both malformed-operation negatives (early-detectable) and length_mismatch negatives (the confound) before drawing conclusions from Condition 3 patching."
+}

@@ -1,0 +1,259 @@
+{
+  "task": "modular-arithmetic-simple",
+  "description": "Cell selection for modular-arithmetic-simple's bounded Phase 3 patching pilot: primary (best) + secondary (next-best) seed per architecture, pulled from flare_a2_modular_arithmetic_simple.json (built here from eval/test.json files, rec+ns/validation-short convention -- no new training).",
+  "comparability_threshold": 0.15,
+  "cell_selection": {
+    "rnn": {
+      "primary_seed": 4,
+      "primary_accuracy": 0.9970059880239521,
+      "secondary_seed": 5,
+      "secondary_accuracy": 0.9970059880239521,
+      "accuracy_gap": 0.0,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "4",
+          0.9970059880239521
+        ],
+        [
+          "5",
+          0.9970059880239521
+        ],
+        [
+          "10",
+          0.9970059880239521
+        ],
+        [
+          "1",
+          0.9966067864271457
+        ],
+        [
+          "3",
+          0.9966067864271457
+        ],
+        [
+          "6",
+          0.9966067864271457
+        ],
+        [
+          "2",
+          0.9964071856287425
+        ],
+        [
+          "8",
+          0.9942115768463073
+        ],
+        [
+          "7",
+          0.9940119760479041
+        ],
+        [
+          "9",
+          0.9131736526946108
+        ]
+      ]
+    },
+    "lstm": {
+      "primary_seed": 3,
+      "primary_accuracy": 0.9970059880239521,
+      "secondary_seed": 4,
+      "secondary_accuracy": 0.9966067864271457,
+      "accuracy_gap": 0.0003992015968063978,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "3",
+          0.9970059880239521
+        ],
+        [
+          "4",
+          0.9966067864271457
+        ],
+        [
+          "6",
+          0.9966067864271457
+        ],
+        [
+          "7",
+          0.9966067864271457
+        ],
+        [
+          "1",
+          0.9964071856287425
+        ],
+        [
+          "8",
+          0.9964071856287425
+        ],
+        [
+          "9",
+          0.9944111776447105
+        ],
+        [
+          "2",
+          0.9245508982035928
+        ],
+        [
+          "5",
+          0.9245508982035928
+        ],
+        [
+          "10",
+          0.5055888223552895
+        ]
+      ]
+    },
+    "transformer": {
+      "primary_seed": 5,
+      "primary_accuracy": 0.830938123752495,
+      "secondary_seed": 2,
+      "secondary_accuracy": 0.7930139720558882,
+      "accuracy_gap": 0.03792415169660679,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "5",
+          0.830938123752495
+        ],
+        [
+          "2",
+          0.7930139720558882
+        ],
+        [
+          "4",
+          0.7920159680638723
+        ],
+        [
+          "8",
+          0.7920159680638723
+        ],
+        [
+          "6",
+          0.7902195608782435
+        ],
+        [
+          "10",
+          0.7878243512974051
+        ],
+        [
+          "7",
+          0.7037924151696606
+        ],
+        [
+          "9",
+          0.6952095808383234
+        ],
+        [
+          "1",
+          0.6323353293413174
+        ],
+        [
+          "3",
+          0.5968063872255489
+        ]
+      ]
+    },
+    "mamba": {
+      "primary_seed": 0,
+      "primary_accuracy": 0.9970059880239521,
+      "secondary_seed": 1,
+      "secondary_accuracy": 0.9942115768463073,
+      "accuracy_gap": 0.0027944111776447844,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "0",
+          0.9970059880239521
+        ],
+        [
+          "1",
+          0.9942115768463073
+        ],
+        [
+          "4",
+          0.949500998003992
+        ],
+        [
+          "2",
+          0.9461077844311377
+        ],
+        [
+          "9",
+          0.9435129740518962
+        ],
+        [
+          "7",
+          0.8860279441117764
+        ],
+        [
+          "6",
+          0.8754491017964072
+        ],
+        [
+          "8",
+          0.8650698602794411
+        ],
+        [
+          "3",
+          0.8612774451097804
+        ],
+        [
+          "5",
+          0.8570858283433134
+        ]
+      ]
+    }
+  },
+  "bottleneck_check": {
+    "rnn": "NO BOTTLENECK (gap=0.000).",
+    "lstm": "NO BOTTLENECK (gap=0.000).",
+    "transformer": "NO BOTTLENECK (gap=0.038).",
+    "mamba": "NO BOTTLENECK (gap=0.003)."
+  },
+  "final_cells": [
+    {
+      "arch": "rnn",
+      "seed": 4,
+      "role": "primary"
+    },
+    {
+      "arch": "lstm",
+      "seed": 3,
+      "role": "primary"
+    },
+    {
+      "arch": "transformer",
+      "seed": 5,
+      "role": "primary"
+    },
+    {
+      "arch": "mamba",
+      "seed": 0,
+      "role": "primary"
+    },
+    {
+      "arch": "rnn",
+      "seed": 5,
+      "role": "secondary",
+      "comparable": true
+    },
+    {
+      "arch": "lstm",
+      "seed": 4,
+      "role": "secondary",
+      "comparable": true
+    },
+    {
+      "arch": "transformer",
+      "seed": 2,
+      "role": "secondary",
+      "comparable": true
+    },
+    {
+      "arch": "mamba",
+      "seed": 1,
+      "role": "secondary",
+      "comparable": true
+    }
+  ]
+}

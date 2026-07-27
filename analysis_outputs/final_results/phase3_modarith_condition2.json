@@ -1,0 +1,1291 @@
+{
+  "condition": "condition_2_cumulative_sum_feature",
+  "task": "modular-arithmetic-simple",
+  "status": "PRIMARY evidence is the behavioral logit gap (clean vs corrupt, unpatched); full-state patch (top-layer readout) is SECONDARY, a wiring check only, flagged UNRELIABLE when the behavioral gap is near zero.",
+  "n_pairs_per_position": 25,
+  "positions_tested": [
+    "early",
+    "mid",
+    "late"
+  ],
+  "results_by_position": {
+    "early": [
+      {
+        "arch": "rnn",
+        "seed": 4,
+        "role": "primary",
+        "pair_type": "cumulative_sum_early",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.06582372665405273,
+          "ci95": 0.019961182631437827,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "rnn",
+        "seed": 5,
+        "role": "secondary",
+        "pair_type": "cumulative_sum_early",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.011409616470336914,
+          "ci95": 0.0027238833996848753,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "lstm",
+        "seed": 3,
+        "role": "primary",
+        "pair_type": "cumulative_sum_early",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/3",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.013827457427978515,
+          "ci95": 0.004083913468336065,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "lstm",
+        "seed": 4,
+        "role": "secondary",
+        "pair_type": "cumulative_sum_early",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.009233589172363282,
+          "ci95": 0.0034716932501594284,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "transformer",
+        "seed": 5,
+        "role": "primary",
+        "pair_type": "cumulative_sum_early",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.15325307846069336,
+          "ci95": 0.04793834427011351,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0000021926028122,
+          "restored_fraction_ci95": 4.283121716792865e-06,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          0.9999989539874782,
+          0.9999989862124898,
+          0.9999952939626247,
+          1.0,
+          1.0000030748652824,
+          0.9999968592372972,
+          1.0000075555521974,
+          1.0000061937913436,
+          1.0,
+          0.9999972059390559,
+          1.0,
+          0.9999980437648919,
+          1.0000222776688648,
+          1.000045796981979,
+          0.9999898652586132,
+          1.0,
+          0.9999986263566445,
+          1.0,
+          0.999989492266308,
+          1.0000049776007964,
+          1.0,
+          1.0,
+          1.000000851108015,
+          1.0,
+          1.0000007605164212
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "transformer",
+        "seed": 2,
+        "role": "secondary",
+        "pair_type": "cumulative_sum_early",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/2",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.10273429870605469,
+          "ci95": 0.02815516515836866,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 0.999999549944165,
+          "restored_fraction_ci95": 1.2659614772120644e-06,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.000001224123558,
+          0.9999991071914833,
+          1.0,
+          1.0,
+          0.999986131528583,
+          0.9999978119933397,
+          1.0,
+          1.0,
+          1.0,
+          1.0000068769169406,
+          1.0,
+          1.0,
+          0.9999988412903854,
+          1.0000010212230577,
+          1.0,
+          1.0,
+          1.0,
+          0.9999977834767054,
+          1.0000008017812372,
+          1.0,
+          1.0,
+          0.9999991490788352
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "mamba",
+        "seed": 0,
+        "role": "primary",
+        "pair_type": "cumulative_sum_early",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/0",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.25861692428588867,
+          "ci95": 0.07635814469642799,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "mamba",
+        "seed": 1,
+        "role": "secondary",
+        "pair_type": "cumulative_sum_early",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/1",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.059082040786743166,
+          "ci95": 0.017870063916053423,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      }
+    ],
+    "mid": [
+      {
+        "arch": "rnn",
+        "seed": 4,
+        "role": "primary",
+        "pair_type": "cumulative_sum_mid",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.07422304153442383,
+          "ci95": 0.02215068786932854,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "rnn",
+        "seed": 5,
+        "role": "secondary",
+        "pair_type": "cumulative_sum_mid",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.012198705673217774,
+          "ci95": 0.004210113251094624,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "lstm",
+        "seed": 3,
+        "role": "primary",
+        "pair_type": "cumulative_sum_mid",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/3",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.01128795623779297,
+          "ci95": 0.003283246688721595,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "lstm",
+        "seed": 4,
+        "role": "secondary",
+        "pair_type": "cumulative_sum_mid",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.00857771873474121,
+          "ci95": 0.002724075385558644,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "transformer",
+        "seed": 5,
+        "role": "primary",
+        "pair_type": "cumulative_sum_mid",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.1572786235809326,
+          "ci95": 0.03846723812294801,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 0.9999993843507172,
+          "restored_fraction_ci95": 2.0398324203657846e-06,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          0.999998164339355,
+          0.9999988040666518,
+          1.0,
+          1.0000015472283725,
+          1.0000167231071533,
+          1.0,
+          0.9999924332041092,
+          0.9999986338396551,
+          0.9999981799816178,
+          1.0000010247497562,
+          1.0,
+          1.0,
+          0.999991153886982,
+          1.0000096333545268,
+          0.9999897968553908,
+          1.0,
+          1.0,
+          1.0000007049968769,
+          0.9999969663461611,
+          1.0,
+          1.0,
+          0.9999962822860223,
+          0.9999978134716385,
+          0.9999980172400974,
+          0.9999987298135621
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "transformer",
+        "seed": 2,
+        "role": "secondary",
+        "pair_type": "cumulative_sum_mid",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/2",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.09117937088012695,
+          "ci95": 0.02611504852739186,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0000008848304278,
+          "restored_fraction_ci95": 4.137552988790632e-06,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          0.9999989117683546,
+          1.0,
+          0.9999990833021656,
+          0.9999988561794334,
+          0.9999693317385837,
+          1.0000041688900747,
+          0.9999993690397921,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.000006900406434,
+          1.0,
+          1.0,
+          1.0000408680371082,
+          1.0,
+          1.0,
+          1.0000028185581384,
+          1.0000023734252323,
+          1.0,
+          1.0,
+          1.0,
+          0.9999994394153775,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "mamba",
+        "seed": 0,
+        "role": "primary",
+        "pair_type": "cumulative_sum_mid",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/0",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.21860615730285646,
+          "ci95": 0.06871172925670617,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "mamba",
+        "seed": 1,
+        "role": "secondary",
+        "pair_type": "cumulative_sum_mid",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/1",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.06716839790344238,
+          "ci95": 0.014434443123832385,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      }
+    ],
+    "late": [
+      {
+        "arch": "rnn",
+        "seed": 4,
+        "role": "primary",
+        "pair_type": "cumulative_sum_late",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.057197370529174806,
+          "ci95": 0.020718713846065658,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "rnn",
+        "seed": 5,
+        "role": "secondary",
+        "pair_type": "cumulative_sum_late",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.013269691467285157,
+          "ci95": 0.004616872770349657,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "lstm",
+        "seed": 3,
+        "role": "primary",
+        "pair_type": "cumulative_sum_late",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/3",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.013636693954467774,
+          "ci95": 0.0035975134558514075,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "lstm",
+        "seed": 4,
+        "role": "secondary",
+        "pair_type": "cumulative_sum_late",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.007453546524047851,
+          "ci95": 0.0027627282892369763,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "transformer",
+        "seed": 5,
+        "role": "primary",
+        "pair_type": "cumulative_sum_late",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.15075852394104003,
+          "ci95": 0.03851109571865905,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0000005315828493,
+          "restored_fraction_ci95": 1.4928680318026568e-06,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          0.9999962104776503,
+          0.9999971283099817,
+          1.0000008806708598,
+          1.0,
+          1.0,
+          1.000003217078828,
+          0.999995677591554,
+          1.0000066556626377,
+          0.999998522971486,
+          1.0000034881125126,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.000010558547144,
+          1.0,
+          1.0,
+          0.9999924005805957,
+          0.999999017549513,
+          1.0,
+          1.000002164010344,
+          1.0,
+          0.9999990982143743,
+          1.0000082697937513,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "transformer",
+        "seed": 2,
+        "role": "secondary",
+        "pair_type": "cumulative_sum_late",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/2",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.0872833776473999,
+          "ci95": 0.027303610916472144,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0000216418289716,
+          "restored_fraction_ci95": 4.626687511890655e-05,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          0.9999689469925163,
+          1.0,
+          0.9999982478534014,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9999941280438752,
+          1.0,
+          1.0005873715124816,
+          1.0,
+          1.0,
+          0.9999989135028776,
+          0.9999943594603131,
+          1.0000008016308377,
+          1.0,
+          1.0,
+          0.9999988981250496,
+          0.9999993786029379,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "mamba",
+        "seed": 0,
+        "role": "primary",
+        "pair_type": "cumulative_sum_late",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/0",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.23099418640136718,
+          "ci95": 0.07113102487207433,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "mamba",
+        "seed": 1,
+        "role": "secondary",
+        "pair_type": "cumulative_sum_late",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/1",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.06727640151977539,
+          "ci95": 0.018410999275916134,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      }
+    ]
+  },
+  "per_cell_summary": {
+    "rnn_seed4": {
+      "arch": "rnn",
+      "seed": 4,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 0.06582372665405273,
+        "mid": 0.07422304153442383,
+        "late": 0.057197370529174806
+      },
+      "causal_by_position": {
+        "early": true,
+        "mid": true,
+        "late": true
+      },
+      "all_positions_causal": true,
+      "no_position_causal": false
+    },
+    "rnn_seed5": {
+      "arch": "rnn",
+      "seed": 5,
+      "role": "secondary",
+      "gap_by_position": {
+        "early": 0.011409616470336914,
+        "mid": 0.012198705673217774,
+        "late": 0.013269691467285157
+      },
+      "causal_by_position": {
+        "early": false,
+        "mid": false,
+        "late": false
+      },
+      "all_positions_causal": false,
+      "no_position_causal": true
+    },
+    "lstm_seed3": {
+      "arch": "lstm",
+      "seed": 3,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 0.013827457427978515,
+        "mid": 0.01128795623779297,
+        "late": 0.013636693954467774
+      },
+      "causal_by_position": {
+        "early": false,
+        "mid": false,
+        "late": false
+      },
+      "all_positions_causal": false,
+      "no_position_causal": true
+    },
+    "lstm_seed4": {
+      "arch": "lstm",
+      "seed": 4,
+      "role": "secondary",
+      "gap_by_position": {
+        "early": 0.009233589172363282,
+        "mid": 0.00857771873474121,
+        "late": 0.007453546524047851
+      },
+      "causal_by_position": {
+        "early": false,
+        "mid": false,
+        "late": false
+      },
+      "all_positions_causal": false,
+      "no_position_causal": true
+    },
+    "transformer_seed5": {
+      "arch": "transformer",
+      "seed": 5,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 0.15325307846069336,
+        "mid": 0.1572786235809326,
+        "late": 0.15075852394104003
+      },
+      "causal_by_position": {
+        "early": true,
+        "mid": true,
+        "late": true
+      },
+      "all_positions_causal": true,
+      "no_position_causal": false
+    },
+    "transformer_seed2": {
+      "arch": "transformer",
+      "seed": 2,
+      "role": "secondary",
+      "gap_by_position": {
+        "early": 0.10273429870605469,
+        "mid": 0.09117937088012695,
+        "late": 0.0872833776473999
+      },
+      "causal_by_position": {
+        "early": true,
+        "mid": true,
+        "late": true
+      },
+      "all_positions_causal": true,
+      "no_position_causal": false
+    },
+    "mamba_seed0": {
+      "arch": "mamba",
+      "seed": 0,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 0.25861692428588867,
+        "mid": 0.21860615730285646,
+        "late": 0.23099418640136718
+      },
+      "causal_by_position": {
+        "early": true,
+        "mid": true,
+        "late": true
+      },
+      "all_positions_causal": true,
+      "no_position_causal": false
+    },
+    "mamba_seed1": {
+      "arch": "mamba",
+      "seed": 1,
+      "role": "secondary",
+      "gap_by_position": {
+        "early": 0.059082040786743166,
+        "mid": 0.06716839790344238,
+        "late": 0.06727640151977539
+      },
+      "causal_by_position": {
+        "early": true,
+        "mid": true,
+        "late": true
+      },
+      "all_positions_causal": true,
+      "no_position_causal": false
+    }
+  },
+  "overall": {
+    "n_cells_causal_at_all_positions": 5,
+    "n_cells_null_everywhere": 3,
+    "n_cells_position_specific": 0,
+    "refined_carrier_account_reading": "5/8 cells causal at ALL positions (aggregate carrier IS built, majority-like), 3/8 null everywhere (carrier absent, parity-like), 0/8 position-specific (partial carrier)."
+  }
+}

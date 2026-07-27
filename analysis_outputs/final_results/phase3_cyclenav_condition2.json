@@ -1,0 +1,433 @@
+{
+  "task": "cycle-navigation",
+  "condition": "condition_2_true_position_null_test",
+  "status": "Construction audit CONFIRMED a mathematically-necessary confound (true_position is a deterministic function of symbol_counts, so input-level editing cannot isolate one from the other) -- resolved via probe-direction SUBSPACE patching (projecting onto each cell's persisted true_position probe direction, raw-activation-space-corrected for the StandardScaler), leaving the orthogonal complement (symbol_counts-relevant information) at the corrupt run's own value. Validated against P=identity (exact match to full-state patch) and P=zero (exact no-op) for all 3 harness types before use. PRIMARY metric is |delta_logit| from the subspace patch (restored_fraction is degenerate here since position_pairs' own behavioral gap is near-zero by design).",
+  "description": "Tests whether the residual true_position probe signal (Phase 2: 0.037-0.072 selectivity for rnn/lstm/transformer, MLP-confirmed genuine; near-zero for mamba) causally drives accept/reject, or is a decodable-but-not-causally-used byproduct. Predicted: near-zero |delta_logit| relative to condition 1's grammar_pairs reference scale, for all 4 architectures, both seeds.",
+  "m_moves": 19,
+  "n_pairs_generated": 25,
+  "canonical_layer_by_arch": {
+    "rnn": 0,
+    "lstm": 0,
+    "mamba": 4,
+    "transformer": 4
+  },
+  "position_pairs_audit": {
+    "n_pairs": 25,
+    "kind": "position",
+    "same_length": true,
+    "n_token_positions_differing": {
+      "min": 1,
+      "max": 1
+    },
+    "differs_only_at_flip_idx": true,
+    "clean_digit_equals_corrupt_digit": true,
+    "true_position_differs": true,
+    "symbol_counts_also_necessarily_differ": "TRUE BY CONSTRUCTION: true_position = f(counts), so any move-token flip that changes true_position also changes symbol_counts (e.g. '>'.'<' flip changes both counts by 1 each). This pair type cannot isolate a 'true_position changed, symbol_counts unchanged' case via input-level editing alone -- see the subspace-patching protocol spec, which addresses this by patching along the probe-derived DIRECTION relevant to each quantity rather than relying on the counterfactual construction alone to separate them."
+  },
+  "construction_confound_note": "position_pairs (single late-move-flip) necessarily changes symbol_counts whenever it changes true_position -- this is a mathematical property of the task (true_position = net displacement mod 5, a deterministic function of move counts), NOT a fixable construction bug. Confirmed via audit_cyclenav_pairs' symbol_counts_also_necessarily_differ field. Resolved via probe-direction subspace patching rather than further input-level editing attempts.",
+  "sample_pairs": [
+    {
+      "clean": [
+        6,
+        7,
+        7,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        7,
+        6,
+        7,
+        7,
+        6,
+        6,
+        7,
+        7,
+        7,
+        2
+      ],
+      "corrupt": [
+        6,
+        7,
+        7,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        7,
+        6,
+        7,
+        7,
+        6,
+        6,
+        7,
+        7,
+        6,
+        2
+      ],
+      "length": 20,
+      "flip_idx": 18,
+      "orig_move": ">",
+      "new_move": "=",
+      "clean_label": true,
+      "corrupt_label": false,
+      "clean_final_pos": 2,
+      "corrupt_final_pos": 1
+    },
+    {
+      "clean": [
+        5,
+        6,
+        6,
+        5,
+        7,
+        6,
+        7,
+        5,
+        6,
+        6,
+        6,
+        5,
+        5,
+        6,
+        5,
+        7,
+        5,
+        5,
+        7,
+        1
+      ],
+      "corrupt": [
+        5,
+        6,
+        6,
+        5,
+        7,
+        6,
+        7,
+        5,
+        6,
+        6,
+        6,
+        5,
+        5,
+        6,
+        5,
+        7,
+        5,
+        5,
+        5,
+        1
+      ],
+      "length": 20,
+      "flip_idx": 18,
+      "orig_move": ">",
+      "new_move": "<",
+      "clean_label": true,
+      "corrupt_label": false,
+      "clean_final_pos": 1,
+      "corrupt_final_pos": 4
+    },
+    {
+      "clean": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        6,
+        7,
+        7,
+        5,
+        7,
+        6,
+        7,
+        7,
+        6,
+        6,
+        6,
+        7,
+        6,
+        6,
+        2
+      ],
+      "corrupt": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        6,
+        7,
+        7,
+        5,
+        7,
+        6,
+        7,
+        7,
+        6,
+        6,
+        6,
+        7,
+        6,
+        7,
+        2
+      ],
+      "length": 20,
+      "flip_idx": 18,
+      "orig_move": "=",
+      "new_move": ">",
+      "clean_label": true,
+      "corrupt_label": false,
+      "clean_final_pos": 2,
+      "corrupt_final_pos": 3
+    }
+  ],
+  "surprise_threshold_abs_delta_logit": 0.05,
+  "cells": [
+    {
+      "arch": "rnn",
+      "seed": 1,
+      "checkpoint": "data/models/cycle-navigation/rnn/rec+ns/validation-short/1",
+      "canonical_layer": 0,
+      "probe_checkpoint": "data/models/cycle-navigation/rnn/rec+ns/validation-short/1",
+      "probe_subspace_rank": 4,
+      "PRIMARY_behavioral_logit_gap_full_edit": {
+        "mean_abs_clean_corrupt_logit_gap": 0.00018240928649902345,
+        "ci95_abs_clean_corrupt_logit_gap": 2.9328117050505625e-05,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n": 25
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "true_position_subspace_patch_PRIMARY_METRIC": {
+        "mean_abs_delta_logit_subspace_patch": 4.673004150390625e-07,
+        "ci95_abs_delta_logit_subspace_patch": 8.306913880318905e-08,
+        "n": 25
+      },
+      "condition1_grammar_pairs_reference_scale": 5.4309,
+      "subspace_effect_ratio_to_condition1_reference": 8.604474673425445e-08,
+      "SURPRISING_above_noise_true_position_causal_effect": false,
+      "restored_fraction_caveat": "position_pairs' behavioral gap is near-zero BY DESIGN (this is what makes it a valid null-test construction, matching Phase 1's near-zero hard-negative accuracy) -- restored_fraction is therefore degenerate for every cell in this condition; use the subspace patch's absolute |delta_logit| as the causal-effect metric instead."
+    },
+    {
+      "arch": "rnn",
+      "seed": 4,
+      "checkpoint": "data/models/cycle-navigation/rnn/rec+ns/validation-short/4",
+      "canonical_layer": 0,
+      "probe_checkpoint": "data/models/cycle-navigation/rnn/rec+ns/validation-short/4",
+      "probe_subspace_rank": 4,
+      "PRIMARY_behavioral_logit_gap_full_edit": {
+        "mean_abs_clean_corrupt_logit_gap": 0.033301782608032224,
+        "ci95_abs_clean_corrupt_logit_gap": 0.008810624693556346,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n": 25
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "true_position_subspace_patch_PRIMARY_METRIC": {
+        "mean_abs_delta_logit_subspace_patch": 0.0008224391937255859,
+        "ci95_abs_delta_logit_subspace_patch": 0.00013942585630636063,
+        "n": 25
+      },
+      "condition1_grammar_pairs_reference_scale": 3.5508,
+      "subspace_effect_ratio_to_condition1_reference": 0.00023162081607682377,
+      "SURPRISING_above_noise_true_position_causal_effect": false,
+      "restored_fraction_caveat": "position_pairs' behavioral gap is near-zero BY DESIGN (this is what makes it a valid null-test construction, matching Phase 1's near-zero hard-negative accuracy) -- restored_fraction is therefore degenerate for every cell in this condition; use the subspace patch's absolute |delta_logit| as the causal-effect metric instead."
+    },
+    {
+      "arch": "lstm",
+      "seed": 2,
+      "checkpoint": "data/models/cycle-navigation/lstm/rec+ns/validation-short/2",
+      "canonical_layer": 0,
+      "probe_checkpoint": "data/models/cycle-navigation/lstm/rec+ns/validation-short/2",
+      "probe_subspace_rank": 4,
+      "PRIMARY_behavioral_logit_gap_full_edit": {
+        "mean_abs_clean_corrupt_logit_gap": 5.18798828125e-06,
+        "ci95_abs_clean_corrupt_logit_gap": 2.4989331175239408e-06,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n": 24
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "true_position_subspace_patch_PRIMARY_METRIC": {
+        "mean_abs_delta_logit_subspace_patch": 1.4781951904296875e-07,
+        "ci95_abs_delta_logit_subspace_patch": 8.236515035676473e-08,
+        "n": 25
+      },
+      "condition1_grammar_pairs_reference_scale": 4.4858,
+      "subspace_effect_ratio_to_condition1_reference": 3.295276629429951e-08,
+      "SURPRISING_above_noise_true_position_causal_effect": false,
+      "restored_fraction_caveat": "position_pairs' behavioral gap is near-zero BY DESIGN (this is what makes it a valid null-test construction, matching Phase 1's near-zero hard-negative accuracy) -- restored_fraction is therefore degenerate for every cell in this condition; use the subspace patch's absolute |delta_logit| as the causal-effect metric instead."
+    },
+    {
+      "arch": "lstm",
+      "seed": 3,
+      "checkpoint": "data/models/cycle-navigation/lstm/rec+ns/validation-short/3",
+      "canonical_layer": 0,
+      "probe_checkpoint": "data/models/cycle-navigation/lstm/rec+ns/validation-short/3",
+      "probe_subspace_rank": 4,
+      "PRIMARY_behavioral_logit_gap_full_edit": {
+        "mean_abs_clean_corrupt_logit_gap": 0.004969501495361328,
+        "ci95_abs_clean_corrupt_logit_gap": 0.0013032111060494772,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n": 25
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "true_position_subspace_patch_PRIMARY_METRIC": {
+        "mean_abs_delta_logit_subspace_patch": 2.5310516357421874e-05,
+        "ci95_abs_delta_logit_subspace_patch": 1.2916734335663218e-05,
+        "n": 25
+      },
+      "condition1_grammar_pairs_reference_scale": 4.5609,
+      "subspace_effect_ratio_to_condition1_reference": 5.54945654529191e-06,
+      "SURPRISING_above_noise_true_position_causal_effect": false,
+      "restored_fraction_caveat": "position_pairs' behavioral gap is near-zero BY DESIGN (this is what makes it a valid null-test construction, matching Phase 1's near-zero hard-negative accuracy) -- restored_fraction is therefore degenerate for every cell in this condition; use the subspace patch's absolute |delta_logit| as the causal-effect metric instead."
+    },
+    {
+      "arch": "transformer",
+      "seed": 6,
+      "checkpoint": "data/models/cycle-navigation/transformer/rec+ns/validation-short/6",
+      "canonical_layer": 4,
+      "probe_checkpoint": "data/models/cycle-navigation/transformer/rec+ns/validation-short/6",
+      "probe_subspace_rank": 4,
+      "PRIMARY_behavioral_logit_gap_full_edit": {
+        "mean_abs_clean_corrupt_logit_gap": 0.0003347349166870117,
+        "ci95_abs_clean_corrupt_logit_gap": 0.0002785094934413217,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0019060108457993,
+        "wiring_restored_fraction_ci95": 0.002136288630754755,
+        "wiring_n": 25
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "true_position_subspace_patch_PRIMARY_METRIC": {
+        "mean_abs_delta_logit_subspace_patch": 0.00012216567993164062,
+        "ci95_abs_delta_logit_subspace_patch": 8.720699384852585e-05,
+        "n": 25
+      },
+      "condition1_grammar_pairs_reference_scale": 7.7331,
+      "subspace_effect_ratio_to_condition1_reference": 1.5797762854694834e-05,
+      "SURPRISING_above_noise_true_position_causal_effect": false,
+      "restored_fraction_caveat": "position_pairs' behavioral gap is near-zero BY DESIGN (this is what makes it a valid null-test construction, matching Phase 1's near-zero hard-negative accuracy) -- restored_fraction is therefore degenerate for every cell in this condition; use the subspace patch's absolute |delta_logit| as the causal-effect metric instead."
+    },
+    {
+      "arch": "transformer",
+      "seed": 9,
+      "checkpoint": "data/models/cycle-navigation/transformer/rec+ns/validation-short/9",
+      "canonical_layer": 4,
+      "probe_checkpoint": "data/models/cycle-navigation/transformer/rec+ns/validation-short/9",
+      "probe_subspace_rank": 4,
+      "PRIMARY_behavioral_logit_gap_full_edit": {
+        "mean_abs_clean_corrupt_logit_gap": 0.00025846004486083983,
+        "ci95_abs_clean_corrupt_logit_gap": 0.00011425055418153276,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 0.9996771478943959,
+        "wiring_restored_fraction_ci95": 0.0005390627497188534,
+        "wiring_n": 25
+      },
+      "layer_specific_rf_is_meaningful": false,
+      "true_position_subspace_patch_PRIMARY_METRIC": {
+        "mean_abs_delta_logit_subspace_patch": 0.00021595001220703125,
+        "ci95_abs_delta_logit_subspace_patch": 0.00013196067778338555,
+        "n": 25
+      },
+      "condition1_grammar_pairs_reference_scale": 6.432,
+      "subspace_effect_ratio_to_condition1_reference": 3.357431781825734e-05,
+      "SURPRISING_above_noise_true_position_causal_effect": false,
+      "restored_fraction_caveat": "position_pairs' behavioral gap is near-zero BY DESIGN (this is what makes it a valid null-test construction, matching Phase 1's near-zero hard-negative accuracy) -- restored_fraction is therefore degenerate for every cell in this condition; use the subspace patch's absolute |delta_logit| as the causal-effect metric instead."
+    },
+    {
+      "arch": "mamba",
+      "seed": 0,
+      "checkpoint": "models/cycle-navigation/mamba/rec+ns/validation-short/0",
+      "canonical_layer": 4,
+      "probe_checkpoint": "models/cycle-navigation/mamba/rec+ns/validation-short/0",
+      "probe_subspace_rank": 4,
+      "PRIMARY_behavioral_logit_gap_full_edit": {
+        "mean_abs_clean_corrupt_logit_gap": 0.0854262351989746,
+        "ci95_abs_clean_corrupt_logit_gap": 0.0404331989954794,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n": 25
+      },
+      "layer_specific_rf_is_meaningful": true,
+      "true_position_subspace_patch_PRIMARY_METRIC": {
+        "mean_abs_delta_logit_subspace_patch": 0.005416464805603027,
+        "ci95_abs_delta_logit_subspace_patch": 0.0022505123967257084,
+        "n": 25
+      },
+      "condition1_grammar_pairs_reference_scale": 9.1288,
+      "subspace_effect_ratio_to_condition1_reference": 0.0005933380954345617,
+      "SURPRISING_above_noise_true_position_causal_effect": false
+    },
+    {
+      "arch": "mamba",
+      "seed": 7,
+      "checkpoint": "models/cycle-navigation/mamba/rec+ns/validation-short/7",
+      "canonical_layer": 4,
+      "probe_checkpoint": "models/cycle-navigation/mamba/rec+ns/validation-short/7",
+      "probe_subspace_rank": 4,
+      "PRIMARY_behavioral_logit_gap_full_edit": {
+        "mean_abs_clean_corrupt_logit_gap": 7.962424752712249,
+        "ci95_abs_clean_corrupt_logit_gap": 1.0338240300016266,
+        "n": 25
+      },
+      "wiring_check_full_state_patch_SECONDARY": {
+        "wiring_restored_fraction_mean": 1.0,
+        "wiring_restored_fraction_ci95": 0.0,
+        "wiring_n": 25
+      },
+      "layer_specific_rf_is_meaningful": true,
+      "true_position_subspace_patch_PRIMARY_METRIC": {
+        "mean_abs_delta_logit_subspace_patch": 0.1060146450996399,
+        "ci95_abs_delta_logit_subspace_patch": 0.029364143557988574,
+        "n": 25
+      },
+      "condition1_grammar_pairs_reference_scale": 9.4247,
+      "subspace_effect_ratio_to_condition1_reference": 0.0112485962523624,
+      "SURPRISING_above_noise_true_position_causal_effect": true,
+      "DIRECT_ACCURACY_INVESTIGATION": {
+        "hard_negative_accuracy_this_pair_set_seed7": 0.84,
+        "hard_negative_accuracy_this_pair_set_seed0": 0.0,
+        "clean_accuracy_both_seeds": 1.0,
+        "long_sequence_accuracy_seed7": 0.8284023668639053,
+        "long_sequence_accuracy_seed0": 0.9230769230769231,
+        "solving_seed_threshold_used_to_select_seed0": 0.95,
+        "bagcount_ffn_shortcut_ceiling": 0.9230769230769231,
+        "interpretation": "mamba seed7 correctly REJECTS 84% of single-late-move-flip hard negatives (vs 0% for seed0 and ~0.9% for the Phase 1 population aggregate) -- a decisive, non-subtle behavioral difference, not sampling noise (verified directly, not just via the aggregate logit-gap statistic). Its long-sequence accuracy (0.8284) is BELOW both the 0.95 threshold used to select seed0 as the architecture's representative \"solving\" seed AND the 0.9231 bagcount-ffn shortcut ceiling every other cell (all 4 architectures, both seeds each) hits exactly or matches closely. This is consistent with seed7 having learned a QUALITATIVELY DIFFERENT solution: partial genuine position-tracking (imprecise enough to cost ~9 points of raw long-sequence accuracy relative to the clean shortcut, but precise enough to catch single-move adversarial edits the pure-shortcut seed misses entirely) -- rather than \"a shortcut model that also happens to leak a small amount of decodable-but-unused true_position information,\" which was the null-test-violation scenario this condition was designed to detect. The subspace-patch causal effect (0.106, statistically real) is likely a genuine reflection of this different underlying mechanism, not an artifact.",
+        "selection_caveat": "mamba seed7 was included in the P2/P3 two-seeds-per-architecture scheme (phase2_p1_verify.py's p2_p3_seed_pairs) WITHOUT independently re-verifying it meets the 0.95 solving-seed threshold used for the architecture's PRIMARY representative seed (seed0). It does not meet that threshold. This means seed7's inclusion in \"uniform shortcut-only\" claims (Phase 2's P2/P4 cross-cell comparisons) may not be an apples-to-apples comparison with the other 7 cells, all of which DO closely match the 0.9231 shortcut ceiling. This is a genuine methodological finding for the paper, not just a curiosity: cycle-navigation's \"uniform shortcut across all architectures/seeds\" claim (previously believed the clean, exception-free counterpart to marked-reversal's architecture hierarchy) has its own seed-level exception, mirroring marked-reversal's seed-dependent-mechanism story in a task previously thought to be exception-free."
+      }
+    }
+  ],
+  "any_surprising_cells": [
+    "mamba_seed7"
+  ],
+  "prediction_confirmed": false,
+  "overall_finding_note": "7 of 8 cells confirm the null prediction cleanly (subspace-patch |delta_logit| ratio to condition 1 reference scale: 0.0000-0.0006, i.e. true_position is decodable but not causally used at readout for those cells). mamba seed7 is the exception, but investigation (see its DIRECT_ACCURACY_INVESTIGATION field) shows this is NOT the \"decodable-not-causally-used\" pattern the condition was designed to detect -- it is direct behavioral+causal evidence that mamba seed7 is a qualitatively different, partially-genuine-position-tracking model that does not meet the architecture's own solving-seed threshold (0.95) used elsewhere in this pilot. This is an important, genuine finding about seed selection and cycle-navigation's previously-assumed-uniform shortcut story, not a null-test violation to explain away."
+}

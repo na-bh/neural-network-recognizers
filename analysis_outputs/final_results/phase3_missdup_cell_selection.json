@@ -1,0 +1,303 @@
+{
+  "task": "missing-duplicate-string",
+  "description": "Cell selection for missing-duplicate-string's bounded Phase 3 patching pilot: primary (best) + secondary (next-best) seed per architecture, pulled from the existing flare_a2_missing_duplicate_string.json (modular-arithmetic-simple protocol, no new training). Checks for per-seed single-solver bottlenecks AND architecture-wide near-chance collapse, plus surfaces the pre-existing hard-vs-scrambled-negative accuracy split as a predicted-route hint for interpreting the upcoming Condition 2/3 patching runs.",
+  "comparability_threshold": 0.15,
+  "near_chance_threshold": 0.6,
+  "hard_vs_scrambled_gap_flag_threshold": 0.3,
+  "cell_selection": {
+    "rnn": {
+      "primary_seed": 2,
+      "primary_accuracy": 0.9733333333333334,
+      "secondary_seed": 3,
+      "secondary_accuracy": 0.9733333333333334,
+      "accuracy_gap": 0.0,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "2",
+          0.9733333333333334
+        ],
+        [
+          "3",
+          0.9733333333333334
+        ],
+        [
+          "5",
+          0.9733333333333334
+        ],
+        [
+          "6",
+          0.9733333333333334
+        ],
+        [
+          "8",
+          0.9733333333333334
+        ],
+        [
+          "9",
+          0.9733333333333334
+        ],
+        [
+          "10",
+          0.6466666666666666
+        ],
+        [
+          "7",
+          0.6066666666666667
+        ],
+        [
+          "4",
+          0.58
+        ],
+        [
+          "1",
+          0.5
+        ]
+      ],
+      "n_seeds_above_near_chance_threshold": 8,
+      "n_seeds_total": 10,
+      "architecture_wide_near_chance": false
+    },
+    "lstm": {
+      "primary_seed": 1,
+      "primary_accuracy": 0.9733333333333334,
+      "secondary_seed": 2,
+      "secondary_accuracy": 0.9733333333333334,
+      "accuracy_gap": 0.0,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "1",
+          0.9733333333333334
+        ],
+        [
+          "2",
+          0.9733333333333334
+        ],
+        [
+          "7",
+          0.9733333333333334
+        ],
+        [
+          "8",
+          0.9666666666666667
+        ],
+        [
+          "3",
+          0.7866666666666666
+        ],
+        [
+          "10",
+          0.7866666666666666
+        ],
+        [
+          "5",
+          0.78
+        ],
+        [
+          "4",
+          0.7733333333333333
+        ],
+        [
+          "9",
+          0.7466666666666667
+        ],
+        [
+          "6",
+          0.5133333333333333
+        ]
+      ],
+      "n_seeds_above_near_chance_threshold": 9,
+      "n_seeds_total": 10,
+      "architecture_wide_near_chance": false
+    },
+    "transformer": {
+      "primary_seed": 8,
+      "primary_accuracy": 0.8666666666666667,
+      "secondary_seed": 10,
+      "secondary_accuracy": 0.8666666666666667,
+      "accuracy_gap": 0.0,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "8",
+          0.8666666666666667
+        ],
+        [
+          "10",
+          0.8666666666666667
+        ],
+        [
+          "3",
+          0.7666666666666667
+        ],
+        [
+          "6",
+          0.72
+        ],
+        [
+          "4",
+          0.6133333333333333
+        ],
+        [
+          "9",
+          0.5666666666666667
+        ],
+        [
+          "1",
+          0.4866666666666667
+        ],
+        [
+          "2",
+          0.4866666666666667
+        ],
+        [
+          "5",
+          0.4866666666666667
+        ],
+        [
+          "7",
+          0.4866666666666667
+        ]
+      ],
+      "n_seeds_above_near_chance_threshold": 5,
+      "n_seeds_total": 10,
+      "architecture_wide_near_chance": false
+    },
+    "mamba": {
+      "primary_seed": 9,
+      "primary_accuracy": 0.8666666666666667,
+      "secondary_seed": 5,
+      "secondary_accuracy": 0.84,
+      "accuracy_gap": 0.026666666666666727,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "9",
+          0.8666666666666667
+        ],
+        [
+          "5",
+          0.84
+        ],
+        [
+          "3",
+          0.6133333333333333
+        ],
+        [
+          "8",
+          0.5666666666666667
+        ],
+        [
+          "4",
+          0.5533333333333333
+        ],
+        [
+          "6",
+          0.5466666666666666
+        ],
+        [
+          "0",
+          0.54
+        ],
+        [
+          "1",
+          0.5333333333333333
+        ],
+        [
+          "2",
+          0.5333333333333333
+        ],
+        [
+          "7",
+          0.5333333333333333
+        ]
+      ],
+      "n_seeds_above_near_chance_threshold": 3,
+      "n_seeds_total": 10,
+      "architecture_wide_near_chance": false
+    }
+  },
+  "per_seed_bottleneck_check": {
+    "rnn": "NO SEED-LEVEL BOTTLENECK -- primary/secondary seeds comparable (gap=0.000).",
+    "lstm": "NO SEED-LEVEL BOTTLENECK -- primary/secondary seeds comparable (gap=0.000).",
+    "transformer": "NO SEED-LEVEL BOTTLENECK -- primary/secondary seeds comparable (gap=0.000).",
+    "mamba": "NO SEED-LEVEL BOTTLENECK -- primary/secondary seeds comparable (gap=0.027)."
+  },
+  "architecture_wide_route_hint": {
+    "rnn": {
+      "hard_negative_accuracy": 0.91,
+      "scrambled_negative_accuracy": 0.9,
+      "scrambled_minus_hard_gap": -0.010000000000000009,
+      "flagged_aggregate_route_suspect": false,
+      "predicted_condition2_vs_condition3": "predicted SMALL Condition 2 effect, LARGE Condition 3 effect -- comparable hard/scrambled accuracy suggests genuine positional tracking, not aggregate-only"
+    },
+    "lstm": {
+      "hard_negative_accuracy": 0.91,
+      "scrambled_negative_accuracy": 0.9,
+      "scrambled_minus_hard_gap": -0.010000000000000009,
+      "flagged_aggregate_route_suspect": false,
+      "predicted_condition2_vs_condition3": "predicted SMALL Condition 2 effect, LARGE Condition 3 effect -- comparable hard/scrambled accuracy suggests genuine positional tracking, not aggregate-only"
+    },
+    "transformer": {
+      "hard_negative_accuracy": 0.25333333333333335,
+      "scrambled_negative_accuracy": 0.8966666666666666,
+      "scrambled_minus_hard_gap": 0.6433333333333333,
+      "flagged_aggregate_route_suspect": true,
+      "predicted_condition2_vs_condition3": "predicted LARGE Condition 2 (aggregate-route) effect, SMALL/NULL Condition 3 (position) effect -- solves scrambled negatives via shallow cues but fails hard negatives requiring genuine positional comparison"
+    },
+    "mamba": {
+      "hard_negative_accuracy": 0.2833333333333333,
+      "scrambled_negative_accuracy": 0.9,
+      "scrambled_minus_hard_gap": 0.6166666666666667,
+      "flagged_aggregate_route_suspect": true,
+      "predicted_condition2_vs_condition3": "predicted LARGE Condition 2 (aggregate-route) effect, SMALL/NULL Condition 3 (position) effect -- solves scrambled negatives via shallow cues but fails hard negatives requiring genuine positional comparison"
+    }
+  },
+  "final_cells": [
+    {
+      "arch": "rnn",
+      "seed": 2,
+      "role": "primary"
+    },
+    {
+      "arch": "lstm",
+      "seed": 1,
+      "role": "primary"
+    },
+    {
+      "arch": "transformer",
+      "seed": 8,
+      "role": "primary"
+    },
+    {
+      "arch": "mamba",
+      "seed": 9,
+      "role": "primary"
+    },
+    {
+      "arch": "rnn",
+      "seed": 3,
+      "role": "secondary",
+      "comparable": true
+    },
+    {
+      "arch": "lstm",
+      "seed": 2,
+      "role": "secondary",
+      "comparable": true
+    },
+    {
+      "arch": "transformer",
+      "seed": 10,
+      "role": "secondary",
+      "comparable": true
+    },
+    {
+      "arch": "mamba",
+      "seed": 5,
+      "role": "secondary",
+      "comparable": true
+    }
+  ]
+}

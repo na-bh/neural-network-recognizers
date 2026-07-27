@@ -1,0 +1,1517 @@
+{
+  "condition": "condition_3_target_computation_permuted_pairs",
+  "task": "modular-arithmetic-simple",
+  "status": "PRIMARY evidence is the behavioral logit gap (clean vs corrupt, unpatched); full-state patch (top-layer readout) is SECONDARY, a wiring check only, flagged UNRELIABLE when the behavioral gap is near zero.",
+  "description": "Load-bearing carrier-account test: clean/corrupted differ ONLY in which (op,digit) pair sits where (all six shortcut features identical), isolating order-sensitive mod-5 accumulation. Swept early/mid/late.",
+  "n_pairs_per_position": 25,
+  "positions_tested": [
+    "early",
+    "mid",
+    "late"
+  ],
+  "results_by_position": {
+    "early": [
+      {
+        "arch": "rnn",
+        "seed": 4,
+        "role": "primary",
+        "pair_type": "target_computation_permuted_early",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.008416891098022461,
+          "ci95": 0.00358888382783855,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "rnn",
+        "seed": 5,
+        "role": "secondary",
+        "pair_type": "target_computation_permuted_early",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.004026288986206055,
+          "ci95": 0.002023093342332621,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "lstm",
+        "seed": 3,
+        "role": "primary",
+        "pair_type": "target_computation_permuted_early",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/3",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 2.3393630981445314e-05,
+          "ci95": 8.962359033588799e-06,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "lstm",
+        "seed": 4,
+        "role": "secondary",
+        "pair_type": "target_computation_permuted_early",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.0003489875793457031,
+          "ci95": 0.00012950240815822156,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "transformer",
+        "seed": 5,
+        "role": "primary",
+        "pair_type": "target_computation_permuted_early",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.012381563186645508,
+          "ci95": 0.003280475899227886,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 0.9999714699880797,
+          "restored_fraction_ci95": 4.4978558662699735e-05,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0000168528911135,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.999517024873219,
+          1.0000254465876126,
+          0.9999697162411798,
+          0.9997126436781609,
+          1.0,
+          0.9999718800967324,
+          1.0,
+          1.0000121220937281,
+          1.0,
+          1.000116754232341,
+          1.000020492643141,
+          1.0,
+          0.9999624702107298,
+          1.0,
+          0.9999533766930089,
+          1.0,
+          1.0,
+          1.0,
+          1.0000079694610253
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "transformer",
+        "seed": 2,
+        "role": "secondary",
+        "pair_type": "target_computation_permuted_early",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/2",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.001897258758544922,
+          "ci95": 0.0008883064097171056,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 0.9999795143318981,
+          "restored_fraction_ci95": 5.348423246526685e-05,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          0.9996332294150009,
+          1.0,
+          0.999750499001996,
+          0.9996001599360256,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.000011771630371,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0000928936367859,
+          1.0001217581882382,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.000277546489037,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "mamba",
+        "seed": 0,
+        "role": "primary",
+        "pair_type": "target_computation_permuted_early",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/0",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.0008719921112060547,
+          "ci95": 0.0003258636922115771,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      },
+      {
+        "arch": "mamba",
+        "seed": 1,
+        "role": "secondary",
+        "pair_type": "target_computation_permuted_early",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/1",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.0014643287658691407,
+          "ci95": 0.0005225989375496534,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "early"
+      }
+    ],
+    "mid": [
+      {
+        "arch": "rnn",
+        "seed": 4,
+        "role": "primary",
+        "pair_type": "target_computation_permuted_mid",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.047631692886352536,
+          "ci95": 0.012841859451771017,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "rnn",
+        "seed": 5,
+        "role": "secondary",
+        "pair_type": "target_computation_permuted_mid",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.008011703491210937,
+          "ci95": 0.002662175128954813,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "lstm",
+        "seed": 3,
+        "role": "primary",
+        "pair_type": "target_computation_permuted_mid",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/3",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.00028250694274902345,
+          "ci95": 0.0001362940627055818,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "lstm",
+        "seed": 4,
+        "role": "secondary",
+        "pair_type": "target_computation_permuted_mid",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.003042793273925781,
+          "ci95": 0.0009011888314216551,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "transformer",
+        "seed": 5,
+        "role": "primary",
+        "pair_type": "target_computation_permuted_mid",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.007826595306396485,
+          "ci95": 0.002364992971544231,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0000551472988821,
+          "restored_fraction_ci95": 6.326576787033023e-05,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0000345476844414,
+          1.0,
+          1.0000335086955066,
+          1.0000302782571835,
+          1.0004192872117401,
+          0.9997178329571106,
+          1.0,
+          0.9999767417520439,
+          1.0002287805994052,
+          1.0000446408642472,
+          0.9999465640696804,
+          1.0001098538943205,
+          1.0,
+          1.0,
+          1.0000192685652627,
+          1.0000228341781978,
+          1.0,
+          1.0,
+          1.0,
+          0.9999468155830342,
+          1.000075951289906,
+          1.000205044084478,
+          1.0005667327854917,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "transformer",
+        "seed": 2,
+        "role": "secondary",
+        "pair_type": "target_computation_permuted_mid",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/2",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.0020261955261230468,
+          "ci95": 0.0012555143074541987,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 0.9998795878908463,
+          "restored_fraction_ci95": 0.00020918909798509772,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9993769470404984,
+          1.0,
+          1.0,
+          0.9996224990562477,
+          1.0,
+          0.9999314505072663,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.000052985746834,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9974747474747475,
+          1.0005310674455656
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "mamba",
+        "seed": 0,
+        "role": "primary",
+        "pair_type": "target_computation_permuted_mid",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/0",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.007851362228393555,
+          "ci95": 0.0017418145333488802,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      },
+      {
+        "arch": "mamba",
+        "seed": 1,
+        "role": "secondary",
+        "pair_type": "target_computation_permuted_mid",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/1",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.0026889514923095705,
+          "ci95": 0.0006282683478881542,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "mid"
+      }
+    ],
+    "late": [
+      {
+        "arch": "rnn",
+        "seed": 4,
+        "role": "primary",
+        "pair_type": "target_computation_permuted_late",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.050779809951782225,
+          "ci95": 0.014925077737280362,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "rnn",
+        "seed": 5,
+        "role": "secondary",
+        "pair_type": "target_computation_permuted_late",
+        "checkpoint": "models/modular-arithmetic-simple/rnn/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.007998971939086915,
+          "ci95": 0.0026732451591378963,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "lstm",
+        "seed": 3,
+        "role": "primary",
+        "pair_type": "target_computation_permuted_late",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/3",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.009697322845458984,
+          "ci95": 0.002323806415084375,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "lstm",
+        "seed": 4,
+        "role": "secondary",
+        "pair_type": "target_computation_permuted_late",
+        "checkpoint": "models/modular-arithmetic-simple/lstm/rec+ns/validation-short/4",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.004695930480957031,
+          "ci95": 0.0012769118685202019,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "transformer",
+        "seed": 5,
+        "role": "primary",
+        "pair_type": "target_computation_permuted_late",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/5",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.004195137023925781,
+          "ci95": 0.0012009339169920202,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 0.9999283345328669,
+          "restored_fraction_ci95": 6.923324690929835e-05,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          0.999974314848586,
+          0.9998671008040402,
+          1.0003339269813,
+          0.9999798764413499,
+          0.9998477929984779,
+          0.9999165762909819,
+          0.9996585282567868,
+          1.0,
+          0.9999092064644998,
+          0.9998992087889936,
+          0.9997337238716549,
+          0.9998192825517304,
+          0.9998775160249868,
+          0.9998277050310131,
+          1.0001255492780916,
+          0.9999465726345034,
+          0.9999322171761675,
+          1.0003466204506066,
+          0.9997456118036123,
+          0.9995294117647059,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9999376208595846
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "transformer",
+        "seed": 2,
+        "role": "secondary",
+        "pair_type": "target_computation_permuted_late",
+        "checkpoint": "models/modular-arithmetic-simple/transformer/rec+ns/validation-short/2",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.0014195203781127929,
+          "ci95": 0.0007706306158722841,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0011178218652268,
+          "restored_fraction_ci95": 0.0020410817827655713,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0033898305084745,
+          1.0,
+          1.0256410256410255,
+          1.0,
+          1.0001641497045306,
+          1.0,
+          1.0000404841909234,
+          1.0,
+          1.0000727061218555,
+          1.000041003772347,
+          0.9999470198675496,
+          1.0,
+          1.0,
+          0.999955713020372,
+          1.0,
+          0.9999839656222942,
+          1.0,
+          1.0010266940451746,
+          1.0,
+          1.0,
+          0.9966996699669967,
+          1.0,
+          1.0009832841691249,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "mamba",
+        "seed": 0,
+        "role": "primary",
+        "pair_type": "target_computation_permuted_late",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/0",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.05441289901733398,
+          "ci95": 0.014686284104600617,
+          "n": 25
+        },
+        "causally_effective": true,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": false
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      },
+      {
+        "arch": "mamba",
+        "seed": 1,
+        "role": "secondary",
+        "pair_type": "target_computation_permuted_late",
+        "checkpoint": "models/modular-arithmetic-simple/mamba/rec+ns/validation-short/1",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.009316434860229492,
+          "ci95": 0.0023865673452067773,
+          "n": 25
+        },
+        "causally_effective": false,
+        "wiring_check_full_state_patch_SECONDARY": {
+          "restored_fraction_mean": 1.0,
+          "restored_fraction_ci95": 0.0,
+          "n_nondegenerate_denom": 25,
+          "UNRELIABLE_near_zero_behavioral_gap": true
+        },
+        "raw_restored_fractions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position_label": "late"
+      }
+    ]
+  },
+  "per_cell_summary": {
+    "rnn_seed4": {
+      "arch": "rnn",
+      "seed": 4,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 0.008416891098022461,
+        "mid": 0.047631692886352536,
+        "late": 0.050779809951782225
+      },
+      "causal_by_position": {
+        "early": false,
+        "mid": false,
+        "late": true
+      },
+      "all_positions_causal": false,
+      "no_position_causal": false,
+      "this_seed_own_standard_test_accuracy": 0.9970059880239521,
+      "diagnostic_by_position": {
+        "early": {
+          "mean_clean_logit": 3.611497344970703,
+          "mean_corrupt_logit": 3.6109019565582274,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "mid": {
+          "mean_clean_logit": 3.6306410884857176,
+          "mean_corrupt_logit": 3.616978874206543,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "late": {
+          "mean_clean_logit": 3.611289186477661,
+          "mean_corrupt_logit": 3.590031623840332,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        }
+      },
+      "verdict": "NULL/POSITION-SPECIFIC -- see per-position breakdown."
+    },
+    "rnn_seed5": {
+      "arch": "rnn",
+      "seed": 5,
+      "role": "secondary",
+      "gap_by_position": {
+        "early": 0.004026288986206055,
+        "mid": 0.008011703491210937,
+        "late": 0.007998971939086915
+      },
+      "causal_by_position": {
+        "early": false,
+        "mid": false,
+        "late": false
+      },
+      "all_positions_causal": false,
+      "no_position_causal": true,
+      "this_seed_own_standard_test_accuracy": 0.9970059880239521,
+      "diagnostic_by_position": {
+        "early": {
+          "mean_clean_logit": 3.6128394699096678,
+          "mean_corrupt_logit": 3.6133242321014403,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "mid": {
+          "mean_clean_logit": 3.612631664276123,
+          "mean_corrupt_logit": 3.6145452308654784,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "late": {
+          "mean_clean_logit": 3.6130303287506105,
+          "mean_corrupt_logit": 3.6118540382385254,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        }
+      },
+      "verdict": "NEAR-ZERO CAUSAL GAP DESPITE HIGH ACCURACY -- investigate: see diagnostic_by_position for whether the model even behaviorally distinguishes clean/corrupt (accepts clean, rejects corrupt) despite the small patched-state gap. If it DOES distinguish them behaviorally, the decision-relevant computation may not be localized at the single readout position/layer patched here -- a genuine open question, not resolved by this condition alone."
+    },
+    "lstm_seed3": {
+      "arch": "lstm",
+      "seed": 3,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 2.3393630981445314e-05,
+        "mid": 0.00028250694274902345,
+        "late": 0.009697322845458984
+      },
+      "causal_by_position": {
+        "early": false,
+        "mid": false,
+        "late": false
+      },
+      "all_positions_causal": false,
+      "no_position_causal": true,
+      "this_seed_own_standard_test_accuracy": 0.9970059880239521,
+      "diagnostic_by_position": {
+        "early": {
+          "mean_clean_logit": 3.6328436279296876,
+          "mean_corrupt_logit": 3.6328331089019774,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "mid": {
+          "mean_clean_logit": 3.6328584957122803,
+          "mean_corrupt_logit": 3.632766799926758,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "late": {
+          "mean_clean_logit": 3.631342067718506,
+          "mean_corrupt_logit": 3.631889667510986,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        }
+      },
+      "verdict": "NEAR-ZERO CAUSAL GAP DESPITE HIGH ACCURACY -- investigate: see diagnostic_by_position for whether the model even behaviorally distinguishes clean/corrupt (accepts clean, rejects corrupt) despite the small patched-state gap. If it DOES distinguish them behaviorally, the decision-relevant computation may not be localized at the single readout position/layer patched here -- a genuine open question, not resolved by this condition alone."
+    },
+    "lstm_seed4": {
+      "arch": "lstm",
+      "seed": 4,
+      "role": "secondary",
+      "gap_by_position": {
+        "early": 0.0003489875793457031,
+        "mid": 0.003042793273925781,
+        "late": 0.004695930480957031
+      },
+      "causal_by_position": {
+        "early": false,
+        "mid": false,
+        "late": false
+      },
+      "all_positions_causal": false,
+      "no_position_causal": true,
+      "this_seed_own_standard_test_accuracy": 0.9966067864271457,
+      "diagnostic_by_position": {
+        "early": {
+          "mean_clean_logit": 3.8382896423339843,
+          "mean_corrupt_logit": 3.8382564544677735,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "mid": {
+          "mean_clean_logit": 3.8338731575012206,
+          "mean_corrupt_logit": 3.834939594268799,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "late": {
+          "mean_clean_logit": 3.8358631420135496,
+          "mean_corrupt_logit": 3.836142339706421,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        }
+      },
+      "verdict": "NEAR-ZERO CAUSAL GAP DESPITE HIGH ACCURACY -- investigate: see diagnostic_by_position for whether the model even behaviorally distinguishes clean/corrupt (accepts clean, rejects corrupt) despite the small patched-state gap. If it DOES distinguish them behaviorally, the decision-relevant computation may not be localized at the single readout position/layer patched here -- a genuine open question, not resolved by this condition alone."
+    },
+    "transformer_seed5": {
+      "arch": "transformer",
+      "seed": 5,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 0.012381563186645508,
+        "mid": 0.007826595306396485,
+        "late": 0.004195137023925781
+      },
+      "causal_by_position": {
+        "early": false,
+        "mid": false,
+        "late": false
+      },
+      "all_positions_causal": false,
+      "no_position_causal": true,
+      "this_seed_own_standard_test_accuracy": 0.830938123752495,
+      "diagnostic_by_position": {
+        "early": {
+          "mean_clean_logit": 3.580950527191162,
+          "mean_corrupt_logit": 3.576821928024292,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "mid": {
+          "mean_clean_logit": 3.5918342685699463,
+          "mean_corrupt_logit": 3.5941440296173095,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "late": {
+          "mean_clean_logit": 3.570619850158691,
+          "mean_corrupt_logit": 3.568648223876953,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        }
+      },
+      "verdict": "NULL/POSITION-SPECIFIC -- see per-position breakdown."
+    },
+    "transformer_seed2": {
+      "arch": "transformer",
+      "seed": 2,
+      "role": "secondary",
+      "gap_by_position": {
+        "early": 0.001897258758544922,
+        "mid": 0.0020261955261230468,
+        "late": 0.0014195203781127929
+      },
+      "causal_by_position": {
+        "early": false,
+        "mid": false,
+        "late": false
+      },
+      "all_positions_causal": false,
+      "no_position_causal": true,
+      "this_seed_own_standard_test_accuracy": 0.7930139720558882,
+      "diagnostic_by_position": {
+        "early": {
+          "mean_clean_logit": 1.247902226448059,
+          "mean_corrupt_logit": 1.2485445642471313,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "mid": {
+          "mean_clean_logit": 1.2461339235305786,
+          "mean_corrupt_logit": 1.245640549659729,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "late": {
+          "mean_clean_logit": 1.2349857997894287,
+          "mean_corrupt_logit": 1.2346845960617066,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        }
+      },
+      "verdict": "NULL/POSITION-SPECIFIC -- see per-position breakdown."
+    },
+    "mamba_seed0": {
+      "arch": "mamba",
+      "seed": 0,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 0.0008719921112060547,
+        "mid": 0.007851362228393555,
+        "late": 0.05441289901733398
+      },
+      "causal_by_position": {
+        "early": false,
+        "mid": false,
+        "late": true
+      },
+      "all_positions_causal": false,
+      "no_position_causal": false,
+      "this_seed_own_standard_test_accuracy": 0.9970059880239521,
+      "diagnostic_by_position": {
+        "early": {
+          "mean_clean_logit": 3.5360545349121093,
+          "mean_corrupt_logit": 3.5360248470306397,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "mid": {
+          "mean_clean_logit": 3.5293441295623778,
+          "mean_corrupt_logit": 3.530775146484375,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "late": {
+          "mean_clean_logit": 3.5294234275817873,
+          "mean_corrupt_logit": 3.5265807342529296,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        }
+      },
+      "verdict": "NULL/POSITION-SPECIFIC -- see per-position breakdown."
+    },
+    "mamba_seed1": {
+      "arch": "mamba",
+      "seed": 1,
+      "role": "secondary",
+      "gap_by_position": {
+        "early": 0.0014643287658691407,
+        "mid": 0.0026889514923095705,
+        "late": 0.009316434860229492
+      },
+      "causal_by_position": {
+        "early": false,
+        "mid": false,
+        "late": false
+      },
+      "all_positions_causal": false,
+      "no_position_causal": true,
+      "this_seed_own_standard_test_accuracy": 0.9942115768463073,
+      "diagnostic_by_position": {
+        "early": {
+          "mean_clean_logit": 3.488590726852417,
+          "mean_corrupt_logit": 3.487916097640991,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "mid": {
+          "mean_clean_logit": 3.48830265045166,
+          "mean_corrupt_logit": 3.4882029628753664,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        },
+        "late": {
+          "mean_clean_logit": 3.490183506011963,
+          "mean_corrupt_logit": 3.4863646030426025,
+          "n_clean_accepted (logit>0)": 25,
+          "n_total": 25,
+          "n_corrupt_rejected (logit<0)": 0,
+          "unpatched_behavioral_discrimination": "Model does NOT reliably distinguish clean from corrupt behaviorally either -- consistent with the causal gap being genuinely near-zero, not a localization artifact."
+        }
+      },
+      "verdict": "NEAR-ZERO CAUSAL GAP DESPITE HIGH ACCURACY -- investigate: see diagnostic_by_position for whether the model even behaviorally distinguishes clean/corrupt (accepts clean, rejects corrupt) despite the small patched-state gap. If it DOES distinguish them behaviorally, the decision-relevant computation may not be localized at the single readout position/layer patched here -- a genuine open question, not resolved by this condition alone."
+    }
+  },
+  "overall": {
+    "n_cells_causal_at_all_positions": 0,
+    "n_cells_null_everywhere": 6,
+    "n_cells_position_specific": 2,
+    "n_cells_null_despite_high_accuracy_FLAGGED_FOR_INVESTIGATION": 4,
+    "carrier_account_reading": "6/8 cells show UNIFORM ABSENCE, 0/8 show COMPREHENSIVE order-sensitive verification, 2/8 position-specific. 4 of the null cells have own standard-test accuracy >0.9 -- these are flagged explicitly (per this condition's approval) as requiring further investigation rather than being read as clean carrier-account confirmations, since a model achieving >99% accuracy while showing zero causal sensitivity to an order-permutation that changes the true answer needs an explanation for HOW it is achieving that accuracy."
+  }
+}

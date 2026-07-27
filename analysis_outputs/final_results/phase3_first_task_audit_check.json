@@ -1,0 +1,68 @@
+{
+  "task": "first",
+  "description": "Lookup/verification pass on the 'first' FLaRe task (src/recognizers/hand_picked_languages/first.py) plus a full task-inventory cross-check against the proposed paper categorization. NOT a causal-patching investigation -- no counterfactual pairs, no cell selection, no training. Direct source + real-data verification only.",
+
+  "first_task_audit": {
+    "source_file": "src/recognizers/hand_picked_languages/first.py",
+    "generator_type": "DFA-based (2-state automaton, same style as repeat-01, NOT a WeightedLanguage.sample()-based hand-picked class like the marker/arithmetic/structure families)",
+    "dfa_structure": "q0 --'1'--> q1; q1 --'0'--> q1; q1 --'1'--> q1; q1 is the ONLY accepting state (q0 is initial, non-accepting). No transition from q0 on '0' -- immediate dead-state reject.",
+    "grammar_and_target_computation": {
+      "target": "accept iff len(s) >= 1 AND s[0] == '1' -- the REST of the string is COMPLETELY UNCONSTRAINED (q1 self-loops on both '0' and '1')",
+      "verified_against_real_data": true,
+      "n_positives_checked": 4924,
+      "positive_match_fraction": 1.0,
+      "n_negatives_checked": 5076,
+      "n_negatives_accidentally_starting_with_1": 0,
+      "n_empty_positives": 0,
+      "note": "This is structurally the simplest possible task in the entire FLaRe suite: a single-position check with zero dependency on any other content -- no length constraint, no aggregate feature, no structural token, no multi-position relationship of any kind. The trivial (and only) solution IS the fully correct solution."
+    },
+    "alphabet": ["0", "1"],
+    "length_range_observed": {"min": 0, "max": 40},
+    "structural_token_conventions": "NONE -- no marker, no operator, no equals sign; pure 2-symbol alphabet, same as repeat-01 and the shortcut-free family (parity/even-pairs/majority), but unlike every marker/arithmetic/structure-family task.",
+    "hard_negative_fraction_from_existing_a1_audit": {
+      "source": "analysis_outputs/final_results/flare_a1_task_audit.json (Part 6B's own internal designation for this pilot's flare_a2_worker.py / cyclenav_s2_shortcut_check.py / flare_a3_verdict.py sweep -- NOT an external published section; 'Part 6B' is this project's own phase-numbering convention)",
+      "n_negatives": 2517,
+      "n_hard": 11,
+      "n_scrambled": 2506,
+      "frac_hard": 0.004370282081843465,
+      "frac_scrambled": 0.9956297179181566,
+      "interpretation": "The smallest hard-negative fraction of ANY task audited in this pilot (smaller even than repeat-01's 6.04%) -- essentially every violation is immediately provable at position 0 (viol_first returns 0.0, i.e. earliest-possible detection, for any negative whose first symbol is wrong). The 11 'hard' cases are presumably empty-or-degenerate edge cases, not genuine late-detectable violations."
+    },
+    "existing_classification_in_a1_audit": {
+      "preliminary_verdict": "N/A -- trivial task, no deeper computation to shortcut around",
+      "structural_note_from_source": "The entire task reduces to reading ONE bit; there is no deeper computation to bypass via a shortcut -- the trivial solution IS the correct solution.",
+      "flagged_as": "NEITHER shortcut-vulnerable NOR shortcut-free in the normal pilot sense -- it is its own degenerate category: there is no 'shortcut vs. genuine computation' distinction to draw, because the correct algorithm and the cheapest possible algorithm are identical (check one bit). Matches the user's proposed standalone 'first (1)' category rather than folding it into either the shortcut-vulnerable families or the shortcut-free family (parity/even-pairs/majority), which DO have a real gap between a genuine solution and an available shortcut."
+    }
+  },
+
+  "full_task_inventory_check": {
+    "source": "languages/ directory listing (18 non-'-fixed' task directories) cross-checked against src/recognizers/hand_picked_languages/ source files",
+    "all_tasks_found": [
+      "binary-addition", "binary-multiplication", "bucket-sort", "compute-sqrt",
+      "cycle-navigation", "dyck-2-3", "even-pairs", "first", "majority",
+      "marked-copy", "marked-reversal", "missing-duplicate-string",
+      "modular-arithmetic-simple", "odds-first", "parity", "repeat-01",
+      "stack-manipulation", "unmarked-reversal"
+    ],
+    "total_count": 18,
+    "proposed_categorization_total": "4 (marker) + 4 (arithmetic) + 3 (structure) + 1 (grammar) + 1 (navigation) + 1 (first) + 3 (shortcut-free) + 1 (well-designed non-trivial) = 18",
+    "counts_match": true,
+    "category_assignment": {
+      "marker_family (4)": ["marked-reversal", "marked-copy", "odds-first", "bucket-sort"],
+      "arithmetic_family (4)": ["binary-addition", "binary-multiplication", "compute-sqrt", "modular-arithmetic-simple"],
+      "structure_family (3)": ["dyck-2-3", "stack-manipulation", "missing-duplicate-string"],
+      "grammar_family (1)": ["repeat-01"],
+      "navigation (1)": ["cycle-navigation"],
+      "first (1)": ["first"],
+      "shortcut_free (3)": ["parity", "even-pairs", "majority"],
+      "well_designed_non_trivial (1)": ["unmarked-reversal"]
+    },
+    "unaccounted_tasks": [],
+    "verdict": "COMPLETE MATCH -- all 18 tasks under languages/ are accounted for exactly once across the 8 proposed categories, with each category's count matching the proposed total precisely (4/4/3/1/1/1/3/1). No task is missing, duplicated, or left uncategorized.",
+    "notes": [
+      "missing-duplicate-string is assigned to structure_family, NOT marker_family, despite superficial resemblance to marked-copy (both are content-preserving halves-match checks) -- the key structural difference (confirmed in this pilot's own phase3_missdup_task_audit.json) is that missing-duplicate-string has NO explicit marker token separating input from answer; the blank '_' sits INSIDE the content itself and always represents a fixed-constant redaction, unlike the marker family's genuine input/output split via '#'.",
+      "repeat-01 and first are the only two DFA-based tasks (using FiniteAutomatonContainer directly) rather than the WeightedLanguage.sample()-based hand-picked class used by every other task -- both are also the only two tasks with a pure 2-symbol {0,1} alphabet and zero structural tokens, consistent with their standalone categories (grammar_family and first respectively) rather than being folded into shortcut_free or well_designed_non_trivial.",
+      "'Part 6B' throughout this project's analysis_outputs/ refers to this pilot's OWN internal phase designation (the flare_a2_worker.py / cyclenav_s2_shortcut_check.py / flare_a3_verdict.py sweep across the FLaRe task suite), not an external published paper section -- confirmed by reading the actual references in phase1_grammar_baselines_design.json."
+    ]
+  }
+}

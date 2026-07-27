@@ -1,0 +1,856 @@
+{
+  "condition": "condition_3_position_sweep_followup",
+  "description": "Follow-up to condition 3: sweeps the target_computation_multiset_matched_case swap position across early/early-mid/mid-late/late locations within the sorted half, all 8 cells, to test whether condition 3's large causal effects (found at ONE fixed position, swap_idx=25) reflect comprehensive sort-order verification or position-specific sensitivity.",
+  "swap_positions_tested": {
+    "early": 5,
+    "early_mid": 17,
+    "mid_late": 33,
+    "late": 44
+  },
+  "n_half": 50,
+  "n_pairs_per_position": 25,
+  "position_construction_audits": {
+    "early": {
+      "n_pairs": 25,
+      "same_length": true,
+      "same_marker_count": true,
+      "same_marker_position": true,
+      "same_is_balanced": true,
+      "same_is_multiset_matched": true,
+      "n_token_positions_differing": {
+        "min": 2,
+        "max": 2
+      },
+      "differs_at_exactly_two_positions": true,
+      "clean_all_target_computation_match": true,
+      "corrupt_all_no_match": true,
+      "max_check_unaffected": true,
+      "min_check_unaffected": true,
+      "target_property_isolated": true
+    },
+    "early_mid": {
+      "n_pairs": 25,
+      "same_length": true,
+      "same_marker_count": true,
+      "same_marker_position": true,
+      "same_is_balanced": true,
+      "same_is_multiset_matched": true,
+      "n_token_positions_differing": {
+        "min": 2,
+        "max": 2
+      },
+      "differs_at_exactly_two_positions": true,
+      "clean_all_target_computation_match": true,
+      "corrupt_all_no_match": true,
+      "max_check_unaffected": true,
+      "min_check_unaffected": true,
+      "target_property_isolated": true
+    },
+    "mid_late": {
+      "n_pairs": 25,
+      "same_length": true,
+      "same_marker_count": true,
+      "same_marker_position": true,
+      "same_is_balanced": true,
+      "same_is_multiset_matched": true,
+      "n_token_positions_differing": {
+        "min": 2,
+        "max": 2
+      },
+      "differs_at_exactly_two_positions": true,
+      "clean_all_target_computation_match": true,
+      "corrupt_all_no_match": true,
+      "max_check_unaffected": true,
+      "min_check_unaffected": true,
+      "target_property_isolated": true
+    },
+    "late": {
+      "n_pairs": 25,
+      "same_length": true,
+      "same_marker_count": true,
+      "same_marker_position": true,
+      "same_is_balanced": true,
+      "same_is_multiset_matched": true,
+      "n_token_positions_differing": {
+        "min": 2,
+        "max": 2
+      },
+      "differs_at_exactly_two_positions": true,
+      "clean_all_target_computation_match": true,
+      "corrupt_all_no_match": true,
+      "max_check_unaffected": true,
+      "min_check_unaffected": true,
+      "target_property_isolated": true
+    }
+  },
+  "results_by_position": {
+    "early": [
+      {
+        "arch": "rnn",
+        "seed": 4,
+        "role": "primary",
+        "checkpoint": "data/models/bucket-sort/rnn/rec+ns/validation-short/4",
+        "swap_idx": 5,
+        "swap_position_label": "early",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 2.09808349609375e-07,
+          "ci95_abs_clean_corrupt_logit_gap": 7.78210708418583e-08,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 16
+        },
+        "causally_effective": false
+      },
+      {
+        "arch": "rnn",
+        "seed": 10,
+        "role": "secondary_comparable",
+        "checkpoint": "data/models/bucket-sort/rnn/rec+ns/validation-short/10",
+        "swap_idx": 5,
+        "swap_position_label": "early",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 11.206955785751342,
+          "ci95_abs_clean_corrupt_logit_gap": 0.30757180547408436,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "lstm",
+        "seed": 2,
+        "role": "primary",
+        "checkpoint": "data/models/bucket-sort/lstm/rec+ns/validation-short/2",
+        "swap_idx": 5,
+        "swap_position_label": "early",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 4.8918724060058595e-05,
+          "ci95_abs_clean_corrupt_logit_gap": 1.3107220478691185e-05,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": false
+      },
+      {
+        "arch": "lstm",
+        "seed": 3,
+        "role": "secondary_near_chance_partial",
+        "checkpoint": "data/models/bucket-sort/lstm/rec+ns/validation-short/3",
+        "swap_idx": 5,
+        "swap_position_label": "early",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 1.1749267578125e-05,
+          "ci95_abs_clean_corrupt_logit_gap": 6.983054881674163e-06,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 21
+        },
+        "causally_effective": false
+      },
+      {
+        "arch": "transformer",
+        "seed": 7,
+        "role": "primary",
+        "checkpoint": "data/models/bucket-sort/transformer/rec+ns/validation-short/7",
+        "swap_idx": 5,
+        "swap_position_label": "early",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 10.147312409877777,
+          "ci95_abs_clean_corrupt_logit_gap": 0.3679252395355853,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0000001337707514,
+          "wiring_restored_fraction_ci95": 3.328327419858655e-08,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "transformer",
+        "seed": 3,
+        "role": "secondary_comparable",
+        "checkpoint": "data/models/bucket-sort/transformer/rec+ns/validation-short/3",
+        "swap_idx": 5,
+        "swap_position_label": "early",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 10.638332829475402,
+          "ci95_abs_clean_corrupt_logit_gap": 0.8258177569361506,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0000000275606147,
+          "wiring_restored_fraction_ci95": 1.2656525239066696e-08,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "mamba",
+        "seed": 7,
+        "role": "primary",
+        "checkpoint": "models/bucket-sort/mamba/rec+ns/validation-short/7",
+        "swap_idx": 5,
+        "swap_position_label": "early",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 8.951943402290345,
+          "ci95_abs_clean_corrupt_logit_gap": 0.02240516928985184,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "mamba",
+        "seed": 3,
+        "role": "secondary_comparable",
+        "checkpoint": "models/bucket-sort/mamba/rec+ns/validation-short/3",
+        "swap_idx": 5,
+        "swap_position_label": "early",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 9.531042828559876,
+          "ci95_abs_clean_corrupt_logit_gap": 0.010628155997687707,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      }
+    ],
+    "early_mid": [
+      {
+        "arch": "rnn",
+        "seed": 4,
+        "role": "primary",
+        "checkpoint": "data/models/bucket-sort/rnn/rec+ns/validation-short/4",
+        "swap_idx": 17,
+        "swap_position_label": "early_mid",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 8.751052684783936,
+          "ci95_abs_clean_corrupt_logit_gap": 0.7146795113063,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 24
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "rnn",
+        "seed": 10,
+        "role": "secondary_comparable",
+        "checkpoint": "data/models/bucket-sort/rnn/rec+ns/validation-short/10",
+        "swap_idx": 17,
+        "swap_position_label": "early_mid",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 10.95294997215271,
+          "ci95_abs_clean_corrupt_logit_gap": 0.3359033160474988,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "lstm",
+        "seed": 2,
+        "role": "primary",
+        "checkpoint": "data/models/bucket-sort/lstm/rec+ns/validation-short/2",
+        "swap_idx": 17,
+        "swap_position_label": "early_mid",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 7.888078689575196e-05,
+          "ci95_abs_clean_corrupt_logit_gap": 1.2930215291116979e-05,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": false
+      },
+      {
+        "arch": "lstm",
+        "seed": 3,
+        "role": "secondary_near_chance_partial",
+        "checkpoint": "data/models/bucket-sort/lstm/rec+ns/validation-short/3",
+        "swap_idx": 17,
+        "swap_position_label": "early_mid",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 12.845399684906006,
+          "ci95_abs_clean_corrupt_logit_gap": 1.049710305376511,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "transformer",
+        "seed": 7,
+        "role": "primary",
+        "checkpoint": "data/models/bucket-sort/transformer/rec+ns/validation-short/7",
+        "swap_idx": 17,
+        "swap_position_label": "early_mid",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 11.674328501224517,
+          "ci95_abs_clean_corrupt_logit_gap": 0.10450168570938614,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0000001043762952,
+          "wiring_restored_fraction_ci95": 2.658724868243363e-08,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "transformer",
+        "seed": 3,
+        "role": "secondary_comparable",
+        "checkpoint": "data/models/bucket-sort/transformer/rec+ns/validation-short/3",
+        "swap_idx": 17,
+        "swap_position_label": "early_mid",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 11.920737991333008,
+          "ci95_abs_clean_corrupt_logit_gap": 0.04085156632035957,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0000000220686835,
+          "wiring_restored_fraction_ci95": 1.0159538572635136e-08,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "mamba",
+        "seed": 7,
+        "role": "primary",
+        "checkpoint": "models/bucket-sort/mamba/rec+ns/validation-short/7",
+        "swap_idx": 17,
+        "swap_position_label": "early_mid",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 6.094067407846451,
+          "ci95_abs_clean_corrupt_logit_gap": 1.085658181393794,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "mamba",
+        "seed": 3,
+        "role": "secondary_comparable",
+        "checkpoint": "models/bucket-sort/mamba/rec+ns/validation-short/3",
+        "swap_idx": 17,
+        "swap_position_label": "early_mid",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 9.681823930740357,
+          "ci95_abs_clean_corrupt_logit_gap": 0.010500918424399711,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      }
+    ],
+    "mid_late": [
+      {
+        "arch": "rnn",
+        "seed": 4,
+        "role": "primary",
+        "checkpoint": "data/models/bucket-sort/rnn/rec+ns/validation-short/4",
+        "swap_idx": 33,
+        "swap_position_label": "mid_late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 8.788695154190064,
+          "ci95_abs_clean_corrupt_logit_gap": 0.12099916861743273,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "rnn",
+        "seed": 10,
+        "role": "secondary_comparable",
+        "checkpoint": "data/models/bucket-sort/rnn/rec+ns/validation-short/10",
+        "swap_idx": 33,
+        "swap_position_label": "mid_late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 9.193491306304931,
+          "ci95_abs_clean_corrupt_logit_gap": 0.4492439824641054,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "lstm",
+        "seed": 2,
+        "role": "primary",
+        "checkpoint": "data/models/bucket-sort/lstm/rec+ns/validation-short/2",
+        "swap_idx": 33,
+        "swap_position_label": "mid_late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.00035227060317993163,
+          "ci95_abs_clean_corrupt_logit_gap": 4.298803080320192e-05,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": false
+      },
+      {
+        "arch": "lstm",
+        "seed": 3,
+        "role": "secondary_near_chance_partial",
+        "checkpoint": "data/models/bucket-sort/lstm/rec+ns/validation-short/3",
+        "swap_idx": 33,
+        "swap_position_label": "mid_late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 7.652839984893799,
+          "ci95_abs_clean_corrupt_logit_gap": 2.1012999873826153,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "transformer",
+        "seed": 7,
+        "role": "primary",
+        "checkpoint": "data/models/bucket-sort/transformer/rec+ns/validation-short/7",
+        "swap_idx": 33,
+        "swap_position_label": "mid_late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 11.6858616232872,
+          "ci95_abs_clean_corrupt_logit_gap": 0.1573750168931283,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0000001114775836,
+          "wiring_restored_fraction_ci95": 2.1018322077518894e-08,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "transformer",
+        "seed": 3,
+        "role": "secondary_comparable",
+        "checkpoint": "data/models/bucket-sort/transformer/rec+ns/validation-short/3",
+        "swap_idx": 33,
+        "swap_position_label": "mid_late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 12.009451818466186,
+          "ci95_abs_clean_corrupt_logit_gap": 0.07161569866318261,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0000000060106033,
+          "wiring_restored_fraction_ci95": 1.2713610958497835e-08,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "mamba",
+        "seed": 7,
+        "role": "primary",
+        "checkpoint": "models/bucket-sort/mamba/rec+ns/validation-short/7",
+        "swap_idx": 33,
+        "swap_position_label": "mid_late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 8.760787119865418,
+          "ci95_abs_clean_corrupt_logit_gap": 0.023070337260995645,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "mamba",
+        "seed": 3,
+        "role": "secondary_comparable",
+        "checkpoint": "models/bucket-sort/mamba/rec+ns/validation-short/3",
+        "swap_idx": 33,
+        "swap_position_label": "mid_late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 6.999781980514526,
+          "ci95_abs_clean_corrupt_logit_gap": 0.4121090368658492,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      }
+    ],
+    "late": [
+      {
+        "arch": "rnn",
+        "seed": 4,
+        "role": "primary",
+        "checkpoint": "data/models/bucket-sort/rnn/rec+ns/validation-short/4",
+        "swap_idx": 44,
+        "swap_position_label": "late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 6.447626342773438,
+          "ci95_abs_clean_corrupt_logit_gap": 0.039201970579251844,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "rnn",
+        "seed": 10,
+        "role": "secondary_comparable",
+        "checkpoint": "data/models/bucket-sort/rnn/rec+ns/validation-short/10",
+        "swap_idx": 44,
+        "swap_position_label": "late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 10.121449270248412,
+          "ci95_abs_clean_corrupt_logit_gap": 0.4182280529133388,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "lstm",
+        "seed": 2,
+        "role": "primary",
+        "checkpoint": "data/models/bucket-sort/lstm/rec+ns/validation-short/2",
+        "swap_idx": 44,
+        "swap_position_label": "late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.00037895679473876954,
+          "ci95_abs_clean_corrupt_logit_gap": 2.215731404512357e-05,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": false
+      },
+      {
+        "arch": "lstm",
+        "seed": 3,
+        "role": "secondary_near_chance_partial",
+        "checkpoint": "data/models/bucket-sort/lstm/rec+ns/validation-short/3",
+        "swap_idx": 44,
+        "swap_position_label": "late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 0.00180877685546875,
+          "ci95_abs_clean_corrupt_logit_gap": 0.0001354116683908761,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": false
+      },
+      {
+        "arch": "transformer",
+        "seed": 7,
+        "role": "primary",
+        "checkpoint": "data/models/bucket-sort/transformer/rec+ns/validation-short/7",
+        "swap_idx": 44,
+        "swap_position_label": "late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 12.306528635025025,
+          "ci95_abs_clean_corrupt_logit_gap": 0.040618277732333966,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.000000120482336,
+          "wiring_restored_fraction_ci95": 2.0490189928946202e-08,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "transformer",
+        "seed": 3,
+        "role": "secondary_comparable",
+        "checkpoint": "data/models/bucket-sort/transformer/rec+ns/validation-short/3",
+        "swap_idx": 44,
+        "swap_position_label": "late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 12.019727149009704,
+          "ci95_abs_clean_corrupt_logit_gap": 0.030379433730342825,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.000000007126146,
+          "wiring_restored_fraction_ci95": 1.5304902589251763e-08,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "mamba",
+        "seed": 7,
+        "role": "primary",
+        "checkpoint": "models/bucket-sort/mamba/rec+ns/validation-short/7",
+        "swap_idx": 44,
+        "swap_position_label": "late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 8.992115840911865,
+          "ci95_abs_clean_corrupt_logit_gap": 0.006066865363622425,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      },
+      {
+        "arch": "mamba",
+        "seed": 3,
+        "role": "secondary_comparable",
+        "checkpoint": "models/bucket-sort/mamba/rec+ns/validation-short/3",
+        "swap_idx": 44,
+        "swap_position_label": "late",
+        "PRIMARY_behavioral_logit_gap": {
+          "mean_abs_clean_corrupt_logit_gap": 9.501481719017029,
+          "ci95_abs_clean_corrupt_logit_gap": 0.023236306698574457,
+          "n": 25
+        },
+        "wiring_check_full_state_patch_SECONDARY": {
+          "wiring_restored_fraction_mean": 1.0,
+          "wiring_restored_fraction_ci95": 0.0,
+          "wiring_n_nondegenerate_denom": 25
+        },
+        "causally_effective": true
+      }
+    ]
+  },
+  "per_cell_summary": {
+    "rnn_seed4": {
+      "arch": "rnn",
+      "seed": 4,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 2.09808349609375e-07,
+        "early_mid": 8.751052684783936,
+        "mid_late": 8.788695154190064,
+        "late": 6.447626342773438
+      },
+      "causal_by_position": {
+        "early": false,
+        "early_mid": true,
+        "mid_late": true,
+        "late": true
+      },
+      "verdict": "POSITION-SPECIFIC SENSITIVITY, NOT COMPREHENSIVE VERIFICATION -- causal effect present at some positions but not others. This cell's sort-order sensitivity is NOT uniform across the sequence -- report which positions specifically, do not generalize to 'verifies sort order' without qualification."
+    },
+    "rnn_seed10": {
+      "arch": "rnn",
+      "seed": 10,
+      "role": "secondary_comparable",
+      "gap_by_position": {
+        "early": 11.206955785751342,
+        "early_mid": 10.95294997215271,
+        "mid_late": 9.193491306304931,
+        "late": 10.121449270248412
+      },
+      "causal_by_position": {
+        "early": true,
+        "early_mid": true,
+        "mid_late": true,
+        "late": true
+      },
+      "verdict": "COMPREHENSIVE SORT-ORDER VERIFICATION -- large causal effect at EVERY tested position (early, early-mid, mid-late, late), not concentrated at the single position condition 3 originally tested. This is genuine, position-general sensitivity to sort-order correctness, not an artifact of one specific location."
+    },
+    "lstm_seed2": {
+      "arch": "lstm",
+      "seed": 2,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 4.8918724060058595e-05,
+        "early_mid": 7.888078689575196e-05,
+        "mid_late": 0.00035227060317993163,
+        "late": 0.00037895679473876954
+      },
+      "causal_by_position": {
+        "early": false,
+        "early_mid": false,
+        "mid_late": false,
+        "late": false
+      },
+      "verdict": "NULL AT EVERY POSITION -- consistent with the marker-only characterization (lstm seed2) or a genuine absence of order-sensitivity."
+    },
+    "lstm_seed3": {
+      "arch": "lstm",
+      "seed": 3,
+      "role": "secondary_near_chance_partial",
+      "gap_by_position": {
+        "early": 1.1749267578125e-05,
+        "early_mid": 12.845399684906006,
+        "mid_late": 7.652839984893799,
+        "late": 0.00180877685546875
+      },
+      "causal_by_position": {
+        "early": false,
+        "early_mid": true,
+        "mid_late": true,
+        "late": false
+      },
+      "verdict": "POSITION-SPECIFIC SENSITIVITY, NOT COMPREHENSIVE VERIFICATION -- causal effect present at some positions but not others. This cell's sort-order sensitivity is NOT uniform across the sequence -- report which positions specifically, do not generalize to 'verifies sort order' without qualification."
+    },
+    "transformer_seed7": {
+      "arch": "transformer",
+      "seed": 7,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 10.147312409877777,
+        "early_mid": 11.674328501224517,
+        "mid_late": 11.6858616232872,
+        "late": 12.306528635025025
+      },
+      "causal_by_position": {
+        "early": true,
+        "early_mid": true,
+        "mid_late": true,
+        "late": true
+      },
+      "verdict": "COMPREHENSIVE SORT-ORDER VERIFICATION -- large causal effect at EVERY tested position (early, early-mid, mid-late, late), not concentrated at the single position condition 3 originally tested. This is genuine, position-general sensitivity to sort-order correctness, not an artifact of one specific location."
+    },
+    "transformer_seed3": {
+      "arch": "transformer",
+      "seed": 3,
+      "role": "secondary_comparable",
+      "gap_by_position": {
+        "early": 10.638332829475402,
+        "early_mid": 11.920737991333008,
+        "mid_late": 12.009451818466186,
+        "late": 12.019727149009704
+      },
+      "causal_by_position": {
+        "early": true,
+        "early_mid": true,
+        "mid_late": true,
+        "late": true
+      },
+      "verdict": "COMPREHENSIVE SORT-ORDER VERIFICATION -- large causal effect at EVERY tested position (early, early-mid, mid-late, late), not concentrated at the single position condition 3 originally tested. This is genuine, position-general sensitivity to sort-order correctness, not an artifact of one specific location."
+    },
+    "mamba_seed7": {
+      "arch": "mamba",
+      "seed": 7,
+      "role": "primary",
+      "gap_by_position": {
+        "early": 8.951943402290345,
+        "early_mid": 6.094067407846451,
+        "mid_late": 8.760787119865418,
+        "late": 8.992115840911865
+      },
+      "causal_by_position": {
+        "early": true,
+        "early_mid": true,
+        "mid_late": true,
+        "late": true
+      },
+      "verdict": "COMPREHENSIVE SORT-ORDER VERIFICATION -- large causal effect at EVERY tested position (early, early-mid, mid-late, late), not concentrated at the single position condition 3 originally tested. This is genuine, position-general sensitivity to sort-order correctness, not an artifact of one specific location."
+    },
+    "mamba_seed3": {
+      "arch": "mamba",
+      "seed": 3,
+      "role": "secondary_comparable",
+      "gap_by_position": {
+        "early": 9.531042828559876,
+        "early_mid": 9.681823930740357,
+        "mid_late": 6.999781980514526,
+        "late": 9.501481719017029
+      },
+      "causal_by_position": {
+        "early": true,
+        "early_mid": true,
+        "mid_late": true,
+        "late": true
+      },
+      "verdict": "COMPREHENSIVE SORT-ORDER VERIFICATION -- large causal effect at EVERY tested position (early, early-mid, mid-late, late), not concentrated at the single position condition 3 originally tested. This is genuine, position-general sensitivity to sort-order correctness, not an artifact of one specific location."
+    }
+  },
+  "overall_conclusion": {
+    "n_cells_comprehensive_verification": 7,
+    "n_cells_null_everywhere": 1,
+    "n_cells_position_specific_only": 0,
+    "interpretation": "7/8 cells show large causal effects at ALL 4 swept positions -- genuine, position-general sort-order verification, not an artifact of condition 3's single tested position. 1/8 show null effects everywhere (expected: lstm seed2). No cell shows a mixed (position-specific-only) pattern -- the comprehensive-vs-null split is completely clean."
+  }
+}

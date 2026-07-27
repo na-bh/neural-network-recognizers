@@ -1,0 +1,298 @@
+{
+  "task": "binary-multiplication",
+  "description": "Cell selection for binary-multiplication's bounded Phase 3 patching pilot: primary (best) + secondary (next-best) seed per architecture, pulled from the existing flare_a2_binary_multiplication.json (no new training). Checks for per-seed single-solver bottlenecks AND architecture-wide near-chance collapse.",
+  "comparability_threshold": 0.15,
+  "near_chance_threshold": 0.6,
+  "cell_selection": {
+    "rnn": {
+      "primary_seed": 4,
+      "primary_accuracy": 0.9066666666666666,
+      "secondary_seed": 2,
+      "secondary_accuracy": 0.9,
+      "accuracy_gap": 0.006666666666666599,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "4",
+          0.9066666666666666
+        ],
+        [
+          "2",
+          0.9
+        ],
+        [
+          "5",
+          0.9
+        ],
+        [
+          "9",
+          0.9
+        ],
+        [
+          "6",
+          0.8933333333333333
+        ],
+        [
+          "8",
+          0.7866666666666666
+        ],
+        [
+          "1",
+          0.6266666666666667
+        ],
+        [
+          "10",
+          0.62
+        ],
+        [
+          "7",
+          0.44666666666666666
+        ],
+        [
+          "3",
+          0.42
+        ]
+      ],
+      "n_seeds_above_near_chance_threshold": 8,
+      "n_seeds_total": 10,
+      "architecture_wide_near_chance": false
+    },
+    "lstm": {
+      "primary_seed": 8,
+      "primary_accuracy": 0.8866666666666667,
+      "secondary_seed": 2,
+      "secondary_accuracy": 0.82,
+      "accuracy_gap": 0.06666666666666676,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "8",
+          0.8866666666666667
+        ],
+        [
+          "2",
+          0.82
+        ],
+        [
+          "4",
+          0.78
+        ],
+        [
+          "7",
+          0.66
+        ],
+        [
+          "5",
+          0.6266666666666667
+        ],
+        [
+          "10",
+          0.6266666666666667
+        ],
+        [
+          "1",
+          0.6133333333333333
+        ],
+        [
+          "6",
+          0.48
+        ],
+        [
+          "9",
+          0.48
+        ],
+        [
+          "3",
+          0.4533333333333333
+        ]
+      ],
+      "n_seeds_above_near_chance_threshold": 7,
+      "n_seeds_total": 10,
+      "architecture_wide_near_chance": false
+    },
+    "transformer": {
+      "primary_seed": 9,
+      "primary_accuracy": 0.88,
+      "secondary_seed": 4,
+      "secondary_accuracy": 0.7933333333333333,
+      "accuracy_gap": 0.08666666666666667,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "9",
+          0.88
+        ],
+        [
+          "4",
+          0.7933333333333333
+        ],
+        [
+          "1",
+          0.4533333333333333
+        ],
+        [
+          "2",
+          0.4533333333333333
+        ],
+        [
+          "3",
+          0.4533333333333333
+        ],
+        [
+          "5",
+          0.4533333333333333
+        ],
+        [
+          "6",
+          0.4533333333333333
+        ],
+        [
+          "8",
+          0.4533333333333333
+        ],
+        [
+          "10",
+          0.4533333333333333
+        ],
+        [
+          "7",
+          0.44666666666666666
+        ]
+      ],
+      "n_seeds_above_near_chance_threshold": 2,
+      "n_seeds_total": 10,
+      "architecture_wide_near_chance": false
+    },
+    "mamba": {
+      "primary_seed": 4,
+      "primary_accuracy": 0.9,
+      "secondary_seed": 8,
+      "secondary_accuracy": 0.8733333333333333,
+      "accuracy_gap": 0.026666666666666727,
+      "comparable": true,
+      "all_seed_accuracies_ranked": [
+        [
+          "4",
+          0.9
+        ],
+        [
+          "8",
+          0.8733333333333333
+        ],
+        [
+          "2",
+          0.8
+        ],
+        [
+          "7",
+          0.7266666666666667
+        ],
+        [
+          "9",
+          0.5866666666666667
+        ],
+        [
+          "1",
+          0.5533333333333333
+        ],
+        [
+          "3",
+          0.49333333333333335
+        ],
+        [
+          "5",
+          0.4533333333333333
+        ],
+        [
+          "0",
+          0.44666666666666666
+        ],
+        [
+          "6",
+          0.44666666666666666
+        ]
+      ],
+      "n_seeds_above_near_chance_threshold": 4,
+      "n_seeds_total": 10,
+      "architecture_wide_near_chance": false
+    }
+  },
+  "per_seed_bottleneck_check": {
+    "rnn": "NO SEED-LEVEL BOTTLENECK -- primary/secondary seeds comparable (gap=0.007).",
+    "lstm": "NO SEED-LEVEL BOTTLENECK -- primary/secondary seeds comparable (gap=0.067).",
+    "transformer": "NO SEED-LEVEL BOTTLENECK -- primary/secondary seeds comparable (gap=0.087).",
+    "mamba": "NO SEED-LEVEL BOTTLENECK -- primary/secondary seeds comparable (gap=0.027)."
+  },
+  "hard_vs_scrambled_negative_accuracy": {
+    "rnn": {
+      "hard_negative_accuracy": 0.5567375886524822,
+      "n_hard": 282,
+      "scrambled_negative_accuracy": 0.8766666666666667,
+      "n_scrambled": 300
+    },
+    "lstm": {
+      "hard_negative_accuracy": 0.48936170212765956,
+      "n_hard": 282,
+      "scrambled_negative_accuracy": 0.8666666666666667,
+      "n_scrambled": 300
+    },
+    "transformer": {
+      "hard_negative_accuracy": 0.4716312056737589,
+      "n_hard": 282,
+      "scrambled_negative_accuracy": 0.8266666666666667,
+      "n_scrambled": 300
+    },
+    "mamba": {
+      "hard_negative_accuracy": 0.48226950354609927,
+      "n_hard": 282,
+      "scrambled_negative_accuracy": 0.8866666666666667,
+      "n_scrambled": 300
+    }
+  },
+  "final_cells": [
+    {
+      "arch": "rnn",
+      "seed": 4,
+      "role": "primary"
+    },
+    {
+      "arch": "lstm",
+      "seed": 8,
+      "role": "primary"
+    },
+    {
+      "arch": "transformer",
+      "seed": 9,
+      "role": "primary"
+    },
+    {
+      "arch": "mamba",
+      "seed": 4,
+      "role": "primary"
+    },
+    {
+      "arch": "rnn",
+      "seed": 2,
+      "role": "secondary",
+      "comparable": true
+    },
+    {
+      "arch": "lstm",
+      "seed": 2,
+      "role": "secondary",
+      "comparable": true
+    },
+    {
+      "arch": "transformer",
+      "seed": 4,
+      "role": "secondary",
+      "comparable": true
+    },
+    {
+      "arch": "mamba",
+      "seed": 8,
+      "role": "secondary",
+      "comparable": true
+    }
+  ]
+}

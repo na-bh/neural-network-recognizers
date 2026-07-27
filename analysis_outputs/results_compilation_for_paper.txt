@@ -1,0 +1,175 @@
+==============================================================================
+PER-OBJECTIVE MEAN OVERALL ACCURACY -- 8 COMPLETED FIX EXPERIMENTS
+(evaluated on each task's own corrected test set)
+==============================================================================
+
+Completed tasks (8): bucket-sort, dyck-2-3, marked-copy, missing-duplicate-string, modular-arithmetic-simple, odds-first, binary-addition, marked-reversal
+
+------------------------------------------------------------------------------
+Task: bucket-sort
+Ceiling: 0.8722
+(source: fix_full_sweep_analysis_bucket_sort.json; corrected_trained n_cells=160, standard_trained n_cells=160)
+
+FLaRe-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.516     0.679     0.731     0.650     0.731
+  LSTM:        0.548     0.666     0.571     0.544     0.666
+  Transformer: 0.581     0.571     0.523     0.574     0.581
+  Mamba:       0.827     0.797     0.743     0.713     0.827
+
+Corrected-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.920     0.699     0.702     0.913     0.920
+  LSTM:        0.786     0.705     0.783     0.649     0.786
+  Transformer: 0.726     0.641     0.516     0.564     0.726
+  Mamba:       0.821     0.849     0.804     0.767     0.849
+
+------------------------------------------------------------------------------
+Task: dyck-2-3
+Ceiling: 0.8761
+(source: fix_full_sweep_analysis_dyck_2_3.json; corrected_trained n_cells=160, standard_trained n_cells=160)
+
+FLaRe-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.471     0.820     0.876     0.832     0.876
+  LSTM:        0.500     0.716     0.751     0.665     0.751
+  Transformer: 0.638     0.555     0.538     0.563     0.638
+  Mamba:       0.492     0.786     0.832     0.835     0.835
+
+Corrected-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.481     0.932     0.986     0.937     0.986
+  LSTM:        0.618     0.864     0.716     0.819     0.864
+  Transformer: 0.604     0.570     0.503     0.484     0.604
+  Mamba:       0.577     0.963     0.959     0.888     0.963
+
+------------------------------------------------------------------------------
+Task: marked-copy
+Ceiling: 0.8736
+(source: fix_full_sweep_analysis_marked_copy.json; corrected_trained n_cells=160, standard_trained n_cells=160)
+
+FLaRe-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.469     0.639     0.614     0.584     0.639
+  LSTM:        0.578     0.553     0.575     0.565     0.578
+  Transformer: 0.522     0.555     0.532     0.554     0.555
+  Mamba:       0.573     0.605     0.597     0.577     0.605
+
+Corrected-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.644     0.637     0.688     0.604     0.688
+  LSTM:        0.740     0.611     0.618     0.586     0.740
+  Transformer: 0.659     0.582     0.550     0.537     0.659
+  Mamba:       0.540     0.695     0.671     0.691     0.695
+
+------------------------------------------------------------------------------
+Task: missing-duplicate-string
+Ceiling: 0.8762
+(source: fix_full_sweep_analysis_missing_duplicate_string.json; corrected_trained n_cells=160, standard_trained n_cells=160)
+
+FLaRe-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.437     0.709     0.716     0.661     0.716
+  LSTM:        0.548     0.716     0.722     0.717     0.722
+  Transformer: 0.583     0.653     0.620     0.604     0.653
+  Mamba:       0.654     0.720     0.653     0.653     0.720
+
+Corrected-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.558     0.739     0.750     0.694     0.750
+  LSTM:        0.710     0.687     0.664     0.680     0.710
+  Transformer: 0.677     0.696     0.684     0.640     0.696
+  Mamba:       0.659     0.669     0.647     0.701     0.701
+
+------------------------------------------------------------------------------
+Task: modular-arithmetic-simple
+Ceiling: 0.8745
+(source: fix_full_sweep_analysis_modular_arithmetic_simple.json; corrected_trained n_cells=160, standard_trained n_cells=160)
+
+FLaRe-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.510     0.719     0.749     0.708     0.749
+  LSTM:        0.533     0.749     0.723     0.749     0.749
+  Transformer: 0.561     0.623     0.529     0.663     0.663
+  Mamba:       0.510     0.749     0.749     0.749     0.749
+
+Corrected-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.506     0.747     0.749     0.724     0.749
+  LSTM:        0.634     0.745     0.750     0.700     0.750
+  Transformer: 0.633     0.612     0.558     0.656     0.656
+  Mamba:       0.523     0.741     0.746     0.748     0.748
+
+------------------------------------------------------------------------------
+Task: odds-first
+Ceiling: 0.8771
+(source: fix_full_sweep_analysis_odds_first.json; corrected_trained n_cells=160, standard_trained n_cells=160)
+
+FLaRe-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.502     0.595     0.660     0.578     0.660
+  LSTM:        0.602     0.578     0.592     0.575     0.602
+  Transformer: 0.590     0.542     0.530     0.511     0.590
+  Mamba:       0.562     0.616     0.625     0.559     0.625
+
+Corrected-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.473     0.671     0.725     0.614     0.725
+  LSTM:        0.693     0.683     0.610     0.597     0.693
+  Transformer: 0.639     0.526     0.525     0.538     0.639
+  Mamba:       0.710     0.686     0.671     0.618     0.710
+
+------------------------------------------------------------------------------
+Task: binary-addition
+Ceiling: 0.8849
+(source: fix_full_sweep_binary_addition_analysis.json; corrected_trained n_cells=160, standard_trained n_cells=160)
+
+FLaRe-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.672     0.706     0.655     0.692     0.706
+  LSTM:        0.708     0.655     0.714     0.648     0.714
+  Transformer: 0.548     0.556     0.586     0.571     0.586
+  Mamba:       0.686     0.666     0.659     0.640     0.686
+
+Corrected-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.670     0.656     0.678     0.668     0.678
+  LSTM:        0.719     0.701     0.691     0.717     0.719
+  Transformer: 0.674     0.672     0.624     0.644     0.674
+  Mamba:       0.759     0.682     0.675     0.661     0.759
+
+------------------------------------------------------------------------------
+Task: marked-reversal
+Ceiling: 0.8742
+(source: fix_full_sweep_marked_reversal_analysis.json; corrected_trained n_cells=160, standard_trained n_cells=130)
+
+FLaRe-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.472     0.628     0.642     0.553     0.642
+  LSTM:        0.585     0.628     0.567     0.540     0.628
+  Transformer: 0.580     0.521     0.512     0.539     0.580
+  Mamba:        n/a       n/a      0.621      n/a      0.621
+
+Corrected-trained on corrected test (mean over seeds):
+                rec       rec+lm    rec+ns    rec+lm+ns MAX
+  RNN:         0.570     0.703     0.669     0.640     0.703
+  LSTM:        0.731     0.608     0.728     0.627     0.731
+  Transformer: 0.605     0.547     0.546     0.503     0.605
+  Mamba:       0.629     0.691     0.633     0.612     0.691
+
+==============================================================================
+Notes:
+- Both populations sourced from each task's fix_full_sweep_*.json file's
+  corrected_trained/standard_trained cell lists (re-evaluated per-example on
+  the corrected test set), NOT from the separately-named standard-baseline
+  eval files -- naming/schema for those diverged across the project's history
+  (e.g. marked-reversal/binary-addition predate the
+  fix_standard_baseline_on_corrected_test_all_objectives_<task>.json /
+  fix_full_sweep_analysis_<task>.json naming convention used from bucket-sort
+  onward), so the full-sweep file is the one consistent, already-computed
+  source for both populations across all 8 tasks.
+- marked-reversal's standard_trained population has only 130/160 cells (some
+  standard FLaRe checkpoints were not available for all arch/objective/seed
+  combinations); means below reflect however many cells actually exist per
+  arch/objective, not always 10.
+- MAX is the maximum per-architecture mean accuracy across the 4 objectives.

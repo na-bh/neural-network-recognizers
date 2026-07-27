@@ -1,0 +1,1000 @@
+{"subtype": "depth_exceeded", "insert_after_index": 12, "violation_position_relative": 0.5416666666666666, "target_position_frac_requested": 0.7075264781387863}
+{"subtype": "type_mismatch", "swap_indices": [9, 10], "violation_position_relative": 0.8636363636363636, "target_position_frac_requested": 0.8422342229984571}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [4, 7], "violation_position_relative": 0.6111111111111112, "target_position_frac_requested": 0.7406213237032967}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 4, "violation_position_relative": 0.25, "target_position_frac_requested": 0.7395904300246164}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [7, 18], "violation_position_relative": 0.6578947368421053, "target_position_frac_requested": 0.9289273054284805}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 14, "violation_position_relative": 0.5769230769230769, "target_position_frac_requested": 0.518334629072738}
+{"subtype": "type_mismatch", "swap_indices": [8, 29], "violation_position_relative": 0.47435897435897434, "target_position_frac_requested": 0.47122572165202814}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [8, 22], "violation_position_relative": 0.4838709677419355, "target_position_frac_requested": 0.7101265305964402}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [4, 7], "violation_position_relative": 0.2619047619047619, "target_position_frac_requested": 0.320025940043695}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [3, 5], "violation_position_relative": 0.19047619047619047, "target_position_frac_requested": 0.20445845411107955}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [6, 9], "violation_position_relative": 0.5769230769230769, "target_position_frac_requested": 0.4448573009006431}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [25, 27], "violation_position_relative": 0.9629629629629629, "target_position_frac_requested": 0.9560753327516738}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [1, 18], "violation_position_relative": 0.3064516129032258, "target_position_frac_requested": 0.3194653717964788}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [7, 13], "violation_position_relative": 0.2702702702702703, "target_position_frac_requested": 0.266838983296697}
+{}
+{"subtype": "type_mismatch", "swap_indices": [17, 18], "violation_position_relative": 0.9210526315789473, "target_position_frac_requested": 0.9371385132396622}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [15, 23], "violation_position_relative": 0.5428571428571428, "target_position_frac_requested": 0.4295897747605708}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 15], "violation_position_relative": 0.5, "target_position_frac_requested": 0.8754054293882453}
+{"subtype": "type_mismatch", "swap_indices": [14, 17], "violation_position_relative": 0.9117647058823529, "target_position_frac_requested": 0.9159206269123864}
+{"subtype": "type_mismatch", "swap_indices": [5, 9], "violation_position_relative": 0.7777777777777778, "target_position_frac_requested": 0.8650359154928465}
+{"subtype": "type_mismatch", "swap_indices": [1, 13], "violation_position_relative": 0.4117647058823529, "target_position_frac_requested": 0.38778777063903425}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [12, 22], "violation_position_relative": 0.68, "target_position_frac_requested": 0.49582527773297014}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [5, 7], "violation_position_relative": 0.46153846153846156, "target_position_frac_requested": 0.5125736670850574}
+{}
+{"subtype": "type_mismatch", "swap_indices": [1, 4], "violation_position_relative": 0.0641025641025641, "target_position_frac_requested": 0.024063892422528155}
+{}
+{"subtype": "type_mismatch", "swap_indices": [24, 39], "violation_position_relative": 0.8076923076923077, "target_position_frac_requested": 0.8125528092231339}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 6], "violation_position_relative": 0.4444444444444444, "target_position_frac_requested": 0.25847336553063804}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [3, 12], "violation_position_relative": 0.22727272727272727, "target_position_frac_requested": 0.23251998177624178}
+{"subtype": "close_with_nothing_open", "swap_indices": [5, 22], "violation_position_relative": 0.5869565217391305, "target_position_frac_requested": 0.9502750653377772}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [18, 29], "violation_position_relative": 0.6714285714285714, "target_position_frac_requested": 0.5034300828331751}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [5, 17], "violation_position_relative": 0.4782608695652174, "target_position_frac_requested": 0.48709171982463206}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 30, "violation_position_relative": 0.7380952380952381, "target_position_frac_requested": 0.7744871351810134}
+{"subtype": "type_mismatch", "swap_indices": [2, 5], "violation_position_relative": 0.7, "target_position_frac_requested": 0.9449358814198463}
+{"subtype": "type_mismatch", "swap_indices": [1, 5], "violation_position_relative": 0.6, "target_position_frac_requested": 0.5656566809243783}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 2, "violation_position_relative": 0.13636363636363635, "target_position_frac_requested": 0.3383352768373342}
+{"subtype": "depth_exceeded", "insert_after_index": 4, "violation_position_relative": 0.11904761904761904, "target_position_frac_requested": 0.11573566197881502}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 2, "violation_position_relative": 0.16666666666666666, "target_position_frac_requested": 0.34832788618118526}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [2, 5], "violation_position_relative": 0.10606060606060606, "target_position_frac_requested": 0.04668436746822813}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 7], "violation_position_relative": 0.23684210526315788, "target_position_frac_requested": 0.3475797580718588}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [3, 5], "violation_position_relative": 0.4444444444444444, "target_position_frac_requested": 0.10492070820340738}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [3, 7], "violation_position_relative": 0.29411764705882354, "target_position_frac_requested": 0.14450325410741927}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [7, 25], "violation_position_relative": 0.64, "target_position_frac_requested": 0.6317342041556974}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [13, 25], "violation_position_relative": 0.76, "target_position_frac_requested": 0.9325126696352443}
+{"subtype": "close_with_nothing_open", "swap_indices": [12, 14], "violation_position_relative": 0.8666666666666667, "target_position_frac_requested": 0.9607892398312955}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 30, "violation_position_relative": 0.7380952380952381, "target_position_frac_requested": 0.6734453268100872}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [4, 11], "violation_position_relative": 0.35714285714285715, "target_position_frac_requested": 0.17077775528455397}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [24, 30], "violation_position_relative": 0.8709677419354839, "target_position_frac_requested": 0.7806586247436709}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [6, 9], "violation_position_relative": 0.35714285714285715, "target_position_frac_requested": 0.34187688584661613}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [4, 5], "violation_position_relative": 0.34615384615384615, "target_position_frac_requested": 0.34038350682917606}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 5], "violation_position_relative": 0.12962962962962962, "target_position_frac_requested": 0.08829855683025822}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 2, "violation_position_relative": 0.3, "target_position_frac_requested": 0.9195421179150693}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 30, "violation_position_relative": 0.8157894736842105, "target_position_frac_requested": 0.9622855119220647}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 2, "violation_position_relative": 0.1, "target_position_frac_requested": 0.04802593125163723}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [8, 11], "violation_position_relative": 0.8636363636363636, "target_position_frac_requested": 0.9047739706197971}
+{"subtype": "type_mismatch", "swap_indices": [3, 26], "violation_position_relative": 0.4393939393939394, "target_position_frac_requested": 0.4299124037177803}
+{"subtype": "type_mismatch", "swap_indices": [3, 19], "violation_position_relative": 0.44, "target_position_frac_requested": 0.432348121575332}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 4, "violation_position_relative": 0.35714285714285715, "target_position_frac_requested": 0.6796002021470273}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [19, 27], "violation_position_relative": 0.7419354838709677, "target_position_frac_requested": 0.7378238029654269}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 8, "violation_position_relative": 0.45, "target_position_frac_requested": 0.4549997037234038}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [17, 24], "violation_position_relative": 0.7592592592592593, "target_position_frac_requested": 0.7682759863159021}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [2, 3], "violation_position_relative": 0.35714285714285715, "target_position_frac_requested": 0.050865850431257464}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [3, 5], "violation_position_relative": 0.23529411764705882, "target_position_frac_requested": 0.2455067014149801}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 26, "violation_position_relative": 0.675, "target_position_frac_requested": 0.6707974802925162}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 26, "violation_position_relative": 0.7105263157894737, "target_position_frac_requested": 0.8290633252170511}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [1, 3], "violation_position_relative": 0.18181818181818182, "target_position_frac_requested": 0.03593233924972783}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [7, 15], "violation_position_relative": 0.6470588235294118, "target_position_frac_requested": 0.6890993262867114}
+{"subtype": "type_mismatch", "swap_indices": [21, 31], "violation_position_relative": 0.7878787878787878, "target_position_frac_requested": 0.8097400161523407}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [14, 28], "violation_position_relative": 0.7241379310344828, "target_position_frac_requested": 0.7257931730967822}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [30, 33], "violation_position_relative": 0.8513513513513513, "target_position_frac_requested": 0.8404153294125837}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 6, "violation_position_relative": 0.23333333333333334, "target_position_frac_requested": 0.22347857925459547}
+{"subtype": "depth_exceeded", "insert_after_index": 4, "violation_position_relative": 0.35714285714285715, "target_position_frac_requested": 0.1794684203345579}
+{}
+{"subtype": "type_mismatch", "swap_indices": [11, 16], "violation_position_relative": 0.46551724137931033, "target_position_frac_requested": 0.4657506097084012}
+{"subtype": "depth_exceeded", "insert_after_index": 14, "violation_position_relative": 0.625, "target_position_frac_requested": 0.23186710982216352}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [1, 3], "violation_position_relative": 0.4, "target_position_frac_requested": 0.29278217595869527}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [1, 5], "violation_position_relative": 0.6, "target_position_frac_requested": 0.44242416482809976}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [5, 27], "violation_position_relative": 0.5925925925925926, "target_position_frac_requested": 0.5907511756117879}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [1, 3], "violation_position_relative": 0.18181818181818182, "target_position_frac_requested": 0.007861603563213526}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [6, 21], "violation_position_relative": 0.36486486486486486, "target_position_frac_requested": 0.15470484278692997}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [4, 5], "violation_position_relative": 0.4090909090909091, "target_position_frac_requested": 0.4258203441502769}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 2, "violation_position_relative": 0.15, "target_position_frac_requested": 0.3156513752667265}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [16, 17], "violation_position_relative": 0.868421052631579, "target_position_frac_requested": 0.859599601862252}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 5], "violation_position_relative": 0.20588235294117646, "target_position_frac_requested": 0.13739287950020684}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [3, 5], "violation_position_relative": 0.16, "target_position_frac_requested": 0.16640393499624628}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 6, "violation_position_relative": 0.20588235294117646, "target_position_frac_requested": 0.020803605172837747}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [34, 36], "violation_position_relative": 0.9459459459459459, "target_position_frac_requested": 0.9570785023867306}
+{}
+{"subtype": "type_mismatch", "swap_indices": [3, 5], "violation_position_relative": 0.5714285714285714, "target_position_frac_requested": 0.5332739132715918}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [16, 19], "violation_position_relative": 0.6481481481481481, "target_position_frac_requested": 0.6901797239480187}
+{}
+{"subtype": "type_mismatch", "swap_indices": [8, 18], "violation_position_relative": 0.6190476190476191, "target_position_frac_requested": 0.6221377636896708}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [25, 37], "violation_position_relative": 0.8378378378378378, "target_position_frac_requested": 0.8357578752913679}
+{"subtype": "close_with_nothing_open", "swap_indices": [7, 20], "violation_position_relative": 0.6428571428571429, "target_position_frac_requested": 0.9531998500059695}
+{"subtype": "close_with_nothing_open", "swap_indices": [1, 4], "violation_position_relative": 0.06756756756756757, "target_position_frac_requested": 0.11234994643825824}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 22, "violation_position_relative": 0.5476190476190477, "target_position_frac_requested": 0.44938079585177526}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [10, 11], "violation_position_relative": 0.8076923076923077, "target_position_frac_requested": 0.7881599660779198}
+{"subtype": "depth_exceeded", "insert_after_index": 26, "violation_position_relative": 0.675, "target_position_frac_requested": 0.5945369563328203}
+{"subtype": "close_with_nothing_open", "swap_indices": [19, 29], "violation_position_relative": 0.6153846153846154, "target_position_frac_requested": 0.47823510701769245}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [5, 6], "violation_position_relative": 0.7857142857142857, "target_position_frac_requested": 0.8001639793511527}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [22, 28], "violation_position_relative": 0.8620689655172413, "target_position_frac_requested": 0.9908954267644381}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 7], "violation_position_relative": 0.1956521739130435, "target_position_frac_requested": 0.3166463071946656}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [4, 20], "violation_position_relative": 0.5217391304347826, "target_position_frac_requested": 0.19373692398905262}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [3, 15], "violation_position_relative": 0.2571428571428571, "target_position_frac_requested": 0.26646887283248033}
+{"subtype": "depth_exceeded", "insert_after_index": 6, "violation_position_relative": 0.19444444444444445, "target_position_frac_requested": 0.3292754849248123}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 4, "violation_position_relative": 0.35714285714285715, "target_position_frac_requested": 0.43431858364977627}
+{"subtype": "type_mismatch", "swap_indices": [3, 15], "violation_position_relative": 0.391304347826087, "target_position_frac_requested": 0.3912719437982096}
+{}
+{"subtype": "type_mismatch", "swap_indices": [5, 13], "violation_position_relative": 0.6923076923076923, "target_position_frac_requested": 0.6901843612266613}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 7], "violation_position_relative": 0.21428571428571427, "target_position_frac_requested": 0.34193120450994263}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [16, 28], "violation_position_relative": 0.7586206896551724, "target_position_frac_requested": 0.5626022866702519}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 6, "violation_position_relative": 0.3888888888888889, "target_position_frac_requested": 0.12685515982281548}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [10, 15], "violation_position_relative": 0.6578947368421053, "target_position_frac_requested": 0.7738868399507433}
+{}
+{"subtype": "type_mismatch", "swap_indices": [7, 15], "violation_position_relative": 0.7333333333333333, "target_position_frac_requested": 0.721560072947928}
+{}
+{"subtype": "type_mismatch", "swap_indices": [8, 17], "violation_position_relative": 0.5, "target_position_frac_requested": 0.507966415013648}
+{"subtype": "type_mismatch", "swap_indices": [10, 24], "violation_position_relative": 0.68, "target_position_frac_requested": 0.678620021379495}
+{"subtype": "type_mismatch", "swap_indices": [3, 7], "violation_position_relative": 0.38461538461538464, "target_position_frac_requested": 0.38148985647924816}
+{"subtype": "close_with_nothing_open", "swap_indices": [12, 27], "violation_position_relative": 0.5, "target_position_frac_requested": 0.3144591188922643}
+{"subtype": "depth_exceeded", "insert_after_index": 4, "violation_position_relative": 0.25, "target_position_frac_requested": 0.5798248675211467}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [2, 11], "violation_position_relative": 0.43333333333333335, "target_position_frac_requested": 0.41944819748508844}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [18, 26], "violation_position_relative": 0.8148148148148148, "target_position_frac_requested": 0.9970785716602487}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 2, "violation_position_relative": 0.16666666666666666, "target_position_frac_requested": 0.5120219602347774}
+{"subtype": "close_with_nothing_open", "swap_indices": [10, 23], "violation_position_relative": 0.6111111111111112, "target_position_frac_requested": 0.36108417190322506}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [1, 10], "violation_position_relative": 0.5, "target_position_frac_requested": 0.9653537308370977}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [6, 14], "violation_position_relative": 0.5263157894736842, "target_position_frac_requested": 0.3297493373288881}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [3, 9], "violation_position_relative": 0.3157894736842105, "target_position_frac_requested": 0.3185281938090836}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [11, 19], "violation_position_relative": 0.7142857142857143, "target_position_frac_requested": 0.7084383792510035}
+{"subtype": "type_mismatch", "swap_indices": [5, 37], "violation_position_relative": 0.5384615384615384, "target_position_frac_requested": 0.5393238363007491}
+{"subtype": "type_mismatch", "swap_indices": [3, 5], "violation_position_relative": 0.12121212121212122, "target_position_frac_requested": 0.061788415243050454}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [1, 17], "violation_position_relative": 0.391304347826087, "target_position_frac_requested": 0.406642308919989}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [6, 9], "violation_position_relative": 0.8333333333333334, "target_position_frac_requested": 0.8099079488136449}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 8], "violation_position_relative": 0.5555555555555556, "target_position_frac_requested": 0.20135884663085635}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [20, 23], "violation_position_relative": 0.6935483870967742, "target_position_frac_requested": 0.6984323269910595}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [4, 13], "violation_position_relative": 0.34, "target_position_frac_requested": 0.35217428643028037}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 4, "violation_position_relative": 0.13157894736842105, "target_position_frac_requested": 0.15597609083660446}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 4, "violation_position_relative": 0.14705882352941177, "target_position_frac_requested": 0.030395740920840075}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [3, 9], "violation_position_relative": 0.2608695652173913, "target_position_frac_requested": 0.14663234176827178}
+{"subtype": "close_with_nothing_open", "swap_indices": [3, 31], "violation_position_relative": 0.4594594594594595, "target_position_frac_requested": 0.844462215325647}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 10, "violation_position_relative": 0.6111111111111112, "target_position_frac_requested": 0.9537562430096781}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [10, 37], "violation_position_relative": 0.6025641025641025, "target_position_frac_requested": 0.9427144723191662}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 11], "violation_position_relative": 0.26, "target_position_frac_requested": 0.4558677865984728}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 12, "violation_position_relative": 0.34210526315789475, "target_position_frac_requested": 0.4129559551835027}
+{"subtype": "type_mismatch", "swap_indices": [33, 37], "violation_position_relative": 0.9459459459459459, "target_position_frac_requested": 0.9405833879799993}
+{"subtype": "close_with_nothing_open", "swap_indices": [28, 33], "violation_position_relative": 0.782051282051282, "target_position_frac_requested": 0.7199555819618992}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 10, "violation_position_relative": 0.4230769230769231, "target_position_frac_requested": 0.12304605666926216}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [21, 35], "violation_position_relative": 0.7567567567567568, "target_position_frac_requested": 0.9358991567221095}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 16, "violation_position_relative": 0.425, "target_position_frac_requested": 0.4380035817790271}
+{"subtype": "type_mismatch", "swap_indices": [21, 23], "violation_position_relative": 0.9565217391304348, "target_position_frac_requested": 0.9696054328918557}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [1, 5], "violation_position_relative": 0.42857142857142855, "target_position_frac_requested": 0.748062222333968}
+{}
+{"subtype": "type_mismatch", "swap_indices": [12, 23], "violation_position_relative": 0.603448275862069, "target_position_frac_requested": 0.5984342523049122}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 4, "violation_position_relative": 0.2777777777777778, "target_position_frac_requested": 0.20631050793297556}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [8, 11], "violation_position_relative": 0.7307692307692307, "target_position_frac_requested": 0.6163187614661524}
+{"subtype": "depth_exceeded", "insert_after_index": 14, "violation_position_relative": 0.4166666666666667, "target_position_frac_requested": 0.19029907281539749}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [14, 16], "violation_position_relative": 0.4838709677419355, "target_position_frac_requested": 0.4527640367051412}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [9, 13], "violation_position_relative": 0.8461538461538461, "target_position_frac_requested": 0.8566991815939297}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 20, "violation_position_relative": 0.7, "target_position_frac_requested": 0.7239032908800933}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 4], "violation_position_relative": 0.6, "target_position_frac_requested": 0.8641594624707869}
+{}
+{"subtype": "type_mismatch", "swap_indices": [9, 20], "violation_position_relative": 0.58, "target_position_frac_requested": 0.5895060910440053}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [8, 15], "violation_position_relative": 0.46, "target_position_frac_requested": 0.6157374725411392}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [10, 20], "violation_position_relative": 0.4838709677419355, "target_position_frac_requested": 0.30714218711330044}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 6, "violation_position_relative": 0.19444444444444445, "target_position_frac_requested": 0.1233681655840545}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [2, 9], "violation_position_relative": 0.3235294117647059, "target_position_frac_requested": 0.08896478355793114}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [4, 5], "violation_position_relative": 0.9, "target_position_frac_requested": 0.7773757568256965}
+{}
+{"subtype": "type_mismatch", "swap_indices": [7, 19], "violation_position_relative": 0.6842105263157895, "target_position_frac_requested": 0.6821366034835195}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 12, "violation_position_relative": 0.5416666666666666, "target_position_frac_requested": 0.16688737172710844}
+{"subtype": "type_mismatch", "swap_indices": [2, 11], "violation_position_relative": 0.30952380952380953, "target_position_frac_requested": 0.3010180784849189}
+{"subtype": "close_with_nothing_open", "swap_indices": [14, 16], "violation_position_relative": 0.8823529411764706, "target_position_frac_requested": 0.9179620160438439}
+{"subtype": "close_with_nothing_open", "swap_indices": [3, 11], "violation_position_relative": 0.4117647058823529, "target_position_frac_requested": 0.6381803820007674}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 4, "violation_position_relative": 0.15625, "target_position_frac_requested": 0.24430851767624917}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [3, 9], "violation_position_relative": 0.5454545454545454, "target_position_frac_requested": 0.5656916812872402}
+{"subtype": "type_mismatch", "swap_indices": [11, 12], "violation_position_relative": 0.32857142857142857, "target_position_frac_requested": 0.3308242128292971}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 2, "violation_position_relative": 0.09375, "target_position_frac_requested": 0.3234238123934866}
+{}
+{"subtype": "type_mismatch", "swap_indices": [15, 35], "violation_position_relative": 0.7142857142857143, "target_position_frac_requested": 0.9044018463339814}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 28, "violation_position_relative": 0.8529411764705882, "target_position_frac_requested": 0.6080964031425092}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [14, 25], "violation_position_relative": 0.6724137931034483, "target_position_frac_requested": 0.47318471953825425}
+{"subtype": "depth_exceeded", "insert_after_index": 12, "violation_position_relative": 0.325, "target_position_frac_requested": 0.024147714841198598}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [6, 9], "violation_position_relative": 0.5769230769230769, "target_position_frac_requested": 0.44495460703259027}
+{"subtype": "depth_exceeded", "insert_after_index": 20, "violation_position_relative": 0.5833333333333334, "target_position_frac_requested": 0.6002144644733207}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 4], "violation_position_relative": 0.6, "target_position_frac_requested": 0.4435361151667492}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 12, "violation_position_relative": 0.3611111111111111, "target_position_frac_requested": 0.3313194460528315}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 30, "violation_position_relative": 0.8157894736842105, "target_position_frac_requested": 0.8752901307929686}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 24, "violation_position_relative": 0.7352941176470589, "target_position_frac_requested": 0.7468030725148385}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 4, "violation_position_relative": 0.22727272727272727, "target_position_frac_requested": 0.2247719078742707}
+{"subtype": "depth_exceeded", "insert_after_index": 2, "violation_position_relative": 0.21428571428571427, "target_position_frac_requested": 0.23506612282358175}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [3, 6], "violation_position_relative": 0.6428571428571429, "target_position_frac_requested": 0.6604588765589628}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [4, 12], "violation_position_relative": 0.47058823529411764, "target_position_frac_requested": 0.4756322446226321}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 9], "violation_position_relative": 0.1774193548387097, "target_position_frac_requested": 0.3050996163611893}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [18, 27], "violation_position_relative": 0.7258064516129032, "target_position_frac_requested": 0.579918862070582}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [7, 20], "violation_position_relative": 0.5, "target_position_frac_requested": 0.4924124881573877}
+{}
+{"subtype": "type_mismatch", "swap_indices": [1, 17], "violation_position_relative": 0.5294117647058824, "target_position_frac_requested": 0.5379392874799855}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [17, 29], "violation_position_relative": 0.6216216216216216, "target_position_frac_requested": 0.6205327023598683}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [5, 11], "violation_position_relative": 0.24242424242424243, "target_position_frac_requested": 0.25101378769168425}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 10, "violation_position_relative": 0.39285714285714285, "target_position_frac_requested": 0.29645753042324074}
+{"subtype": "depth_exceeded", "insert_after_index": 2, "violation_position_relative": 0.3, "target_position_frac_requested": 0.1998100452942252}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [3, 9], "violation_position_relative": 0.24, "target_position_frac_requested": 0.10824349663268207}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [1, 7], "violation_position_relative": 0.36363636363636365, "target_position_frac_requested": 0.18174117977512105}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 11], "violation_position_relative": 0.38235294117647056, "target_position_frac_requested": 0.674770434415182}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [2, 3], "violation_position_relative": 0.8333333333333334, "target_position_frac_requested": 0.7681252971059075}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [1, 4], "violation_position_relative": 0.2777777777777778, "target_position_frac_requested": 0.10762969295778535}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 34, "violation_position_relative": 0.8333333333333334, "target_position_frac_requested": 0.8827451973446393}
+{"subtype": "depth_exceeded", "insert_after_index": 8, "violation_position_relative": 0.45, "target_position_frac_requested": 0.7695640997069733}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [5, 13], "violation_position_relative": 0.24324324324324326, "target_position_frac_requested": 0.23926266469971613}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [3, 10], "violation_position_relative": 0.5909090909090909, "target_position_frac_requested": 0.5838962614222256}
+{"subtype": "close_with_nothing_open", "swap_indices": [7, 19], "violation_position_relative": 0.52, "target_position_frac_requested": 0.7695409025410161}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [3, 10], "violation_position_relative": 0.34210526315789475, "target_position_frac_requested": 0.3224804001468541}
+{"subtype": "type_mismatch", "swap_indices": [3, 13], "violation_position_relative": 0.42105263157894735, "target_position_frac_requested": 0.43663308520851174}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 6], "violation_position_relative": 0.5714285714285714, "target_position_frac_requested": 0.33297069439281046}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 24, "violation_position_relative": 0.6578947368421053, "target_position_frac_requested": 0.8454272868468986}
+{"subtype": "close_with_nothing_open", "swap_indices": [2, 16], "violation_position_relative": 0.5294117647058824, "target_position_frac_requested": 0.11078828608672286}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [3, 13], "violation_position_relative": 0.6153846153846154, "target_position_frac_requested": 0.6169577320422708}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 4, "violation_position_relative": 0.2777777777777778, "target_position_frac_requested": 0.5992901596339665}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [1, 14], "violation_position_relative": 0.5, "target_position_frac_requested": 0.9574757750319481}
+{"subtype": "type_mismatch", "swap_indices": [5, 29], "violation_position_relative": 0.4358974358974359, "target_position_frac_requested": 0.4415325150317221}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [9, 17], "violation_position_relative": 0.7647058823529411, "target_position_frac_requested": 0.8122801050961024}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 6, "violation_position_relative": 0.5833333333333334, "target_position_frac_requested": 0.9102954710928475}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [18, 23], "violation_position_relative": 0.7592592592592593, "target_position_frac_requested": 0.7683893849760915}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [14, 19], "violation_position_relative": 0.868421052631579, "target_position_frac_requested": 0.889783791493979}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [5, 15], "violation_position_relative": 0.5882352941176471, "target_position_frac_requested": 0.8724566445884557}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [5, 7], "violation_position_relative": 0.2222222222222222, "target_position_frac_requested": 0.19692421787739167}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [1, 7], "violation_position_relative": 0.5714285714285714, "target_position_frac_requested": 0.22464814884371698}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [19, 31], "violation_position_relative": 0.7142857142857143, "target_position_frac_requested": 0.7181198902748209}
+{"subtype": "close_with_nothing_open", "swap_indices": [6, 13], "violation_position_relative": 0.4523809523809524, "target_position_frac_requested": 0.640655253594893}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [23, 26], "violation_position_relative": 0.6621621621621622, "target_position_frac_requested": 0.6614132553223282}
+{"subtype": "type_mismatch", "swap_indices": [13, 22], "violation_position_relative": 0.7608695652173914, "target_position_frac_requested": 0.7732259154989319}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [11, 19], "violation_position_relative": 0.6521739130434783, "target_position_frac_requested": 0.4884616659779252}
+{"subtype": "close_with_nothing_open", "swap_indices": [1, 9], "violation_position_relative": 0.38461538461538464, "target_position_frac_requested": 0.6915274391013834}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [27, 33], "violation_position_relative": 0.9090909090909091, "target_position_frac_requested": 0.9989133565728875}
+{}
+{"subtype": "type_mismatch", "swap_indices": [2, 5], "violation_position_relative": 0.5, "target_position_frac_requested": 0.31423828423641054}
+{"subtype": "type_mismatch", "swap_indices": [7, 21], "violation_position_relative": 0.42424242424242425, "target_position_frac_requested": 0.42857471269573133}
+{"subtype": "close_with_nothing_open", "swap_indices": [4, 7], "violation_position_relative": 0.6111111111111112, "target_position_frac_requested": 0.3972976107281352}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [24, 27], "violation_position_relative": 0.9444444444444444, "target_position_frac_requested": 0.9664164733767262}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "depth_exceeded", "insert_after_index": 14, "violation_position_relative": 0.75, "target_position_frac_requested": 0.17623758779801613}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [3, 16], "violation_position_relative": 0.5, "target_position_frac_requested": 0.154526826355051}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "type_mismatch", "swap_indices": [17, 22], "violation_position_relative": 0.78, "target_position_frac_requested": 0.7703531198813045}
+{"subtype": "type_mismatch", "swap_indices": [9, 18], "violation_position_relative": 0.38571428571428573, "target_position_frac_requested": 0.3910465098317034}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"subtype": "close_with_nothing_open", "swap_indices": [3, 19], "violation_position_relative": 0.28205128205128205, "target_position_frac_requested": 0.06848294592433257}
+{"subtype": "type_mismatch", "swap_indices": [1, 8], "violation_position_relative": 0.34615384615384615, "target_position_frac_requested": 0.3484233613869193}

@@ -1,0 +1,1000 @@
+{}
+{"n_half": 6, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_half": 13, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.45454545454545453, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [14, 15], "short_sequence_constrained": false, "violation_position_relative": 0.8235294117647058, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 18, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.125, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [9, 10], "short_sequence_constrained": false, "violation_position_relative": 0.5294117647058824, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.4, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_half": 8, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{"n_half": 10, "swap_indices_in_sorted_half": [4, 5], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 19, "swap_indices_in_sorted_half": [15, 16], "short_sequence_constrained": false, "violation_position_relative": 0.8823529411764706, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.16666666666666666, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_half": 6, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_half": 15, "swap_indices_in_sorted_half": [12, 13], "short_sequence_constrained": false, "violation_position_relative": 0.9230769230769231, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_half": 3, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 15, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.46153846153846156, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_half": 15, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.15384615384615385, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_half": 5, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [4, 5], "short_sequence_constrained": false, "violation_position_relative": 0.26666666666666666, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [11, 12], "short_sequence_constrained": false, "violation_position_relative": 0.6470588235294118, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 2, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": true, "violation_position_relative": 0.0, "violation_position_tertile": "low (forced, n==2)", "target_tertile_requested": "low"}
+{"n_half": 2, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": true, "violation_position_relative": 0.0, "violation_position_tertile": "low (forced, n==2)", "target_tertile_requested": "mid"}
+{"n_half": 10, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{"n_half": 10, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 12, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [14, 15], "short_sequence_constrained": false, "violation_position_relative": 0.8235294117647058, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [12, 13], "short_sequence_constrained": false, "violation_position_relative": 0.8, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 18, "swap_indices_in_sorted_half": [9, 10], "short_sequence_constrained": false, "violation_position_relative": 0.5625, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 15, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.46153846153846156, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 12, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.1, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 12, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.7, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [9, 10], "short_sequence_constrained": false, "violation_position_relative": 0.6, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 18, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.375, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 12, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.6, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [13, 14], "short_sequence_constrained": false, "violation_position_relative": 0.8666666666666667, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.4666666666666667, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 8, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.8333333333333334, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_half": 5, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_half": 12, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.6, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 19, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.29411764705882354, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 9, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.7142857142857143, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 13, "swap_indices_in_sorted_half": [11, 12], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 5, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 3, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 2, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": true, "violation_position_relative": 0.0, "violation_position_tertile": "low (forced, n==2)", "target_tertile_requested": "high"}
+{"n_half": 8, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.8333333333333334, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 18, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.4375, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 4, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 6, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_half": 3, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.4, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_half": 8, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 15, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.46153846153846156, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{"n_half": 9, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 3, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 13, "swap_indices_in_sorted_half": [9, 10], "short_sequence_constrained": false, "violation_position_relative": 0.8181818181818182, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 15, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.15384615384615385, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_half": 6, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 7, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.2, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_half": 3, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 7, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.6, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_half": 6, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.75, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 9, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.8571428571428571, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [11, 12], "short_sequence_constrained": false, "violation_position_relative": 0.9166666666666666, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.5833333333333334, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 9, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.14285714285714285, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_half": 15, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.46153846153846156, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 3, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 12, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.7, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_half": 8, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 17, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.06666666666666667, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [11, 12], "short_sequence_constrained": false, "violation_position_relative": 0.7333333333333333, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 5, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666666, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 5, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.4117647058823529, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{"n_half": 3, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [14, 15], "short_sequence_constrained": false, "violation_position_relative": 0.9333333333333333, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 11, "swap_indices_in_sorted_half": [8, 9], "short_sequence_constrained": false, "violation_position_relative": 0.8888888888888888, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 13, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.2727272727272727, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 16, "swap_indices_in_sorted_half": [12, 13], "short_sequence_constrained": false, "violation_position_relative": 0.8571428571428571, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 4, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [9, 10], "short_sequence_constrained": false, "violation_position_relative": 0.6, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 18, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.1875, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.35294117647058826, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.6, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.6, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 18, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.0625, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 16, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.35714285714285715, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.2, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_half": 2, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": true, "violation_position_relative": 0.0, "violation_position_tertile": "low (forced, n==2)", "target_tertile_requested": "mid"}
+{"n_half": 12, "swap_indices_in_sorted_half": [8, 9], "short_sequence_constrained": false, "violation_position_relative": 0.8, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_half": 10, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.125, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 16, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.21428571428571427, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.6, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 9, "swap_indices_in_sorted_half": [4, 5], "short_sequence_constrained": false, "violation_position_relative": 0.5714285714285714, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 16, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.07142857142857142, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 6, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.75, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_half": 6, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 2, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": true, "violation_position_relative": 0.0, "violation_position_tertile": "low (forced, n==2)", "target_tertile_requested": "high"}
+{}
+{"n_half": 5, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 19, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.35294117647058826, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 10, "swap_indices_in_sorted_half": [8, 9], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 19, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.29411764705882354, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [8, 9], "short_sequence_constrained": false, "violation_position_relative": 0.47058823529411764, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.4166666666666667, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 15, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.23076923076923078, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_half": 9, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.8571428571428571, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 12, "swap_indices_in_sorted_half": [10, 11], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 2, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": true, "violation_position_relative": 0.0, "violation_position_tertile": "low (forced, n==2)", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 13, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.5454545454545454, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [4, 5], "short_sequence_constrained": false, "violation_position_relative": 0.8, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 3, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_half": 6, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 15, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.23076923076923078, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_half": 8, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 4, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_half": 2, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": true, "violation_position_relative": 0.0, "violation_position_tertile": "low (forced, n==2)", "target_tertile_requested": "high"}
+{"n_half": 2, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": true, "violation_position_relative": 0.0, "violation_position_tertile": "low (forced, n==2)", "target_tertile_requested": "high"}
+{"n_half": 12, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.1, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [16, 17], "short_sequence_constrained": false, "violation_position_relative": 0.9411764705882353, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_half": 15, "swap_indices_in_sorted_half": [12, 13], "short_sequence_constrained": false, "violation_position_relative": 0.9230769230769231, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [13, 14], "short_sequence_constrained": false, "violation_position_relative": 0.8666666666666667, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 11, "swap_indices_in_sorted_half": [8, 9], "short_sequence_constrained": false, "violation_position_relative": 0.8888888888888888, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_half": 12, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_half": 10, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.375, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 4, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_half": 18, "swap_indices_in_sorted_half": [8, 9], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.16666666666666666, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.17647058823529413, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_half": 16, "swap_indices_in_sorted_half": [11, 12], "short_sequence_constrained": false, "violation_position_relative": 0.7857142857142857, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.2, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.16666666666666666, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_half": 16, "swap_indices_in_sorted_half": [14, 15], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [4, 5], "short_sequence_constrained": false, "violation_position_relative": 0.26666666666666666, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 6, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 10, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 5, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.058823529411764705, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 4, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 17, "swap_indices_in_sorted_half": [9, 10], "short_sequence_constrained": false, "violation_position_relative": 0.6, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 18, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.375, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 9, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.2857142857142857, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 3, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 3, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 17, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.4, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 19, "swap_indices_in_sorted_half": [8, 9], "short_sequence_constrained": false, "violation_position_relative": 0.47058823529411764, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{"n_half": 8, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.16666666666666666, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 10, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.625, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 18, "swap_indices_in_sorted_half": [16, 17], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 8, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.16666666666666666, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 19, "swap_indices_in_sorted_half": [14, 15], "short_sequence_constrained": false, "violation_position_relative": 0.8235294117647058, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_half": 6, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.75, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 4, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [8, 9], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666666, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [10, 11], "short_sequence_constrained": false, "violation_position_relative": 0.8333333333333334, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 18, "swap_indices_in_sorted_half": [13, 14], "short_sequence_constrained": false, "violation_position_relative": 0.8125, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_half": 10, "swap_indices_in_sorted_half": [4, 5], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 17, "swap_indices_in_sorted_half": [11, 12], "short_sequence_constrained": false, "violation_position_relative": 0.7333333333333333, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [12, 13], "short_sequence_constrained": false, "violation_position_relative": 0.8, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 15, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.46153846153846156, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 19, "swap_indices_in_sorted_half": [17, 18], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_half": 11, "swap_indices_in_sorted_half": [8, 9], "short_sequence_constrained": false, "violation_position_relative": 0.8888888888888888, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 13, "swap_indices_in_sorted_half": [4, 5], "short_sequence_constrained": false, "violation_position_relative": 0.36363636363636365, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 19, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.29411764705882354, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_half": 9, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.2857142857142857, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_half": 12, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.3, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 15, "swap_indices_in_sorted_half": [10, 11], "short_sequence_constrained": false, "violation_position_relative": 0.7692307692307693, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_half": 12, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.6, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 12, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.2, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_half": 9, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.7142857142857143, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 18, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.1875, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 13, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.2727272727272727, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{"n_half": 18, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.375, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 16, "swap_indices_in_sorted_half": [10, 11], "short_sequence_constrained": false, "violation_position_relative": 0.7142857142857143, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.5833333333333334, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [14, 15], "short_sequence_constrained": false, "violation_position_relative": 0.9333333333333333, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 5, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 14, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_half": 9, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_half": 10, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 13, "swap_indices_in_sorted_half": [10, 11], "short_sequence_constrained": false, "violation_position_relative": 0.9090909090909091, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_half": 10, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 13, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.09090909090909091, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 18, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.375, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 16, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 8, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.8333333333333334, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 5, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_half": 8, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.16666666666666666, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 14, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.5833333333333334, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.4, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_half": 10, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [15, 16], "short_sequence_constrained": false, "violation_position_relative": 0.8823529411764706, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 10, "swap_indices_in_sorted_half": [4, 5], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_half": 2, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": true, "violation_position_relative": 0.0, "violation_position_tertile": "low (forced, n==2)", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_half": 8, "swap_indices_in_sorted_half": [4, 5], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666666, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 17, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.13333333333333333, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_half": 18, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.3125, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 19, "swap_indices_in_sorted_half": [13, 14], "short_sequence_constrained": false, "violation_position_relative": 0.7647058823529411, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 6, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.75, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 15, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.38461538461538464, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.08333333333333333, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.4666666666666667, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [4, 5], "short_sequence_constrained": false, "violation_position_relative": 0.23529411764705882, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.35294117647058826, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{"n_half": 13, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.5454545454545454, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [16, 17], "short_sequence_constrained": false, "violation_position_relative": 0.9411764705882353, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 10, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 16, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.4, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [8, 9], "short_sequence_constrained": false, "violation_position_relative": 0.47058823529411764, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 18, "swap_indices_in_sorted_half": [13, 14], "short_sequence_constrained": false, "violation_position_relative": 0.8125, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.6, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 5, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [4, 5], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.35294117647058826, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 7, "swap_indices_in_sorted_half": [4, 5], "short_sequence_constrained": false, "violation_position_relative": 0.8, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_half": 15, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.23076923076923078, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 8, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_half": 4, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 18, "swap_indices_in_sorted_half": [4, 5], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 15, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.38461538461538464, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_half": 13, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.09090909090909091, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 11, "swap_indices_in_sorted_half": [5, 6], "short_sequence_constrained": false, "violation_position_relative": 0.5555555555555556, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [11, 12], "short_sequence_constrained": false, "violation_position_relative": 0.9166666666666666, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 11, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.1111111111111111, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 18, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.1875, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{"n_half": 8, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [12, 13], "short_sequence_constrained": false, "violation_position_relative": 0.7058823529411765, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 7, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 17, "swap_indices_in_sorted_half": [10, 11], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666666, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_half": 8, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 11, "swap_indices_in_sorted_half": [8, 9], "short_sequence_constrained": false, "violation_position_relative": 0.8888888888888888, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_half": 18, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.375, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 10, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.75, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 19, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.4117647058823529, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_half": 7, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.4, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [4, 5], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_half": 18, "swap_indices_in_sorted_half": [8, 9], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_half": 9, "swap_indices_in_sorted_half": [6, 7], "short_sequence_constrained": false, "violation_position_relative": 0.8571428571428571, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_half": 14, "swap_indices_in_sorted_half": [11, 12], "short_sequence_constrained": false, "violation_position_relative": 0.9166666666666666, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 17, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.2, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_half": 15, "swap_indices_in_sorted_half": [2, 3], "short_sequence_constrained": false, "violation_position_relative": 0.15384615384615385, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 5, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 8, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.16666666666666666, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_half": 13, "swap_indices_in_sorted_half": [7, 8], "short_sequence_constrained": false, "violation_position_relative": 0.6363636363636364, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 13, "swap_indices_in_sorted_half": [11, 12], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_half": 14, "swap_indices_in_sorted_half": [8, 9], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666666, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_half": 15, "swap_indices_in_sorted_half": [3, 4], "short_sequence_constrained": false, "violation_position_relative": 0.23076923076923078, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 3, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_half": 5, "swap_indices_in_sorted_half": [1, 2], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_half": 16, "swap_indices_in_sorted_half": [14, 15], "short_sequence_constrained": false, "violation_position_relative": 1.0, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_half": 5, "swap_indices_in_sorted_half": [0, 1], "short_sequence_constrained": false, "violation_position_relative": 0.0, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}

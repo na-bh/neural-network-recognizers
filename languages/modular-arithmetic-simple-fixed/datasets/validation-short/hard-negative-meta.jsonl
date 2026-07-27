@@ -1,0 +1,1000 @@
+{}
+{"n_pairs": 6, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.2142857142857143, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 13, "swapped_pair_indices": [0, 11], "short_sequence_constrained": false, "violation_position_relative": 0.42857142857142855, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [4, 7], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666667, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_pairs": 13, "swapped_pair_indices": [0, 12], "short_sequence_constrained": false, "violation_position_relative": 0.4642857142857143, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{"n_pairs": 18, "swapped_pair_indices": [10, 17], "short_sequence_constrained": false, "violation_position_relative": 0.736842105263158, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_pairs": 12, "swapped_pair_indices": [0, 3], "short_sequence_constrained": false, "violation_position_relative": 0.15384615384615385, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 7, "swapped_pair_indices": [4, 6], "short_sequence_constrained": false, "violation_position_relative": 0.6875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_pairs": 17, "swapped_pair_indices": [13, 16], "short_sequence_constrained": false, "violation_position_relative": 0.8333333333333333, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [5, 10], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666666, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 5, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_pairs": 19, "swapped_pair_indices": [3, 6], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 6, "swapped_pair_indices": [0, 4], "short_sequence_constrained": false, "violation_position_relative": 0.35714285714285715, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 8, "swapped_pair_indices": [4, 7], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666667, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 13, "swapped_pair_indices": [7, 12], "short_sequence_constrained": false, "violation_position_relative": 0.7142857142857143, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 13, "swapped_pair_indices": [7, 12], "short_sequence_constrained": false, "violation_position_relative": 0.7142857142857143, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 4, "swapped_pair_indices": [1, 3], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 12, "swapped_pair_indices": [6, 11], "short_sequence_constrained": false, "violation_position_relative": 0.6923076923076923, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [0, 7], "short_sequence_constrained": false, "violation_position_relative": 0.4, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [4, 7], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666667, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [4, 7], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666667, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 7, "swapped_pair_indices": [0, 4], "short_sequence_constrained": false, "violation_position_relative": 0.3125, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [1, 5], "short_sequence_constrained": false, "violation_position_relative": 0.29166666666666663, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 14, "swapped_pair_indices": [5, 11], "short_sequence_constrained": false, "violation_position_relative": 0.5666666666666667, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 15, "swapped_pair_indices": [9, 11], "short_sequence_constrained": false, "violation_position_relative": 0.65625, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [0, 4], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 16, "swapped_pair_indices": [3, 10], "short_sequence_constrained": false, "violation_position_relative": 0.4117647058823529, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [5, 8], "short_sequence_constrained": false, "violation_position_relative": 0.7, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_pairs": 10, "swapped_pair_indices": [5, 9], "short_sequence_constrained": false, "violation_position_relative": 0.6818181818181819, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [7, 9], "short_sequence_constrained": false, "violation_position_relative": 0.7083333333333333, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 17, "swapped_pair_indices": [13, 16], "short_sequence_constrained": false, "violation_position_relative": 0.8333333333333333, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [6, 8], "short_sequence_constrained": false, "violation_position_relative": 0.75, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 10, "swapped_pair_indices": [3, 8], "short_sequence_constrained": false, "violation_position_relative": 0.5454545454545454, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{"n_pairs": 18, "swapped_pair_indices": [3, 6], "short_sequence_constrained": false, "violation_position_relative": 0.2631578947368421, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_pairs": 13, "swapped_pair_indices": [6, 12], "short_sequence_constrained": false, "violation_position_relative": 0.6785714285714286, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 7, "swapped_pair_indices": [4, 6], "short_sequence_constrained": false, "violation_position_relative": 0.6875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 6, "swapped_pair_indices": [0, 3], "short_sequence_constrained": false, "violation_position_relative": 0.2857142857142857, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_pairs": 18, "swapped_pair_indices": [14, 17], "short_sequence_constrained": false, "violation_position_relative": 0.8421052631578947, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 12, "swapped_pair_indices": [7, 10], "short_sequence_constrained": false, "violation_position_relative": 0.6923076923076923, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 7, "swapped_pair_indices": [3, 5], "short_sequence_constrained": false, "violation_position_relative": 0.5625, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 18, "swapped_pair_indices": [9, 17], "short_sequence_constrained": false, "violation_position_relative": 0.7105263157894737, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 5, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.16666666666666669, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_pairs": 16, "swapped_pair_indices": [4, 6], "short_sequence_constrained": false, "violation_position_relative": 0.32352941176470584, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 9, "swapped_pair_indices": [2, 5], "short_sequence_constrained": false, "violation_position_relative": 0.4, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 15, "swapped_pair_indices": [5, 14], "short_sequence_constrained": false, "violation_position_relative": 0.625, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [5, 8], "short_sequence_constrained": false, "violation_position_relative": 0.7, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 7, "swapped_pair_indices": [4, 6], "short_sequence_constrained": false, "violation_position_relative": 0.6875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [10, 13], "short_sequence_constrained": false, "violation_position_relative": 0.8, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 7, "swapped_pair_indices": [3, 6], "short_sequence_constrained": false, "violation_position_relative": 0.625, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [3, 6], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 9, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.15, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_pairs": 2, "swapped_pair_indices": [0, 1], "short_sequence_constrained": true, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_pairs": 6, "swapped_pair_indices": [3, 5], "short_sequence_constrained": false, "violation_position_relative": 0.6428571428571428, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [6, 13], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666667, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 16, "swapped_pair_indices": [9, 14], "short_sequence_constrained": false, "violation_position_relative": 0.7058823529411764, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 11, "swapped_pair_indices": [0, 7], "short_sequence_constrained": false, "violation_position_relative": 0.3333333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [6, 9], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666666, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 18, "swapped_pair_indices": [2, 13], "short_sequence_constrained": false, "violation_position_relative": 0.42105263157894735, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [4, 6], "short_sequence_constrained": false, "violation_position_relative": 0.6111111111111112, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_pairs": 12, "swapped_pair_indices": [1, 8], "short_sequence_constrained": false, "violation_position_relative": 0.38461538461538464, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 4, "swapped_pair_indices": [0, 3], "short_sequence_constrained": false, "violation_position_relative": 0.39999999999999997, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [0, 5], "short_sequence_constrained": false, "violation_position_relative": 0.19999999999999998, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_pairs": 10, "swapped_pair_indices": [1, 5], "short_sequence_constrained": false, "violation_position_relative": 0.3181818181818182, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{"n_pairs": 13, "swapped_pair_indices": [8, 10], "short_sequence_constrained": false, "violation_position_relative": 0.6785714285714286, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 6, "swapped_pair_indices": [0, 5], "short_sequence_constrained": false, "violation_position_relative": 0.42857142857142855, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 14, "swapped_pair_indices": [0, 8], "short_sequence_constrained": false, "violation_position_relative": 0.3, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 15, "swapped_pair_indices": [9, 14], "short_sequence_constrained": false, "violation_position_relative": 0.75, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 15, "swapped_pair_indices": [7, 14], "short_sequence_constrained": false, "violation_position_relative": 0.6875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 14, "swapped_pair_indices": [6, 13], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666667, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.16666666666666669, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [4, 6], "short_sequence_constrained": false, "violation_position_relative": 0.3666666666666667, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 4, "swapped_pair_indices": [1, 3], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_pairs": 15, "swapped_pair_indices": [9, 14], "short_sequence_constrained": false, "violation_position_relative": 0.75, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 9, "swapped_pair_indices": [0, 4], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [3, 8], "short_sequence_constrained": false, "violation_position_relative": 0.6, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.15, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 17, "swapped_pair_indices": [1, 11], "short_sequence_constrained": false, "violation_position_relative": 0.3611111111111111, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_pairs": 19, "swapped_pair_indices": [14, 17], "short_sequence_constrained": false, "violation_position_relative": 0.8, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 13, "swapped_pair_indices": [10, 12], "short_sequence_constrained": false, "violation_position_relative": 0.8214285714285714, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 6, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.2142857142857143, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 3, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.375, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_pairs": 7, "swapped_pair_indices": [2, 4], "short_sequence_constrained": false, "violation_position_relative": 0.4375, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 18, "swapped_pair_indices": [10, 17], "short_sequence_constrained": false, "violation_position_relative": 0.736842105263158, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [1, 9], "short_sequence_constrained": false, "violation_position_relative": 0.4583333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 18, "swapped_pair_indices": [8, 17], "short_sequence_constrained": false, "violation_position_relative": 0.6842105263157895, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_pairs": 18, "swapped_pair_indices": [10, 16], "short_sequence_constrained": false, "violation_position_relative": 0.7105263157894737, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [5, 8], "short_sequence_constrained": false, "violation_position_relative": 0.7, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_pairs": 15, "swapped_pair_indices": [10, 12], "short_sequence_constrained": false, "violation_position_relative": 0.71875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 15, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.09375, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 9, "swapped_pair_indices": [5, 8], "short_sequence_constrained": false, "violation_position_relative": 0.7, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 11, "swapped_pair_indices": [5, 10], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666666, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 16, "swapped_pair_indices": [0, 12], "short_sequence_constrained": false, "violation_position_relative": 0.3823529411764706, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 12, "swapped_pair_indices": [0, 7], "short_sequence_constrained": false, "violation_position_relative": 0.30769230769230765, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 5, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [4, 6], "short_sequence_constrained": false, "violation_position_relative": 0.4583333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 17, "swapped_pair_indices": [3, 6], "short_sequence_constrained": false, "violation_position_relative": 0.2777777777777778, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_pairs": 10, "swapped_pair_indices": [7, 9], "short_sequence_constrained": false, "violation_position_relative": 0.7727272727272727, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 13, "swapped_pair_indices": [4, 12], "short_sequence_constrained": false, "violation_position_relative": 0.6071428571428572, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [1, 4], "short_sequence_constrained": false, "violation_position_relative": 0.3, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 10, "swapped_pair_indices": [0, 9], "short_sequence_constrained": false, "violation_position_relative": 0.45454545454545453, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 13, "swapped_pair_indices": [7, 11], "short_sequence_constrained": false, "violation_position_relative": 0.6785714285714286, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [3, 7], "short_sequence_constrained": false, "violation_position_relative": 0.55, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 12, "swapped_pair_indices": [7, 11], "short_sequence_constrained": false, "violation_position_relative": 0.7307692307692307, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 8, "swapped_pair_indices": [0, 7], "short_sequence_constrained": false, "violation_position_relative": 0.4444444444444445, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_pairs": 19, "swapped_pair_indices": [14, 17], "short_sequence_constrained": false, "violation_position_relative": 0.8, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 7, "swapped_pair_indices": [4, 6], "short_sequence_constrained": false, "violation_position_relative": 0.6875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [0, 3], "short_sequence_constrained": false, "violation_position_relative": 0.2222222222222222, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [0, 3], "short_sequence_constrained": false, "violation_position_relative": 0.16666666666666669, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 18, "swapped_pair_indices": [4, 13], "short_sequence_constrained": false, "violation_position_relative": 0.47368421052631576, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [2, 4], "short_sequence_constrained": false, "violation_position_relative": 0.35, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 10, "swapped_pair_indices": [6, 9], "short_sequence_constrained": false, "violation_position_relative": 0.7272727272727273, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [6, 11], "short_sequence_constrained": false, "violation_position_relative": 0.6000000000000001, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_pairs": 12, "swapped_pair_indices": [6, 9], "short_sequence_constrained": false, "violation_position_relative": 0.6153846153846154, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [4, 6], "short_sequence_constrained": false, "violation_position_relative": 0.4583333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 12, "swapped_pair_indices": [0, 4], "short_sequence_constrained": false, "violation_position_relative": 0.1923076923076923, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 15, "swapped_pair_indices": [8, 14], "short_sequence_constrained": false, "violation_position_relative": 0.71875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [4, 7], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666667, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_pairs": 16, "swapped_pair_indices": [10, 12], "short_sequence_constrained": false, "violation_position_relative": 0.6764705882352942, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 15, "swapped_pair_indices": [2, 4], "short_sequence_constrained": false, "violation_position_relative": 0.21875, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 5, "swapped_pair_indices": [0, 4], "short_sequence_constrained": false, "violation_position_relative": 0.4166666666666667, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 6, "swapped_pair_indices": [0, 3], "short_sequence_constrained": false, "violation_position_relative": 0.2857142857142857, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 12, "swapped_pair_indices": [5, 8], "short_sequence_constrained": false, "violation_position_relative": 0.5384615384615384, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 4, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.3, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [1, 12], "short_sequence_constrained": false, "violation_position_relative": 0.4666666666666667, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [6, 10], "short_sequence_constrained": false, "violation_position_relative": 0.7083333333333333, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [7, 12], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666667, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_pairs": 13, "swapped_pair_indices": [2, 12], "short_sequence_constrained": false, "violation_position_relative": 0.5357142857142857, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 15, "swapped_pair_indices": [7, 14], "short_sequence_constrained": false, "violation_position_relative": 0.6875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 18, "swapped_pair_indices": [11, 17], "short_sequence_constrained": false, "violation_position_relative": 0.763157894736842, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [1, 3], "short_sequence_constrained": false, "violation_position_relative": 0.20833333333333334, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_pairs": 17, "swapped_pair_indices": [0, 6], "short_sequence_constrained": false, "violation_position_relative": 0.19444444444444445, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{"n_pairs": 7, "swapped_pair_indices": [4, 6], "short_sequence_constrained": false, "violation_position_relative": 0.6875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 8, "swapped_pair_indices": [4, 7], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666667, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [0, 3], "short_sequence_constrained": false, "violation_position_relative": 0.2222222222222222, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 7, "swapped_pair_indices": [1, 6], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 17, "swapped_pair_indices": [2, 9], "short_sequence_constrained": false, "violation_position_relative": 0.33333333333333337, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_pairs": 15, "swapped_pair_indices": [8, 13], "short_sequence_constrained": false, "violation_position_relative": 0.6875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 10, "swapped_pair_indices": [1, 7], "short_sequence_constrained": false, "violation_position_relative": 0.40909090909090906, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 3, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.375, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [1, 3], "short_sequence_constrained": false, "violation_position_relative": 0.2777777777777778, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [2, 5], "short_sequence_constrained": false, "violation_position_relative": 0.26666666666666666, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_pairs": 16, "swapped_pair_indices": [5, 11], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 11, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.125, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 18, "swapped_pair_indices": [13, 16], "short_sequence_constrained": false, "violation_position_relative": 0.7894736842105263, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 9, "swapped_pair_indices": [6, 8], "short_sequence_constrained": false, "violation_position_relative": 0.75, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 12, "swapped_pair_indices": [3, 11], "short_sequence_constrained": false, "violation_position_relative": 0.5769230769230769, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 12, "swapped_pair_indices": [3, 8], "short_sequence_constrained": false, "violation_position_relative": 0.46153846153846156, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{"n_pairs": 13, "swapped_pair_indices": [0, 5], "short_sequence_constrained": false, "violation_position_relative": 0.21428571428571427, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 11, "swapped_pair_indices": [2, 8], "short_sequence_constrained": false, "violation_position_relative": 0.45833333333333337, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 16, "swapped_pair_indices": [10, 13], "short_sequence_constrained": false, "violation_position_relative": 0.7058823529411764, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [1, 9], "short_sequence_constrained": false, "violation_position_relative": 0.4583333333333333, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [0, 5], "short_sequence_constrained": false, "violation_position_relative": 0.33333333333333337, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 13, "swapped_pair_indices": [9, 12], "short_sequence_constrained": false, "violation_position_relative": 0.7857142857142858, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [2, 9], "short_sequence_constrained": false, "violation_position_relative": 0.39999999999999997, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [0, 7], "short_sequence_constrained": false, "violation_position_relative": 0.4444444444444445, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 4, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.3, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [0, 6], "short_sequence_constrained": false, "violation_position_relative": 0.29166666666666663, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_pairs": 18, "swapped_pair_indices": [13, 17], "short_sequence_constrained": false, "violation_position_relative": 0.8157894736842105, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 8, "swapped_pair_indices": [0, 4], "short_sequence_constrained": false, "violation_position_relative": 0.2777777777777778, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 9, "swapped_pair_indices": [0, 3], "short_sequence_constrained": false, "violation_position_relative": 0.19999999999999998, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{"n_pairs": 13, "swapped_pair_indices": [7, 12], "short_sequence_constrained": false, "violation_position_relative": 0.7142857142857143, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 7, "swapped_pair_indices": [4, 6], "short_sequence_constrained": false, "violation_position_relative": 0.6875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 9, "swapped_pair_indices": [0, 4], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [0, 3], "short_sequence_constrained": false, "violation_position_relative": 0.13333333333333333, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 19, "swapped_pair_indices": [15, 18], "short_sequence_constrained": false, "violation_position_relative": 0.8500000000000001, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [1, 5], "short_sequence_constrained": false, "violation_position_relative": 0.3888888888888889, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [0, 5], "short_sequence_constrained": false, "violation_position_relative": 0.33333333333333337, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 12, "swapped_pair_indices": [6, 11], "short_sequence_constrained": false, "violation_position_relative": 0.6923076923076923, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_pairs": 13, "swapped_pair_indices": [2, 5], "short_sequence_constrained": false, "violation_position_relative": 0.2857142857142857, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [0, 4], "short_sequence_constrained": false, "violation_position_relative": 0.16666666666666666, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_pairs": 7, "swapped_pair_indices": [1, 6], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 15, "swapped_pair_indices": [12, 14], "short_sequence_constrained": false, "violation_position_relative": 0.84375, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 3, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.375, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [5, 9], "short_sequence_constrained": false, "violation_position_relative": 0.625, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 13, "swapped_pair_indices": [8, 12], "short_sequence_constrained": false, "violation_position_relative": 0.75, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_pairs": 7, "swapped_pair_indices": [4, 6], "short_sequence_constrained": false, "violation_position_relative": 0.6875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [9, 12], "short_sequence_constrained": false, "violation_position_relative": 0.7333333333333334, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [0, 7], "short_sequence_constrained": false, "violation_position_relative": 0.4, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 3, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.375, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 12, "swapped_pair_indices": [7, 10], "short_sequence_constrained": false, "violation_position_relative": 0.6923076923076923, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_pairs": 16, "swapped_pair_indices": [10, 13], "short_sequence_constrained": false, "violation_position_relative": 0.7058823529411764, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_pairs": 15, "swapped_pair_indices": [10, 14], "short_sequence_constrained": false, "violation_position_relative": 0.78125, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 7, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.1875, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 19, "swapped_pair_indices": [10, 16], "short_sequence_constrained": false, "violation_position_relative": 0.675, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [6, 8], "short_sequence_constrained": false, "violation_position_relative": 0.75, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_pairs": 10, "swapped_pair_indices": [6, 9], "short_sequence_constrained": false, "violation_position_relative": 0.7272727272727273, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [5, 7], "short_sequence_constrained": false, "violation_position_relative": 0.7222222222222223, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 16, "swapped_pair_indices": [11, 13], "short_sequence_constrained": false, "violation_position_relative": 0.7352941176470589, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 6, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.2142857142857143, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [10, 12], "short_sequence_constrained": false, "violation_position_relative": 0.7666666666666666, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_pairs": 13, "swapped_pair_indices": [10, 12], "short_sequence_constrained": false, "violation_position_relative": 0.8214285714285714, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 7, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.1875, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 17, "swapped_pair_indices": [9, 15], "short_sequence_constrained": false, "violation_position_relative": 0.6944444444444444, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_pairs": 7, "swapped_pair_indices": [1, 3], "short_sequence_constrained": false, "violation_position_relative": 0.3125, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 13, "swapped_pair_indices": [5, 9], "short_sequence_constrained": false, "violation_position_relative": 0.5357142857142857, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 17, "swapped_pair_indices": [13, 16], "short_sequence_constrained": false, "violation_position_relative": 0.8333333333333333, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 13, "swapped_pair_indices": [0, 6], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 3, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.375, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 15, "swapped_pair_indices": [8, 13], "short_sequence_constrained": false, "violation_position_relative": 0.6875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 10, "swapped_pair_indices": [0, 8], "short_sequence_constrained": false, "violation_position_relative": 0.40909090909090906, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [1, 3], "short_sequence_constrained": false, "violation_position_relative": 0.20833333333333334, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{"n_pairs": 10, "swapped_pair_indices": [2, 9], "short_sequence_constrained": false, "violation_position_relative": 0.5454545454545454, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [4, 6], "short_sequence_constrained": false, "violation_position_relative": 0.3666666666666667, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 11, "swapped_pair_indices": [2, 4], "short_sequence_constrained": false, "violation_position_relative": 0.2916666666666667, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [4, 8], "short_sequence_constrained": false, "violation_position_relative": 0.65, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 13, "swapped_pair_indices": [6, 12], "short_sequence_constrained": false, "violation_position_relative": 0.6785714285714286, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 6, "swapped_pair_indices": [0, 4], "short_sequence_constrained": false, "violation_position_relative": 0.35714285714285715, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [0, 11], "short_sequence_constrained": false, "violation_position_relative": 0.4, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 4, "swapped_pair_indices": [0, 3], "short_sequence_constrained": false, "violation_position_relative": 0.39999999999999997, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{"n_pairs": 4, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.3, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 12, "swapped_pair_indices": [6, 11], "short_sequence_constrained": false, "violation_position_relative": 0.6923076923076923, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 10, "swapped_pair_indices": [2, 7], "short_sequence_constrained": false, "violation_position_relative": 0.45454545454545453, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [5, 7], "short_sequence_constrained": false, "violation_position_relative": 0.7222222222222223, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{"n_pairs": 19, "swapped_pair_indices": [13, 17], "short_sequence_constrained": false, "violation_position_relative": 0.775, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 18, "swapped_pair_indices": [6, 12], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 8, "swapped_pair_indices": [5, 7], "short_sequence_constrained": false, "violation_position_relative": 0.7222222222222223, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 4, "swapped_pair_indices": [0, 2], "short_sequence_constrained": false, "violation_position_relative": 0.3, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{"n_pairs": 16, "swapped_pair_indices": [5, 15], "short_sequence_constrained": false, "violation_position_relative": 0.6176470588235294, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 17, "swapped_pair_indices": [6, 15], "short_sequence_constrained": false, "violation_position_relative": 0.6111111111111112, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 15, "swapped_pair_indices": [1, 13], "short_sequence_constrained": false, "violation_position_relative": 0.46875, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [5, 7], "short_sequence_constrained": false, "violation_position_relative": 0.7222222222222223, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 16, "swapped_pair_indices": [3, 15], "short_sequence_constrained": false, "violation_position_relative": 0.5588235294117647, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 18, "swapped_pair_indices": [8, 15], "short_sequence_constrained": false, "violation_position_relative": 0.631578947368421, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 9, "swapped_pair_indices": [1, 7], "short_sequence_constrained": false, "violation_position_relative": 0.45, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 17, "swapped_pair_indices": [10, 16], "short_sequence_constrained": false, "violation_position_relative": 0.75, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 9, "swapped_pair_indices": [6, 8], "short_sequence_constrained": false, "violation_position_relative": 0.75, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [6, 9], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666666, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_pairs": 15, "swapped_pair_indices": [8, 14], "short_sequence_constrained": false, "violation_position_relative": 0.71875, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 4, "swapped_pair_indices": [1, 3], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [11, 13], "short_sequence_constrained": false, "violation_position_relative": 0.8333333333333334, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_pairs": 10, "swapped_pair_indices": [0, 6], "short_sequence_constrained": false, "violation_position_relative": 0.3181818181818182, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 17, "swapped_pair_indices": [6, 8], "short_sequence_constrained": false, "violation_position_relative": 0.41666666666666663, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [1, 10], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 16, "swapped_pair_indices": [2, 8], "short_sequence_constrained": false, "violation_position_relative": 0.3235294117647059, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_pairs": 5, "swapped_pair_indices": [0, 4], "short_sequence_constrained": false, "violation_position_relative": 0.4166666666666667, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 11, "swapped_pair_indices": [6, 9], "short_sequence_constrained": false, "violation_position_relative": 0.6666666666666666, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 10, "swapped_pair_indices": [6, 8], "short_sequence_constrained": false, "violation_position_relative": 0.6818181818181819, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{}
+{}
+{"n_pairs": 17, "swapped_pair_indices": [13, 16], "short_sequence_constrained": false, "violation_position_relative": 0.8333333333333333, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 16, "swapped_pair_indices": [1, 5], "short_sequence_constrained": false, "violation_position_relative": 0.2058823529411765, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{"n_pairs": 12, "swapped_pair_indices": [6, 11], "short_sequence_constrained": false, "violation_position_relative": 0.6923076923076923, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 4, "swapped_pair_indices": [0, 3], "short_sequence_constrained": false, "violation_position_relative": 0.39999999999999997, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{"n_pairs": 4, "swapped_pair_indices": [1, 3], "short_sequence_constrained": false, "violation_position_relative": 0.5, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}
+{}
+{"n_pairs": 8, "swapped_pair_indices": [1, 3], "short_sequence_constrained": false, "violation_position_relative": 0.2777777777777778, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 12, "swapped_pair_indices": [0, 4], "short_sequence_constrained": false, "violation_position_relative": 0.1923076923076923, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 17, "swapped_pair_indices": [11, 15], "short_sequence_constrained": false, "violation_position_relative": 0.75, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{"n_pairs": 15, "swapped_pair_indices": [0, 4], "short_sequence_constrained": false, "violation_position_relative": 0.15625, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 7, "swapped_pair_indices": [0, 4], "short_sequence_constrained": false, "violation_position_relative": 0.3125, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{}
+{}
+{}
+{}
+{}
+{"n_pairs": 14, "swapped_pair_indices": [10, 13], "short_sequence_constrained": false, "violation_position_relative": 0.8, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{"n_pairs": 18, "swapped_pair_indices": [12, 14], "short_sequence_constrained": false, "violation_position_relative": 0.7105263157894737, "violation_position_tertile": "high", "target_tertile_requested": "high"}
+{}
+{}
+{"n_pairs": 13, "swapped_pair_indices": [0, 6], "short_sequence_constrained": false, "violation_position_relative": 0.25, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 12, "swapped_pair_indices": [2, 4], "short_sequence_constrained": false, "violation_position_relative": 0.2692307692307692, "violation_position_tertile": "low", "target_tertile_requested": "low"}
+{"n_pairs": 14, "swapped_pair_indices": [6, 10], "short_sequence_constrained": false, "violation_position_relative": 0.5666666666666667, "violation_position_tertile": "mid", "target_tertile_requested": "mid"}

@@ -1,0 +1,2866 @@
+{
+  "task": "marked-reversal",
+  "description": "Standard-FLaRe-trained models (all 4 loss terms, no retraining) evaluated on the corrected test set.",
+  "runs": [
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.5850299401197605,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5606786427145709,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.22248995983935743,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.7898493259318001,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.812375249500998,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6614770459081837,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.6544876886417792,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.49660678642714573,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.506187624750499,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.006827309236947791,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.7768463073852295,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6209580838323353,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.4932486100079428,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.7774451097804391,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6211576846307385,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.49404289118347894,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.812375249500998,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6614770459081837,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.6544876886417792,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.9634730538922156,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7483033932135729,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.9471057884231537,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7483033932135729,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.5359281437125748,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5279441117764471,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.07670682730923695,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9476605868358445,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.7772455089820359,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6211576846307385,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.49404289118347894,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+ns/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.5413173652694611,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5347305389221557,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.10441767068273092,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9199048374306106,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+ns/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.7774451097804391,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6211576846307385,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.49404289118347894,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+ns/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.9471057884231537,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7483033932135729,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+ns/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.5499001996007984,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5341317365269461,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.10923694779116466,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9080095162569389,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+ns/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.7768463073852295,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6209580838323353,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.4932486100079428,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+ns/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.7768463073852295,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6209580838323353,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.4932486100079428,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+ns/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.9467065868263473,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7483033932135729,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+ns/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.7143712574850299,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6898203592814371,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.7662650602409639,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.22918318794607453,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+ns/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.5844311377245509,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5572854291417165,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.21124497991967872,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.7985725614591594,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+ns",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+ns/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.7516966067864271,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7431137724550898,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9879518072289156,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9960285941223193,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.007137192704203013,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm+ns/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.5343313373253493,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5273453093812375,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.07389558232931727,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.950832672482157,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm+ns/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.5475049900199601,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5383233532934132,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.121285140562249,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9008723235527359,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm+ns/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.5746506986027944,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5489021956087824,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1755020080321285,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8358445678033307,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm+ns/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.49520958083832334,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5051896207584831,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.006827309236947791,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9952343129467831,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm+ns/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.5317365269461077,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5311377245508982,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.08714859437751005,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9397303727200634,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm+ns/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.5373253493013972,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5283433133732535,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.08072289156626505,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9413164155432197,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm+ns/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.5349301397205589,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5283433133732535,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.08072289156626505,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9413164155432197,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm+ns/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.9473053892215569,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7483033932135729,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm+ns/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.5636726546906188,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5469061876247505,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.15863453815261044,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8612212529738303,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec+lm+ns/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.5387225548902196,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5305389221556887,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.08433734939759036,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9429024583663759,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.5552894211576846,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5397205588822356,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1216867469879518,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9056304520222046,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.5502994011976048,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5351297405189621,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.10883534136546184,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9127676447264076,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.8516966067864271,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7477045908183633,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9976171564733916,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.7377245508982035,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7411177644710579,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.971405877680699,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.5600798403193613,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5409181636726547,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.13293172690763053,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8881839809674861,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.6646706586826348,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6127744510978044,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.42931726907630524,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.5884218873909596,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.9455089820359281,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7483033932135729,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.7872255489021956,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7467065868263473,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9936457505957109,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.5443113772455089,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5343313373253493,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9270420301348137,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.5289421157684631,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5319361277445109,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.09477911646586346,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9960285941223193,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9318001586042823,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+ns/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.5676646706586826,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5564870259481038,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.14096385542168674,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9341792228390167,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+ns/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.5802395209580838,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5493013972055888,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.17751004016064256,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8334655035685964,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+ns/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.5588822355289421,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5540918163672655,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1248995983935743,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9563838223632039,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+ns/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.5520958083832336,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5349301397205589,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.10843373493975904,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9127676447264076,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+ns/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.5716566866267465,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5461077844311377,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1614457831325301,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.852498017446471,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+ns/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.5694610778443113,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5457085828343313,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.15903614457831325,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8556701030927835,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+ns/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.5978043912175649,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5580838323353293,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.21405622489959839,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.796193497224425,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+ns/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.5447105788423153,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5341317365269461,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9262490087232356,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+ns/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.5594810379241517,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5397205588822356,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.12931726907630522,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8905630452022204,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+ns",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+ns/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.8023952095808383,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7483033932135729,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm+ns/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.5363273453093812,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5329341317365269,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.09477911646586346,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9318001586042823,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm+ns/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.5560878243512974,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5407185628742515,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.13253012048192772,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8881839809674861,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm+ns/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.5622754491017964,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5417165668662675,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.142570281124498,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8723235527359239,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm+ns/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.5700598802395209,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5451097804391217,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1538152610441767,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8636003172085647,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm+ns/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.5544910179640719,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5373253493013972,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.11726907630522089,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9048374306106265,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm+ns/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.5439121756487026,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5329341317365269,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.09477911646586346,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9318001586042823,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm+ns/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.5616766467065868,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5421157684630739,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.13734939759036144,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8842188739095955,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm+ns/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.5748502994011976,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5510978043912176,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1819277108433735,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8318794607454402,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm+ns/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.5449101796407185,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5341317365269461,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9262490087232356,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec+lm+ns/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.5724550898203593,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5455089820359281,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.15863453815261044,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8556701030927835,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.22375249500998004,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.37924151696606784,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.5075456711675933,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.47105788423153694,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5025948103792415,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9984114376489277,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.22395209580838324,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.37944111776447104,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.5083399523431295,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.22395209580838324,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.37944111776447104,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.5083399523431295,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.22375249500998004,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.37924151696606784,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.5075456711675933,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.40139720558882236,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5025948103792415,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9984114376489277,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.3313373253493014,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.49021956087824353,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.949166004765687,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.7011976047904191,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7023952095808383,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9875502008032129,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.8371723590150913,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.004758128469468675,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.3564870259481038,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5013972055888224,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9936457505957109,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "loss_terms": "rec",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/rnn/rec/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.4746506986027944,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5025948103792415,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9984114376489277,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.506187624750499,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5137724550898204,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.050200803212851405,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9984114376489277,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9452815226011102,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.8455089820359282,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7429141716566866,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9931726907630523,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9920571882446386,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.5389221556886228,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5389221556886228,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.13614457831325302,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9984114376489277,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8754956383822363,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.493812375249501,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5049900199600799,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.014457831325301205,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9984114376489277,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9809674861221253,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.8469061876247505,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.742315369261477,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9931726907630523,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9896743447180302,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.22375249500998004,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.37924151696606784,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.5075456711675933,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.578443113772455,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.56187624750499,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.24859437751004015,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9920571882446386,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.7509912767644726,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.22375249500998004,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.37924151696606784,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.5075456711675933,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.7836327345309381,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7431137724550898,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9931726907630523,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9928514694201748,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "loss_terms": "rec",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/lstm/rec/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.8481037924151696,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7435129740518962,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9931726907630523,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9944400317712471,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.6892215568862275,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6714570858283433,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.7008032128514057,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.2854877081681205,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.5147704590818363,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5215568862275449,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.06907630522088354,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9373513084853291,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.8163672654690619,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7233532934131737,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9040160642570281,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.09119746233148295,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.5852295409181637,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5970059880239521,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.3546184738955823,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.6732751784298177,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.48982035928143713,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.49500998003992014,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5071856287425149,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.017269076305220885,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9825535289452815,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.49560878243512974,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5091816367265469,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.02530120481927711,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9746233148295004,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.5023952095808383,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.511377245508982,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.03413654618473896,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9659000793021412,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.4946107784431138,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5081836327345309,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.024497991967871485,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.972244250594766,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.84750499001996,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7445109780439122,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9931726907630523,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9984114376489277,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.4942115768463074,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.49261477045908186,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.49860279441117766,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5109780439121756,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.03855421686746988,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9563838223632039,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.493812375249501,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.4942115768463074,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.4942115768463074,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.5203592814371257,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5279441117764471,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.11124497991967872,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.880253766851705,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.6768463073852296,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6447105788423154,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.6116465863453815,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9968228752978554,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.3584456780333069,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.4942115768463074,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.501996007984032,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5105788423153692,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.04096385542168675,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9984114376489277,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.950832672482157,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+ns/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.49680638722554893,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5049900199600799,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.007630522088353414,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.992862807295797,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+ns/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.4942115768463074,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5031936127744511,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.001606425702811245,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9976209357652657,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+ns/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.49740518962075847,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5057884231536927,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.008032128514056224,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9952418715305313,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+ns/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.4942115768463074,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+ns/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.49580838323353293,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5041916167664671,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.007228915662650603,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9904837430610627,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+ns/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.4930139720558882,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+ns/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.4934131736526946,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5027944111776447,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+ns/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.4940119760479042,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+ns/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.5512974051896208,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5534930139720559,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1819277108433735,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8413957176843775,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+ns",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+ns/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.5487025948103792,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5387225548902196,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.15060240963855423,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8445678033306899,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm+ns/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.4942115768463074,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm+ns/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.5039920159680639,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5119760479041916,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.04497991967871486,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9984114376489277,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9484536082474226,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm+ns/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.5023952095808383,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5105788423153692,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.03413654618473896,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9627279936558287,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm+ns/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.4936127744510978,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5027944111776447,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm+ns/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.5069860279441117,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5125748502994012,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.051807228915662654,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.936558287073751,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm+ns/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.6317365269461078,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6341317365269461,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.5493975903614458,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9952343129467831,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.4409199048374306,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm+ns/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.4942115768463074,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm+ns/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.4940119760479042,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm+ns/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.5297405189620759,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5295409181636727,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.10481927710843374,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8992862807295797,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "loss_terms": "rec+lm+ns",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/data/models/marked-reversal/transformer/rec+lm+ns/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.7538922155688623,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6816367265469062,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.736144578313253,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9968228752978554,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.25931800158604285,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "loss_terms": "rec+ns",
+      "trial_no": 0,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/marked-reversal/mamba/rec+ns/validation-short/0",
+      "standard_flare_test_set": {
+        "accuracy": 0.8293413173652695,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7289421157684631,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9253012048192771,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.07137192704203013,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "loss_terms": "rec+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/marked-reversal/mamba/rec+ns/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.605189620758483,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5924151696606786,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.31244979919678717,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.739095955590801,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "loss_terms": "rec+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/marked-reversal/mamba/rec+ns/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.5369261477045908,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5413173652694611,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.09799196787148594,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9587628865979382,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "loss_terms": "rec+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/marked-reversal/mamba/rec+ns/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.5582834331337325,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5662674650698603,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.20923694779116467,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8390166534496432,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "loss_terms": "rec+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/marked-reversal/mamba/rec+ns/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.8584830339321358,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7548902195608782,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.02696272799365583,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "loss_terms": "rec+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/marked-reversal/mamba/rec+ns/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.5425149700598803,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5459081836327345,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.09036144578313253,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9920697858842189,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "loss_terms": "rec+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/marked-reversal/mamba/rec+ns/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.8542914171656687,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7612774451097805,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9991967871485944,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.05392545598731166,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "loss_terms": "rec+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/marked-reversal/mamba/rec+ns/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.5405189620758483,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5411177644710579,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9540047581284695,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "loss_terms": "rec+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/marked-reversal/mamba/rec+ns/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.5407185628742515,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5443113772455089,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.10923694779116466,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9492466296590008,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "loss_terms": "rec+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/marked-reversal/mamba/rec+ns/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.6592814371257485,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6315369261477046,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.4502008032128514,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.6217287866772403,
+        "n_hard_negative": 1261
+      }
+    }
+  ]
+}

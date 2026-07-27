@@ -1,0 +1,185 @@
+{
+  "task": "binary-addition",
+  "experiment": "corrected-dataset-fix (BF2: shortcut-only baseline ceiling on corrected test data)",
+  "description": "Evaluates the shortcut baseline (Phase 1 P2, no retraining) plus NEWLY-TRAINED ngram-logreg and bagcount-ffn baselines (trained here on binary-addition's STANDARD training set -- these two baselines did not previously exist for this task) on the CORRECTED test set (BF1), split into positive/uniform-random/hard-negative subsets via BF1's negative-kind.txt side-channel. Also reports the theoretical shortcut-only ceiling, refined with an explicit LSB-parity-detectable credit.",
+  "corrected_test_set": "languages/binary-addition-fixed/datasets/test",
+  "test_composition": {
+    "n_total": 5010,
+    "n_positive": 2423,
+    "n_uniform_random": 1369,
+    "n_hard_negative": 1218
+  },
+  "theoretical_shortcut_only_ceiling": {
+    "n_total": 5010,
+    "n_positive": 2423,
+    "n_structurally_obvious_negatives": 1369,
+    "structurally_obvious_breakdown": {
+      "from_hard_negative_half": 0,
+      "from_uniform_random_half": 1369
+    },
+    "n_structurally_ambiguous_negatives": 1218,
+    "structurally_ambiguous_breakdown": {
+      "from_hard_negative_half": 1218,
+      "from_uniform_random_half_by_chance": 0
+    },
+    "n_ambiguous_lsb_parity_detectable": 65,
+    "n_ambiguous_not_lsb_parity_detectable": 1153,
+    "lsb_parity_detectable_fraction_of_ambiguous": 0.053366174055829226,
+    "formula": "(n_positive + n_structurally_obvious + n_ambiguous_lsb_parity_detectable + 0.5 * n_ambiguous_not_lsb_parity_detectable) / n_total -- perfect on positives and every negative a shortcut-only detector (parse validity + structural features) can catch; ADDITIONALLY perfect on the subset of structurally-ambiguous (valid-parse) negatives that also violate the necessary LSB-parity condition; chance (0.5) on the remainder. This is a THEORETICAL upper bound assuming access to LSB parity -- the ACTUALLY TRAINED shortcut_features baseline (lengths/counts/positions only, Phase 1 P2) has NO parity feature, so its measured accuracy is expected to fall below this ceiling on the hard-negative half.",
+    "theoretical_shortcut_only_ceiling": 0.8849301397205589,
+    "note": "1218/1218 of the hard-negative half is structurally ambiguous by construction (should be ALL of it, i.e. 1218); 0/1369 of the uniform-random half is ALSO structurally ambiguous purely by chance (expected to be small/near-zero, checked directly rather than assumed)."
+  },
+  "baselines": {
+    "shortcut": {
+      "baseline": "shortcut",
+      "n_total": 5010,
+      "overall_accuracy": 0.6636726546906188,
+      "positive_accuracy": 0.5761452744531572,
+      "n_positive": 2423,
+      "uniform_random_half_accuracy": 1.0,
+      "n_uniform_random": 1369,
+      "hard_negative_half_accuracy": 0.45977011494252873,
+      "n_hard_negative": 1218,
+      "long_sequence_accuracy": 0.6086956521739131,
+      "n_long_sequences": 1012,
+      "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_binaryaddition_shortcut_baseline.joblib",
+      "trained_on": "standard binary-addition training set (Butoi et al. mixed strategy, K-edit perturbations)"
+    },
+    "ngram_logreg": {
+      "baseline": "ngram-logreg",
+      "n_total": 5010,
+      "overall_accuracy": 0.7570858283433134,
+      "positive_accuracy": 0.9991745769706974,
+      "n_positive": 2423,
+      "uniform_random_half_accuracy": 0.9992695398100804,
+      "n_uniform_random": 1369,
+      "hard_negative_half_accuracy": 0.003284072249589491,
+      "n_hard_negative": 1218,
+      "long_sequence_accuracy": 0.7460474308300395,
+      "n_long_sequences": 1012,
+      "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_binaryaddition_ngram_logreg.joblib",
+      "trained_on": "standard binary-addition training set (Butoi et al. mixed strategy, K-edit perturbations)",
+      "selected_C": 100.0
+    },
+    "bagcount_ffn": {
+      "8": {
+        "baseline": "bagcount-ffn-h8",
+        "n_total": 5010,
+        "overall_accuracy": 0.7075848303393214,
+        "positive_accuracy": 0.7812628972348329,
+        "n_positive": 2423,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1369,
+        "hard_negative_half_accuracy": 0.23234811165845648,
+        "n_hard_negative": 1218,
+        "long_sequence_accuracy": 0.6294466403162056,
+        "n_long_sequences": 1012,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_binaryaddition_bagcount_ffn_h8.pt",
+        "trained_on": "standard binary-addition training set (Butoi et al. mixed strategy, K-edit perturbations)",
+        "num_epochs_run": 79,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "32": {
+        "baseline": "bagcount-ffn-h32",
+        "n_total": 5010,
+        "overall_accuracy": 0.6377245508982036,
+        "positive_accuracy": 0.47585637639290135,
+        "n_positive": 2423,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1369,
+        "hard_negative_half_accuracy": 0.5525451559934319,
+        "n_hard_negative": 1218,
+        "long_sequence_accuracy": 0.5859683794466403,
+        "n_long_sequences": 1012,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_binaryaddition_bagcount_ffn_h32.pt",
+        "trained_on": "standard binary-addition training set (Butoi et al. mixed strategy, K-edit perturbations)",
+        "num_epochs_run": 119,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "128": {
+        "baseline": "bagcount-ffn-h128",
+        "n_total": 5010,
+        "overall_accuracy": 0.5716566866267465,
+        "positive_accuracy": 0.2141972761040033,
+        "n_positive": 2423,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1369,
+        "hard_negative_half_accuracy": 0.8013136288998358,
+        "n_hard_negative": 1218,
+        "long_sequence_accuracy": 0.5266798418972332,
+        "n_long_sequences": 1012,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_binaryaddition_bagcount_ffn_h128.pt",
+        "trained_on": "standard binary-addition training set (Butoi et al. mixed strategy, K-edit perturbations)",
+        "num_epochs_run": 72,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "512": {
+        "baseline": "bagcount-ffn-h512",
+        "n_total": 5010,
+        "overall_accuracy": 0.5846307385229541,
+        "positive_accuracy": 0.2682624845233182,
+        "n_positive": 2423,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1369,
+        "hard_negative_half_accuracy": 0.7471264367816092,
+        "n_hard_negative": 1218,
+        "long_sequence_accuracy": 0.5395256916996047,
+        "n_long_sequences": 1012,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_binaryaddition_bagcount_ffn_h512.pt",
+        "trained_on": "standard binary-addition training set (Butoi et al. mixed strategy, K-edit perturbations)",
+        "num_epochs_run": 30,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      }
+    }
+  },
+  "summary_vs_ceiling": [
+    {
+      "baseline": "shortcut",
+      "overall_accuracy": 0.6636726546906188,
+      "hard_negative_half_accuracy": 0.45977011494252873,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "ngram-logreg",
+      "overall_accuracy": 0.7570858283433134,
+      "hard_negative_half_accuracy": 0.003284072249589491,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h8",
+      "overall_accuracy": 0.7075848303393214,
+      "hard_negative_half_accuracy": 0.23234811165845648,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h32",
+      "overall_accuracy": 0.6377245508982036,
+      "hard_negative_half_accuracy": 0.5525451559934319,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h128",
+      "overall_accuracy": 0.5716566866267465,
+      "hard_negative_half_accuracy": 0.8013136288998358,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h512",
+      "overall_accuracy": 0.5846307385229541,
+      "hard_negative_half_accuracy": 0.7471264367816092,
+      "exceeds_theoretical_ceiling": false
+    }
+  ]
+}

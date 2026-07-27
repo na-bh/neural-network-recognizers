@@ -1,0 +1,1608 @@
+{
+  "task": "odds-first",
+  "objective": "rec+ns",
+  "experiment": "corrected-dataset-fix (OF3: single-objective training on corrected data)",
+  "description": "Trains RNN/LSTM/Transformer/Mamba on the corrected odds-first training set (languages/odds-first-fixed) under the 'rec+ns' objective, 10 trials each (40 runs). Per-trial hyperparameter sampling matches train_and_evaluate.bash exactly. Evaluated on both the standard FLaRe test set and the corrected test set.",
+  "corrected_trained_runs": [
+    {
+      "arch": "rnn",
+      "objective": "rec+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/rnn/rec+ns/validation-short/1",
+      "hyperparameters": {
+        "max_tokens_per_batch": 453,
+        "initial_learning_rate": 0.00015639704148890797,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.044120198823988516
+      },
+      "training_duration_seconds": 129.5255537033081,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7606786427145709,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7536926147704591,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9968578161822467,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/rnn/rec+ns/validation-short/2",
+      "hyperparameters": {
+        "max_tokens_per_batch": 611,
+        "initial_learning_rate": 0.00035400986830773704,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.011549284180477489
+      },
+      "training_duration_seconds": 899.1938052177429,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.618562874251497,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6045908183632734,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.29158356601515756,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.997643362136685,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.8357723577235773,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/rnn/rec+ns/validation-short/3",
+      "hyperparameters": {
+        "max_tokens_per_batch": 663,
+        "initial_learning_rate": 0.001476278383630698,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.012408033102711899
+      },
+      "training_duration_seconds": 94.97764658927917,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.8956087824351298,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7538922155688623,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.997643362136685,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/rnn/rec+ns/validation-short/4",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1253,
+        "initial_learning_rate": 0.0016775642828455832,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.029334352399506877
+      },
+      "training_duration_seconds": 91.03369617462158,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.8950099800399202,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7534930139720559,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9960722702278083,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/rnn/rec+ns/validation-short/5",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1263,
+        "initial_learning_rate": 0.003395677633370479,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.18505291017004027
+      },
+      "training_duration_seconds": 123.71676588058472,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7768463073852295,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6259481037924152,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.49410840534171246,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/rnn/rec+ns/validation-short/6",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1401,
+        "initial_learning_rate": 0.001680544313580331,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 1.2985909048131696
+      },
+      "training_duration_seconds": 152.41932821273804,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7776447105788423,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7540918163672655,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9984289080911233,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/rnn/rec+ns/validation-short/7",
+      "hyperparameters": {
+        "max_tokens_per_batch": 3899,
+        "initial_learning_rate": 0.0017112718778261355,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.10275456517440543
+      },
+      "training_duration_seconds": 66.85886812210083,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7674650698602794,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7536926147704591,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9968578161822467,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/rnn/rec+ns/validation-short/8",
+      "hyperparameters": {
+        "max_tokens_per_batch": 2977,
+        "initial_learning_rate": 0.0045696684756901165,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 2.924585406170198
+      },
+      "training_duration_seconds": 104.62272310256958,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7638722554890219,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7540918163672655,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9984289080911233,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/rnn/rec+ns/validation-short/9",
+      "hyperparameters": {
+        "max_tokens_per_batch": 3906,
+        "initial_learning_rate": 0.0019611186967589847,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 2.376814516140609
+      },
+      "training_duration_seconds": 227.00637316703796,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7820359281437126,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7542914171656686,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+ns",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/rnn/rec+ns/validation-short/10",
+      "hyperparameters": {
+        "max_tokens_per_batch": 540,
+        "initial_learning_rate": 0.0002161304164270403,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.5769467428060969
+      },
+      "training_duration_seconds": 362.21053075790405,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7614770459081837,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7393213572854291,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9529317909852413,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9984289080911233,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.03577235772357724,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/lstm/rec+ns/validation-short/1",
+      "hyperparameters": {
+        "max_tokens_per_batch": 690,
+        "initial_learning_rate": 0.0003176390715397452,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.5199887684870191
+      },
+      "training_duration_seconds": 333.9985866546631,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5325349301397205,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.530938123752495,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1112883925009972,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.9016260162601626,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/lstm/rec+ns/validation-short/2",
+      "hyperparameters": {
+        "max_tokens_per_batch": 546,
+        "initial_learning_rate": 0.0007041079767054892,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.3321714898433546
+      },
+      "training_duration_seconds": 456.3606834411621,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5355289421157685,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.539121756487026,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.12086158755484643,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.9154471544715447,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/lstm/rec+ns/validation-short/3",
+      "hyperparameters": {
+        "max_tokens_per_batch": 3661,
+        "initial_learning_rate": 0.00047811526314638574,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.04186602255335263
+      },
+      "training_duration_seconds": 158.55822372436523,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7640718562874251,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7532934131736527,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.99528672427337,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/lstm/rec+ns/validation-short/4",
+      "hyperparameters": {
+        "max_tokens_per_batch": 497,
+        "initial_learning_rate": 0.0006293785672739433,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.10776214592544844
+      },
+      "training_duration_seconds": 345.51631259918213,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5347305389221557,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5421157684630739,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.14718787395293179,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.8739837398373984,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/lstm/rec+ns/validation-short/5",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1280,
+        "initial_learning_rate": 0.004621407156124305,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.21748359556690508
+      },
+      "training_duration_seconds": 95.9042341709137,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5738522954091816,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.567065868263473,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.24650977263661747,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.7731707317073171,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/lstm/rec+ns/validation-short/6",
+      "hyperparameters": {
+        "max_tokens_per_batch": 666,
+        "initial_learning_rate": 0.0021940005257979848,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.3162240673318552
+      },
+      "training_duration_seconds": 121.23606252670288,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.8325349301397206,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7467065868263473,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9617072197846032,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.04715447154471545,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/lstm/rec+ns/validation-short/7",
+      "hyperparameters": {
+        "max_tokens_per_batch": 177,
+        "initial_learning_rate": 0.00040761829278056027,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.09345990366698921
+      },
+      "training_duration_seconds": 812.0413656234741,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5588822355289421,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.567065868263473,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.17590745911447947,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.916260162601626,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/lstm/rec+ns/validation-short/8",
+      "hyperparameters": {
+        "max_tokens_per_batch": 286,
+        "initial_learning_rate": 0.00019407823820957292,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 1.1042467263754843
+      },
+      "training_duration_seconds": 464.2499649524689,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5518962075848304,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5493013972055888,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.16234543278819305,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9984289080911233,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.8731707317073171,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/lstm/rec+ns/validation-short/9",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1288,
+        "initial_learning_rate": 0.009445611118932586,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.31116174005944874
+      },
+      "training_duration_seconds": 141.89185619354248,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.9461077844311377,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7540918163672655,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9984289080911233,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+ns",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/lstm/rec+ns/validation-short/10",
+      "hyperparameters": {
+        "max_tokens_per_batch": 294,
+        "initial_learning_rate": 0.001284553235026254,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.1352305271232221
+      },
+      "training_duration_seconds": 182.04587149620056,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5487025948103792,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5487025948103792,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.17510969285999203,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.8439024390243902,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/transformer/rec+ns/validation-short/1",
+      "hyperparameters": {
+        "max_tokens_per_batch": 444,
+        "initial_learning_rate": 0.00013000558931695893,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.35593106797000484
+      },
+      "training_duration_seconds": 611.1718597412109,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5183632734530939,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.524750499001996,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.08815317112086159,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.9235772357723577,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/transformer/rec+ns/validation-short/2",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1512,
+        "initial_learning_rate": 0.00011990546059590855,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 1.8809451036718456
+      },
+      "training_duration_seconds": 228.64208960533142,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5063872255489021,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5167664670658683,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.05863581970482649,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.9504065040650407,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/transformer/rec+ns/validation-short/3",
+      "hyperparameters": {
+        "max_tokens_per_batch": 330,
+        "initial_learning_rate": 0.0022823037907437837,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.045166809736442264
+      },
+      "training_duration_seconds": 430.54501271247864,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.4944111776447106,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.4994011976047904,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/transformer/rec+ns/validation-short/4",
+      "hyperparameters": {
+        "max_tokens_per_batch": 562,
+        "initial_learning_rate": 0.0013793424808620286,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.04251585868118641
+      },
+      "training_duration_seconds": 281.81330943107605,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.49500998003992014,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.4996007984031936,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/transformer/rec+ns/validation-short/5",
+      "hyperparameters": {
+        "max_tokens_per_batch": 2120,
+        "initial_learning_rate": 0.0006992861151063034,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 2.516024943218638
+      },
+      "training_duration_seconds": 528.3599987030029,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5097804391217565,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5195608782435129,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.060231352213801354,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.9585365853658536,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/transformer/rec+ns/validation-short/6",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1298,
+        "initial_learning_rate": 0.00034246736418957303,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.2205470347510987
+      },
+      "training_duration_seconds": 134.45844984054565,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5373253493013972,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5590818363273453,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.22138013562026326,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.791869918699187,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/transformer/rec+ns/validation-short/7",
+      "hyperparameters": {
+        "max_tokens_per_batch": 330,
+        "initial_learning_rate": 0.0026629035969869576,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.011225933017097482
+      },
+      "training_duration_seconds": 308.4327042102814,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5243512974051896,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5329341317365269,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.12126047068209014,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.8886178861788618,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/transformer/rec+ns/validation-short/8",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1124,
+        "initial_learning_rate": 0.00018938998560376875,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.2512293056419326
+      },
+      "training_duration_seconds": 188.74749088287354,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5415169660678643,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5373253493013972,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1451934583167132,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.8577235772357723,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/transformer/rec+ns/validation-short/9",
+      "hyperparameters": {
+        "max_tokens_per_batch": 3047,
+        "initial_learning_rate": 0.0009242530668671841,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.0333990731695194
+      },
+      "training_duration_seconds": 126.73883438110352,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5249500998003992,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5303393213572855,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.11447945751894695,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.8926829268292683,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+ns",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/transformer/rec+ns/validation-short/10",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1875,
+        "initial_learning_rate": 0.0013966182786209727,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.017799365383816445
+      },
+      "training_duration_seconds": 318.4555642604828,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5219560878243513,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5285429141716567,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.104507379337854,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.9048780487804878,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/mamba/rec+ns/validation-short/1",
+      "hyperparameters": {
+        "max_tokens_per_batch": 494,
+        "initial_learning_rate": 0.0038987771193206844,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.637670651090025
+      },
+      "training_duration_seconds": 249.63097190856934,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.8550898203592814,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7540918163672655,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9984289080911233,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/mamba/rec+ns/validation-short/2",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1268,
+        "initial_learning_rate": 0.0008987089740579724,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.09046815343842955
+      },
+      "training_duration_seconds": 178.3836030960083,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.6135728542914172,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6261477045908184,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.42481053051455925,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9984289080911233,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.651219512195122,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/mamba/rec+ns/validation-short/3",
+      "hyperparameters": {
+        "max_tokens_per_batch": 233,
+        "initial_learning_rate": 0.00014172924205436432,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.8688962694778168
+      },
+      "training_duration_seconds": 575.0200142860413,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.578443113772455,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5926147704590818,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.255684084563223,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.8585365853658536,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/mamba/rec+ns/validation-short/4",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1341,
+        "initial_learning_rate": 0.00010866019053838349,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.7977339686911439
+      },
+      "training_duration_seconds": 528.0048499107361,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.700998003992016,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6852295409181637,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.6896689270043878,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9960722702278083,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.3544715447154472,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/mamba/rec+ns/validation-short/5",
+      "hyperparameters": {
+        "max_tokens_per_batch": 212,
+        "initial_learning_rate": 0.00045339058958889547,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.12560409641307568
+      },
+      "training_duration_seconds": 435.6339707374573,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5780439121756487,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.30714000797766255,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9984289080911233,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.7967479674796748,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/mamba/rec+ns/validation-short/6",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1126,
+        "initial_learning_rate": 0.003548842453652493,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.27350127142083686
+      },
+      "training_duration_seconds": 380.83123302459717,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7506986027944111,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7279441117764471,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.836059034702832,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.997643362136685,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.22845528455284553,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/mamba/rec+ns/validation-short/7",
+      "hyperparameters": {
+        "max_tokens_per_batch": 2326,
+        "initial_learning_rate": 0.0004199245592559904,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.013267166946611494
+      },
+      "training_duration_seconds": 212.00053882598877,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7181636726546906,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7105788423153693,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.8117271639409653,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.99528672427337,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.2097560975609756,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/mamba/rec+ns/validation-short/8",
+      "hyperparameters": {
+        "max_tokens_per_batch": 825,
+        "initial_learning_rate": 0.0005522713102551266,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.4330144139403438
+      },
+      "training_duration_seconds": 197.5590512752533,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7273453093812375,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7179640718562874,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.8328679696848823,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9984289080911233,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.19349593495934958,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/mamba/rec+ns/validation-short/9",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1132,
+        "initial_learning_rate": 0.00014946868322273843,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 0.11126875516648159
+      },
+      "training_duration_seconds": 399.63062620162964,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7562874251497006,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7315369261477046,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.8540087754287994,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.2048780487804878,
+        "n_hard_negative": 1230
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+ns",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/odds-first-fixed/mamba/rec+ns/validation-short/10",
+      "hyperparameters": {
+        "max_tokens_per_batch": 480,
+        "initial_learning_rate": 0.0001920883793645058,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "next_symbols_loss_coefficient": 6.494019269774803
+      },
+      "training_duration_seconds": 573.8018214702606,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5560878243512974,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5598802395209581,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.15715995213402473,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.9252032520325203,
+        "n_hard_negative": 1230
+      }
+    }
+  ]
+}

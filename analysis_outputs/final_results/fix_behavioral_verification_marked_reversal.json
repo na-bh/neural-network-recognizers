@@ -1,0 +1,581 @@
+{
+  "task": "marked-reversal",
+  "experiment": "corrected-dataset-fix (F4: behavioral verification)",
+  "verdict": {
+    "verdict": "FIX FAILS",
+    "shortcut_only_ceiling": 0.8741516966067864,
+    "max_overall_accuracy_achieved": 0.768063872255489,
+    "max_accuracy_trial": "mamba trial 6",
+    "gap_to_ceiling": 0.10608782435129738,
+    "n_trials_exceeding_ceiling_at_all": 0,
+    "reasoning": "No trained model, across all 40 trials (4 architectures x 10 seeds each), exceeds the shortcut-only ceiling (0.8742) on the corrected test set. The maximum overall accuracy achieved anywhere is 0.7681 (mamba trial 6), still 0.106 below the ceiling, and even this best trial's own hard-negative accuracy (0.271) is far short of genuine discrimination. Every one of the 40 trials falls into one of two failure modes: clean shortcut-mode (marker-only collapse, identical in character to the original F2 baselines) or reject-bias mode (trivial 'reject most inputs' bias that inflates hard-negative accuracy at the direct cost of positive accuracy). No trial resolves both simultaneously -- i.e. no trial demonstrates balanced positive/uniform-random/hard-negative discrimination that would indicate genuine target-computation (mirror-content verification). Correcting the training DATA's negative-generation strategy (Butoi et al.'s mixed strategy, with the adversarial half now genuinely hard) was NOT sufficient to force any of the four architectures to build a durable mirror-content carrier under this training procedure -- architectural/optimization biases against durable-carrier construction appear to dominate over the data-distribution correction alone.",
+    "per_architecture_failure_mode_summary": {
+      "rnn": "clean_shortcut_mode dominant (6/10), full breakdown: {'reject_bias_mode': 3, 'clean_shortcut_mode': 6, 'intermediate_shortcut_leaning': 1}",
+      "lstm": "clean_shortcut_mode dominant (8/10), full breakdown: {'clean_shortcut_mode': 8, 'intermediate_shortcut_leaning': 1, 'reject_bias_mode': 1}",
+      "transformer": "reject_bias_mode dominant (9/10), full breakdown: {'intermediate_shortcut_leaning': 1, 'reject_bias_mode': 9}",
+      "mamba": "reject_bias_mode dominant (7/10), full breakdown: {'reject_bias_mode': 7, 'clean_shortcut_mode': 2, 'intermediate_shortcut_leaning': 1}"
+    },
+    "note_on_rnn_and_mamba_characterization": "RNN and Mamba do NOT show an identical 'split' pattern to each other, despite both being more mixed than LSTM (shortcut-dominant) and Transformer (reject-bias-dominant): RNN leans shortcut-majority ({'reject_bias_mode': 3, 'clean_shortcut_mode': 6, 'intermediate_shortcut_leaning': 1}), while Mamba leans reject-bias-majority ({'reject_bias_mode': 7, 'clean_shortcut_mode': 2, 'intermediate_shortcut_leaning': 1}) -- reported precisely here rather than smoothed into a single 'both split evenly' characterization."
+  },
+  "rnn_seed_8_10_training_curve_investigation": {
+    "question": "Did training converge for rnn seeds 8 and 10, or did it fail to stabilize? (their uniform-random-half TEST accuracy, 0.655 and 0.493, is far below every other shortcut-mode seed's 0.993-1.000)",
+    "seed8": {
+      "next_symbols_loss_coefficient": 0.014421005834964341,
+      "initial_learning_rate_from_train_summary_not_available": null,
+      "n_checkpoints_run": 50,
+      "best_checkpoint": 39,
+      "checkpoints_since_improvement_at_stop": 10,
+      "best_validation_recognition_accuracy": 0.671,
+      "best_validation_next_symbols_set_accuracy": 0.2515180265654649,
+      "recognition_accuracy_trajectory_rounded": [
+        0.629,
+        0.631,
+        0.503,
+        0.517,
+        0.629,
+        0.517,
+        0.629,
+        0.629,
+        0.629,
+        0.629,
+        0.629,
+        0.629,
+        0.629,
+        0.629,
+        0.629,
+        0.629,
+        0.541,
+        0.51,
+        0.64,
+        0.52,
+        0.64,
+        0.52,
+        0.639,
+        0.639,
+        0.639,
+        0.639,
+        0.639,
+        0.639,
+        0.639,
+        0.639,
+        0.648,
+        0.632,
+        0.632,
+        0.671,
+        0.671,
+        0.671,
+        0.671,
+        0.671,
+        0.671,
+        0.671,
+        0.671,
+        0.602,
+        0.671,
+        0.671,
+        0.671,
+        0.671,
+        0.671,
+        0.671,
+        0.671,
+        0.671
+      ]
+    },
+    "seed10": {
+      "next_symbols_loss_coefficient": 0.011691271716542538,
+      "initial_learning_rate_from_train_summary_not_available": null,
+      "n_checkpoints_run": 36,
+      "best_checkpoint": 25,
+      "checkpoints_since_improvement_at_stop": 10,
+      "best_validation_recognition_accuracy": 0.629,
+      "best_validation_next_symbols_set_accuracy": 0.1774193548387097,
+      "recognition_accuracy_trajectory_rounded": [
+        0.483,
+        0.503,
+        0.503,
+        0.503,
+        0.501,
+        0.503,
+        0.517,
+        0.501,
+        0.517,
+        0.517,
+        0.506,
+        0.629,
+        0.528,
+        0.629,
+        0.629,
+        0.629,
+        0.629,
+        0.528,
+        0.629,
+        0.629,
+        0.629,
+        0.629,
+        0.629,
+        0.517,
+        0.629,
+        0.629,
+        0.629,
+        0.629,
+        0.629,
+        0.629,
+        0.517,
+        0.629,
+        0.517,
+        0.629,
+        0.629,
+        0.629
+      ]
+    },
+    "reference_well_converged_seed2": {
+      "next_symbols_loss_coefficient": 0.18398584836723128,
+      "initial_learning_rate_from_train_summary_not_available": null,
+      "n_checkpoints_run": 50,
+      "best_checkpoint": 39,
+      "checkpoints_since_improvement_at_stop": 10,
+      "best_validation_recognition_accuracy": 0.754,
+      "best_validation_next_symbols_set_accuracy": 0.5260910815939279,
+      "recognition_accuracy_trajectory_rounded": [
+        0.664,
+        0.698,
+        0.681,
+        0.716,
+        0.726,
+        0.732,
+        0.729,
+        0.72,
+        0.734,
+        0.732,
+        0.738,
+        0.752,
+        0.754,
+        0.754,
+        0.752,
+        0.689,
+        0.751,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.736,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.752,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754,
+        0.754
+      ]
+    },
+    "finding": "EARLY STOPPING FIRED CORRECTLY for both seeds (checkpoints_since_improvement=10 at stop, matching the configured patience) -- this was NOT a crash, hang, or training-loop bug. However, validation recognition accuracy PLATEAUED at a low value for both (seed8: 0.671, seed10: 0.629) -- well below the well-converged reference seed2's 0.754. The recognition-accuracy trajectory for both seeds oscillates among only a handful of discrete values across dozens of checkpoints without genuine improvement -- consistent with the optimizer getting STUCK in a poor local optimum early in training, not with a well-converged model that happens to generalize poorly. Both anomalous seeds share an unusually LOW next_symbols_loss_coefficient (seed8: 0.0144, seed10: 0.0117 -- both near the bottom 1-2% of the sampled log-uniform(0.01,10) range) compared to the well-converged reference seed2's 0.1840. This is a plausible (not proven) causal story: when the auxiliary next-symbols signal barely contributes to the joint loss, optimization for THIS task/architecture combination appears more prone to stalling in a bad optimum. CONCLUSION: seeds 8 and 10 represent a GENUINE CONVERGENCE FAILURE (undertrained, stuck models), not a novel behavioral finding about the corrected training distribution -- their poor uniform-random accuracy should be read as 'this particular run did not train successfully,' not as evidence about what corrected training does to RNN's grammar-detection capability in general. This does not change the overall fix verdict (RNN's OTHER shortcut-mode seeds, 2/3/4/9, converged normally and show the standard clean shortcut pattern)."
+  },
+  "per_architecture_failure_mode_characterization": {
+    "rnn": {
+      "mode_counts": {
+        "reject_bias_mode": 3,
+        "clean_shortcut_mode": 6,
+        "intermediate_shortcut_leaning": 1
+      },
+      "dominant_mode": "clean_shortcut_mode",
+      "dominant_mode_count": "6/10",
+      "seed_details": [
+        {
+          "trial_no": 1,
+          "positive_accuracy": 0.40522088353413654,
+          "hard_negative_accuracy": 0.5868358445678034,
+          "uniform_random_accuracy": 0.9976171564733916,
+          "overall_accuracy": 0.5998003992015968,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 2,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 0.9992057188244639,
+          "overall_accuracy": 0.7481037924151697,
+          "mode": "clean_shortcut_mode"
+        },
+        {
+          "trial_no": 3,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 0.9992057188244639,
+          "overall_accuracy": 0.7481037924151697,
+          "mode": "clean_shortcut_mode"
+        },
+        {
+          "trial_no": 4,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 0.9976171564733916,
+          "overall_accuracy": 0.7477045908183633,
+          "mode": "clean_shortcut_mode"
+        },
+        {
+          "trial_no": 5,
+          "positive_accuracy": 0.18393574297188756,
+          "hard_negative_accuracy": 0.8913560666137986,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.567065868263473,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 6,
+          "positive_accuracy": 0.3216867469879518,
+          "hard_negative_accuracy": 0.6915146708961142,
+          "uniform_random_accuracy": 0.9992057188244639,
+          "overall_accuracy": 0.5850299401197605,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 7,
+          "positive_accuracy": 0.6441767068273092,
+          "hard_negative_accuracy": 0.3687549563838224,
+          "uniform_random_accuracy": 0.9992057188244639,
+          "overall_accuracy": 0.6640718562874252,
+          "mode": "intermediate_shortcut_leaning"
+        },
+        {
+          "trial_no": 8,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 0.6544876886417792,
+          "overall_accuracy": 0.6614770459081837,
+          "mode": "clean_shortcut_mode"
+        },
+        {
+          "trial_no": 9,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 0.9992057188244639,
+          "overall_accuracy": 0.7481037924151697,
+          "mode": "clean_shortcut_mode"
+        },
+        {
+          "trial_no": 10,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 0.4932486100079428,
+          "overall_accuracy": 0.6209580838323353,
+          "mode": "clean_shortcut_mode"
+        }
+      ]
+    },
+    "lstm": {
+      "mode_counts": {
+        "clean_shortcut_mode": 8,
+        "intermediate_shortcut_leaning": 1,
+        "reject_bias_mode": 1
+      },
+      "dominant_mode": "clean_shortcut_mode",
+      "dominant_mode_count": "8/10",
+      "seed_details": [
+        {
+          "trial_no": 1,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.7483033932135729,
+          "mode": "clean_shortcut_mode"
+        },
+        {
+          "trial_no": 2,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.7483033932135729,
+          "mode": "clean_shortcut_mode"
+        },
+        {
+          "trial_no": 3,
+          "positive_accuracy": 0.8401606425702811,
+          "hard_negative_accuracy": 0.3481363996827914,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.7564870259481038,
+          "mode": "intermediate_shortcut_leaning"
+        },
+        {
+          "trial_no": 4,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 0.9968228752978554,
+          "overall_accuracy": 0.7475049900199601,
+          "mode": "clean_shortcut_mode"
+        },
+        {
+          "trial_no": 5,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.7483033932135729,
+          "mode": "clean_shortcut_mode"
+        },
+        {
+          "trial_no": 6,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.7483033932135729,
+          "mode": "clean_shortcut_mode"
+        },
+        {
+          "trial_no": 7,
+          "positive_accuracy": 0.1465863453815261,
+          "hard_negative_accuracy": 0.8699444885011896,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.5431137724550898,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 8,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 0.9928514694201748,
+          "overall_accuracy": 0.7465069860279441,
+          "mode": "clean_shortcut_mode"
+        },
+        {
+          "trial_no": 9,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.7483033932135729,
+          "mode": "clean_shortcut_mode"
+        },
+        {
+          "trial_no": 10,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 0.9936457505957109,
+          "overall_accuracy": 0.7467065868263473,
+          "mode": "clean_shortcut_mode"
+        }
+      ]
+    },
+    "transformer": {
+      "mode_counts": {
+        "intermediate_shortcut_leaning": 1,
+        "reject_bias_mode": 9
+      },
+      "dominant_mode": "reject_bias_mode",
+      "dominant_mode_count": "9/10",
+      "seed_details": [
+        {
+          "trial_no": 1,
+          "positive_accuracy": 0.8730923694779117,
+          "hard_negative_accuracy": 0.09833465503568596,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.7099800399201597,
+          "mode": "intermediate_shortcut_leaning"
+        },
+        {
+          "trial_no": 2,
+          "positive_accuracy": 0.06345381526104418,
+          "hard_negative_accuracy": 0.9579698651863601,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.5239520958083832,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 3,
+          "positive_accuracy": 0.11847389558232932,
+          "hard_negative_accuracy": 0.8953211736716892,
+          "uniform_random_accuracy": 0.9984114376489277,
+          "overall_accuracy": 0.5351297405189621,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 4,
+          "positive_accuracy": 0.41807228915662653,
+          "hard_negative_accuracy": 0.5765265662172878,
+          "uniform_random_accuracy": 0.9968228752978554,
+          "overall_accuracy": 0.6033932135728542,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 5,
+          "positive_accuracy": 0.0285140562248996,
+          "hard_negative_accuracy": 0.9690721649484536,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.5093812375249501,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 6,
+          "positive_accuracy": 0.1678714859437751,
+          "hard_negative_accuracy": 0.8255352894528152,
+          "uniform_random_accuracy": 0.9984114376489277,
+          "overall_accuracy": 0.5421157684630739,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 7,
+          "positive_accuracy": 0.0,
+          "hard_negative_accuracy": 1.0,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.5029940119760479,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 8,
+          "positive_accuracy": 0.0,
+          "hard_negative_accuracy": 1.0,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.5029940119760479,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 9,
+          "positive_accuracy": 0.04257028112449799,
+          "hard_negative_accuracy": 0.9746233148295004,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.5177644710578843,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 10,
+          "positive_accuracy": 0.053413654618473895,
+          "hard_negative_accuracy": 0.9397303727200634,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.51437125748503,
+          "mode": "reject_bias_mode"
+        }
+      ]
+    },
+    "mamba": {
+      "mode_counts": {
+        "reject_bias_mode": 7,
+        "clean_shortcut_mode": 2,
+        "intermediate_shortcut_leaning": 1
+      },
+      "dominant_mode": "reject_bias_mode",
+      "dominant_mode_count": "7/10",
+      "seed_details": [
+        {
+          "trial_no": 1,
+          "positive_accuracy": 0.3678714859437751,
+          "hard_negative_accuracy": 0.7644726407613005,
+          "uniform_random_accuracy": 0.9992057188244639,
+          "overall_accuracy": 0.6263473053892216,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 2,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 0.9968228752978554,
+          "overall_accuracy": 0.7475049900199601,
+          "mode": "clean_shortcut_mode"
+        },
+        {
+          "trial_no": 3,
+          "positive_accuracy": 0.16626506024096385,
+          "hard_negative_accuracy": 0.9238699444885012,
+          "uniform_random_accuracy": 0.9992057188244639,
+          "overall_accuracy": 0.5662674650698603,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 4,
+          "positive_accuracy": 0.25662650602409637,
+          "hard_negative_accuracy": 0.8215701823949246,
+          "uniform_random_accuracy": 0.9992057188244639,
+          "overall_accuracy": 0.5854291417165669,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 5,
+          "positive_accuracy": 0.10843373493975904,
+          "hard_negative_accuracy": 0.9738302934179223,
+          "uniform_random_accuracy": 0.9992057188244639,
+          "overall_accuracy": 0.5500998003992016,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 6,
+          "positive_accuracy": 0.9024096385542169,
+          "hard_negative_accuracy": 0.2712133227597145,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.768063872255489,
+          "mode": "intermediate_shortcut_leaning"
+        },
+        {
+          "trial_no": 7,
+          "positive_accuracy": 0.09919678714859438,
+          "hard_negative_accuracy": 0.9849325931800159,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.548502994011976,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 8,
+          "positive_accuracy": 0.14136546184738955,
+          "hard_negative_accuracy": 0.9627279936558287,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.563872255489022,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 9,
+          "positive_accuracy": 0.4036144578313253,
+          "hard_negative_accuracy": 0.6962727993655828,
+          "uniform_random_accuracy": 1.0,
+          "overall_accuracy": 0.6271457085828344,
+          "mode": "reject_bias_mode"
+        },
+        {
+          "trial_no": 10,
+          "positive_accuracy": 1.0,
+          "hard_negative_accuracy": 0.0,
+          "uniform_random_accuracy": 0.9936457505957109,
+          "overall_accuracy": 0.7467065868263473,
+          "mode": "clean_shortcut_mode"
+        }
+      ]
+    }
+  },
+  "max_accuracy_trial_analysis": {
+    "trial": "mamba trial 6",
+    "overall_accuracy": 0.768063872255489,
+    "positive_accuracy": 0.9024096385542169,
+    "uniform_random_accuracy": 1.0,
+    "hard_negative_accuracy": 0.2712133227597145,
+    "ceiling_gap": 0.10608782435129738,
+    "mechanism_CORRECTED": "This trial is NOT reject-bias -- its positive_accuracy (0.902) is HIGH (close to clean shortcut-mode's 1.0), not low. Its mechanism is: strong shortcut-mode-like behavior (high positive + uniform-random accuracy, matching the shortcut baselines) PLUS a modest hard-negative accuracy (0.271) that is notably better than pure shortcut-mode's 0.000 but far from genuine discrimination (would need to approach ~1.0 alongside high positive accuracy to demonstrate real target-computation). It is best described as 'the best shortcut-mode-plus-a-small-increment trial,' not a reject-biased trial. This is a factual correction to the initial characterization of this trial's mechanism.",
+    "why_reject_bias_cannot_win_on_overall_accuracy": "Reject-bias trials sacrifice positive accuracy (49.7% of the test population) to gain on the hard-negative half (25.2% of the population) -- structurally, this trade is unfavorable unless hard-negative accuracy approaches 1.0 while positive accuracy stays high, which no trial achieves. Consistent with the data: every reject-bias-mode trial in this run has overall accuracy well below the clean-shortcut-mode trials' ~0.746-0.748 and below this run's own maximum (0.768)."
+  },
+  "shortcut_only_ceiling_reference": {
+    "n_total": 5010,
+    "n_positive": 2490,
+    "n_structurally_obvious_negatives": 1259,
+    "n_structurally_ambiguous_negatives": 1261,
+    "structurally_ambiguous_breakdown": {
+      "from_hard_negative_half": 1261,
+      "from_uniform_random_half_by_chance": 0
+    },
+    "formula": "(n_positive + n_structurally_obvious + 0.5 * n_structurally_ambiguous) / n_total -- perfect classification wherever marker_count/marker_position alone can distinguish the example from a positive (all positives, plus every negative that is NOT single-marker-and-balanced), chance (0.5) on everything that is single-marker-and-balanced (indistinguishable from a positive via marker features alone) -- generalizes the pilot's established grammar_only_ceiling formula to the corrected test set's actual composition.",
+    "theoretical_shortcut_only_ceiling": 0.8741516966067864,
+    "note": "1261/1261 of the hard-negative half is structurally ambiguous by construction (should be ALL of it, i.e. 1261); 0/1259 of the uniform-random half is ALSO structurally ambiguous purely by chance (expected to be small/near-zero, checked directly rather than assumed)."
+  }
+}

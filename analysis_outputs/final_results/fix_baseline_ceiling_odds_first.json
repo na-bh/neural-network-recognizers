@@ -1,0 +1,219 @@
+{
+  "task": "odds-first",
+  "experiment": "corrected-dataset-fix (OF2: shortcut-only baseline ceiling on corrected test data)",
+  "description": "Evaluates a NEWLY-TRAINED marker_shortcut baseline (marker count/relative-position, reused unchanged from marked-copy/marked-reversal's feature set -- provably incapable of deinterleave-content verification) plus ngram-logreg and bagcount-ffn baselines (also newly trained here), all trained on STANDARD odds-first training data, evaluated on the CORRECTED test set (OF1), split into positive/uniform-random/hard-negative subsets.",
+  "provable_incapacity_counterexample": {
+    "clean": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "#",
+      "0",
+      "1",
+      "1",
+      "0"
+    ],
+    "corrupted": [
+      "0",
+      "1",
+      "1",
+      "0",
+      "#",
+      "0",
+      "1",
+      "0",
+      "1"
+    ],
+    "clean_features": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "corrupted_features": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "features_identical": true,
+    "note": "IDENTICAL marker-shortcut feature vectors (marker count/relative-offset), opposite validity -- the information distinguishing them (whether the post-marker half is actually the correct deinterleave, not just correctly bracketed) is structurally absent from a marker-position-only representation."
+  },
+  "corrected_test_set": "languages/odds-first-fixed/datasets/test",
+  "test_composition": {
+    "n_total": 5010,
+    "n_positive": 2507,
+    "n_uniform_random": 1273,
+    "n_hard_negative": 1230
+  },
+  "theoretical_shortcut_only_ceiling": {
+    "n_total": 5010,
+    "n_positive": 2507,
+    "n_structurally_obvious_negatives": 1272,
+    "structurally_obvious_breakdown": {
+      "from_hard_negative_half": 0,
+      "from_uniform_random_half": 1272
+    },
+    "n_structurally_ambiguous_negatives": 1231,
+    "structurally_ambiguous_breakdown": {
+      "from_hard_negative_half": 1230,
+      "from_uniform_random_half_by_chance": 1
+    },
+    "formula": "(n_positive + n_structurally_obvious + 0.5 * n_structurally_ambiguous) / n_total -- perfect classification wherever marker_count/marker_position alone can distinguish the example from a positive, chance (0.5) on everything single-marker-and-balanced (indistinguishable from a positive via marker features alone).",
+    "theoretical_shortcut_only_ceiling": 0.8771457085828344,
+    "note": "1230/1230 of the hard-negative half is structurally ambiguous by construction (should be ALL of it, i.e. 1230); 1/1273 of the uniform-random half is ALSO structurally ambiguous purely by chance."
+  },
+  "baselines": {
+    "marker_shortcut": {
+      "baseline": "marker_shortcut",
+      "n_total": 5010,
+      "overall_accuracy": 0.7542914171656686,
+      "positive_accuracy": 1.0,
+      "n_positive": 2507,
+      "uniform_random_half_accuracy": 0.9992144540455616,
+      "n_uniform_random": 1273,
+      "hard_negative_half_accuracy": 0.0,
+      "n_hard_negative": 1230,
+      "long_sequence_accuracy": 0.755023923444976,
+      "n_long_sequences": 1045,
+      "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_odds_first_marker_shortcut.joblib",
+      "trained_on": "standard odds-first training set",
+      "selected_C": 100.0
+    },
+    "ngram_logreg": {
+      "baseline": "ngram-logreg",
+      "n_total": 5010,
+      "overall_accuracy": 0.7540918163672655,
+      "positive_accuracy": 1.0,
+      "n_positive": 2507,
+      "uniform_random_half_accuracy": 0.997643362136685,
+      "n_uniform_random": 1273,
+      "hard_negative_half_accuracy": 0.0008130081300813008,
+      "n_hard_negative": 1230,
+      "long_sequence_accuracy": 0.755023923444976,
+      "n_long_sequences": 1045,
+      "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_odds_first_ngram_logreg.joblib",
+      "trained_on": "standard odds-first training set",
+      "selected_C": 100.0
+    },
+    "bagcount_ffn": {
+      "8": {
+        "baseline": "bagcount-ffn-h8",
+        "n_total": 5010,
+        "overall_accuracy": 0.7536926147704591,
+        "positive_accuracy": 1.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9968578161822467,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1230,
+        "long_sequence_accuracy": 0.755023923444976,
+        "n_long_sequences": 1045,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_odds_first_bagcount_ffn_h8.pt",
+        "trained_on": "standard odds-first training set",
+        "num_epochs_run": 76,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "32": {
+        "baseline": "bagcount-ffn-h32",
+        "n_total": 5010,
+        "overall_accuracy": 0.7542914171656686,
+        "positive_accuracy": 1.0,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1230,
+        "long_sequence_accuracy": 0.755023923444976,
+        "n_long_sequences": 1045,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_odds_first_bagcount_ffn_h32.pt",
+        "trained_on": "standard odds-first training set",
+        "num_epochs_run": 142,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "128": {
+        "baseline": "bagcount-ffn-h128",
+        "n_total": 5010,
+        "overall_accuracy": 0.7526946107784431,
+        "positive_accuracy": 0.994415636218588,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.004878048780487805,
+        "n_hard_negative": 1230,
+        "long_sequence_accuracy": 0.75311004784689,
+        "n_long_sequences": 1045,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_odds_first_bagcount_ffn_h128.pt",
+        "trained_on": "standard odds-first training set",
+        "num_epochs_run": 60,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "512": {
+        "baseline": "bagcount-ffn-h512",
+        "n_total": 5010,
+        "overall_accuracy": 0.5465069860279441,
+        "positive_accuracy": 0.15995213402473074,
+        "n_positive": 2507,
+        "uniform_random_half_accuracy": 0.9992144540455616,
+        "n_uniform_random": 1273,
+        "hard_negative_half_accuracy": 0.8658536585365854,
+        "n_hard_negative": 1230,
+        "long_sequence_accuracy": 0.509090909090909,
+        "n_long_sequences": 1045,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_odds_first_bagcount_ffn_h512.pt",
+        "trained_on": "standard odds-first training set",
+        "num_epochs_run": 56,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      }
+    }
+  },
+  "summary_vs_ceiling": [
+    {
+      "baseline": "marker_shortcut",
+      "overall_accuracy": 0.7542914171656686,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "ngram-logreg",
+      "overall_accuracy": 0.7540918163672655,
+      "hard_negative_half_accuracy": 0.0008130081300813008,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h8",
+      "overall_accuracy": 0.7536926147704591,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h32",
+      "overall_accuracy": 0.7542914171656686,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h128",
+      "overall_accuracy": 0.7526946107784431,
+      "hard_negative_half_accuracy": 0.004878048780487805,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h512",
+      "overall_accuracy": 0.5465069860279441,
+      "hard_negative_half_accuracy": 0.8658536585365854,
+      "exceeds_theoretical_ceiling": false
+    }
+  ]
+}

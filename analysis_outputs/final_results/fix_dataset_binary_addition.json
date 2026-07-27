@@ -1,0 +1,190 @@
+{
+  "task": "binary-addition",
+  "experiment": "corrected-dataset-fix (BF1: dataset construction + audit)",
+  "description": "Corrected binary-addition dataset preserving Butoi et al.'s mixed negative-generation strategy (50% uniform-random / 50% hard-negative half) but replacing K-edit-perturbation hard negatives with an explicit structurally-valid single-bit-flip-in-u_z construction: a genuine positive u_x+u_y=u_z with exactly one bit of u_z flipped at a position drawn uniformly within [0, len_z) -- preserving u_x, u_y, all segment lengths, and operator/equals positions exactly, guaranteeing a genuinely wrong sum (never a no-op).",
+  "random_seed": 20260714,
+  "language_output_directory": "languages/binary-addition-fixed",
+  "splits_generated": {
+    "train": {
+      "n": 10000,
+      "length_range": [
+        0,
+        40
+      ]
+    },
+    "validation-short": {
+      "n": 1000,
+      "length_range": [
+        0,
+        40
+      ]
+    },
+    "test": {
+      "n": 5010,
+      "length_range": [
+        0,
+        500
+      ]
+    }
+  },
+  "known_simplifications_vs_original_pipeline": [
+    "No cross-split deduplication of positive examples (negligible given the string space size at these lengths, matching the marked-reversal fix's own documented simplification).",
+    "log-probabilities.txt is NOT written: binary-addition's language class has supports_log_probability()=False (unlike marked-reversal), so there is no log-probability field for this task in the standard pipeline either.",
+    "validation-long, test-short-held-out, and test-edit-distance splits (present in the standard FLaRe pipeline) were not generated -- not needed for BF2-BF4's planned evaluations (standard test set + corrected test set only)."
+  ],
+  "audits": {
+    "train": {
+      "split": "train",
+      "n_total": 10000,
+      "n_positive": 4957,
+      "n_negative": 5043,
+      "positive_fraction": 0.4957,
+      "n_negative_uniform_random": 2507,
+      "n_negative_hard_negative": 2536,
+      "uniform_random_fraction_of_negatives": 0.4971247273448344,
+      "hard_negative_construction_checks": {
+        "n_checked": 2536,
+        "all_single_bit_flip_reconstructs_to_valid_positive": true,
+        "all_genuinely_wrong_sum": true,
+        "all_constraints_satisfied": true,
+        "flip_position_absolute_summary": {
+          "mean": 3.0465299684542586,
+          "min": 0,
+          "max": 26
+        },
+        "flip_position_relative_tertile_histogram_low_mid_high": [
+          1057,
+          942,
+          537
+        ],
+        "len_z_summary": {
+          "mean": 7.182965299684542,
+          "min": 1,
+          "max": 35
+        },
+        "flip_position_distribution_note": "relative position (flip_k / len_z) is drawn Uniform per-example by construction, so the low/mid/high tertile counts should be roughly equal REGARDLESS of split -- this is the quantity that must be uniform. The absolute flip_k range will differ between train and test (reported separately) purely because train's length range (0-40) is much narrower than test's (0-500), NOT because of any construction bias -- matching the marked-reversal fix F1's analogous train/test length-range caveat.",
+        "lsb_parity_detectable_fraction": 0.2531545741324921,
+        "lsb_parity_detectable_matches_flip_at_position_0": true,
+        "lsb_parity_note": "0.2532 of hard negatives are LSB-parity-detectable (flip landed exactly at position 0). This should be close to the theoretical mean(1/len_z) over the hard-negative population, small relative to 0.7 -- reported as a residual structural pathway, not grounds for restricting the construction further."
+      },
+      "uniform_random_structural_violation_distribution": {
+        "n_checked": 2507,
+        "n_operator_distribution_capped_at_2": {
+          "0": 272,
+          "1": 229,
+          "2": 2006
+        },
+        "n_equals_distribution_capped_at_2": {
+          "0": 269,
+          "1": 249,
+          "2": 1989
+        },
+        "fraction_exactly_one_operator": 0.09134423613881133,
+        "fraction_exactly_one_equals": 0.09932189868368568,
+        "note": "matches the expected 'mostly structural violation' pattern established across the prior pilot (a uniform-random 4-symbol string very rarely has exactly one '+' AND one '=' in a valid arrangement by chance)."
+      }
+    },
+    "validation-short": {
+      "split": "validation-short",
+      "n_total": 1000,
+      "n_positive": 479,
+      "n_negative": 521,
+      "positive_fraction": 0.479,
+      "n_negative_uniform_random": 239,
+      "n_negative_hard_negative": 282,
+      "uniform_random_fraction_of_negatives": 0.45873320537428025,
+      "hard_negative_construction_checks": {
+        "n_checked": 282,
+        "all_single_bit_flip_reconstructs_to_valid_positive": true,
+        "all_genuinely_wrong_sum": true,
+        "all_constraints_satisfied": true,
+        "flip_position_absolute_summary": {
+          "mean": 2.975177304964539,
+          "min": 0,
+          "max": 17
+        },
+        "flip_position_relative_tertile_histogram_low_mid_high": [
+          125,
+          90,
+          67
+        ],
+        "len_z_summary": {
+          "mean": 7.73758865248227,
+          "min": 1,
+          "max": 30
+        },
+        "flip_position_distribution_note": "relative position (flip_k / len_z) is drawn Uniform per-example by construction, so the low/mid/high tertile counts should be roughly equal REGARDLESS of split -- this is the quantity that must be uniform. The absolute flip_k range will differ between train and test (reported separately) purely because train's length range (0-40) is much narrower than test's (0-500), NOT because of any construction bias -- matching the marked-reversal fix F1's analogous train/test length-range caveat.",
+        "lsb_parity_detectable_fraction": 0.25177304964539005,
+        "lsb_parity_detectable_matches_flip_at_position_0": true,
+        "lsb_parity_note": "0.2518 of hard negatives are LSB-parity-detectable (flip landed exactly at position 0). This should be close to the theoretical mean(1/len_z) over the hard-negative population, small relative to 0.7 -- reported as a residual structural pathway, not grounds for restricting the construction further."
+      },
+      "uniform_random_structural_violation_distribution": {
+        "n_checked": 239,
+        "n_operator_distribution_capped_at_2": {
+          "0": 25,
+          "1": 27,
+          "2": 187
+        },
+        "n_equals_distribution_capped_at_2": {
+          "0": 27,
+          "1": 26,
+          "2": 186
+        },
+        "fraction_exactly_one_operator": 0.11297071129707113,
+        "fraction_exactly_one_equals": 0.1087866108786611,
+        "note": "matches the expected 'mostly structural violation' pattern established across the prior pilot (a uniform-random 4-symbol string very rarely has exactly one '+' AND one '=' in a valid arrangement by chance)."
+      }
+    },
+    "test": {
+      "split": "test",
+      "n_total": 5010,
+      "n_positive": 2423,
+      "n_negative": 2587,
+      "positive_fraction": 0.48363273453093814,
+      "n_negative_uniform_random": 1369,
+      "n_negative_hard_negative": 1218,
+      "uniform_random_fraction_of_negatives": 0.5291843834557403,
+      "hard_negative_construction_checks": {
+        "n_checked": 1218,
+        "all_single_bit_flip_reconstructs_to_valid_positive": true,
+        "all_genuinely_wrong_sum": true,
+        "all_constraints_satisfied": true,
+        "flip_position_absolute_summary": {
+          "mean": 43.79392446633826,
+          "min": 0,
+          "max": 421
+        },
+        "flip_position_relative_tertile_histogram_low_mid_high": [
+          412,
+          420,
+          386
+        ],
+        "len_z_summary": {
+          "mean": 85.78489326765188,
+          "min": 1,
+          "max": 447
+        },
+        "flip_position_distribution_note": "relative position (flip_k / len_z) is drawn Uniform per-example by construction, so the low/mid/high tertile counts should be roughly equal REGARDLESS of split -- this is the quantity that must be uniform. The absolute flip_k range will differ between train and test (reported separately) purely because train's length range (0-40) is much narrower than test's (0-500), NOT because of any construction bias -- matching the marked-reversal fix F1's analogous train/test length-range caveat.",
+        "lsb_parity_detectable_fraction": 0.053366174055829226,
+        "lsb_parity_detectable_matches_flip_at_position_0": true,
+        "lsb_parity_note": "0.0534 of hard negatives are LSB-parity-detectable (flip landed exactly at position 0). This should be close to the theoretical mean(1/len_z) over the hard-negative population, small relative to 0.7 -- reported as a residual structural pathway, not grounds for restricting the construction further."
+      },
+      "uniform_random_structural_violation_distribution": {
+        "n_checked": 1369,
+        "n_operator_distribution_capped_at_2": {
+          "0": 10,
+          "1": 13,
+          "2": 1346
+        },
+        "n_equals_distribution_capped_at_2": {
+          "0": 11,
+          "1": 10,
+          "2": 1348
+        },
+        "fraction_exactly_one_operator": 0.009495982468955442,
+        "fraction_exactly_one_equals": 0.007304601899196494,
+        "note": "matches the expected 'mostly structural violation' pattern established across the prior pilot (a uniform-random 4-symbol string very rarely has exactly one '+' AND one '=' in a valid arrangement by chance)."
+      }
+    }
+  }
+}

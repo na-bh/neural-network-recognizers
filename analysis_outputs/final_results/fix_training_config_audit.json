@@ -1,0 +1,97 @@
+{
+  "task": "marked-reversal",
+  "experiment": "corrected-dataset-fix (training-configuration audit, pre-F3)",
+  "training_objective": {
+    "entry_point": "src/recognizers/neural_networks/train_and_evaluate.bash, which calls recognizers/neural_networks/train.py",
+    "loss_terms_confirmed": "rec+ns",
+    "confirmation_method": "train_and_evaluate.bash's <loss-terms> argument is joined into the model output path via get_model_dir() (recognizers/functions.bash): \"$base_dir/models/$language/$architecture/$loss_terms/$validation_data/$trial_no\" -- this EXACTLY matches every checkpoint path used throughout the four-task pilot (e.g. data/models/marked-reversal/rnn/rec+ns/validation-short/3), confirming loss_terms='rec+ns' directly from the path-construction logic, not just pattern-matching the directory name.",
+    "loss_term_definitions": {
+      "rec": "recognition (binary cross-entropy on the single accept/reject logit) -- ALWAYS present, no extra flag needed; requires ONLY labels.txt (labels.prepared at train time).",
+      "ns": "next-symbol-set prediction (binary cross-entropy over whether each vocabulary symbol is valid at each next position) -- ACTIVE for 'rec+ns' runs via --use-next-symbols-head; requires next-symbols.jsonl (next-symbols.prepared at train time), populated ONLY for positive examples (empty for negatives, matching recognizers/neural_networks/data.py's load_prepared_next_symbols_file, which yields None for any example with label=False).",
+      "lm": "full autoregressive language-modeling head (cross-entropy over the next actual token) -- NOT active for 'rec+ns' runs (would need --use-language-modeling-head, not present in the confirmed loss_terms). Does NOT use log-probabilities.txt -- that file is not read by any code under src/ (confirmed by direct grep); it appears to be an analysis-only artifact, not a training signal, regardless of which loss terms are active."
+    },
+    "signals_required_for_rec_plus_ns": [
+      "main.prepared (token sequences)",
+      "labels.prepared",
+      "next-symbols.prepared"
+    ],
+    "signals_NOT_required": [
+      "log-probabilities.txt (unused by training code at all)",
+      "num-edits.txt (analysis-only, from the original K-edit pipeline)"
+    ],
+    "per_trial_hyperparameter_note": "train_and_evaluate.bash samples several hyperparameters PER TRIAL via random_sample.py: --max-tokens-per-batch (log-uniform int, 128-4096), --initial-learning-rate (log-uniform, 0.0001-0.01), and --next-symbols-loss-coefficient (log-uniform, 0.01-10). This means the 10 original seeds for any architecture/task were NOT trained with identical hyperparameters -- each trial_no drew its own random sample. F3 must replicate this per-trial sampling (matching trial_no to seed, using the same random_sample.py mechanism) to legitimately claim it 'matches FLaRe's standard training procedure exactly' -- flagged here for F3, not resolved in this audit."
+  },
+  "dataset_comparison": {
+    "standard_marked_reversal": {
+      "raw_files": {
+        "main.tok": true,
+        "labels.txt": true,
+        "next-symbols.jsonl": true,
+        "log-probabilities.txt": true,
+        "num-edits.txt": true,
+        "negative-kind.txt": false,
+        "hard-negative-swap-meta.jsonl": false
+      },
+      "prepared_files": {
+        "main.vocab": true,
+        "main.prepared": true,
+        "labels.prepared": true,
+        "next-symbols.prepared": true
+      }
+    },
+    "corrected_marked_reversal_fixed_train": {
+      "raw_files": {
+        "main.tok": true,
+        "labels.txt": true,
+        "next-symbols.jsonl": true,
+        "log-probabilities.txt": true,
+        "num-edits.txt": false,
+        "negative-kind.txt": true,
+        "hard-negative-swap-meta.jsonl": true
+      },
+      "prepared_files": {
+        "main.vocab": false,
+        "main.prepared": false,
+        "labels.prepared": false,
+        "next-symbols.prepared": false
+      }
+    },
+    "corrected_marked_reversal_fixed_validation_short": {
+      "raw_files": {
+        "main.tok": true,
+        "labels.txt": true,
+        "next-symbols.jsonl": true,
+        "log-probabilities.txt": true,
+        "num-edits.txt": false,
+        "negative-kind.txt": true,
+        "hard-negative-swap-meta.jsonl": true
+      },
+      "prepared_files": {
+        "main.vocab": false,
+        "main.prepared": false,
+        "labels.prepared": false,
+        "next-symbols.prepared": false
+      }
+    },
+    "corrected_marked_reversal_fixed_test": {
+      "raw_files": {
+        "main.tok": true,
+        "labels.txt": true,
+        "next-symbols.jsonl": true,
+        "log-probabilities.txt": true,
+        "num-edits.txt": false,
+        "negative-kind.txt": true,
+        "hard-negative-swap-meta.jsonl": true
+      },
+      "prepared_files": {
+        "main.vocab": false,
+        "main.prepared": false,
+        "labels.prepared": false,
+        "next-symbols.prepared": false
+      }
+    },
+    "raw_signal_completeness": "F1 generated ALL raw signals 'rec+ns' training needs: labels.txt (rec) and a correctly-populated next-symbols.jsonl (ns) -- verified non-empty for positive rows and an empty list '[]' for negative rows, matching the standard convention exactly (spot-checked directly against languages/marked-reversal/next-symbols.jsonl's format). log-probabilities.txt was also generated (unused by training, harmless extra).",
+    "gap_identified": "The corrected dataset (train + validation-short + test) is MISSING the PREPARED/integerized files training actually reads: ['main.vocab', 'main.prepared', 'labels.prepared', 'next-symbols.prepared']. This is NOT a missing-training-signal problem (Options A/B/C as originally framed don't apply) -- F1 was scoped as raw dataset construction + audit only, and never ran the mechanical tokenization/vocabulary-building step (recognizers/neural_networks/prepare_data.py, invoked via prepare_language.bash for the standard pipeline) that converts main.tok/labels.txt/next-symbols.jsonl into main.vocab/main.prepared/labels.prepared/next-symbols.prepared. The raw data is complete and correctly formatted for 'rec+ns' training; it just hasn't been run through this one remaining, purely mechanical preparation step yet.",
+    "recommended_next_action": "Run recognizers/neural_networks/prepare_data.py on languages/marked-reversal-fixed (--training-data languages/marked-reversal-fixed --more-data validation-short --more-data test --use-next-symbols-head --never-allow-unk), exactly mirroring prepare_language.bash's invocation for the standard pipeline, before F3 begins training. This is a data-preparation step, not a redesign of F1's dataset construction -- none of Options A/B/C (regenerate with all signals / retrain baselines rec-only / empirically verify rec-only) are needed, since the raw signals already match 'rec+ns' requirements exactly."
+  }
+}

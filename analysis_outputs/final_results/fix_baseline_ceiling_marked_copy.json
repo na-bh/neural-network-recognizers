@@ -1,0 +1,215 @@
+{
+  "task": "marked-copy",
+  "experiment": "corrected-dataset-fix (MCF2: shortcut-only baseline ceiling on corrected test data)",
+  "description": "Evaluates a NEWLY-TRAINED marker_shortcut baseline (marker count/relative-position, reused unchanged from marked-reversal's feature set -- provably incapable of copy-content verification) plus ngram-logreg and bagcount-ffn baselines (also newly trained here, no pre-existing phase1 checkpoints for marked-copy), all trained on STANDARD marked-copy training data, evaluated on the CORRECTED test set (MCF1), split into positive/uniform-random/hard-negative subsets.",
+  "provable_incapacity_counterexample": {
+    "clean": [
+      "0",
+      "1",
+      "1",
+      "#",
+      "0",
+      "1",
+      "1"
+    ],
+    "corrupted": [
+      "0",
+      "1",
+      "1",
+      "#",
+      "0",
+      "1",
+      "0"
+    ],
+    "clean_features": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "corrupted_features": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "features_identical": true,
+    "note": "IDENTICAL marker-shortcut feature vectors (marker count/relative-offset), opposite validity -- the information distinguishing them (whether the post-marker half is actually a COPY, not just correctly bracketed) is structurally absent from a marker-position-only representation."
+  },
+  "corrected_test_set": "languages/marked-copy-fixed/datasets/test",
+  "test_composition": {
+    "n_total": 5010,
+    "n_positive": 2468,
+    "n_uniform_random": 1275,
+    "n_hard_negative": 1267
+  },
+  "theoretical_shortcut_only_ceiling": {
+    "n_total": 5010,
+    "n_positive": 2468,
+    "n_structurally_obvious_negatives": 1275,
+    "structurally_obvious_breakdown": {
+      "from_hard_negative_half": 0,
+      "from_uniform_random_half": 1275
+    },
+    "n_structurally_ambiguous_negatives": 1267,
+    "structurally_ambiguous_breakdown": {
+      "from_hard_negative_half": 1267,
+      "from_uniform_random_half_by_chance": 0
+    },
+    "formula": "(n_positive + n_structurally_obvious + 0.5 * n_structurally_ambiguous) / n_total -- perfect classification wherever marker_count/marker_position alone can distinguish the example from a positive, chance (0.5) on everything single-marker-and-balanced (indistinguishable from a positive via marker features alone) -- i.e. perfect on the uniform-random half (essentially never single-marker-and-balanced by chance) + chance on the hard-negative half (single-marker-and-balanced BY CONSTRUCTION).",
+    "theoretical_shortcut_only_ceiling": 0.8735528942115769,
+    "note": "1267/1267 of the hard-negative half is structurally ambiguous by construction (should be ALL of it, i.e. 1267); 0/1275 of the uniform-random half is ALSO structurally ambiguous purely by chance (expected small/near-zero, checked directly)."
+  },
+  "baselines": {
+    "marker_shortcut": {
+      "baseline": "marker_shortcut",
+      "n_total": 5010,
+      "overall_accuracy": 0.7471057884231537,
+      "positive_accuracy": 1.0,
+      "n_positive": 2468,
+      "uniform_random_half_accuracy": 1.0,
+      "n_uniform_random": 1275,
+      "hard_negative_half_accuracy": 0.0,
+      "n_hard_negative": 1267,
+      "long_sequence_accuracy": 0.7436140018921475,
+      "n_long_sequences": 1057,
+      "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_marked_copy_marker_shortcut.joblib",
+      "trained_on": "standard marked-copy training set",
+      "selected_C": 100.0
+    },
+    "ngram_logreg": {
+      "baseline": "ngram-logreg",
+      "n_total": 5010,
+      "overall_accuracy": 0.7463073852295409,
+      "positive_accuracy": 1.0,
+      "n_positive": 2468,
+      "uniform_random_half_accuracy": 0.9968627450980392,
+      "n_uniform_random": 1275,
+      "hard_negative_half_accuracy": 0.0,
+      "n_hard_negative": 1267,
+      "long_sequence_accuracy": 0.7436140018921475,
+      "n_long_sequences": 1057,
+      "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_marked_copy_ngram_logreg.joblib",
+      "trained_on": "standard marked-copy training set",
+      "selected_C": 100.0
+    },
+    "bagcount_ffn": {
+      "8": {
+        "baseline": "bagcount-ffn-h8",
+        "n_total": 5010,
+        "overall_accuracy": 0.7457085828343314,
+        "positive_accuracy": 1.0,
+        "n_positive": 2468,
+        "uniform_random_half_accuracy": 0.9945098039215686,
+        "n_uniform_random": 1275,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1267,
+        "long_sequence_accuracy": 0.7436140018921475,
+        "n_long_sequences": 1057,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_marked_copy_bagcount_ffn_h8.pt",
+        "trained_on": "standard marked-copy training set",
+        "num_epochs_run": 80,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "32": {
+        "baseline": "bagcount-ffn-h32",
+        "n_total": 5010,
+        "overall_accuracy": 0.7459081836327345,
+        "positive_accuracy": 1.0,
+        "n_positive": 2468,
+        "uniform_random_half_accuracy": 0.9952941176470588,
+        "n_uniform_random": 1275,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1267,
+        "long_sequence_accuracy": 0.7436140018921475,
+        "n_long_sequences": 1057,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_marked_copy_bagcount_ffn_h32.pt",
+        "trained_on": "standard marked-copy training set",
+        "num_epochs_run": 79,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "128": {
+        "baseline": "bagcount-ffn-h128",
+        "n_total": 5010,
+        "overall_accuracy": 0.6590818363273453,
+        "positive_accuracy": 0.6158833063209076,
+        "n_positive": 2468,
+        "uniform_random_half_accuracy": 0.996078431372549,
+        "n_uniform_random": 1275,
+        "hard_negative_half_accuracy": 0.40410418310970797,
+        "n_hard_negative": 1267,
+        "long_sequence_accuracy": 0.5231788079470199,
+        "n_long_sequences": 1057,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_marked_copy_bagcount_ffn_h128.pt",
+        "trained_on": "standard marked-copy training set",
+        "num_epochs_run": 90,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "512": {
+        "baseline": "bagcount-ffn-h512",
+        "n_total": 5010,
+        "overall_accuracy": 0.5834331337325349,
+        "positive_accuracy": 0.34157212317666125,
+        "n_positive": 2468,
+        "uniform_random_half_accuracy": 0.996078431372549,
+        "n_uniform_random": 1275,
+        "hard_negative_half_accuracy": 0.6393054459352802,
+        "n_hard_negative": 1267,
+        "long_sequence_accuracy": 0.5231788079470199,
+        "n_long_sequences": 1057,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_marked_copy_bagcount_ffn_h512.pt",
+        "trained_on": "standard marked-copy training set",
+        "num_epochs_run": 57,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      }
+    }
+  },
+  "summary_vs_ceiling": [
+    {
+      "baseline": "marker_shortcut",
+      "overall_accuracy": 0.7471057884231537,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "ngram-logreg",
+      "overall_accuracy": 0.7463073852295409,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h8",
+      "overall_accuracy": 0.7457085828343314,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h32",
+      "overall_accuracy": 0.7459081836327345,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h128",
+      "overall_accuracy": 0.6590818363273453,
+      "hard_negative_half_accuracy": 0.40410418310970797,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h512",
+      "overall_accuracy": 0.5834331337325349,
+      "hard_negative_half_accuracy": 0.6393054459352802,
+      "exceeds_theoretical_ceiling": false
+    }
+  ]
+}

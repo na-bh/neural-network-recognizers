@@ -1,0 +1,1648 @@
+{
+  "task": "binary-multiplication",
+  "objective": "rec+lm+ns",
+  "experiment": "corrected-dataset-fix (BMF3: single-objective training on corrected data)",
+  "description": "Trains RNN/LSTM/Transformer/Mamba on the corrected binary-multiplication training set (languages/binary-multiplication-fixed) under the 'rec+lm+ns' objective, 10 trials each (40 runs). Per-trial hyperparameter sampling matches train_and_evaluate.bash exactly. Evaluated on both the standard FLaRe test set and the corrected test set.",
+  "corrected_trained_runs": [
+    {
+      "arch": "rnn",
+      "objective": "rec+lm+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/rnn/rec+lm+ns/validation-short/1",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1544,
+        "initial_learning_rate": 0.0006270930114292462,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.01062657358896516,
+        "next_symbols_loss_coefficient": 6.1710599190163045
+      },
+      "training_duration_seconds": 214.17154550552368,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5978043912175649,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6183632734530938,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.2592443729903537,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.946219797349961,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+lm+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/rnn/rec+lm+ns/validation-short/2",
+      "hyperparameters": {
+        "max_tokens_per_batch": 159,
+        "initial_learning_rate": 0.0011483842256874623,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 9.311403249346633,
+        "next_symbols_loss_coefficient": 0.02237514259783043
+      },
+      "training_duration_seconds": 538.4485323429108,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.6802395209580838,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6868263473053893,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.5285369774919614,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.691348402182385,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+lm+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/rnn/rec+lm+ns/validation-short/3",
+      "hyperparameters": {
+        "max_tokens_per_batch": 158,
+        "initial_learning_rate": 0.003008093401999989,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 4.564010435605043,
+        "next_symbols_loss_coefficient": 0.15123411845741028
+      },
+      "training_duration_seconds": 71.98467421531677,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7646706586826347,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7417165668662674,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 0.9911218724778047,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+lm+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/rnn/rec+lm+ns/validation-short/4",
+      "hyperparameters": {
+        "max_tokens_per_batch": 646,
+        "initial_learning_rate": 0.00040596209562574544,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.2772484054168385,
+        "next_symbols_loss_coefficient": 4.082119053539505
+      },
+      "training_duration_seconds": 322.83181285858154,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5864271457085828,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.603193612774451,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.21945337620578778,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.9641465315666407,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+lm+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/rnn/rec+lm+ns/validation-short/5",
+      "hyperparameters": {
+        "max_tokens_per_batch": 189,
+        "initial_learning_rate": 0.00015158929092295057,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.35306544739931844,
+        "next_symbols_loss_coefficient": 1.6757717281836775
+      },
+      "training_duration_seconds": 377.7710156440735,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.6760479041916168,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6614770459081837,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.5293408360128617,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.5908028059236166,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+lm+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/rnn/rec+lm+ns/validation-short/6",
+      "hyperparameters": {
+        "max_tokens_per_batch": 3866,
+        "initial_learning_rate": 0.0027750618113828052,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.023119346574271962,
+        "next_symbols_loss_coefficient": 0.4381496341867507
+      },
+      "training_duration_seconds": 350.07790970802307,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7912175648702595,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.818562874251497,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9638263665594855,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.36165237724084176,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+lm+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/rnn/rec+lm+ns/validation-short/7",
+      "hyperparameters": {
+        "max_tokens_per_batch": 422,
+        "initial_learning_rate": 0.004933497580531172,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 1.699839618997646,
+        "next_symbols_loss_coefficient": 0.03631592669146356
+      },
+      "training_duration_seconds": 62.09343957901001,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.4942115768463074,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.49720558882235527,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 0.002421307506053269,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+lm+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/rnn/rec+lm+ns/validation-short/8",
+      "hyperparameters": {
+        "max_tokens_per_batch": 925,
+        "initial_learning_rate": 0.00021273468052158717,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.17186702529531475,
+        "next_symbols_loss_coefficient": 0.030310175171047404
+      },
+      "training_duration_seconds": 204.80721950531006,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7774451097804391,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.805189620758483,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9433279742765274,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.34918160561184725,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+lm+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/rnn/rec+lm+ns/validation-short/9",
+      "hyperparameters": {
+        "max_tokens_per_batch": 444,
+        "initial_learning_rate": 0.00019900563679607874,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.0931227170868934,
+        "next_symbols_loss_coefficient": 0.5194495018549941
+      },
+      "training_duration_seconds": 615.739828824997,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7437125748502994,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7419161676646706,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.8231511254019293,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.33515198752922837,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "rnn",
+      "objective": "rec+lm+ns",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/rnn/rec+lm+ns/validation-short/10",
+      "hyperparameters": {
+        "max_tokens_per_batch": 597,
+        "initial_learning_rate": 0.003867997405082901,
+        "architecture_flags": [
+          "--architecture",
+          "rnn",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "79",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.01825702630314054,
+        "next_symbols_loss_coefficient": 8.868165556816196
+      },
+      "training_duration_seconds": 94.51711654663086,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.8578842315369262,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7816367265469062,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9835209003215434,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 0.9967715899919289,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.18238503507404522,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+lm+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/lstm/rec+lm+ns/validation-short/1",
+      "hyperparameters": {
+        "max_tokens_per_batch": 727,
+        "initial_learning_rate": 0.00289418074468108,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.08925512154924051,
+        "next_symbols_loss_coefficient": 0.023724063240217166
+      },
+      "training_duration_seconds": 249.31231141090393,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.6724550898203593,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7077844311377246,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.5514469453376206,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.7287607170693686,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+lm+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/lstm/rec+lm+ns/validation-short/2",
+      "hyperparameters": {
+        "max_tokens_per_batch": 173,
+        "initial_learning_rate": 0.004026188329432957,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.030349336254146497,
+        "next_symbols_loss_coefficient": 1.009694440314666
+      },
+      "training_duration_seconds": 319.98888754844666,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7560878243512974,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7522954091816367,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.7045819935691319,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.6056118472330475,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+lm+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/lstm/rec+lm+ns/validation-short/3",
+      "hyperparameters": {
+        "max_tokens_per_batch": 551,
+        "initial_learning_rate": 0.001903743813407982,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.4842915283531601,
+        "next_symbols_loss_coefficient": 0.11974862121481791
+      },
+      "training_duration_seconds": 322.61589217185974,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.779441117764471,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7516966067864271,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.7114147909967846,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.5900233826968043,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+lm+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/lstm/rec+lm+ns/validation-short/4",
+      "hyperparameters": {
+        "max_tokens_per_batch": 680,
+        "initial_learning_rate": 0.003965277822216735,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.03851646256901281,
+        "next_symbols_loss_coefficient": 0.1378051180618604
+      },
+      "training_duration_seconds": 252.1693696975708,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.6313373253493014,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6672654690618762,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.4119774919614148,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.8409976617303195,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+lm+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/lstm/rec+lm+ns/validation-short/5",
+      "hyperparameters": {
+        "max_tokens_per_batch": 3190,
+        "initial_learning_rate": 0.00045426869890934264,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.061414124118798874,
+        "next_symbols_loss_coefficient": 9.676223910191743
+      },
+      "training_duration_seconds": 455.2892282009125,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5984031936127745,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.61437125748503,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.2516077170418006,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.9454403741231489,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+lm+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/lstm/rec+lm+ns/validation-short/6",
+      "hyperparameters": {
+        "max_tokens_per_batch": 288,
+        "initial_learning_rate": 0.00024562138619918983,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.3417474849670823,
+        "next_symbols_loss_coefficient": 0.25615173445274086
+      },
+      "training_duration_seconds": 487.37503695487976,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.6163672654690618,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6538922155688622,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.38263665594855306,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.8456742010911925,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+lm+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/lstm/rec+lm+ns/validation-short/7",
+      "hyperparameters": {
+        "max_tokens_per_batch": 175,
+        "initial_learning_rate": 0.009156697737728512,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 7.799431851478858,
+        "next_symbols_loss_coefficient": 0.023356156009645673
+      },
+      "training_duration_seconds": 68.75199508666992,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.6243512974051896,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6201596806387225,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.5221061093247589,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 0.9717514124293786,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.47077162899454406,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+lm+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/lstm/rec+lm+ns/validation-short/8",
+      "hyperparameters": {
+        "max_tokens_per_batch": 3117,
+        "initial_learning_rate": 0.0004704831431231992,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 4.2775489820089225,
+        "next_symbols_loss_coefficient": 0.040156847842376026
+      },
+      "training_duration_seconds": 465.21306586265564,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7752495009980039,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7351297405189621,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.7696945337620579,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.4123148869836321,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+lm+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/lstm/rec+lm+ns/validation-short/9",
+      "hyperparameters": {
+        "max_tokens_per_batch": 153,
+        "initial_learning_rate": 0.0010056612016714713,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.012642214595908693,
+        "next_symbols_loss_coefficient": 0.09625509895565985
+      },
+      "training_duration_seconds": 408.5128300189972,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.6403193612774452,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6634730538922156,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.3967041800643087,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.8558067030397506,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "lstm",
+      "objective": "rec+lm+ns",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/lstm/rec+lm+ns/validation-short/10",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1086,
+        "initial_learning_rate": 0.0036355055256486403,
+        "architecture_flags": [
+          "--architecture",
+          "lstm",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "40",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.010896735233047409,
+        "next_symbols_loss_coefficient": 2.3834551639780726
+      },
+      "training_duration_seconds": 90.90336608886719,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.8672654690618763,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7668662674650698,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9557877813504824,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.17537022603273578,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+lm+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/transformer/rec+lm+ns/validation-short/1",
+      "hyperparameters": {
+        "max_tokens_per_batch": 880,
+        "initial_learning_rate": 0.0016325061232290933,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.9328467202472984,
+        "next_symbols_loss_coefficient": 0.018811286696683905
+      },
+      "training_duration_seconds": 468.50422620773315,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.716566866267465,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.707185628742515,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.6438906752411575,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.5471551052221356,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+lm+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/transformer/rec+lm+ns/validation-short/2",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1109,
+        "initial_learning_rate": 0.0007257768939297,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.05545736327778112,
+        "next_symbols_loss_coefficient": 6.288245278114357
+      },
+      "training_duration_seconds": 428.5167646408081,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.52375249500998,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5193612774451097,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.06229903536977492,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.9415432579890881,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+lm+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/transformer/rec+lm+ns/validation-short/3",
+      "hyperparameters": {
+        "max_tokens_per_batch": 272,
+        "initial_learning_rate": 0.009982834842308866,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.0145495114164237,
+        "next_symbols_loss_coefficient": 0.015999917479899085
+      },
+      "training_duration_seconds": 185.08732223510742,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7640718562874251,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.669061876247505,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.7102090032154341,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 0.9959644874899112,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.2735775526110678,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+lm+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/transformer/rec+lm+ns/validation-short/4",
+      "hyperparameters": {
+        "max_tokens_per_batch": 284,
+        "initial_learning_rate": 0.002777405783246273,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 8.522049657078162,
+        "next_symbols_loss_coefficient": 5.231455958348471
+      },
+      "training_duration_seconds": 379.4515950679779,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5518962075848304,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5455089820359281,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.11816720257234727,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.9353078721745908,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+lm+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/transformer/rec+lm+ns/validation-short/5",
+      "hyperparameters": {
+        "max_tokens_per_batch": 507,
+        "initial_learning_rate": 0.0034764054909521354,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.09164595842118435,
+        "next_symbols_loss_coefficient": 3.2017835012915543
+      },
+      "training_duration_seconds": 444.1183292865753,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.666067864271457,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6532934131736527,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.44935691318327975,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.7139516757599377,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+lm+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/transformer/rec+lm+ns/validation-short/6",
+      "hyperparameters": {
+        "max_tokens_per_batch": 262,
+        "initial_learning_rate": 0.00013860935591115606,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.07910761663000129,
+        "next_symbols_loss_coefficient": 4.849596801185111
+      },
+      "training_duration_seconds": 678.5695073604584,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5497005988023952,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5481037924151697,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.13183279742765272,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.9189399844115355,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+lm+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/transformer/rec+lm+ns/validation-short/7",
+      "hyperparameters": {
+        "max_tokens_per_batch": 366,
+        "initial_learning_rate": 0.008966594630818019,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.10007946603012083,
+        "next_symbols_loss_coefficient": 0.04339029483811196
+      },
+      "training_duration_seconds": 155.21255707740784,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7706586826347306,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7375249500998003,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9718649517684887,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.029618082618862042,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+lm+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/transformer/rec+lm+ns/validation-short/8",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1257,
+        "initial_learning_rate": 0.0013444288478038206,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 3.9649762155979396,
+        "next_symbols_loss_coefficient": 2.5077732406203546
+      },
+      "training_duration_seconds": 227.74801874160767,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5401197604790419,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.53812375249501,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.12057877813504823,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.9017926734216679,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+lm+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/transformer/rec+lm+ns/validation-short/9",
+      "hyperparameters": {
+        "max_tokens_per_batch": 185,
+        "initial_learning_rate": 0.004766550251822734,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 3.1377816883847554,
+        "next_symbols_loss_coefficient": 3.366139727834911
+      },
+      "training_duration_seconds": 650.098310470581,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5832335329341317,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5822355289421157,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.2142282958199357,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 0.9991928974979822,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.8932190179267342,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "transformer",
+      "objective": "rec+lm+ns",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/transformer/rec+lm+ns/validation-short/10",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1848,
+        "initial_learning_rate": 0.0003172076083221641,
+        "architecture_flags": [
+          "--architecture",
+          "transformer",
+          "--num-layers",
+          "5",
+          "--d-model",
+          "32",
+          "--num-heads",
+          "8",
+          "--feedforward-size",
+          "128",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.26379653092997735,
+        "next_symbols_loss_coefficient": 2.1008823112809534
+      },
+      "training_duration_seconds": 259.3102695941925,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.6085828343313373,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5974051896207585,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.3745980707395498,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.6406858924395947,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+lm+ns",
+      "trial_no": 1,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/mamba/rec+lm+ns/validation-short/1",
+      "hyperparameters": {
+        "max_tokens_per_batch": 3550,
+        "initial_learning_rate": 0.00014417042355837107,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 9.476392924208147,
+        "next_symbols_loss_coefficient": 0.39238663524933426
+      },
+      "training_duration_seconds": 583.2340943813324,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.6239520958083832,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.662874251497006,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.4119774919614148,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.8238503507404521,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+lm+ns",
+      "trial_no": 2,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/mamba/rec+lm+ns/validation-short/2",
+      "hyperparameters": {
+        "max_tokens_per_batch": 354,
+        "initial_learning_rate": 0.00038371406811672624,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.4922070316497489,
+        "next_symbols_loss_coefficient": 2.53238237382096
+      },
+      "training_duration_seconds": 345.12131094932556,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.5834331337325349,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6075848303393213,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.24115755627009647,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.9392049883086516,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+lm+ns",
+      "trial_no": 3,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/mamba/rec+lm+ns/validation-short/3",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1596,
+        "initial_learning_rate": 0.0003127738073056851,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 4.868465786196879,
+        "next_symbols_loss_coefficient": 0.02865407655925229
+      },
+      "training_duration_seconds": 327.1993520259857,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.7119760479041917,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7267465069860279,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.6587620578778135,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 0.9991928974979822,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.5954793452844894,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+lm+ns",
+      "trial_no": 4,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/mamba/rec+lm+ns/validation-short/4",
+      "hyperparameters": {
+        "max_tokens_per_batch": 1951,
+        "initial_learning_rate": 0.0007822801698712866,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 1.1069182422688248,
+        "next_symbols_loss_coefficient": 0.119595936845697
+      },
+      "training_duration_seconds": 188.87689089775085,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.615568862275449,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.664870259481038,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.4397106109324759,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.7778643803585347,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+lm+ns",
+      "trial_no": 5,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/mamba/rec+lm+ns/validation-short/5",
+      "hyperparameters": {
+        "max_tokens_per_batch": 137,
+        "initial_learning_rate": 0.002602197272989655,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 3.176989706165219,
+        "next_symbols_loss_coefficient": 0.10963145685699136
+      },
+      "training_duration_seconds": 550.0473546981812,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.606187624750499,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6395209580838324,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.3114951768488746,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.9275136399064692,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+lm+ns",
+      "trial_no": 6,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/mamba/rec+lm+ns/validation-short/6",
+      "hyperparameters": {
+        "max_tokens_per_batch": 170,
+        "initial_learning_rate": 0.000927662961451241,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.011425384073413624,
+        "next_symbols_loss_coefficient": 0.036568586219567836
+      },
+      "training_duration_seconds": 473.12205362319946,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.6812375249500998,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7111776447105789,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.6414790996784566,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 0.9983857949959645,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.568978955572876,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+lm+ns",
+      "trial_no": 7,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/mamba/rec+lm+ns/validation-short/7",
+      "hyperparameters": {
+        "max_tokens_per_batch": 153,
+        "initial_learning_rate": 0.00015690360608506515,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.12893898746110047,
+        "next_symbols_loss_coefficient": 1.1055576825051543
+      },
+      "training_duration_seconds": 550.2494404315948,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.6994011976047905,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7419161676646706,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.6165594855305466,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.7357755261106781,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+lm+ns",
+      "trial_no": 8,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/mamba/rec+lm+ns/validation-short/8",
+      "hyperparameters": {
+        "max_tokens_per_batch": 164,
+        "initial_learning_rate": 0.003547394366323628,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.06854925548376936,
+        "next_symbols_loss_coefficient": 0.9483739044048768
+      },
+      "training_duration_seconds": 626.0205028057098,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.8291417165668663,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.8005988023952095,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9135852090032154,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.38893219017926733,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+lm+ns",
+      "trial_no": 9,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/mamba/rec+lm+ns/validation-short/9",
+      "hyperparameters": {
+        "max_tokens_per_batch": 373,
+        "initial_learning_rate": 0.0037178539646718057,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 0.34184946065716176,
+        "next_symbols_loss_coefficient": 2.9315272162297905
+      },
+      "training_duration_seconds": 357.36305117607117,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.6499001996007984,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6538922155688622,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.39228295819935693,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.8269680436477007,
+        "n_hard_negative": 1283
+      }
+    },
+    {
+      "arch": "mamba",
+      "objective": "rec+lm+ns",
+      "trial_no": 10,
+      "model_dir": "/mnt/linuxlab/home/reunbhandari/neural-network-recognizers/models/binary-multiplication-fixed/mamba/rec+lm+ns/validation-short/10",
+      "hyperparameters": {
+        "max_tokens_per_batch": 2088,
+        "initial_learning_rate": 0.003238551561751914,
+        "architecture_flags": [
+          "--architecture",
+          "mamba",
+          "--num-layers",
+          "5",
+          "--hidden-units",
+          "37",
+          "--dropout",
+          "0.1"
+        ],
+        "language_modeling_loss_coefficient": 1.5562530314827967,
+        "next_symbols_loss_coefficient": 0.012523810500603394
+      },
+      "training_duration_seconds": 218.15068531036377,
+      "train_returncode": 0,
+      "standard_flare_test_set": {
+        "accuracy": 0.6149700598802396,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6351297405189621,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.31913183279742763,
+        "n_positive": 2488,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.8955572876071707,
+        "n_hard_negative": 1283
+      }
+    }
+  ]
+}

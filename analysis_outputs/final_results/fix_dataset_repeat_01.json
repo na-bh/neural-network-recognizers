@@ -1,0 +1,125 @@
+{
+  "task": "repeat-01",
+  "experiment": "corrected-dataset-fix (RF1: dataset construction + audit)",
+  "description": "Corrected repeat-01 dataset preserving Butoi et al.'s mixed negative-generation strategy (50% uniform-random / 50% hard-negative half). Hard negatives are constructed via an adjacent-symbol swap at interior positions (i, i+1), i in range(1, n-2) -- structurally guaranteed to preserve all four identified shortcut features (length_parity_even, first_symbol_is_0, last_symbol_is_1, count_balance) while genuinely breaking alternation at the swapped positions. Uses the exact target_computation_pairs construction validated in the Phase 3 causal-patching pilot (analysis/phase3_repeat01_counterfactual_design.py), extended to full-dataset scale with the modular-arithmetic-simple fix's Option A tertile-sweep discipline (target tertile drawn once and held fixed across retries).",
+  "random_seed": 20260720,
+  "language_output_directory": "languages/repeat-01-fixed",
+  "splits_generated": {
+    "train": {
+      "n": 10000,
+      "length_range": [
+        0,
+        40
+      ]
+    },
+    "validation-short": {
+      "n": 1000,
+      "length_range": [
+        0,
+        40
+      ]
+    },
+    "test": {
+      "n": 5010,
+      "length_range": [
+        0,
+        500
+      ]
+    }
+  },
+  "known_simplifications_vs_original_pipeline": [
+    "Positives are generated via a direct from-scratch construction ((01)^k) rather than the original FSA-sampling machinery -- exact (not approximate) for this task, since the grammar is a single repeated 2-token block with no branching.",
+    "Hard negatives require n>=4 (k>=2 pairs); for n<4 no non-boundary adjacent-swap candidate exists, so such lengths are excluded from the hard-negative half only (uniform-random negatives are unaffected and still cover all lengths).",
+    "No cross-split deduplication of positive examples (negligible given the string space size at these lengths, matching every prior fix experiment's own documented simplification).",
+    "No log-probabilities.txt: not consumed by prepare_data.py and not needed for any of the four training objectives (matching modular-arithmetic-simple's fix)."
+  ],
+  "audits": {
+    "train": {
+      "split": "train",
+      "n_total": 10000,
+      "n_positive": 4901,
+      "n_negative": 5099,
+      "positive_fraction": 0.4901,
+      "all_positives_grammatically_valid": true,
+      "n_negative_uniform_random": 2528,
+      "n_negative_hard_negative": 2571,
+      "uniform_random_fraction_of_negatives": 0.4957834869582271,
+      "hard_negative_construction_checks": {
+        "n_checked": 2571,
+        "all_pass_all_four_shortcut_features": true,
+        "n_detectable_by_any_shortcut_feature": 0,
+        "all_genuinely_fail_alternation": true,
+        "position_relative_tertile_histogram_low_mid_high": [
+          836,
+          851,
+          884
+        ],
+        "position_relative_mean": 0.4806502915479644,
+        "tertiles_within_20_percent_of_each_other": true
+      },
+      "uniform_random_structural_check": {
+        "n_checked": 2528,
+        "n_accidentally_valid": 0,
+        "fraction_accidentally_valid": 0.0
+      }
+    },
+    "validation-short": {
+      "split": "validation-short",
+      "n_total": 1000,
+      "n_positive": 501,
+      "n_negative": 499,
+      "positive_fraction": 0.501,
+      "all_positives_grammatically_valid": true,
+      "n_negative_uniform_random": 255,
+      "n_negative_hard_negative": 244,
+      "uniform_random_fraction_of_negatives": 0.5110220440881763,
+      "hard_negative_construction_checks": {
+        "n_checked": 244,
+        "all_pass_all_four_shortcut_features": true,
+        "n_detectable_by_any_shortcut_feature": 0,
+        "all_genuinely_fail_alternation": true,
+        "position_relative_tertile_histogram_low_mid_high": [
+          72,
+          87,
+          85
+        ],
+        "position_relative_mean": 0.48734117954100603,
+        "tertiles_within_20_percent_of_each_other": true
+      },
+      "uniform_random_structural_check": {
+        "n_checked": 255,
+        "n_accidentally_valid": 0,
+        "fraction_accidentally_valid": 0.0
+      }
+    },
+    "test": {
+      "split": "test",
+      "n_total": 5010,
+      "n_positive": 2561,
+      "n_negative": 2449,
+      "positive_fraction": 0.5111776447105788,
+      "all_positives_grammatically_valid": true,
+      "n_negative_uniform_random": 1211,
+      "n_negative_hard_negative": 1238,
+      "uniform_random_fraction_of_negatives": 0.4944875459371172,
+      "hard_negative_construction_checks": {
+        "n_checked": 1238,
+        "all_pass_all_four_shortcut_features": true,
+        "n_detectable_by_any_shortcut_feature": 0,
+        "all_genuinely_fail_alternation": true,
+        "position_relative_tertile_histogram_low_mid_high": [
+          385,
+          423,
+          430
+        ],
+        "position_relative_mean": 0.5052459956397433,
+        "tertiles_within_20_percent_of_each_other": true
+      },
+      "uniform_random_structural_check": {
+        "n_checked": 1211,
+        "n_accidentally_valid": 0,
+        "fraction_accidentally_valid": 0.0
+      }
+    }
+  }
+}

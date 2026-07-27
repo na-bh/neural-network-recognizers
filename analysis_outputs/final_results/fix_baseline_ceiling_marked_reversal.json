@@ -1,0 +1,119 @@
+{
+  "task": "marked-reversal",
+  "experiment": "corrected-dataset-fix (F2: shortcut-only baseline ceiling on corrected test data)",
+  "description": "Evaluates the three shortcut-only baselines already trained on marked-reversal's STANDARD training data (no retraining here) on the CORRECTED test set (F1), split into uniform-random and hard-negative halves via F1's negative-kind.txt side-channel. Also reports the theoretical shortcut-only ceiling computed directly from the corrected test set's actual structural composition.",
+  "corrected_test_set": "languages/marked-reversal-fixed/datasets/test",
+  "test_composition": {
+    "n_total": 5010,
+    "n_positive": 2490,
+    "n_uniform_random": 1259,
+    "n_hard_negative": 1261
+  },
+  "theoretical_shortcut_only_ceiling": {
+    "n_total": 5010,
+    "n_positive": 2490,
+    "n_structurally_obvious_negatives": 1259,
+    "n_structurally_ambiguous_negatives": 1261,
+    "structurally_ambiguous_breakdown": {
+      "from_hard_negative_half": 1261,
+      "from_uniform_random_half_by_chance": 0
+    },
+    "formula": "(n_positive + n_structurally_obvious + 0.5 * n_structurally_ambiguous) / n_total -- perfect classification wherever marker_count/marker_position alone can distinguish the example from a positive (all positives, plus every negative that is NOT single-marker-and-balanced), chance (0.5) on everything that is single-marker-and-balanced (indistinguishable from a positive via marker features alone) -- generalizes the pilot's established grammar_only_ceiling formula to the corrected test set's actual composition.",
+    "theoretical_shortcut_only_ceiling": 0.8741516966067864,
+    "note": "1261/1261 of the hard-negative half is structurally ambiguous by construction (should be ALL of it, i.e. 1261); 0/1259 of the uniform-random half is ALSO structurally ambiguous purely by chance (expected to be small/near-zero, checked directly rather than assumed)."
+  },
+  "baselines": {
+    "marker_shortcut": {
+      "baseline": "marker_shortcut",
+      "n_total": 5010,
+      "overall_accuracy": 0.7483033932135729,
+      "positive_accuracy": 1.0,
+      "n_positive": 2490,
+      "uniform_random_half_accuracy": 1.0,
+      "n_uniform_random": 1259,
+      "hard_negative_half_accuracy": 0.0,
+      "n_hard_negative": 1261,
+      "long_sequence_accuracy": 0.7225994180407371,
+      "n_long_sequences": 1031,
+      "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_marked_reversal_marker_shortcut.joblib",
+      "trained_on": "standard marked-reversal training set (Butoi et al. mixed strategy, K-edit perturbations)"
+    },
+    "ngram_logreg": {
+      "baseline": "ngram-logreg",
+      "n_total": 5010,
+      "overall_accuracy": 0.7542914171656686,
+      "positive_accuracy": 1.0,
+      "n_positive": 2490,
+      "uniform_random_half_accuracy": 0.9960285941223193,
+      "n_uniform_random": 1259,
+      "hard_negative_half_accuracy": 0.02775574940523394,
+      "n_hard_negative": 1261,
+      "long_sequence_accuracy": 0.7225994180407371,
+      "n_long_sequences": 1031,
+      "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_marked_reversal_ngram_logreg.joblib",
+      "trained_on": "standard marked-reversal training set (Butoi et al. mixed strategy, K-edit perturbations)"
+    },
+    "bagcount_ffn": {
+      "8": {
+        "baseline": "bagcount-ffn-h8",
+        "n_total": 5010,
+        "overall_accuracy": 0.7473053892215569,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9960285941223193,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261,
+        "long_sequence_accuracy": 0.7225994180407371,
+        "n_long_sequences": 1031,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_marked_reversal_bagcount_ffn_h8.pt",
+        "trained_on": "standard marked-reversal training set (Butoi et al. mixed strategy, K-edit perturbations)"
+      },
+      "32": {
+        "baseline": "bagcount-ffn-h32",
+        "n_total": 5010,
+        "overall_accuracy": 0.7479041916167665,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9984114376489277,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261,
+        "long_sequence_accuracy": 0.7225994180407371,
+        "n_long_sequences": 1031,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_marked_reversal_bagcount_ffn_h32.pt",
+        "trained_on": "standard marked-reversal training set (Butoi et al. mixed strategy, K-edit perturbations)"
+      },
+      "128": {
+        "baseline": "bagcount-ffn-h128",
+        "n_total": 5010,
+        "overall_accuracy": 0.7085828343313373,
+        "positive_accuracy": 0.8269076305220884,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9984114376489277,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.18556701030927836,
+        "n_hard_negative": 1261,
+        "long_sequence_accuracy": 0.6391852570320078,
+        "n_long_sequences": 1031,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_marked_reversal_bagcount_ffn_h128.pt",
+        "trained_on": "standard marked-reversal training set (Butoi et al. mixed strategy, K-edit perturbations)"
+      },
+      "512": {
+        "baseline": "bagcount-ffn-h512",
+        "n_total": 5010,
+        "overall_accuracy": 0.5634730538922156,
+        "positive_accuracy": 0.23333333333333334,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9984114376489277,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.7811260904044409,
+        "n_hard_negative": 1261,
+        "long_sequence_accuracy": 0.513094083414161,
+        "n_long_sequences": 1031,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_marked_reversal_bagcount_ffn_h512.pt",
+        "trained_on": "standard marked-reversal training set (Butoi et al. mixed strategy, K-edit perturbations)"
+      }
+    }
+  }
+}

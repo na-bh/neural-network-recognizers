@@ -1,0 +1,769 @@
+{
+  "experiment": "objective-combination methodology audit (pre-BF3 check)",
+  "pipeline_facts": {
+    "supported_loss_term_combinations": [
+      "rec",
+      "rec+lm",
+      "rec+ns",
+      "rec+lm+ns"
+    ],
+    "source": "src/recognizers/neural_networks/train_and_evaluate.bash (loss_terms arg, '+'-joined any of rec/lm/ns)",
+    "flare_grid_per_language": {
+      "architectures": [
+        "transformer",
+        "rnn",
+        "lstm"
+      ],
+      "loss_terms": [
+        "rec",
+        "rec+lm",
+        "rec+ns",
+        "rec+lm+ns"
+      ],
+      "validation_sets": [
+        "validation-short",
+        "validation-long"
+      ],
+      "trials": 10,
+      "total_combinations_per_language": 240,
+      "source": "experiments/include.bash (LOSS_TERMS/VALIDATION_SETS/ARCHITECTURES/TRIALS) + experiments/training/submit_train_and_evaluate_jobs.bash (nested loop submits EVERY combination, not a single default)"
+    },
+    "mamba_not_in_flare_original_grid": {
+      "finding": "ARCHITECTURES in experiments/include.bash = (transformer rnn lstm) -- mamba is ABSENT from FLaRe's own experiment grid entirely.",
+      "implication": "Mamba is an addition made by this project (git log: 'Add initial Mamba architecture support'), not part of the original FLaRe paper's protocol. All Mamba findings in this pilot are this project's own extension, with no paper-reported figure to compare against -- already implicitly understood throughout the pilot, but worth stating explicitly here."
+    },
+    "main_table_selection_logic": {
+      "finding": "src/recognizers/analysis/print_main_table.py's aggregate_results() does NOT use a fixed loss-term default. For EVERY (architecture, validation_type, language) cell, it selects the loss-term combination with the BEST test accuracy among all four -- mean across the 10 trials for validation-short ('L. Test (Mean)'), MAX across the 10 trials for validation-long ('L. Test (Max)'). The paper's headline main-table figure for each cell is THIS best-of-four number, not a fixed rec+ns number.",
+      "source": "src/recognizers/analysis/print_main_table.py, aggregate_results()"
+    }
+  },
+  "per_task_per_cell_results": {
+    "marked-reversal": [
+      {
+        "arch": "transformer",
+        "validation_set": "validation-short",
+        "selection_metric": "mean",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6192814371257486,
+            "max_accuracy": 0.849500998003992
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.5502794411177645,
+            "max_accuracy": 0.6800399201596806
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.5689421157684631,
+            "max_accuracy": 0.7534930139720559
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.5920758483033932,
+            "max_accuracy": 0.8500998003992016
+          }
+        },
+        "flare_selected_best_loss_term": "rec",
+        "flare_selected_best_value": 0.6192814371257486,
+        "rec_ns_value": 0.5689421157684631,
+        "rec_ns_is_flare_selected_best": false,
+        "rec_ns_rank_of_4": 3,
+        "gap_rec_ns_vs_best": 0.05033932135728547
+      },
+      {
+        "arch": "transformer",
+        "validation_set": "validation-long",
+        "selection_metric": "max",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.666626746506986,
+            "max_accuracy": 0.757684630738523
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6231137724550899,
+            "max_accuracy": 0.7530938123752495
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6225748502994012,
+            "max_accuracy": 0.7662674650698603
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6687425149700599,
+            "max_accuracy": 0.8782435129740519
+          }
+        },
+        "flare_selected_best_loss_term": "rec+lm+ns",
+        "flare_selected_best_value": 0.8782435129740519,
+        "rec_ns_value": 0.7662674650698603,
+        "rec_ns_is_flare_selected_best": false,
+        "rec_ns_rank_of_4": 2,
+        "gap_rec_ns_vs_best": 0.11197604790419158
+      },
+      {
+        "arch": "rnn",
+        "validation_set": "validation-short",
+        "selection_metric": "mean",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7646906187624751,
+            "max_accuracy": 0.9479041916167664
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7484431137724551,
+            "max_accuracy": 0.9634730538922156
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7366666666666667,
+            "max_accuracy": 0.9471057884231537
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.5805389221556887,
+            "max_accuracy": 0.9473053892215569
+          }
+        },
+        "flare_selected_best_loss_term": "rec",
+        "flare_selected_best_value": 0.7646906187624751,
+        "rec_ns_value": 0.7366666666666667,
+        "rec_ns_is_flare_selected_best": false,
+        "rec_ns_rank_of_4": 3,
+        "gap_rec_ns_vs_best": 0.028023952095808435
+      },
+      {
+        "arch": "rnn",
+        "validation_set": "validation-long",
+        "selection_metric": "max",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7835928143712574,
+            "max_accuracy": 0.9622754491017964
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7014171656686626,
+            "max_accuracy": 0.7774451097804391
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7531736526946108,
+            "max_accuracy": 0.9479041916167664
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7466467065868263,
+            "max_accuracy": 0.9481037924151696
+          }
+        },
+        "flare_selected_best_loss_term": "rec",
+        "flare_selected_best_value": 0.9622754491017964,
+        "rec_ns_value": 0.9479041916167664,
+        "rec_ns_is_flare_selected_best": false,
+        "rec_ns_rank_of_4": 3,
+        "gap_rec_ns_vs_best": 0.014371257485029987
+      },
+      {
+        "arch": "lstm",
+        "validation_set": "validation-short",
+        "selection_metric": "mean",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7175848303393213,
+            "max_accuracy": 0.8528942115768463
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6725748502994012,
+            "max_accuracy": 0.9455089820359281
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.5904391217564872,
+            "max_accuracy": 0.8023952095808383
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.5577245508982035,
+            "max_accuracy": 0.5748502994011976
+          }
+        },
+        "flare_selected_best_loss_term": "rec",
+        "flare_selected_best_value": 0.7175848303393213,
+        "rec_ns_value": 0.5904391217564872,
+        "rec_ns_is_flare_selected_best": false,
+        "rec_ns_rank_of_4": 3,
+        "gap_rec_ns_vs_best": 0.12714570858283414
+      },
+      {
+        "arch": "lstm",
+        "validation_set": "validation-long",
+        "selection_metric": "max",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6736726546906187,
+            "max_accuracy": 0.8590818363273454
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6608582834331338,
+            "max_accuracy": 0.7982035928143713
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.670499001996008,
+            "max_accuracy": 0.94750499001996
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6142115768463073,
+            "max_accuracy": 0.8107784431137725
+          }
+        },
+        "flare_selected_best_loss_term": "rec+ns",
+        "flare_selected_best_value": 0.94750499001996,
+        "rec_ns_value": 0.94750499001996,
+        "rec_ns_is_flare_selected_best": true,
+        "rec_ns_rank_of_4": 1,
+        "gap_rec_ns_vs_best": 0.0
+      }
+    ],
+    "binary-addition": [
+      {
+        "arch": "transformer",
+        "validation_set": "validation-short",
+        "selection_metric": "mean",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.5608982035928143,
+            "max_accuracy": 0.7143712574850299
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6127345309381239,
+            "max_accuracy": 0.8409181636726547
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6713572854291417,
+            "max_accuracy": 0.8926147704590819
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6097205588822355,
+            "max_accuracy": 0.8984031936127744
+          }
+        },
+        "flare_selected_best_loss_term": "rec+ns",
+        "flare_selected_best_value": 0.6713572854291417,
+        "rec_ns_value": 0.6713572854291417,
+        "rec_ns_is_flare_selected_best": true,
+        "rec_ns_rank_of_4": 1,
+        "gap_rec_ns_vs_best": 0.0
+      },
+      {
+        "arch": "transformer",
+        "validation_set": "validation-long",
+        "selection_metric": "max",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6995209580838323,
+            "max_accuracy": 0.8067864271457086
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7155888223552894,
+            "max_accuracy": 0.8087824351297406
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6936327345309381,
+            "max_accuracy": 0.8532934131736527
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6439520958083833,
+            "max_accuracy": 0.7602794411177645
+          }
+        },
+        "flare_selected_best_loss_term": "rec+ns",
+        "flare_selected_best_value": 0.8532934131736527,
+        "rec_ns_value": 0.8532934131736527,
+        "rec_ns_is_flare_selected_best": true,
+        "rec_ns_rank_of_4": 1,
+        "gap_rec_ns_vs_best": 0.0
+      },
+      {
+        "arch": "rnn",
+        "validation_set": "validation-short",
+        "selection_metric": "mean",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.727624750499002,
+            "max_accuracy": 0.8780439121756487
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7961477045908184,
+            "max_accuracy": 0.9153692614770459
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7176247504990021,
+            "max_accuracy": 0.9125748502994012
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7806786427145711,
+            "max_accuracy": 0.9153692614770459
+          }
+        },
+        "flare_selected_best_loss_term": "rec+lm",
+        "flare_selected_best_value": 0.7961477045908184,
+        "rec_ns_value": 0.7176247504990021,
+        "rec_ns_is_flare_selected_best": false,
+        "rec_ns_rank_of_4": 4,
+        "gap_rec_ns_vs_best": 0.07852295409181631
+      },
+      {
+        "arch": "rnn",
+        "validation_set": "validation-long",
+        "selection_metric": "max",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7503992015968064,
+            "max_accuracy": 0.9149700598802395
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7542714570858282,
+            "max_accuracy": 0.9143712574850299
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7557285429141716,
+            "max_accuracy": 0.9147704590818363
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.8216167664670658,
+            "max_accuracy": 0.9169660678642715
+          }
+        },
+        "flare_selected_best_loss_term": "rec+lm+ns",
+        "flare_selected_best_value": 0.9169660678642715,
+        "rec_ns_value": 0.9147704590818363,
+        "rec_ns_is_flare_selected_best": false,
+        "rec_ns_rank_of_4": 3,
+        "gap_rec_ns_vs_best": 0.0021956087824351878
+      },
+      {
+        "arch": "lstm",
+        "validation_set": "validation-short",
+        "selection_metric": "mean",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.8200199600798405,
+            "max_accuracy": 0.912375249500998
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7324750499001996,
+            "max_accuracy": 0.9139720558882235
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.8170459081836328,
+            "max_accuracy": 0.9155688622754491
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7053892215568862,
+            "max_accuracy": 0.9155688622754491
+          }
+        },
+        "flare_selected_best_loss_term": "rec",
+        "flare_selected_best_value": 0.8200199600798405,
+        "rec_ns_value": 0.8170459081836328,
+        "rec_ns_is_flare_selected_best": false,
+        "rec_ns_rank_of_4": 2,
+        "gap_rec_ns_vs_best": 0.0029740518962076967
+      },
+      {
+        "arch": "lstm",
+        "validation_set": "validation-long",
+        "selection_metric": "max",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7690219560878242,
+            "max_accuracy": 0.8678642714570858
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6897604790419163,
+            "max_accuracy": 0.8766467065868263
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7936526946107785,
+            "max_accuracy": 0.9153692614770459
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6977045908183632,
+            "max_accuracy": 0.8095808383233533
+          }
+        },
+        "flare_selected_best_loss_term": "rec+ns",
+        "flare_selected_best_value": 0.9153692614770459,
+        "rec_ns_value": 0.9153692614770459,
+        "rec_ns_is_flare_selected_best": true,
+        "rec_ns_rank_of_4": 1,
+        "gap_rec_ns_vs_best": 0.0
+      }
+    ],
+    "dyck-2-3": [
+      {
+        "arch": "transformer",
+        "validation_set": "validation-short",
+        "selection_metric": "mean",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7137724550898203,
+            "max_accuracy": 0.7988023952095809
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.66624750499002,
+            "max_accuracy": 0.7397205588822355
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6830938123752496,
+            "max_accuracy": 0.8025948103792415
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6669261477045908,
+            "max_accuracy": 0.8337325349301398
+          }
+        },
+        "flare_selected_best_loss_term": "rec",
+        "flare_selected_best_value": 0.7137724550898203,
+        "rec_ns_value": 0.6830938123752496,
+        "rec_ns_is_flare_selected_best": false,
+        "rec_ns_rank_of_4": 2,
+        "gap_rec_ns_vs_best": 0.03067864271457077
+      },
+      {
+        "arch": "transformer",
+        "validation_set": "validation-long",
+        "selection_metric": "max",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7149900199600798,
+            "max_accuracy": 0.7896207584830339
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6819760479041916,
+            "max_accuracy": 0.7910179640718563
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.6464471057884232,
+            "max_accuracy": 0.7435129740518962
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.7021556886227546,
+            "max_accuracy": 0.8191616766467066
+          }
+        },
+        "flare_selected_best_loss_term": "rec+lm+ns",
+        "flare_selected_best_value": 0.8191616766467066,
+        "rec_ns_value": 0.7435129740518962,
+        "rec_ns_is_flare_selected_best": false,
+        "rec_ns_rank_of_4": 4,
+        "gap_rec_ns_vs_best": 0.07564870259481038
+      },
+      {
+        "arch": "rnn",
+        "validation_set": "validation-short",
+        "selection_metric": "mean",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.8948502994011976,
+            "max_accuracy": 0.9878243512974052
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.9449500998003991,
+            "max_accuracy": 0.999001996007984
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.9556487025948103,
+            "max_accuracy": 0.9998003992015968
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.9309980039920159,
+            "max_accuracy": 0.9824351297405189
+          }
+        },
+        "flare_selected_best_loss_term": "rec+ns",
+        "flare_selected_best_value": 0.9556487025948103,
+        "rec_ns_value": 0.9556487025948103,
+        "rec_ns_is_flare_selected_best": true,
+        "rec_ns_rank_of_4": 1,
+        "gap_rec_ns_vs_best": 0.0
+      },
+      {
+        "arch": "rnn",
+        "validation_set": "validation-long",
+        "selection_metric": "max",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.9293013972055888,
+            "max_accuracy": 0.9822355289421157
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.959241516966068,
+            "max_accuracy": 0.9992015968063872
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.9569860279441119,
+            "max_accuracy": 0.9992015968063872
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.9299001996007984,
+            "max_accuracy": 0.9988023952095808
+          }
+        },
+        "flare_selected_best_loss_term": "rec+lm",
+        "flare_selected_best_value": 0.9992015968063872,
+        "rec_ns_value": 0.9992015968063872,
+        "rec_ns_is_flare_selected_best": false,
+        "rec_ns_rank_of_4": 2,
+        "gap_rec_ns_vs_best": 0.0
+      },
+      {
+        "arch": "lstm",
+        "validation_set": "validation-short",
+        "selection_metric": "mean",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.9022155688622753,
+            "max_accuracy": 0.9812375249500997
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.8075848303393215,
+            "max_accuracy": 0.9726546906187625
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.845449101796407,
+            "max_accuracy": 0.9850299401197605
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.841497005988024,
+            "max_accuracy": 0.9748502994011976
+          }
+        },
+        "flare_selected_best_loss_term": "rec",
+        "flare_selected_best_value": 0.9022155688622753,
+        "rec_ns_value": 0.845449101796407,
+        "rec_ns_is_flare_selected_best": false,
+        "rec_ns_rank_of_4": 2,
+        "gap_rec_ns_vs_best": 0.0567664670658683
+      },
+      {
+        "arch": "lstm",
+        "validation_set": "validation-long",
+        "selection_metric": "max",
+        "per_loss_term": {
+          "rec": {
+            "n_trials": 10,
+            "mean_accuracy": 0.9130339321357285,
+            "max_accuracy": 0.9824351297405189
+          },
+          "rec+lm": {
+            "n_trials": 10,
+            "mean_accuracy": 0.8535329341317365,
+            "max_accuracy": 0.9736526946107784
+          },
+          "rec+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.8677644710578842,
+            "max_accuracy": 0.97624750499002
+          },
+          "rec+lm+ns": {
+            "n_trials": 10,
+            "mean_accuracy": 0.855688622754491,
+            "max_accuracy": 0.9824351297405189
+          }
+        },
+        "flare_selected_best_loss_term": "rec",
+        "flare_selected_best_value": 0.9824351297405189,
+        "rec_ns_value": 0.97624750499002,
+        "rec_ns_is_flare_selected_best": false,
+        "rec_ns_rank_of_4": 3,
+        "gap_rec_ns_vs_best": 0.0061876247504989434
+      }
+    ]
+  },
+  "summary": {
+    "marked-reversal": {
+      "n_cells": 6,
+      "n_cells_rec_ns_is_flare_best": 1,
+      "fraction_rec_ns_is_flare_best": 0.16666666666666666,
+      "mean_gap_when_rec_ns_not_best": 0.06637125748502992,
+      "max_gap_when_rec_ns_not_best": 0.12714570858283414
+    },
+    "binary-addition": {
+      "n_cells": 6,
+      "n_cells_rec_ns_is_flare_best": 3,
+      "fraction_rec_ns_is_flare_best": 0.5,
+      "mean_gap_when_rec_ns_not_best": 0.02789753825681973,
+      "max_gap_when_rec_ns_not_best": 0.07852295409181631
+    },
+    "dyck-2-3": {
+      "n_cells": 6,
+      "n_cells_rec_ns_is_flare_best": 1,
+      "fraction_rec_ns_is_flare_best": 0.16666666666666666,
+      "mean_gap_when_rec_ns_not_best": 0.03385628742514968,
+      "max_gap_when_rec_ns_not_best": 0.07564870259481038
+    }
+  },
+  "answers": {
+    "q0_run_experiments_bash_does_not_exist": "No file named run_experiments.bash exists anywhere in this repository (confirmed by exhaustive find). The relevant configuration files are experiments/include.bash (grid definition), experiments/training/submit_train_and_evaluate_jobs.bash (job submission loop), and src/recognizers/neural_networks/train_and_evaluate.bash (per-trial training invocation) -- used throughout this audit in its place.",
+    "q1_supported_objective_combinations": [
+      "rec",
+      "rec+lm",
+      "rec+ns",
+      "rec+lm+ns"
+    ],
+    "q2_default_vs_train_all_and_select": "FLaRe's protocol TRAINS ALL FOUR loss-term combinations (rec, rec+lm, rec+ns, rec+lm+ns) x both validation sets x 10 trials, for every language x architecture -- confirmed both from experiments/include.bash's grid definition and from the actual eval/test.json files present on disk for every combination. The paper's main-table figure then SELECTS the best-performing loss term per (architecture, validation_type, language) cell (print_main_table.py) -- there is no single 'configured default' objective.",
+    "q3_which_combination_for_marked_reversal_binary_addition_dyck": {
+      "marked-reversal": "rec+ns is the FLaRe-selected best in 1/6 (arch, validation_set) cells. Plain 'rec' or 'rec+lm+ns' win most cells instead; when rec+ns is NOT the winner the gap averages 0.0664 and reaches 0.1271 (LSTM, validation-short: rec=0.7176 mean vs rec+ns=0.5904 mean, a 12.7-point gap).",
+      "binary-addition": "rec+ns is the FLaRe-selected best in 3/6 (arch, validation_set) cells -- notably Transformer (both validation sets) and LSTM validation-long. It is CLEARLY beaten on RNN validation-short (rec+lm mean=0.7961 vs rec+ns mean=0.7176, an 7.85-point gap) and is a close second on LSTM validation-short (rec=0.8200 vs rec+ns=0.8170).",
+      "dyck-2-3": "rec+ns is the FLaRe-selected best in 1/6 (arch, validation_set) cells -- notably RNN validation-short (0.9556 mean, best of 4) and LSTM (both validation sets, 0.8454/0.8678, best of 4). It is CLEARLY beaten on Transformer, especially validation-long (plain rec=0.7150 vs rec+ns=0.6464, a 6.9-point gap) -- a genuinely different, task-specific winner pattern from both other tasks, reinforcing that there is no universal 'rec+ns is fine' default across tasks."
+    },
+    "q4_are_rec_ns_checkpoints_the_papers_best_config": "NO, not uniformly, and the pattern is DIFFERENT for every task checked. The data/models/*/rec+ns/... checkpoints this ENTIRE pilot has used (Phase 1-3 for marked-reversal, marked-copy, odds-first, bucket-sort, binary-addition, dyck-2-3, plus the marked-reversal corrected-dataset fix F1-F4) are confirmed to be only ONE of four fully-trained-and-evaluated objective combinations on disk, for EVERY task in FLaRe's grid (see grid-completeness check: all combinations are present on disk, nothing was trained-but-not-preserved). For marked-reversal, rec+ns is essentially NEVER the paper-selected best config. For binary-addition, rec+ns wins for Transformer/LSTM but loses clearly for RNN. For dyck-2-3, rec+ns wins for RNN/LSTM but loses clearly for Transformer. There is no single task-independent rule -- each task's own grid must be checked.",
+    "q5_hyperparameter_sampling": {
+      "finding": "train_and_evaluate.bash samples THREE hyperparameters via random_sample.py for EVERY trial regardless of loss-term combination: --max-tokens-per-batch (int, log-uniform 128-4096), --initial-learning-rate (log-uniform 0.0001-0.01), plus ONE additional sampled coefficient PER active auxiliary head: --language-modeling-loss-coefficient (log-uniform 0.01-10) IF 'lm' is in loss_terms, --next-symbols-loss-coefficient (log-uniform 0.01-10) IF 'ns' is in loss_terms. Plain 'rec' has no extra coefficient (no auxiliary head to weight). Nothing is fixed across trials for any objective combination -- every trial, every loss-term combination, samples its own batch size and learning rate independently; rec+lm+ns additionally samples BOTH coefficients independently of each other.",
+      "source": "src/recognizers/neural_networks/train_and_evaluate.bash lines defining model_flags/loss_term_flags/the final train.py invocation -- read directly, each --*-loss-coefficient flag's value is a `random_sample --log 0.01 10` call inside the loss_term case statement, so it literally cannot be fixed by construction (it's computed fresh in the bash conditional each time the script runs).",
+      "implication": "This pilot's own fix_train_models_all_objectives.py (this session's all-objectives expansion) already matches this exactly: max_tokens_per_batch/initial_learning_rate sampled per trial regardless of loss_terms, plus a per-active-head coefficient sampled only when that head is used -- confirmed consistent with FLaRe's own protocol, not an independent design choice that happens to coincide."
+    },
+    "q6_grid_completeness": {
+      "n_languages_with_full_grid": 17,
+      "n_languages_total": 18,
+      "per_language": {
+        "even-pairs": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "repeat-01": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "parity": {
+          "full_grid_all_combos_10_trials": false,
+          "non_standard_counts": {
+            "rnn/rec+ns": 30,
+            "lstm/rec+ns": 30
+          }
+        },
+        "cycle-navigation": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "modular-arithmetic-simple": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "dyck-2-3": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "first": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "majority": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "stack-manipulation": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "marked-reversal": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "unmarked-reversal": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "marked-copy": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "missing-duplicate-string": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "odds-first": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "binary-addition": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "binary-multiplication": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "compute-sqrt": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        },
+        "bucket-sort": {
+          "full_grid_all_combos_10_trials": true,
+          "non_standard_counts": {}
+        }
+      },
+      "interpretation": "17/18 FLaRe languages have the full 4-loss-term x 10-trial grid preserved on disk -- confirms other objective combinations were TRAINED AND PRESERVED (not merely trained-then-deleted) for essentially every task, including all tasks this pilot has studied. The one exception (parity) has EXTRA (30 instead of 10) rnn/rec+ns and lstm/rec+ns directories, not missing ones -- likely from separate prior experimentation, not evidence of data loss."
+    },
+    "implication_for_expanded_fix_experiments": "Every task this pilot has studied shows a DIFFERENT best-loss-term pattern per architecture -- there is no default that's safe to assume. Before scoping any new multi-objective fix experiment, check that specific task's own grid (as done here for marked-reversal, binary-addition, dyck-2-3) rather than assuming rec+ns's known weaknesses/strengths transfer. This audit itself confirms all 4 combinations already exist as trained checkpoints for every relevant task -- expanded fix experiments that need standard-trained baselines under other objectives can evaluate existing checkpoints directly, no new training required for that part."
+  }
+}

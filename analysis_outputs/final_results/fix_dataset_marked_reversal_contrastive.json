@@ -1,0 +1,42 @@
+{
+  "task": "marked-reversal",
+  "experiment": "contrastive-pairing (CPF1: dataset construction + audit)",
+  "description": "Paired training file built ENTIRELY from languages/marked-reversal-fixed's existing train split -- no new positives or hard negatives sampled from the language. Every hard negative's exact pre-swap source positive is recovered by re-applying its recorded swap_i/swap_j (a swap is its own inverse), not approximated via nearest-neighbor matching. The 50/25/25 positive/uniform/hard ratio is held by downsampling F1's original positive population (without replacement) to match the surviving hard-negative count, since pairing necessarily adds one new positive row per hard negative.",
+  "technical_notes": {
+    "reconstruction_method": "swap inversion (exact, not nearest-neighbor), verified against is_positive_local for every reconstructed row",
+    "file_order_vs_batch_cooccurrence": "Pairs are placed as consecutive rows here for auditability, but rau's shared TrainingLoop.run() reshuffles the FULL training example list every epoch before batching, so on-disk adjacency alone does NOT guarantee same-batch placement at training time. CPF2's custom generate_batches override enforces actual co-occurrence directly, independent of file order -- see analysis/contrastive_training_loop.py."
+  },
+  "random_seed": 20260724,
+  "source_dataset": "languages/marked-reversal-fixed",
+  "language_output_directory": "languages/marked-reversal-fixed-contrastive",
+  "source_composition": {
+    "n_total": 10000,
+    "n_positive": 4976,
+    "n_hard_negative": 2561,
+    "n_uniform_random": 2463
+  },
+  "reconstruction": {
+    "n_hard_negatives_attempted": 2561,
+    "n_reconstructed_successfully": 2561,
+    "n_reconstruction_failures": 0
+  },
+  "output_composition": {
+    "n_total": 10146,
+    "n_positive": 5122,
+    "n_positive_paired": 2561,
+    "n_positive_unpaired": 2561,
+    "n_hard_negative": 2561,
+    "n_uniform_random": 2463,
+    "positive_fraction": 0.504829489453972,
+    "hard_negative_fraction": 0.252414744726986,
+    "uniform_random_fraction": 0.24275576581904199,
+    "n_original_positives_dropped_to_hold_ratio": 2415
+  },
+  "verification": {
+    "a_every_hard_negative_has_paired_positive": true,
+    "b_pairs_consecutive_in_file": true,
+    "b_pairid_file_matches_row_metadata": true,
+    "c_test_set_unchanged": true,
+    "c_validation_short_unchanged": true
+  }
+}

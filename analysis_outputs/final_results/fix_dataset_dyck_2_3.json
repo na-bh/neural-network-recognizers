@@ -1,0 +1,238 @@
+{
+  "task": "dyck-2-3",
+  "experiment": "corrected-dataset-fix (DF1: dataset construction + audit)",
+  "description": "Corrected Dyck-2-3 dataset preserving Butoi et al.'s mixed negative-generation strategy (50% uniform-random / 50% hard-negative half). Hard negatives are drawn from the three shortcut-blind subtypes identified in phase3_dyck_task_audit.json's joint audit (type_mismatch, close_with_nothing_open, depth_exceeded), in their natural proportions (46.5%/30.2%/23.3%), each construction verified to pass ALL FOUR listed shortcut features (bracket_count_parity, per_type_bracket_counts, sequence_length_parity, first_last_check) while being genuinely invalid.",
+  "random_seed": 20260716,
+  "k_bracket_types": 2,
+  "m_max_nesting_depth": 3,
+  "subtype_proportions_from_phase3_audit": {
+    "type_mismatch": 0.46511627906976744,
+    "close_with_nothing_open": 0.3023255813953488,
+    "depth_exceeded": 0.23255813953488372
+  },
+  "language_output_directory": "languages/dyck-2-3-fixed",
+  "splits_generated": {
+    "train": {
+      "n": 10000,
+      "length_range": [
+        0,
+        40
+      ]
+    },
+    "validation-short": {
+      "n": 1000,
+      "length_range": [
+        0,
+        40
+      ]
+    },
+    "test": {
+      "n": 5010,
+      "length_range": [
+        0,
+        500
+      ]
+    }
+  },
+  "known_simplifications_vs_original_pipeline": [
+    "Positives are generated via a from-scratch stack-based random walk (random_valid_dyck), not the original FSA-based sampling machinery (dyck_k_m.py/rayuela) -- validated equivalent via is_valid_dyck(seq, max_depth=3) matching every generated string exactly, but the exact PROBABILITY DISTRIBUTION over valid strings may differ from the original FSA's weighting scheme.",
+    "No cross-split deduplication of positive examples (negligible given the string space size at these lengths, matching every prior fix experiment's own documented simplification)."
+  ],
+  "audits": {
+    "train": {
+      "split": "train",
+      "n_total": 10000,
+      "n_positive": 5015,
+      "n_negative": 4985,
+      "positive_fraction": 0.5015,
+      "n_negative_uniform_random": 2529,
+      "n_negative_hard_negative": 2456,
+      "uniform_random_fraction_of_negatives": 0.5073219658976931,
+      "hard_negative_construction_checks": {
+        "n_checked": 2456,
+        "all_pass_all_four_shortcut_features": true,
+        "n_detectable_by_any_shortcut_feature": 0,
+        "all_genuinely_invalid": true,
+        "subtype_distribution": {
+          "depth_exceeded": 572,
+          "type_mismatch": 1164,
+          "close_with_nothing_open": 720
+        },
+        "subtype_distribution_fraction": {
+          "depth_exceeded": 0.23289902280130292,
+          "type_mismatch": 0.4739413680781759,
+          "close_with_nothing_open": 0.2931596091205212
+        },
+        "expected_subtype_fractions": {
+          "type_mismatch": 0.46511627906976744,
+          "close_with_nothing_open": 0.3023255813953488,
+          "depth_exceeded": 0.23255813953488372
+        },
+        "position_distribution_by_subtype": {
+          "type_mismatch": {
+            "n": 1164,
+            "tertile_histogram_low_mid_high": [
+              311,
+              443,
+              410
+            ],
+            "mean": 0.5310497961817405
+          },
+          "close_with_nothing_open": {
+            "n": 720,
+            "tertile_histogram_low_mid_high": [
+              121,
+              478,
+              121
+            ],
+            "mean": 0.49995718492360436
+          },
+          "depth_exceeded": {
+            "n": 572,
+            "tertile_histogram_low_mid_high": [
+              170,
+              287,
+              115
+            ],
+            "mean": 0.4707268380921402
+          }
+        }
+      },
+      "uniform_random_structural_check": {
+        "n_checked": 2529,
+        "n_accidentally_valid": 0,
+        "fraction_accidentally_valid": 0.0
+      }
+    },
+    "validation-short": {
+      "split": "validation-short",
+      "n_total": 1000,
+      "n_positive": 483,
+      "n_negative": 517,
+      "positive_fraction": 0.483,
+      "n_negative_uniform_random": 287,
+      "n_negative_hard_negative": 230,
+      "uniform_random_fraction_of_negatives": 0.5551257253384912,
+      "hard_negative_construction_checks": {
+        "n_checked": 230,
+        "all_pass_all_four_shortcut_features": true,
+        "n_detectable_by_any_shortcut_feature": 0,
+        "all_genuinely_invalid": true,
+        "subtype_distribution": {
+          "depth_exceeded": 56,
+          "type_mismatch": 102,
+          "close_with_nothing_open": 72
+        },
+        "subtype_distribution_fraction": {
+          "depth_exceeded": 0.24347826086956523,
+          "type_mismatch": 0.4434782608695652,
+          "close_with_nothing_open": 0.3130434782608696
+        },
+        "expected_subtype_fractions": {
+          "type_mismatch": 0.46511627906976744,
+          "close_with_nothing_open": 0.3023255813953488,
+          "depth_exceeded": 0.23255813953488372
+        },
+        "position_distribution_by_subtype": {
+          "type_mismatch": {
+            "n": 102,
+            "tertile_histogram_low_mid_high": [
+              20,
+              44,
+              38
+            ],
+            "mean": 0.5586589355276648
+          },
+          "close_with_nothing_open": {
+            "n": 72,
+            "tertile_histogram_low_mid_high": [
+              13,
+              44,
+              15
+            ],
+            "mean": 0.5205499161279661
+          },
+          "depth_exceeded": {
+            "n": 56,
+            "tertile_histogram_low_mid_high": [
+              23,
+              21,
+              12
+            ],
+            "mean": 0.4222704971143162
+          }
+        }
+      },
+      "uniform_random_structural_check": {
+        "n_checked": 287,
+        "n_accidentally_valid": 0,
+        "fraction_accidentally_valid": 0.0
+      }
+    },
+    "test": {
+      "split": "test",
+      "n_total": 5010,
+      "n_positive": 2591,
+      "n_negative": 2419,
+      "positive_fraction": 0.5171656686626747,
+      "n_negative_uniform_random": 1179,
+      "n_negative_hard_negative": 1240,
+      "uniform_random_fraction_of_negatives": 0.48739148408433236,
+      "hard_negative_construction_checks": {
+        "n_checked": 1240,
+        "all_pass_all_four_shortcut_features": true,
+        "n_detectable_by_any_shortcut_feature": 0,
+        "all_genuinely_invalid": true,
+        "subtype_distribution": {
+          "type_mismatch": 598,
+          "depth_exceeded": 292,
+          "close_with_nothing_open": 350
+        },
+        "subtype_distribution_fraction": {
+          "type_mismatch": 0.482258064516129,
+          "depth_exceeded": 0.23548387096774193,
+          "close_with_nothing_open": 0.28225806451612906
+        },
+        "expected_subtype_fractions": {
+          "type_mismatch": 0.46511627906976744,
+          "close_with_nothing_open": 0.3023255813953488,
+          "depth_exceeded": 0.23255813953488372
+        },
+        "position_distribution_by_subtype": {
+          "type_mismatch": {
+            "n": 598,
+            "tertile_histogram_low_mid_high": [
+              208,
+              196,
+              194
+            ],
+            "mean": 0.48949484409953803
+          },
+          "close_with_nothing_open": {
+            "n": 350,
+            "tertile_histogram_low_mid_high": [
+              76,
+              196,
+              78
+            ],
+            "mean": 0.503129534638008
+          },
+          "depth_exceeded": {
+            "n": 292,
+            "tertile_histogram_low_mid_high": [
+              96,
+              103,
+              93
+            ],
+            "mean": 0.4930899820830632
+          }
+        }
+      },
+      "uniform_random_structural_check": {
+        "n_checked": 1179,
+        "n_accidentally_valid": 0,
+        "fraction_accidentally_valid": 0.0
+      }
+    }
+  }
+}

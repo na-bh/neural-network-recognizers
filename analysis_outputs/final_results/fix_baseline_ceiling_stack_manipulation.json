@@ -1,0 +1,224 @@
+{
+  "task": "stack-manipulation",
+  "experiment": "corrected-dataset-fix (SMF2: shortcut-only baseline ceiling on corrected test data)",
+  "description": "Evaluates a NEWLY-TRAINED shortcut-only baseline (six-feature bag-of-trivial-checks -- marker count, well-formedness, arithmetic length consistency, first/last-token checks, answer bit-count subset -- provably incapable of genuine LIFO-order verification) plus ngram-logreg and bagcount-ffn baselines (also newly trained here -- none previously existed for stack-manipulation), all trained on STANDARD stack-manipulation training data, evaluated on the CORRECTED test set (SMF1), split into positive/uniform-random/hard-negative subsets.",
+  "provable_incapacity_counterexample": {
+    "clean": [
+      "1",
+      "0",
+      "PUSH",
+      "1",
+      "POP",
+      "#",
+      "0",
+      "1"
+    ],
+    "corrupted": [
+      "1",
+      "0",
+      "PUSH",
+      "1",
+      "POP",
+      "#",
+      "1",
+      "0"
+    ],
+    "clean_valid": true,
+    "corrupted_valid": false,
+    "clean_features": {
+      "marker_count_is_one": 1.0,
+      "operations_well_formed": 1.0,
+      "stack_size_arithmetic_consistent": 1.0,
+      "first_token_never_pop": 1.0,
+      "token_before_marker_never_push": 1.0,
+      "answer_bit_counts_subset_of_available": 1.0
+    },
+    "corrupted_features": {
+      "marker_count_is_one": 1.0,
+      "operations_well_formed": 1.0,
+      "stack_size_arithmetic_consistent": 1.0,
+      "first_token_never_pop": 1.0,
+      "token_before_marker_never_push": 1.0,
+      "answer_bit_counts_subset_of_available": 1.0
+    },
+    "features_identical": true,
+    "note": "IDENTICAL six-feature vectors, opposite validity -- the information distinguishing them (the correct ORDER of the answer, i.e. true LIFO result) is structurally absent from a marker/count/multiset-only representation."
+  },
+  "corrected_test_set": "languages/stack-manipulation-fixed/datasets/test",
+  "test_composition": {
+    "n_total": 5010,
+    "n_positive": 2511,
+    "n_uniform_random": 1239,
+    "n_hard_negative": 1260
+  },
+  "theoretical_shortcut_only_ceiling": {
+    "n_total": 5010,
+    "n_positive": 2511,
+    "n_structurally_obvious_negatives": 1239,
+    "structurally_obvious_breakdown": {
+      "from_hard_negative_half": 0,
+      "from_uniform_random_half": 1239
+    },
+    "n_structurally_ambiguous_negatives": 1260,
+    "structurally_ambiguous_breakdown": {
+      "from_hard_negative_half": 1260,
+      "from_uniform_random_half_by_chance": 0
+    },
+    "formula": "(n_positive + n_structurally_obvious + 0.5 * n_structurally_ambiguous) / n_total -- perfect on positives and every negative a shortcut-only detector (marker count, well-formedness, arithmetic length consistency, first/last-token checks, answer bit-count subset) can catch; chance (0.5) on every negative that passes all six (by SMF1's construction, this is the ENTIRE hard-negative half, plus any uniform-random negatives that coincidentally also pass all six).",
+    "theoretical_shortcut_only_ceiling": 0.874251497005988,
+    "note": "1260/1260 of the hard-negative half is structurally ambiguous by construction (should be ALL of it, i.e. 1260); 0/1239 of the uniform-random half is ALSO structurally ambiguous purely by chance."
+  },
+  "baselines": {
+    "shortcut": {
+      "baseline": "shortcut",
+      "n_total": 5010,
+      "overall_accuracy": 0.7485029940119761,
+      "positive_accuracy": 1.0,
+      "n_positive": 2511,
+      "uniform_random_half_accuracy": 1.0,
+      "n_uniform_random": 1239,
+      "hard_negative_half_accuracy": 0.0,
+      "n_hard_negative": 1260,
+      "long_sequence_accuracy": 0.7130124777183601,
+      "n_long_sequences": 2244,
+      "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_stack_manipulation_shortcut_baseline.joblib",
+      "trained_on": "standard stack-manipulation training set"
+    },
+    "ngram_logreg": {
+      "baseline": "ngram-logreg",
+      "n_total": 5010,
+      "overall_accuracy": 0.7510978043912175,
+      "positive_accuracy": 1.0,
+      "n_positive": 2511,
+      "uniform_random_half_accuracy": 1.0,
+      "n_uniform_random": 1239,
+      "hard_negative_half_accuracy": 0.010317460317460317,
+      "n_hard_negative": 1260,
+      "long_sequence_accuracy": 0.714349376114082,
+      "n_long_sequences": 2244,
+      "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_stack_manipulation_ngram_logreg.joblib",
+      "trained_on": "standard stack-manipulation training set",
+      "selected_C": 100.0
+    },
+    "bagcount_ffn": {
+      "8": {
+        "baseline": "bagcount-ffn-h8",
+        "n_total": 5010,
+        "overall_accuracy": 0.7473053892215569,
+        "positive_accuracy": 0.9992035045798486,
+        "n_positive": 2511,
+        "uniform_random_half_accuracy": 0.9967715899919289,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1260,
+        "long_sequence_accuracy": 0.7130124777183601,
+        "n_long_sequences": 2244,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_stack_manipulation_bagcount_ffn_h8.pt",
+        "trained_on": "standard stack-manipulation training set",
+        "num_epochs_run": 57,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "32": {
+        "baseline": "bagcount-ffn-h32",
+        "n_total": 5010,
+        "overall_accuracy": 0.5021956087824351,
+        "positive_accuracy": 0.013540422142572681,
+        "n_positive": 2511,
+        "uniform_random_half_accuracy": 0.9967715899919289,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.9896825396825397,
+        "n_hard_negative": 1260,
+        "long_sequence_accuracy": 0.39126559714795006,
+        "n_long_sequences": 2244,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_stack_manipulation_bagcount_ffn_h32.pt",
+        "trained_on": "standard stack-manipulation training set",
+        "num_epochs_run": 49,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "128": {
+        "baseline": "bagcount-ffn-h128",
+        "n_total": 5010,
+        "overall_accuracy": 0.5057884231536927,
+        "positive_accuracy": 0.020708880923934688,
+        "n_positive": 2511,
+        "uniform_random_half_accuracy": 0.9975786924939467,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.9888888888888889,
+        "n_hard_negative": 1260,
+        "long_sequence_accuracy": 0.39438502673796794,
+        "n_long_sequences": 2244,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_stack_manipulation_bagcount_ffn_h128.pt",
+        "trained_on": "standard stack-manipulation training set",
+        "num_epochs_run": 51,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "512": {
+        "baseline": "bagcount-ffn-h512",
+        "n_total": 5010,
+        "overall_accuracy": 0.500998003992016,
+        "positive_accuracy": 0.010752688172043012,
+        "n_positive": 2511,
+        "uniform_random_half_accuracy": 0.9967715899919289,
+        "n_uniform_random": 1239,
+        "hard_negative_half_accuracy": 0.9904761904761905,
+        "n_hard_negative": 1260,
+        "long_sequence_accuracy": 0.39126559714795006,
+        "n_long_sequences": 2244,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_stack_manipulation_bagcount_ffn_h512.pt",
+        "trained_on": "standard stack-manipulation training set",
+        "num_epochs_run": 32,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      }
+    }
+  },
+  "summary_vs_ceiling": [
+    {
+      "baseline": "shortcut",
+      "overall_accuracy": 0.7485029940119761,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "ngram-logreg",
+      "overall_accuracy": 0.7510978043912175,
+      "hard_negative_half_accuracy": 0.010317460317460317,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h8",
+      "overall_accuracy": 0.7473053892215569,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h32",
+      "overall_accuracy": 0.5021956087824351,
+      "hard_negative_half_accuracy": 0.9896825396825397,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h128",
+      "overall_accuracy": 0.5057884231536927,
+      "hard_negative_half_accuracy": 0.9888888888888889,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h512",
+      "overall_accuracy": 0.500998003992016,
+      "hard_negative_half_accuracy": 0.9904761904761905,
+      "exceeds_theoretical_ceiling": false
+    }
+  ]
+}

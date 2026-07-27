@@ -1,0 +1,1050 @@
+{
+  "runs": [
+    {
+      "arch": "rnn",
+      "seed": 1,
+      "model_dir": "data/models/marked-reversal/rnn/rec+ns/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.5413173652694611,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5347305389221557,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.10441767068273092,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9199048374306106,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "seed": 2,
+      "model_dir": "data/models/marked-reversal/rnn/rec+ns/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.7774451097804391,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6211576846307385,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.49404289118347894,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "seed": 3,
+      "model_dir": "data/models/marked-reversal/rnn/rec+ns/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.9471057884231537,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7483033932135729,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "seed": 4,
+      "model_dir": "data/models/marked-reversal/rnn/rec+ns/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.5499001996007984,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5341317365269461,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.10923694779116466,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9080095162569389,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "seed": 5,
+      "model_dir": "data/models/marked-reversal/rnn/rec+ns/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.7768463073852295,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6209580838323353,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.4932486100079428,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "seed": 6,
+      "model_dir": "data/models/marked-reversal/rnn/rec+ns/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.7768463073852295,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6209580838323353,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.4932486100079428,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "seed": 7,
+      "model_dir": "data/models/marked-reversal/rnn/rec+ns/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.9467065868263473,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7483033932135729,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "seed": 8,
+      "model_dir": "data/models/marked-reversal/rnn/rec+ns/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.7143712574850299,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6898203592814371,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.7662650602409639,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.22918318794607453,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "seed": 9,
+      "model_dir": "data/models/marked-reversal/rnn/rec+ns/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.5844311377245509,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5572854291417165,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.21124497991967872,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.7985725614591594,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "rnn",
+      "seed": 10,
+      "model_dir": "data/models/marked-reversal/rnn/rec+ns/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.7516966067864271,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7431137724550898,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9879518072289156,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9960285941223193,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.007137192704203013,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "seed": 1,
+      "model_dir": "data/models/marked-reversal/lstm/rec+ns/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.5676646706586826,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5564870259481038,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.14096385542168674,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9341792228390167,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "seed": 2,
+      "model_dir": "data/models/marked-reversal/lstm/rec+ns/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.5802395209580838,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5493013972055888,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.17751004016064256,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8334655035685964,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "seed": 3,
+      "model_dir": "data/models/marked-reversal/lstm/rec+ns/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.5588822355289421,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5540918163672655,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1248995983935743,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9563838223632039,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "seed": 4,
+      "model_dir": "data/models/marked-reversal/lstm/rec+ns/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.5520958083832336,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5349301397205589,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.10843373493975904,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9127676447264076,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "seed": 5,
+      "model_dir": "data/models/marked-reversal/lstm/rec+ns/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.5716566866267465,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5461077844311377,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1614457831325301,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.852498017446471,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "seed": 6,
+      "model_dir": "data/models/marked-reversal/lstm/rec+ns/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.5694610778443113,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5457085828343313,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.15903614457831325,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8556701030927835,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "seed": 7,
+      "model_dir": "data/models/marked-reversal/lstm/rec+ns/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.5978043912175649,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5580838323353293,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.21405622489959839,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.796193497224425,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "seed": 8,
+      "model_dir": "data/models/marked-reversal/lstm/rec+ns/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.5447105788423153,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5341317365269461,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9262490087232356,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "seed": 9,
+      "model_dir": "data/models/marked-reversal/lstm/rec+ns/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.5594810379241517,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5397205588822356,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.12931726907630522,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8905630452022204,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "lstm",
+      "seed": 10,
+      "model_dir": "data/models/marked-reversal/lstm/rec+ns/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.8023952095808383,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7483033932135729,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "seed": 1,
+      "model_dir": "data/models/marked-reversal/transformer/rec+ns/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.49680638722554893,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5049900199600799,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.007630522088353414,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.992862807295797,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "seed": 2,
+      "model_dir": "data/models/marked-reversal/transformer/rec+ns/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.4942115768463074,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5031936127744511,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.001606425702811245,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9976209357652657,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "seed": 3,
+      "model_dir": "data/models/marked-reversal/transformer/rec+ns/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.49740518962075847,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5057884231536927,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.008032128514056224,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9952418715305313,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "seed": 4,
+      "model_dir": "data/models/marked-reversal/transformer/rec+ns/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.4942115768463074,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "seed": 5,
+      "model_dir": "data/models/marked-reversal/transformer/rec+ns/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.49580838323353293,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5041916167664671,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.007228915662650603,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9904837430610627,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "seed": 6,
+      "model_dir": "data/models/marked-reversal/transformer/rec+ns/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.4930139720558882,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "seed": 7,
+      "model_dir": "data/models/marked-reversal/transformer/rec+ns/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.4934131736526946,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5027944111776447,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "seed": 8,
+      "model_dir": "data/models/marked-reversal/transformer/rec+ns/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.4940119760479042,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5029940119760479,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 1.0,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "seed": 9,
+      "model_dir": "data/models/marked-reversal/transformer/rec+ns/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.5512974051896208,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5534930139720559,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1819277108433735,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8413957176843775,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "transformer",
+      "seed": 10,
+      "model_dir": "data/models/marked-reversal/transformer/rec+ns/validation-short/10",
+      "standard_flare_test_set": {
+        "accuracy": 0.5487025948103792,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5387225548902196,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.15060240963855423,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8445678033306899,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "seed": 0,
+      "model_dir": "models/marked-reversal/mamba/rec+ns/validation-short/0",
+      "standard_flare_test_set": {
+        "accuracy": 0.8293413173652695,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7289421157684631,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9253012048192771,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.07137192704203013,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "seed": 1,
+      "model_dir": "models/marked-reversal/mamba/rec+ns/validation-short/1",
+      "standard_flare_test_set": {
+        "accuracy": 0.605189620758483,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5924151696606786,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.31244979919678717,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.739095955590801,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "seed": 2,
+      "model_dir": "models/marked-reversal/mamba/rec+ns/validation-short/2",
+      "standard_flare_test_set": {
+        "accuracy": 0.5369261477045908,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5413173652694611,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.09799196787148594,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9587628865979382,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "seed": 3,
+      "model_dir": "models/marked-reversal/mamba/rec+ns/validation-short/3",
+      "standard_flare_test_set": {
+        "accuracy": 0.5582834331337325,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5662674650698603,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.20923694779116467,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.8390166534496432,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "seed": 4,
+      "model_dir": "models/marked-reversal/mamba/rec+ns/validation-short/4",
+      "standard_flare_test_set": {
+        "accuracy": 0.8584830339321358,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7548902195608782,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 1.0,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.02696272799365583,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "seed": 5,
+      "model_dir": "models/marked-reversal/mamba/rec+ns/validation-short/5",
+      "standard_flare_test_set": {
+        "accuracy": 0.5425149700598803,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5459081836327345,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.09036144578313253,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9920697858842189,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "seed": 6,
+      "model_dir": "models/marked-reversal/mamba/rec+ns/validation-short/6",
+      "standard_flare_test_set": {
+        "accuracy": 0.8542914171656687,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.7612774451097805,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.9991967871485944,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.05392545598731166,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "seed": 7,
+      "model_dir": "models/marked-reversal/mamba/rec+ns/validation-short/7",
+      "standard_flare_test_set": {
+        "accuracy": 0.5405189620758483,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5411177644710579,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.1,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9540047581284695,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "seed": 8,
+      "model_dir": "models/marked-reversal/mamba/rec+ns/validation-short/8",
+      "standard_flare_test_set": {
+        "accuracy": 0.5407185628742515,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.5443113772455089,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.10923694779116466,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 0.9992057188244639,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.9492466296590008,
+        "n_hard_negative": 1261
+      }
+    },
+    {
+      "arch": "mamba",
+      "seed": 9,
+      "model_dir": "models/marked-reversal/mamba/rec+ns/validation-short/9",
+      "standard_flare_test_set": {
+        "accuracy": 0.6592814371257485,
+        "n": 5010,
+        "n_inference_failed": 0
+      },
+      "corrected_test_set": {
+        "overall_accuracy": 0.6315369261477046,
+        "n": 5010,
+        "n_inference_failed": 0,
+        "positive_accuracy": 0.4502008032128514,
+        "n_positive": 2490,
+        "uniform_random_half_accuracy": 1.0,
+        "n_uniform_random": 1259,
+        "hard_negative_half_accuracy": 0.6217287866772403,
+        "n_hard_negative": 1261
+      }
+    }
+  ],
+  "methodological_caveat": "Standard-trained checkpoints evaluated here are ALL 10 available seeds per architecture (unselected), whereas the pilot's own Phase 2/3 probing/patching work used only the BEST-performing 1-2 seeds per architecture (selected_seeds). F3's corrected-trained checkpoints are 10 RANDOM hyperparameter draws per architecture with no selection in either direction. This means: (a) this evaluation includes standard-trained seeds that never solved the original task well at all (chance-level long-sequence accuracy), unlike the pilot's own curated cell roster; (b) the F3 vs. standard-trained comparison is not a clean apples-to-apples 'same seed-selection procedure, different training data' comparison -- it compares an unselected population (standard) to another unselected population (F3), which IS internally consistent, but neither matches the pilot's PREVIOUS best-seed-selected characterization of marked-reversal's mechanisms. Read the standard-trained numbers here as 'what the full population of standard training runs does on the corrected test,' not as 'what the pilot's previously-characterized best seeds do.'",
+  "hard_negative_accuracy_by_architecture": {
+    "rnn": {
+      "n_seeds": 10,
+      "hard_negative_accuracy_per_seed": {
+        "1": 0.9199048374306106,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.9080095162569389,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.22918318794607453,
+        "9": 0.7985725614591594,
+        "10": 0.007137192704203013
+      },
+      "min": 0.0,
+      "max": 0.9199048374306106,
+      "mean_reported_for_context_only_not_the_primary_metric": 0.28628072957969863
+    },
+    "lstm": {
+      "n_seeds": 10,
+      "hard_negative_accuracy_per_seed": {
+        "1": 0.9341792228390167,
+        "2": 0.8334655035685964,
+        "3": 0.9563838223632039,
+        "4": 0.9127676447264076,
+        "5": 0.852498017446471,
+        "6": 0.8556701030927835,
+        "7": 0.796193497224425,
+        "8": 0.9262490087232356,
+        "9": 0.8905630452022204,
+        "10": 0.0
+      },
+      "min": 0.0,
+      "max": 0.9563838223632039,
+      "mean_reported_for_context_only_not_the_primary_metric": 0.7957969865186361
+    },
+    "transformer": {
+      "n_seeds": 10,
+      "hard_negative_accuracy_per_seed": {
+        "1": 0.992862807295797,
+        "2": 0.9976209357652657,
+        "3": 0.9952418715305313,
+        "4": 1.0,
+        "5": 0.9904837430610627,
+        "6": 1.0,
+        "7": 1.0,
+        "8": 1.0,
+        "9": 0.8413957176843775,
+        "10": 0.8445678033306899
+      },
+      "min": 0.8413957176843775,
+      "max": 1.0,
+      "mean_reported_for_context_only_not_the_primary_metric": 0.9662172878667725
+    },
+    "mamba": {
+      "n_seeds": 10,
+      "hard_negative_accuracy_per_seed": {
+        "0": 0.07137192704203013,
+        "1": 0.739095955590801,
+        "2": 0.9587628865979382,
+        "3": 0.8390166534496432,
+        "4": 0.02696272799365583,
+        "5": 0.9920697858842189,
+        "6": 0.05392545598731166,
+        "7": 0.9540047581284695,
+        "8": 0.9492466296590008,
+        "9": 0.6217287866772403
+      },
+      "min": 0.02696272799365583,
+      "max": 0.9920697858842189,
+      "mean_reported_for_context_only_not_the_primary_metric": 0.6206185567010308
+    }
+  },
+  "three_way_comparison_per_architecture": {
+    "rnn": {
+      "standard_trained_on_corrected_test": {
+        "n_seeds": 10,
+        "overall_accuracy_range": [
+          0.5341317365269461,
+          0.7483033932135729
+        ],
+        "hard_negative_accuracy_range": [
+          0.0,
+          0.9199048374306106
+        ]
+      },
+      "corrected_trained_on_corrected_test_F3": {
+        "n_seeds": 10,
+        "overall_accuracy_range": [
+          0.567065868263473,
+          0.7481037924151697
+        ],
+        "hard_negative_accuracy_range": [
+          0.0,
+          0.8913560666137986
+        ]
+      },
+      "corrected_trained_on_standard_test_F3": {
+        "n_seeds": 10,
+        "accuracy_range": [
+          0.5570858283433133,
+          0.8542914171656687
+        ]
+      }
+    },
+    "lstm": {
+      "standard_trained_on_corrected_test": {
+        "n_seeds": 10,
+        "overall_accuracy_range": [
+          0.5341317365269461,
+          0.7483033932135729
+        ],
+        "hard_negative_accuracy_range": [
+          0.0,
+          0.9563838223632039
+        ]
+      },
+      "corrected_trained_on_corrected_test_F3": {
+        "n_seeds": 10,
+        "overall_accuracy_range": [
+          0.5431137724550898,
+          0.7564870259481038
+        ],
+        "hard_negative_accuracy_range": [
+          0.0,
+          0.8699444885011896
+        ]
+      },
+      "corrected_trained_on_standard_test_F3": {
+        "n_seeds": 10,
+        "accuracy_range": [
+          0.554690618762475,
+          0.8840319361277446
+        ]
+      }
+    },
+    "transformer": {
+      "standard_trained_on_corrected_test": {
+        "n_seeds": 10,
+        "overall_accuracy_range": [
+          0.5027944111776447,
+          0.5534930139720559
+        ],
+        "hard_negative_accuracy_range": [
+          0.8413957176843775,
+          1.0
+        ]
+      },
+      "corrected_trained_on_corrected_test_F3": {
+        "n_seeds": 10,
+        "overall_accuracy_range": [
+          0.5029940119760479,
+          0.7099800399201597
+        ],
+        "hard_negative_accuracy_range": [
+          0.09833465503568596,
+          1.0
+        ]
+      },
+      "corrected_trained_on_standard_test_F3": {
+        "n_seeds": 10,
+        "accuracy_range": [
+          0.4940119760479042,
+          0.7215568862275449
+        ]
+      }
+    },
+    "mamba": {
+      "standard_trained_on_corrected_test": {
+        "n_seeds": 10,
+        "overall_accuracy_range": [
+          0.5411177644710579,
+          0.7612774451097805
+        ],
+        "hard_negative_accuracy_range": [
+          0.02696272799365583,
+          0.9920697858842189
+        ]
+      },
+      "corrected_trained_on_corrected_test_F3": {
+        "n_seeds": 10,
+        "overall_accuracy_range": [
+          0.548502994011976,
+          0.768063872255489
+        ],
+        "hard_negative_accuracy_range": [
+          0.0,
+          0.9849325931800159
+        ]
+      },
+      "corrected_trained_on_standard_test_F3": {
+        "n_seeds": 10,
+        "accuracy_range": [
+          0.5411177644710579,
+          0.8345309381237525
+        ]
+      }
+    }
+  },
+  "standard_trained_vs_chance_prediction_finding": {
+    "prediction": "standard-trained models should score at CHANCE (0.5) on the hard-negative subset",
+    "actual_result": "BIMODAL, not chance -- pearson correlation(positive_accuracy, hard_negative_accuracy) = -0.9979 across all 40 standard-trained seeds (near-perfect NEGATIVE correlation). Zero of 40 seeds land in the 0.4-0.6 near-chance band for hard-negative accuracy (10 seeds <0.1, 18 seeds >0.9, 12 in between but still not clustered near 0.5). Zero seeds achieve BOTH positive_accuracy>0.9 AND hard_negative_accuracy>0.5.",
+    "interpretation": "The apparently HIGH hard-negative accuracy seen in many standard-trained seeds (e.g. 9/10 LSTM seeds at 0.80-0.96, all 10 transformer seeds at 0.84-1.00) is NOT residual target-computation capability -- it is the SAME reject-bias artifact documented in F4 for corrected-trained models, now triggered by evaluating standard-trained checkpoints OUT OF DISTRIBUTION on the corrected test set (which contains negative examples statistically unlike anything in their training distribution). The near-perfect negative correlation with positive accuracy is the diagnostic signature: models rejecting the hard-negative half well are, in lockstep, ALSO rejecting genuine positives at a similarly elevated rate -- a generic out-of-distribution reject bias, not selective arithmetic/content verification. The chance-level prediction is WRONG in a specific, well-evidenced way: standard training does not preserve a dormant genuine-content-verification capability that surfaces at 50% on hard negatives; instead it reproduces the exact same shortcut-vs-reject-bias dichotomy seen throughout this whole experiment, this time driven by distribution shift rather than by training-data composition."
+  }
+}

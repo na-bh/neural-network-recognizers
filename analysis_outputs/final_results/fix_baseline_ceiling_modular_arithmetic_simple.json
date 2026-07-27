@@ -1,0 +1,222 @@
+{
+  "task": "modular-arithmetic-simple",
+  "experiment": "corrected-dataset-fix (MF2: shortcut-only baseline ceiling on corrected test data)",
+  "description": "Evaluates a NEWLY-TRAINED shortcut-only baseline (six-feature bag-of-trivial-checks, provably incapable of order-sensitive mod-5 computation) plus ngram-logreg and bagcount-ffn baselines (also newly trained here -- none previously existed for modular-arithmetic-simple), all trained on STANDARD modular-arithmetic-simple training data, evaluated on the CORRECTED test set (MF1), split into positive/uniform-random/hard-negative subsets.",
+  "provable_incapacity_counterexample": {
+    "clean": [
+      "1",
+      "*",
+      "2",
+      "+",
+      "3",
+      "=",
+      "0"
+    ],
+    "corrupted": [
+      "1",
+      "+",
+      "3",
+      "*",
+      "2",
+      "=",
+      "0"
+    ],
+    "clean_valid": true,
+    "corrupted_valid": false,
+    "clean_features": {
+      "n_equals_is_one": 1.0,
+      "first_token_is_digit": 1.0,
+      "last_token_is_digit": 1.0,
+      "sequence_length_parity_odd": 1.0,
+      "alternation_pattern_valid": 1.0,
+      "digit_operator_count_relation": 1.0
+    },
+    "corrupted_features": {
+      "n_equals_is_one": 1.0,
+      "first_token_is_digit": 1.0,
+      "last_token_is_digit": 1.0,
+      "sequence_length_parity_odd": 1.0,
+      "alternation_pattern_valid": 1.0,
+      "digit_operator_count_relation": 1.0
+    },
+    "features_identical": true,
+    "note": "IDENTICAL six-feature vectors, opposite validity -- the information distinguishing them (the running mod-5 value at each position) is structurally absent from any bag-of-trivial-pattern-checks representation, not merely hard to learn."
+  },
+  "corrected_test_set": "languages/modular-arithmetic-simple-fixed/datasets/test",
+  "test_composition": {
+    "n_total": 5010,
+    "n_positive": 2456,
+    "n_uniform_random": 1296,
+    "n_hard_negative": 1258
+  },
+  "theoretical_shortcut_only_ceiling": {
+    "n_total": 5010,
+    "n_positive": 2456,
+    "n_structurally_obvious_negatives": 1296,
+    "structurally_obvious_breakdown": {
+      "from_hard_negative_half": 0,
+      "from_uniform_random_half": 1296
+    },
+    "n_structurally_ambiguous_negatives": 1258,
+    "structurally_ambiguous_breakdown": {
+      "from_hard_negative_half": 1258,
+      "from_uniform_random_half_by_chance": 0
+    },
+    "formula": "(n_positive + n_structurally_obvious + 0.5 * n_structurally_ambiguous) / n_total -- perfect on positives and every negative a shortcut-only detector (the six-feature bag-of-trivial-checks) can catch; chance (0.5) on every negative that passes all six listed shortcut features (by MF1's construction, this is the ENTIRE hard-negative half, plus any uniform-random negatives that coincidentally also pass all six).",
+    "theoretical_shortcut_only_ceiling": 0.8744510978043912,
+    "note": "1258/1258 of the hard-negative half is structurally ambiguous by construction (should be ALL of it, i.e. 1258); 0/1296 of the uniform-random half is ALSO structurally ambiguous purely by chance."
+  },
+  "baselines": {
+    "shortcut": {
+      "baseline": "shortcut",
+      "n_total": 5010,
+      "overall_accuracy": 0.7489021956087825,
+      "positive_accuracy": 1.0,
+      "n_positive": 2456,
+      "uniform_random_half_accuracy": 1.0,
+      "n_uniform_random": 1296,
+      "hard_negative_half_accuracy": 0.0,
+      "n_hard_negative": 1258,
+      "long_sequence_accuracy": 0.9091954022988505,
+      "n_long_sequences": 870,
+      "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_modular_arithmetic_simple_shortcut_baseline.joblib",
+      "trained_on": "standard modular-arithmetic-simple training set"
+    },
+    "ngram_logreg": {
+      "baseline": "ngram-logreg",
+      "n_total": 5010,
+      "overall_accuracy": 0.7499001996007985,
+      "positive_accuracy": 0.9979641693811075,
+      "n_positive": 2456,
+      "uniform_random_half_accuracy": 1.0,
+      "n_uniform_random": 1296,
+      "hard_negative_half_accuracy": 0.00794912559618442,
+      "n_hard_negative": 1258,
+      "long_sequence_accuracy": 0.9091954022988505,
+      "n_long_sequences": 870,
+      "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_modular_arithmetic_simple_ngram_logreg.joblib",
+      "trained_on": "standard modular-arithmetic-simple training set",
+      "selected_C": 10.0
+    },
+    "bagcount_ffn": {
+      "8": {
+        "baseline": "bagcount-ffn-h8",
+        "n_total": 5010,
+        "overall_accuracy": 0.7481037924151697,
+        "positive_accuracy": 1.0,
+        "n_positive": 2456,
+        "uniform_random_half_accuracy": 0.9969135802469136,
+        "n_uniform_random": 1296,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1258,
+        "long_sequence_accuracy": 0.9091954022988505,
+        "n_long_sequences": 870,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_modular_arithmetic_simple_bagcount_ffn_h8.pt",
+        "trained_on": "standard modular-arithmetic-simple training set",
+        "num_epochs_run": 105,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "32": {
+        "baseline": "bagcount-ffn-h32",
+        "n_total": 5010,
+        "overall_accuracy": 0.7481037924151697,
+        "positive_accuracy": 1.0,
+        "n_positive": 2456,
+        "uniform_random_half_accuracy": 0.9969135802469136,
+        "n_uniform_random": 1296,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1258,
+        "long_sequence_accuracy": 0.9091954022988505,
+        "n_long_sequences": 870,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_modular_arithmetic_simple_bagcount_ffn_h32.pt",
+        "trained_on": "standard modular-arithmetic-simple training set",
+        "num_epochs_run": 97,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "128": {
+        "baseline": "bagcount-ffn-h128",
+        "n_total": 5010,
+        "overall_accuracy": 0.7473053892215569,
+        "positive_accuracy": 0.9979641693811075,
+        "n_positive": 2456,
+        "uniform_random_half_accuracy": 0.9969135802469136,
+        "n_uniform_random": 1296,
+        "hard_negative_half_accuracy": 0.000794912559618442,
+        "n_hard_negative": 1258,
+        "long_sequence_accuracy": 0.9057471264367816,
+        "n_long_sequences": 870,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_modular_arithmetic_simple_bagcount_ffn_h128.pt",
+        "trained_on": "standard modular-arithmetic-simple training set",
+        "num_epochs_run": 59,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "512": {
+        "baseline": "bagcount-ffn-h512",
+        "n_total": 5010,
+        "overall_accuracy": 0.7479041916167665,
+        "positive_accuracy": 0.9995928338762216,
+        "n_positive": 2456,
+        "uniform_random_half_accuracy": 0.9969135802469136,
+        "n_uniform_random": 1296,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1258,
+        "long_sequence_accuracy": 0.9091954022988505,
+        "n_long_sequences": 870,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_modular_arithmetic_simple_bagcount_ffn_h512.pt",
+        "trained_on": "standard modular-arithmetic-simple training set",
+        "num_epochs_run": 50,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      }
+    }
+  },
+  "summary_vs_ceiling": [
+    {
+      "baseline": "shortcut",
+      "overall_accuracy": 0.7489021956087825,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "ngram-logreg",
+      "overall_accuracy": 0.7499001996007985,
+      "hard_negative_half_accuracy": 0.00794912559618442,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h8",
+      "overall_accuracy": 0.7481037924151697,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h32",
+      "overall_accuracy": 0.7481037924151697,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h128",
+      "overall_accuracy": 0.7473053892215569,
+      "hard_negative_half_accuracy": 0.000794912559618442,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h512",
+      "overall_accuracy": 0.7479041916167665,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    }
+  ]
+}

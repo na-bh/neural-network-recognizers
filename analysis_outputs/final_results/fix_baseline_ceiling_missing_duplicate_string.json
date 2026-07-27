@@ -1,0 +1,218 @@
+{
+  "task": "missing-duplicate-string",
+  "experiment": "corrected-dataset-fix (MDF2: shortcut-only baseline ceiling on corrected test data)",
+  "description": "Evaluates a NEWLY-TRAINED shortcut-only baseline (four-feature bag-of-counts-and-single-position, provably incapable of position-by-position content verification) plus ngram-logreg and bagcount-ffn baselines (also newly trained here, no pre-existing phase1 checkpoints for this task), all trained on STANDARD missing-duplicate-string training data, evaluated on the CORRECTED test set (MDF1), split into positive/uniform-random/hard-negative subsets.",
+  "provable_incapacity_counterexample": {
+    "clean": [
+      "1",
+      "1",
+      "0",
+      "1",
+      "_",
+      "1",
+      "0",
+      "1"
+    ],
+    "corrupted": [
+      "1",
+      "1",
+      "0",
+      "1",
+      "_",
+      "0",
+      "1",
+      "1"
+    ],
+    "clean_features": {
+      "sequence_length_parity": 1.0,
+      "blank_count_is_one": 1.0,
+      "aggregate_count_per_half": 1.0,
+      "first_last_symbol_match": 1.0
+    },
+    "corrupted_features": {
+      "sequence_length_parity": 1.0,
+      "blank_count_is_one": 1.0,
+      "aggregate_count_per_half": 1.0,
+      "first_last_symbol_match": 1.0
+    },
+    "features_identical": true,
+    "note": "IDENTICAL four-feature vectors, opposite validity -- the information distinguishing them (whether the two halves genuinely match position-by-position, not just in aggregate bit counts) is structurally absent from any bag-of-counts-and-single-position representation, not merely hard to learn."
+  },
+  "corrected_test_set": "languages/missing-duplicate-string-fixed/datasets/test",
+  "test_composition": {
+    "n_total": 5010,
+    "n_positive": 2509,
+    "n_uniform_random": 1261,
+    "n_hard_negative": 1240
+  },
+  "theoretical_shortcut_only_ceiling": {
+    "n_total": 5010,
+    "n_positive": 2509,
+    "n_structurally_obvious_negatives": 1261,
+    "structurally_obvious_breakdown": {
+      "from_hard_negative_half": 0,
+      "from_uniform_random_half": 1261
+    },
+    "n_structurally_ambiguous_negatives": 1240,
+    "structurally_ambiguous_breakdown": {
+      "from_hard_negative_half": 1240,
+      "from_uniform_random_half_by_chance": 0
+    },
+    "formula": "(n_positive + n_structurally_obvious + 0.5 * n_structurally_ambiguous) / n_total -- perfect on positives and every negative a shortcut-only detector (the four-feature bag-of-counts-and-single-position check) can catch; chance (0.5) on every negative that passes all four listed shortcut features (by MDF1's construction, this is the ENTIRE hard-negative half, plus any uniform-random negatives that coincidentally also pass all four).",
+    "theoretical_shortcut_only_ceiling": 0.8762475049900199,
+    "note": "1240/1240 of the hard-negative half is structurally ambiguous by construction (should be ALL of it, i.e. 1240); 0/1261 of the uniform-random half is ALSO structurally ambiguous purely by chance."
+  },
+  "baselines": {
+    "shortcut": {
+      "baseline": "shortcut",
+      "n_total": 5010,
+      "overall_accuracy": 0.7524950099800399,
+      "positive_accuracy": 1.0,
+      "n_positive": 2509,
+      "uniform_random_half_accuracy": 1.0,
+      "n_uniform_random": 1261,
+      "hard_negative_half_accuracy": 0.0,
+      "n_hard_negative": 1240,
+      "long_sequence_accuracy": 0.7464522232734153,
+      "n_long_sequences": 1057,
+      "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_missing_duplicate_string_shortcut_baseline.joblib",
+      "trained_on": "standard missing-duplicate-string training set"
+    },
+    "ngram_logreg": {
+      "baseline": "ngram-logreg",
+      "n_total": 5010,
+      "overall_accuracy": 0.7512974051896207,
+      "positive_accuracy": 1.0,
+      "n_positive": 2509,
+      "uniform_random_half_accuracy": 0.9952418715305313,
+      "n_uniform_random": 1261,
+      "hard_negative_half_accuracy": 0.0,
+      "n_hard_negative": 1240,
+      "long_sequence_accuracy": 0.7464522232734153,
+      "n_long_sequences": 1057,
+      "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_missing_duplicate_string_ngram_logreg.joblib",
+      "trained_on": "standard missing-duplicate-string training set",
+      "selected_C": 100.0
+    },
+    "bagcount_ffn": {
+      "8": {
+        "baseline": "bagcount-ffn-h8",
+        "n_total": 5010,
+        "overall_accuracy": 0.7518962075848303,
+        "positive_accuracy": 1.0,
+        "n_positive": 2509,
+        "uniform_random_half_accuracy": 0.9976209357652657,
+        "n_uniform_random": 1261,
+        "hard_negative_half_accuracy": 0.0,
+        "n_hard_negative": 1240,
+        "long_sequence_accuracy": 0.7464522232734153,
+        "n_long_sequences": 1057,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_missing_duplicate_string_bagcount_ffn_h8.pt",
+        "trained_on": "standard missing-duplicate-string training set",
+        "num_epochs_run": 51,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "32": {
+        "baseline": "bagcount-ffn-h32",
+        "n_total": 5010,
+        "overall_accuracy": 0.7421157684630738,
+        "positive_accuracy": 0.9445994420087684,
+        "n_positive": 2509,
+        "uniform_random_half_accuracy": 0.9976209357652657,
+        "n_uniform_random": 1261,
+        "hard_negative_half_accuracy": 0.07258064516129033,
+        "n_hard_negative": 1240,
+        "long_sequence_accuracy": 0.7313150425733207,
+        "n_long_sequences": 1057,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_missing_duplicate_string_bagcount_ffn_h32.pt",
+        "trained_on": "standard missing-duplicate-string training set",
+        "num_epochs_run": 40,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "128": {
+        "baseline": "bagcount-ffn-h128",
+        "n_total": 5010,
+        "overall_accuracy": 0.5798403193612774,
+        "positive_accuracy": 0.3076923076923077,
+        "n_positive": 2509,
+        "uniform_random_half_accuracy": 0.9984139571768438,
+        "n_uniform_random": 1261,
+        "hard_negative_half_accuracy": 0.7048387096774194,
+        "n_hard_negative": 1240,
+        "long_sequence_accuracy": 0.4938505203405866,
+        "n_long_sequences": 1057,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_missing_duplicate_string_bagcount_ffn_h128.pt",
+        "trained_on": "standard missing-duplicate-string training set",
+        "num_epochs_run": 104,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      },
+      "512": {
+        "baseline": "bagcount-ffn-h512",
+        "n_total": 5010,
+        "overall_accuracy": 0.5614770459081836,
+        "positive_accuracy": 0.2339577520924671,
+        "n_positive": 2509,
+        "uniform_random_half_accuracy": 0.9992069785884219,
+        "n_uniform_random": 1261,
+        "hard_negative_half_accuracy": 0.7790322580645161,
+        "n_hard_negative": 1240,
+        "long_sequence_accuracy": 0.4938505203405866,
+        "n_long_sequences": 1057,
+        "source_checkpoint": "analysis_outputs/final_results/phase1_checkpoints/phase1_missing_duplicate_string_bagcount_ffn_h512.pt",
+        "trained_on": "standard missing-duplicate-string training set",
+        "num_epochs_run": 80,
+        "stopped_early": true,
+        "convergence_issues": [
+          "none"
+        ]
+      }
+    }
+  },
+  "summary_vs_ceiling": [
+    {
+      "baseline": "shortcut",
+      "overall_accuracy": 0.7524950099800399,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "ngram-logreg",
+      "overall_accuracy": 0.7512974051896207,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h8",
+      "overall_accuracy": 0.7518962075848303,
+      "hard_negative_half_accuracy": 0.0,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h32",
+      "overall_accuracy": 0.7421157684630738,
+      "hard_negative_half_accuracy": 0.07258064516129033,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h128",
+      "overall_accuracy": 0.5798403193612774,
+      "hard_negative_half_accuracy": 0.7048387096774194,
+      "exceeds_theoretical_ceiling": false
+    },
+    {
+      "baseline": "bagcount-ffn-h512",
+      "overall_accuracy": 0.5614770459081836,
+      "hard_negative_half_accuracy": 0.7790322580645161,
+      "exceeds_theoretical_ceiling": false
+    }
+  ]
+}

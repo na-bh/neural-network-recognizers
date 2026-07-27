@@ -1,0 +1,244 @@
+{
+  "experiment": "CPF2 baseline variance check -- standard (non-paired) batch-size variance",
+  "description": "Characterizes how much batch-size variance standard FLaRe training ALREADY produces (as a fraction of max_tokens_per_batch, always <=1.0 by construction), on the same marked-reversal task and the same budget/seed grid as cpf2_overflow_check.json's contrastive-pairing overflow measurements, to give the CPF2 overflow numbers a baseline for comparison.",
+  "dataset": "languages/marked-reversal-fixed",
+  "budgets_tested": [
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096
+  ],
+  "shuffle_seeds": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005
+  ],
+  "results_by_budget": {
+    "128": {
+      "per_seed": {
+        "1001": {
+          "n_batches": 1806,
+          "mean_ratio": 0.8971830011074197,
+          "std_ratio": 0.06382466199593065
+        },
+        "1002": {
+          "n_batches": 1806,
+          "mean_ratio": 0.8971830011074197,
+          "std_ratio": 0.06382466199593065
+        },
+        "1003": {
+          "n_batches": 1806,
+          "mean_ratio": 0.8971830011074197,
+          "std_ratio": 0.06382466199593065
+        },
+        "1004": {
+          "n_batches": 1806,
+          "mean_ratio": 0.8971830011074197,
+          "std_ratio": 0.06382466199593065
+        },
+        "1005": {
+          "n_batches": 1806,
+          "mean_ratio": 0.8971830011074197,
+          "std_ratio": 0.06382466199593065
+        }
+      },
+      "pooled_mean_fraction_of_budget_used": 0.8971830011074197,
+      "pooled_std_fraction_of_budget_used": 0.06382466199593065,
+      "pooled_percentiles_fraction_of_budget_used": {
+        "p5": 0.7734375,
+        "p50": 0.90625,
+        "p95": 0.984375
+      },
+      "n_batches_pooled": 9030
+    },
+    "256": {
+      "per_seed": {
+        "1001": {
+          "n_batches": 858,
+          "mean_ratio": 0.9458041958041958,
+          "std_ratio": 0.048255843893419685
+        },
+        "1002": {
+          "n_batches": 858,
+          "mean_ratio": 0.9458041958041958,
+          "std_ratio": 0.048255843893419685
+        },
+        "1003": {
+          "n_batches": 858,
+          "mean_ratio": 0.9458041958041958,
+          "std_ratio": 0.048255843893419685
+        },
+        "1004": {
+          "n_batches": 858,
+          "mean_ratio": 0.9458041958041958,
+          "std_ratio": 0.048255843893419685
+        },
+        "1005": {
+          "n_batches": 858,
+          "mean_ratio": 0.9458041958041958,
+          "std_ratio": 0.048255843893419685
+        }
+      },
+      "pooled_mean_fraction_of_budget_used": 0.9458041958041958,
+      "pooled_std_fraction_of_budget_used": 0.048255843893419685,
+      "pooled_percentiles_fraction_of_budget_used": {
+        "p5": 0.8671875,
+        "p50": 0.95703125,
+        "p95": 0.99609375
+      },
+      "n_batches_pooled": 4290
+    },
+    "512": {
+      "per_seed": {
+        "1001": {
+          "n_batches": 418,
+          "mean_ratio": 0.9712404680023924,
+          "std_ratio": 0.028228785877242934
+        },
+        "1002": {
+          "n_batches": 418,
+          "mean_ratio": 0.9712404680023924,
+          "std_ratio": 0.028228785877242934
+        },
+        "1003": {
+          "n_batches": 418,
+          "mean_ratio": 0.9712404680023924,
+          "std_ratio": 0.028228785877242934
+        },
+        "1004": {
+          "n_batches": 418,
+          "mean_ratio": 0.9712404680023924,
+          "std_ratio": 0.028228785877242934
+        },
+        "1005": {
+          "n_batches": 418,
+          "mean_ratio": 0.9712404680023924,
+          "std_ratio": 0.028228785877242934
+        }
+      },
+      "pooled_mean_fraction_of_budget_used": 0.9712404680023924,
+      "pooled_std_fraction_of_budget_used": 0.028228785877242934,
+      "pooled_percentiles_fraction_of_budget_used": {
+        "p5": 0.939453125,
+        "p50": 0.96875,
+        "p95": 0.99609375
+      },
+      "n_batches_pooled": 2090
+    },
+    "1024": {
+      "per_seed": {
+        "1001": {
+          "n_batches": 207,
+          "mean_ratio": 0.9847665685386473,
+          "std_ratio": 0.0436795168998487
+        },
+        "1002": {
+          "n_batches": 207,
+          "mean_ratio": 0.9847665685386473,
+          "std_ratio": 0.0436795168998487
+        },
+        "1003": {
+          "n_batches": 207,
+          "mean_ratio": 0.9847665685386473,
+          "std_ratio": 0.0436795168998487
+        },
+        "1004": {
+          "n_batches": 207,
+          "mean_ratio": 0.9847665685386473,
+          "std_ratio": 0.0436795168998487
+        },
+        "1005": {
+          "n_batches": 207,
+          "mean_ratio": 0.9847665685386473,
+          "std_ratio": 0.0436795168998487
+        }
+      },
+      "pooled_mean_fraction_of_budget_used": 0.9847665685386473,
+      "pooled_std_fraction_of_budget_used": 0.0436795168998487,
+      "pooled_percentiles_fraction_of_budget_used": {
+        "p5": 0.9755859375,
+        "p50": 0.990234375,
+        "p95": 0.9990234375
+      },
+      "n_batches_pooled": 1035
+    },
+    "2048": {
+      "per_seed": {
+        "1001": {
+          "n_batches": 104,
+          "mean_ratio": 0.9861825796274039,
+          "std_ratio": 0.07626859944997072
+        },
+        "1002": {
+          "n_batches": 104,
+          "mean_ratio": 0.9861825796274039,
+          "std_ratio": 0.07626859944997072
+        },
+        "1003": {
+          "n_batches": 104,
+          "mean_ratio": 0.9861825796274039,
+          "std_ratio": 0.07626859944997072
+        },
+        "1004": {
+          "n_batches": 104,
+          "mean_ratio": 0.9861825796274039,
+          "std_ratio": 0.07626859944997072
+        },
+        "1005": {
+          "n_batches": 104,
+          "mean_ratio": 0.9861825796274039,
+          "std_ratio": 0.07626859944997072
+        }
+      },
+      "pooled_mean_fraction_of_budget_used": 0.9861825796274039,
+      "pooled_std_fraction_of_budget_used": 0.07626859944997072,
+      "pooled_percentiles_fraction_of_budget_used": {
+        "p5": 0.98876953125,
+        "p50": 0.99365234375,
+        "p95": 0.99951171875
+      },
+      "n_batches_pooled": 520
+    },
+    "4096": {
+      "per_seed": {
+        "1001": {
+          "n_batches": 53,
+          "mean_ratio": 0.9851534861438679,
+          "std_ratio": 0.08268186473900978
+        },
+        "1002": {
+          "n_batches": 53,
+          "mean_ratio": 0.9851534861438679,
+          "std_ratio": 0.08268186473900978
+        },
+        "1003": {
+          "n_batches": 53,
+          "mean_ratio": 0.9851534861438679,
+          "std_ratio": 0.08268186473900978
+        },
+        "1004": {
+          "n_batches": 53,
+          "mean_ratio": 0.9851534861438679,
+          "std_ratio": 0.08268186473900978
+        },
+        "1005": {
+          "n_batches": 53,
+          "mean_ratio": 0.9851534861438679,
+          "std_ratio": 0.08268186473900978
+        }
+      },
+      "pooled_mean_fraction_of_budget_used": 0.9851534861438679,
+      "pooled_std_fraction_of_budget_used": 0.08268186473900978,
+      "pooled_percentiles_fraction_of_budget_used": {
+        "p5": 0.968994140625,
+        "p50": 0.9990234375,
+        "p95": 0.999755859375
+      },
+      "n_batches_pooled": 265
+    }
+  }
+}

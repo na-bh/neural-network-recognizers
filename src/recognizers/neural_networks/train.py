@@ -1,5 +1,7 @@
 import argparse
+import json
 import logging
+import pathlib
 import sys
 
 import humanfriendly
@@ -16,6 +18,13 @@ from recognizers.neural_networks.training_loop import (
     RecognitionTrainingLoop,
     add_training_loop_arguments,
     get_training_loop_kwargs,
+)
+from recognizers.neural_networks.contrastive_training_loop import (
+    ContrastiveRecognitionTrainingLoop,
+)
+from recognizers.neural_networks.contrastive_batching import (
+    load_pair_ids,
+    build_pair_partner_map,
 )
 
 def main():
@@ -37,6 +46,14 @@ def main():
     model_interface.add_arguments(parser)
     model_interface.add_forward_arguments(parser)
     add_training_loop_arguments(parser)
+    parser.add_argument('--pair-id-file', type=pathlib.Path, default=None,
+        help='OPTIONAL. Path to a pair-id.txt side-channel file (one line '
+             'per training example, matching main.tok in order; empty for '
+             'unpaired examples, an integer pair id otherwise). If given, '
+             'batches are constructed so that both members of a pair always '
+             'land in the same minibatch (contrastive-pairing experiment). '
+             'If omitted (the default), training behaves EXACTLY as before '
+             '-- this flag has no effect on any existing training script.')
     args = parser.parse_args()
     console_logger.info(f'parsed arguments: {args}')
 
@@ -46,9 +63,14 @@ def main():
     do_profile_memory = device.type == 'cuda'
 
     # Configure the training loop.
-    training_loop = RecognitionTrainingLoop(
-        **get_training_loop_kwargs(parser, args)
-    )
+    if args.pair_id_file is not None:
+        training_loop = ContrastiveRecognitionTrainingLoop(
+            **get_training_loop_kwargs(parser, args)
+        )
+    else:
+        training_loop = RecognitionTrainingLoop(
+            **get_training_loop_kwargs(parser, args)
+        )
 
     # Load the tokens in the vocabulary. This determines the sizes of the
     # embedding and softmax layers in the model.
@@ -74,6 +96,11 @@ def main():
     training_data, validation_data, vocabulary \
         = load_prepared_data(args, parser, vocabulary_data, model_interface)
 
+    if args.pair_id_file is not None:
+        pair_ids = load_pair_ids(args.pair_id_file, len(training_data))
+        pair_partner_map = build_pair_partner_map(training_data, pair_ids)
+        training_loop.set_pair_partner_map(pair_partner_map)
+
     # Start logging events to disk.
     with saver.logger() as event_logger:
         event_logger.log('model_info', dict(
@@ -87,15 +114,22 @@ def main():
             next_symbols_loss_coefficient=args.next_symbols_loss_coefficient
         ))
         # Run the training loop.
-        training_loop.run(
-            saver,
-            model_interface,
-            training_data,
-            validation_data,
-            vocabulary,
-            console_logger,
-            event_logger
-        )
+        try:
+            training_loop.run(
+                saver,
+                model_interface,
+                training_data,
+                validation_data,
+                vocabulary,
+                console_logger,
+                event_logger
+            )
+        finally:
+            if args.pair_id_file is not None:
+                stats_path = pathlib.Path(args.output) / 'contrastive_batch_stats.json'
+                stats_path.parent.mkdir(parents=True, exist_ok=True)
+                stats_path.write_text(json.dumps(training_loop.batch_stats_log, indent=2))
+                console_logger.info(f'wrote {stats_path}')
 
 if __name__ == '__main__':
     main()

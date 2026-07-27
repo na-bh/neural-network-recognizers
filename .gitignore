@@ -8,3 +8,32 @@ __pycache__/
 
 .history/
 .vscode/
+
+# --- paper-repo curation (git_curation_plan_final.txt) ---
+# Model checkpoints: never committed, regenerable by re-running the
+# corresponding training script.
+data/models/**
+/models/
+**/*_checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.bin
+
+# Raw process logs from background training queues: superseded by the
+# structured result JSONs the same runs produce.
+*.log
+
+# SLURM cluster job stdout/stderr debris (mamba_all_*, node_test_*,
+# mamba_parity_*, submit_*.sbatch*) and other non-paper scratch files at
+# the repo root.
+mamba_all_*.out
+mamba_all_*.err
+mamba_parity_*.out
+mamba_parity_*.err
+node_test_*.out
+node_test_*.err
+submit_mamba_*.sbatch*
+test_mamba_node.sbatch
+/test.txt
+/nnr.def

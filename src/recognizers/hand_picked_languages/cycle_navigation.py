@@ -28,4 +28,4 @@ def cycle_navigation() -> FSA:
     return A
 
 def cycle_navigation_dfa() -> tuple[FiniteAutomatonContainer, list[str]]:
-    return from_rayuela_fsa(cycle_navigation_rayuela_fsa())
+    return from_rayuela_fsa(cycle_navigation())
